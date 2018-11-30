@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Android基础常见工具类</string>
+
+    <string name="permission_read_phone_state"> 读取电话状态权限获取失败</string>
+</resources>

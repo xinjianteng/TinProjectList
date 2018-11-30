@@ -1,0 +1,15 @@
+ext {
+    compileSdkVersion = 26
+    minSdkVersion = 21
+    targetSdkVersion = 26
+
+    supprotLibraryVersion = '27.1.0'
+    fastjsonVersion = '1.1.63.android'
+    glideVersion = '4.8.0'
+
+
+    versionName="5.0.0.18"
+    versionCode= 500018
+
+
+}

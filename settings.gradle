@@ -1,0 +1,8 @@
+include ':app',
+        ':TinTvPlay',
+        ':TinAppKnowldege',
+        ':TinAppGuShiWen',
+        ':JavaTest',
+        ':Tinlibrary',
+        ':TinLibraryJsoup',
+        ':TinLibraryBase'

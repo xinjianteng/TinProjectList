@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300px">
+
+            <TextView
+                android:id="@+id/tv_chiness"
+                android:text="@string/highSchool_chiness"
+                style="@style/subject_type"
+                android:background="@color/color_chiness_bg"
+                />
+
+            <TextView
+                android:id="@+id/tv_math"
+                style="@style/subject_type"
+                android:text="@string/highSchool_math"
+                android:background="@color/color_math_bg"
+                />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300px">
+
+            <TextView
+                android:id="@+id/tv_english"
+                style="@style/subject_type"
+                android:text="@string/highSchool_english"
+                android:background="@color/color_english_bg"
+                />
+
+            <TextView
+                android:id="@+id/tv_physics"
+                style="@style/subject_type"
+                android:text="@string/highSchool_physics"
+                android:background="@color/color_physics_bg"
+                />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300px">
+
+            <TextView
+                android:id="@+id/tv_chemistry"
+                style="@style/subject_type"
+                android:text="@string/highSchool_chemistry"
+                android:background="@color/color_chemistry_bg"
+                />
+
+            <TextView
+                android:id="@+id/tv_biology"
+                style="@style/subject_type"
+                android:text="@string/highSchool_biology"
+                android:background="@color/color_biology_bg"
+                />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300px">
+
+            <TextView
+                android:id="@+id/tv_geography"
+                style="@style/subject_type"
+                android:text="@string/highSchool_geography"
+                android:background="@color/color_geography_bg"
+                />
+
+            <TextView
+                android:id="@+id/tv_politics"
+                style="@style/subject_type"
+                android:text="@string/highSchool_politics"
+                android:background="@color/color_politics_bg"
+                />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300px">
+
+            <TextView
+                android:id="@+id/tv_history"
+                style="@style/subject_type"
+                android:text="@string/highSchool_history"
+                android:background="@color/color_history_bg"
+                />
+
+            <TextView
+                style="@style/subject_type"
+                android:visibility="invisible"
+                android:text="@string/highSchool_politics"
+                android:background="@color/color_politics_bg"
+                />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+</ScrollView>

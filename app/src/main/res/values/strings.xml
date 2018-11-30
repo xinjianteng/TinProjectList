@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TinProjectList</string>
+    <string name="str_file">文件路径</string>
+</resources>
