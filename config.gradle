@@ -1,10 +1,10 @@
 ext {
     compileSdkVersion = 26
-    minSdkVersion = 21
+    minSdkVersion = 20
     targetSdkVersion = 26
 
+
     supprotLibraryVersion = '27.1.0'
-    fastjsonVersion = '1.1.63.android'
     glideVersion = '4.8.0'
 
 

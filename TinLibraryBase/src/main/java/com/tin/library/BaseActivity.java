@@ -5,25 +5,21 @@ import android.support.annotation.Nullable;
 
 import com.zhy.autolayout.AutoLayoutActivity;
 
+import org.xutils.x;
+
 public abstract class BaseActivity extends AutoLayoutActivity{
-    protected static final int NO_ID = 0;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if(getContentLayout()!=NO_ID){
-            setContentView(getContentLayout());
-        }
+        x.view().inject(this);
         setView();
         setValue();
         setListener();
-
     }
 
 
-
-
-    protected abstract int getContentLayout();
 
     protected abstract void setView();
 

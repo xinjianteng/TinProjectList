@@ -4,10 +4,10 @@ android {
     compileSdkVersion 27
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -39,11 +39,15 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
 
-    implementation 'com.zhy:autolayout:1.4.5'
-    implementation 'com.google.code.gson:gson:2.7'
+    api 'com.zhy:autolayout:1.4.5'
+    api 'com.google.code.gson:gson:2.7'
 
     api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-10'
     api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-10'
+
+
+    api project(path: ':xutils')
+
 
 
 }

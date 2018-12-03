@@ -12,7 +12,7 @@ public class SsType {
 
     @Override
     public String toString() {
-        return "GuShiWenBean{" +
+        return "PoetryEntity{" +
                 "name='" + name + '\'' +
                 ", href='" + href + '\'' +
                 '}';

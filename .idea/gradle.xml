@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/TinTvPlay" />
             <option value="$PROJECT_DIR$/Tinlibrary" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/xutils" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

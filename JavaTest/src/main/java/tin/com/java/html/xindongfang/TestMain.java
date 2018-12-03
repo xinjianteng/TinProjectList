@@ -23,9 +23,9 @@ public class TestMain {
 
     public static void main(String args[]){
             long t1=new Date().getTime();
-//            List<GuShiWenBean> typeBeanList=getTypeBeanList(yuwen);
+//            List<PoetryEntity> typeBeanList=getTypeBeanList(yuwen);
 //            List<List<TypeClassilyBean>> typeClassilyListList=new ArrayList<>();
-//            for(GuShiWenBean typeBean:typeBeanList){
+//            for(PoetryEntity typeBean:typeBeanList){
 //                typeClassilyListList.add(getTypeClassilyList(typeBean.getHref()));
 //            }
             getDetail("http://gaokao.koolearn.com/20180608/1154866.html");

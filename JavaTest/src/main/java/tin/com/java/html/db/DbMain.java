@@ -31,7 +31,7 @@ public class DbMain {
             //2.创建statement类对象，用来执行SQL语句！！
             Statement statement = con.createStatement();
             //要执行的SQL语句
-            String sql = "select * from emp";
+            String sql = "select * from times";
             //3.ResultSet类，用来存放获取的结果集！！
             ResultSet rs = statement.executeQuery(sql);
             System.out.println("-----------------");
@@ -67,6 +67,9 @@ public class DbMain {
             System.out.println("数据库数据成功获取！！");
         }
     }
+
+
+
 
 
 }

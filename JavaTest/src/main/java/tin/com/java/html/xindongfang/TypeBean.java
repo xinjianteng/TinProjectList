@@ -10,7 +10,7 @@ public class TypeBean {
 
     @Override
     public String toString() {
-        return "GuShiWenBean{" +
+        return "PoetryEntity{" +
                 "name='" + name + '\'' +
                 ", href='" + href + '\'' +
                 ", classilyList=" + classilyList +
