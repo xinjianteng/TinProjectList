@@ -6,39 +6,68 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import tin.com.java.html.gushiwen.GuShiWenMain;
 import tin.com.java.html.gushiwen.IPoetryContract;
 import tin.com.java.html.gushiwen.ParseUtils;
 import tin.com.java.html.gushiwen.bean.PoetryDetailEntity;
 
 public class PoetryDetailPresenter implements IPoetryContract{
 
-    private Gson gson=new Gson();
     static String rootPath="https://www.gushiwen.org";
+
+    private Gson gson;
+    private ClassilyTagPresenter classilyTagPresenter;
+
+
+    public PoetryDetailPresenter() {
+        classilyTagPresenter=new ClassilyTagPresenter();
+        gson=new Gson();
+    }
     /***
-     * 获取详情信息
+     * 获取详情页面信息
      * @param url
      * @return
      */
     @Override
     public PoetryDetailEntity getPoetryDetail(String url) {
         PoetryDetailEntity poetryDetailEntity =new PoetryDetailEntity();
+        poetryDetailEntity.setDetailHref(url);
         Document document=ParseUtils.getDocument(url);
-        Element leftElements= document.select("div.main3").select("div.left").first();
+        Element mainElement= document.getElementsByClass("main3").first();
+        Elements sonsElements= mainElement.select("div.sons");
+        Elements fanyiElements=new Elements();
+        Elements shangxiElements=new Elements();
 
-        Element contElement =leftElements.select("div.sons").select("div.cont").first();
-        poetryDetailEntity.setTitle(contElement.select("h1").text());
-        Elements sourceElements=contElement.select(".source");
-        if(sourceElements.get(0)!=null){
-            poetryDetailEntity.setTimes(sourceElements.get(0).select("a").get(0).text());
-            poetryDetailEntity.setTimesHerf(sourceElements.get(0).select("a").get(0).attr("href"));
-            poetryDetailEntity.setAuthor(sourceElements.get(0).select("a").get(1).text());
-            poetryDetailEntity.setAuthorHerf(rootPath+sourceElements.get(0).select("a").get(1).attr("href"));
+        for(int i=0;i<sonsElements.size();i++){
+            if(i==0){
+                //内容主题
+                Element contElement =sonsElements.get(0).select("div.cont").first();
+                poetryDetailEntity.setTitle(contElement.select("h1").text());
+                Element sourceElement=contElement.getElementsByClass("source").first();
+                poetryDetailEntity.setTimes(sourceElement.select("a").get(0).text());
+                poetryDetailEntity.setTimesHerf(GuShiWenMain.rootPath+sourceElement.select("a").get(0).attr("href"));
+                poetryDetailEntity.setAuthor(sourceElement.select("a").get(1).text());
+                poetryDetailEntity.setAuthorHerf(GuShiWenMain.rootPath+sourceElement.select("a").get(1).attr("href"));
+                poetryDetailEntity.setContent(contElement.getElementsByClass("contson").select("p").html());
+                poetryDetailEntity.setTag( sonsElements.get(0).getElementsByClass("tag").text());
+                poetryDetailEntity.setClassilyTagEntityList(classilyTagPresenter.getListContainTags(sonsElements.get(0)));
+            }
+
+            Element fanyiElement=sonsElements.get(i).getElementsByAttributeValueMatching("id","fanyi*").first();
+            if(fanyiElement!=null){
+                fanyiElements.add(fanyiElement);
+            }
+
+            Element shangxiElement=sonsElements.get(i).getElementsByAttributeValueMatching("id","shangxi*").first();
+            if(shangxiElement!=null){
+                shangxiElements.add(shangxiElement);
+            }
+
         }
-        poetryDetailEntity.setContent(contElement.select("div.contson").text());
 
-       Element fanyiElements= leftElements.select("div.fanyi").first();
-       poetryDetailEntity.setTranslation(fanyiElements.select("div.contyishang").text());
+        for(int i=0;i<fanyiElements.size();i++){
 
+        }
 
 
 

@@ -35,5 +35,14 @@ public class DbPresenter implements IDbContract {
         return false;
     }
 
+    /***
+     * 初始化分类
+     * @return
+     */
+    @Override
+    public boolean initTag() {
+        return false;
+    }
+
 
 }

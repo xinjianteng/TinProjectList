@@ -1,5 +1,7 @@
 package tin.com.java.html.gushiwen.bean;
 
+import java.util.List;
+
 public class PoetryDetailEntity {
 
     //作者
@@ -14,13 +16,17 @@ public class PoetryDetailEntity {
     private String timesHerf;
     //内容
     private String content;
-
     //翻译
     private String translation;
 
     private String tag;
 
+    private List<ClassilyTagEntity> classilyTagEntityList;
+
     private String detailHref;
+
+
+
 
     public String getAuthor() {
         return author;
@@ -94,6 +100,15 @@ public class PoetryDetailEntity {
         this.translation = translation;
     }
 
+
+    public List<ClassilyTagEntity> getClassilyTagEntityList() {
+        return classilyTagEntityList;
+    }
+
+    public void setClassilyTagEntityList(List<ClassilyTagEntity> classilyTagEntityList) {
+        this.classilyTagEntityList = classilyTagEntityList;
+    }
+
     @Override
     public String toString() {
         return "PoetryDetailEntity{" +
@@ -105,6 +120,7 @@ public class PoetryDetailEntity {
                 ", content='" + content + '\'' +
                 ", translation='" + translation + '\'' +
                 ", tag='" + tag + '\'' +
+                ", classilyTagEntityList=" + classilyTagEntityList +
                 ", detailHref='" + detailHref + '\'' +
                 '}';
     }

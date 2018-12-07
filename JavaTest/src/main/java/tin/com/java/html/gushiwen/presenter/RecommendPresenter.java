@@ -9,6 +9,7 @@ import org.jsoup.select.Elements;
 import java.util.ArrayList;
 import java.util.List;
 
+import tin.com.java.html.gushiwen.GuShiWenMain;
 import tin.com.java.html.gushiwen.IRecommendContract;
 import tin.com.java.html.gushiwen.ParseUtils;
 import tin.com.java.html.gushiwen.bean.PoetryDetailEntity;
@@ -18,9 +19,15 @@ import tin.com.java.html.utils.StringUtil;
 
 public class RecommendPresenter implements IRecommendContract {
 
-    static String rootPath="https://www.gushiwen.org";
-    private Gson gson=new Gson();
+    private Gson gson;
 
+    private ClassilyTagPresenter classilyTagPresenter;
+
+
+    public RecommendPresenter() {
+        classilyTagPresenter=new ClassilyTagPresenter();
+        gson=new Gson();
+    }
 
     /***
      * 获取推荐页面模块的所有数据
@@ -49,7 +56,6 @@ public class RecommendPresenter implements IRecommendContract {
      */
     @Override
     public RecommentEntity getRecommendPageData(final String url) {
-        Document document=ParseUtils.getDocument(url);
         RecommentEntity recommentEntity=new RecommentEntity();
         recommentEntity.setPoetryDetailEntityList(getRecommendPoetryEntityList(url));
         recommentEntity.setRecommendHerfEntity(getRecommendHerf(url));
@@ -63,11 +69,12 @@ public class RecommendPresenter implements IRecommendContract {
      */
     public RecommendHerfEntity getRecommendHerf(String url) {
         Document document=ParseUtils.getDocument(url);
-        Element pageElements=document.select("div.main3").select("div.left").select("div.pagesright").first();
-        String href=pageElements.getElementById("amore").attr("href");
-        if(!StringUtil.isEmpty(href)){
+        Element amoreElement=document.getElementById("amore");
+
+        if(amoreElement!=null){
+            String href=amoreElement.attr("href");
             RecommendHerfEntity recommendHerfEntity=new RecommendHerfEntity();
-            recommendHerfEntity.setHerf(rootPath+href);
+            recommendHerfEntity.setHerf(GuShiWenMain.rootPath+href);
             return recommendHerfEntity;
         }
         return null;
@@ -83,27 +90,29 @@ public class RecommendPresenter implements IRecommendContract {
     public List<PoetryDetailEntity> getRecommendPoetryEntityList(String url) {
         List<PoetryDetailEntity> poetryDetailEntityList =new ArrayList<>();
         Document document=ParseUtils.getDocument(url);
-        Elements sonsElements= document.select("div.main3").select("div.left").select("div.sons");
+        Elements sonsElements= document.getElementById("main3").select("div.sons");
+
         for(Element sonsElement:sonsElements){
-            PoetryDetailEntity poetryDetailEntity =new PoetryDetailEntity();
-            Elements contElements =sonsElement.select("div.cont").select("p");
-            if(contElements.get(0)!=null){
-                poetryDetailEntity.setTitle(contElements.get(0).select("a").text());
-                poetryDetailEntity.setDetailHref(contElements.get(0).select("a").attr("href"));
+            Element contElement=sonsElement.getElementsByClass("cont").first();
+            if(contElement!=null){
+                PoetryDetailEntity poetryDetailEntity =new PoetryDetailEntity();
+                Element titleElement=contElement.select("p").get(0).select("a").first();
+                poetryDetailEntity.setTitle(titleElement.text());
+                poetryDetailEntity.setDetailHref(GuShiWenMain.rootPath+titleElement.attr("href"));
+
+                Element authorElement=contElement.getElementsByClass("source").first();
+                poetryDetailEntity.setTimes(authorElement.select("a").get(0).text());
+                poetryDetailEntity.setTimesHerf(GuShiWenMain.rootPath+ authorElement.select("a").get(0).attr("href"));
+                poetryDetailEntity.setAuthor(authorElement.select("a").get(1).text());
+                poetryDetailEntity.setAuthorHerf(GuShiWenMain.rootPath+authorElement.select("a").get(1).attr("href"));
+                poetryDetailEntity.setContent(contElement.getElementsByClass("contson").text());
+                poetryDetailEntity.setTag( sonsElement.getElementsByClass("tag").text());
+                poetryDetailEntity.setClassilyTagEntityList(classilyTagPresenter.getListContainTags(sonsElement));
+                System.out.println("");
+                System.out.println(""+gson.toJson(poetryDetailEntity));
+                System.out.println("");
+                poetryDetailEntityList.add(poetryDetailEntity);
             }
-            if(contElements.get(1)!=null){
-                Elements sourceElements=contElements.get(1).select("a");
-                if(sourceElements.get(0)!=null){
-                    poetryDetailEntity.setTimes(sourceElements.get(0).text());
-                    poetryDetailEntity.setTimesHerf(sourceElements.get(0).attr("href"));
-                }
-                if(sourceElements.get(1)!=null){
-                    poetryDetailEntity.setAuthor(sourceElements.get(1).text());
-                    poetryDetailEntity.setAuthorHerf(sourceElements.get(1).attr("href"));
-                }
-            }
-            poetryDetailEntity.setContent(sonsElement.select("div.cont").select("div.contson").text());
-            System.out.println(""+gson.toJson(poetryDetailEntity));
         }
         return poetryDetailEntityList;
     }

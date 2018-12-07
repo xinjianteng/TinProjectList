@@ -16,6 +16,11 @@ public  interface IDbContract {
     boolean initTime();
 
 
+    /***
+     * 初始化分类
+     * @return
+     */
+    boolean initTag();
 
 
 
