@@ -31,6 +31,7 @@ public class EchoServer {
                     .childOption(ChannelOption.SO_KEEPALIVE, true).childOption(ChannelOption.TCP_NODELAY, true);
             ChannelFuture f = server.bind(PORT).sync();
             System.out.println("SYSTEM - SERVER PORT: " + PORT);
+
             f.channel().closeFuture().sync();
 
         } catch (InterruptedException e) {

@@ -6,9 +6,6 @@ android {
     defaultConfig {
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
-        versionCode rootProject.versionCode
-        versionName rootProject.versionName
-
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -24,19 +21,25 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+    api "com.android.support:design:$rootProject.ext.supportLibraryVersion"
 
-    implementation 'com.android.support:appcompat-v7:27.1.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
-    // 分包
-    api 'com.android.support:multidex:1.0.2'
-
-    api 'io.reactivex.rxjava2:rxjava:2.1.7'
-    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
-
-
+    // Dex分包，解决 64k 问题
+    api 'com.android.support:multidex:1.0.3'
+    // 状态栏沉浸：https://github.com/gyf-dev/ImmersionBar
+    api 'com.gyf.immersionbar:immersionbar:2.3.3'
+    // 侧滑功能：https://github.com/bingoogolapple/BGASwipeBackLayout-Android
+    api 'cn.bingoogolapple:bga-swipebacklayout:1.2.0'
+    // 吐司工具类：https://github.com/getActivity/ToastUtils
+    api 'com.hjq:toast:6.0'
+    //全能型框架事件注解  http  数据库db 图片加载 https://github.com/wyouflf/xUtils3
+    api 'org.xutils:xutils:3.5.1'
+    // 标题栏：https://github.com/getActivity/TitleBar
+    api 'com.hjq:titlebar:5.0'
+    // 权限请求框架：https://github.com/getActivity/XXPermissions
+    api 'com.hjq:xxpermissions:5.5'
+    //json 解析器
+    api 'com.google.code.gson:gson:2.7'
 
 }

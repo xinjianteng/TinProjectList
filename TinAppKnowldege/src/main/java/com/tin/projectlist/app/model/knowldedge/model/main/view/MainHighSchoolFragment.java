@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.google.gson.reflect.TypeToken;
+import com.tin.projectlist.app.model.knowldedge.KnowledgeAppLication;
 import com.tin.projectlist.app.model.knowldedge.R;
 import com.tin.projectlist.app.model.knowldedge.model.Constant;
-import com.tin.projectlist.app.model.knowldedge.KnowledgeAppLication;
 import com.tin.projectlist.app.model.knowldedge.model.base.view.BaseFrg;
 import com.tin.projectlist.app.model.knowldedge.model.koolearn.view.KoolearnTypeActivity;
 import com.tin.projectlist.app.model.knowldedge.model.main.bean.SubjectBean;

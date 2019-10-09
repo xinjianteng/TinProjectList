@@ -1,10 +1,10 @@
 package tin.com.java.html.jsoup;
 
-import java.util.regex.Pattern;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+
+import java.util.regex.Pattern;
 
 /**
  * @作者 Goofy

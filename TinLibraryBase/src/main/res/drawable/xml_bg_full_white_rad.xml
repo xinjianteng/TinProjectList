@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><!--主要按钮  常规状态-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 圆角 -->
+    <corners android:radius="@dimen/dp_3" /><!-- 设置圆角半径 -->
+
+    <!-- 渐变
+    android:startColor和android:endColor分别为起始和结束颜色，
+    android:angle是渐变角度，必须为45的整数倍。
+    另外渐变默认的模式为android:type="linear"，即线性渐变，
+    可以指定渐变为径向渐变，android:type="radial"，
+    径向渐变需要指定半径android:gradientRadius="50"。
+    angle值对应的位置如图：
+             -->
+    <gradient
+        android:useLevel="true"
+        android:angle="45"
+        android:type="radial"
+        android:centerX="0"
+        android:centerY="0"
+        android:gradientRadius="90" />
+
+
+
+    <!-- 大小 -->
+    <!--<size-->
+    <!--android:width="50dp"-->
+    <!--android:height="50dp"/>&lt;!&ndash; 宽度和高度 &ndash;&gt;-->
+
+    <!-- 填充 -->
+    <solid android:color="@color/white" />
+    <!-- 填充的颜色 -->
+
+
+</shape>

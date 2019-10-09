@@ -1,8 +1,8 @@
 package tin.com.java.html.gushiwen.db;
 
+
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class SqlConnection {
@@ -19,7 +19,11 @@ public class SqlConnection {
 
     private static final String URL="jdbc:mysql://localhost:3306/shicigefu?";//数据库连接字符串，这里的deom为数据库名
     private static final String NAME="root";//登录名
-    private static final String PASSWORD="123";//密码
+    private static final String PASSWORD="123456";//密码
+
+//    msyql -u root -p
+//show variables like "%time_zone%";
+//set global time_zone = '+8:00';
 
     public Connection TheSqlConnection()
     {
@@ -33,7 +37,7 @@ public class SqlConnection {
         }
         Connection conn = null;
         try {
-            conn = DriverManager.getConnection(URL, NAME, PASSWORD);
+            conn = (Connection) DriverManager.getConnection(URL, NAME, PASSWORD);
             System.out.println("获取数据库连接成功！");
         } catch (SQLException e) {
             System.out.println("获取数据库连接失败！");

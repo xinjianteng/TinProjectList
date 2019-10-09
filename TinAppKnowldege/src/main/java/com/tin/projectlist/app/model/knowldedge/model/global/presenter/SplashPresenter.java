@@ -3,9 +3,10 @@ package com.tin.projectlist.app.model.knowldedge.model.global.presenter;
 import android.app.Activity;
 
 import com.tin.projectlist.app.model.knowldedge.model.global.imp.ISplash;
-import com.tin.projectlist.app.model.knowldedge.model.global.model.SplashModel;
-import knowldege.app.tin.com.tinlibrary.mvp.BasePresenter;
 import com.tin.projectlist.app.model.knowldedge.model.global.imp.ISplashContract;
+import com.tin.projectlist.app.model.knowldedge.model.global.model.SplashModel;
+
+import knowldege.app.tin.com.tinlibrary.mvp.BasePresenter;
 
 public class SplashPresenter extends BasePresenter implements ISplashContract.Presenter {
 

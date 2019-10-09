@@ -3,7 +3,6 @@ package tin.com.java.html.sese.presenter;
 import com.google.gson.Gson;
 
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.util.ArrayList;

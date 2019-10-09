@@ -1,27 +1,12 @@
 package com.tin.library.utils;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.net.Uri;
-import android.net.wifi.WifiInfo;
-import android.net.wifi.WifiManager;
-import android.os.Environment;
-import android.provider.MediaStore;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
-
-
-import java.io.File;
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.util.Enumeration;
 
 /**
  * PhoneUtils 终端工具

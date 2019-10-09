@@ -24,24 +24,24 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    api "com.android.support:appcompat-v7:$rootProject.supprotLibraryVersion"
-    api "com.android.support:design:$rootProject.supprotLibraryVersion"
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    api "com.android.support:design:$rootProject.supportLibraryVersion"
 
 
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
-    implementation 'org.xutils:xutils:3.5.0'
+    api 'com.android.support.constraint:constraint-layout:1.1.2'
+    api 'org.xutils:xutils:3.5.0'
 
-    implementation 'org.greenrobot:eventbus:3.0.0'
+    api 'org.greenrobot:eventbus:3.0.0'
 
-    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-12'
-    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-12'
-    implementation 'com.zhy:autolayout:1.4.5'
-    implementation 'com.google.code.gson:gson:2.7'
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-12'
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-12'
+    api 'com.zhy:autolayout:1.4.5'
+    api 'com.google.code.gson:gson:2.7'
     //没有使用特殊Header，可以不加这行
 
     api 'jp.wasabeef:glide-transformations:3.0.1'
-    implementation project(':Tinlibrary')
+    api project(':Tinlibrary')
 
 
 }

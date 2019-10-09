@@ -5,7 +5,7 @@ import java.util.List;
 public class RecommentEntity {
 
     private List<PoetryDetailEntity> poetryDetailEntityList;
-    private RecommendHerfEntity recommendHerfEntity;
+    private RecommendLinkEntity recommendHerfEntity;
 
     public List<PoetryDetailEntity> getPoetryDetailEntityList() {
         return poetryDetailEntityList;
@@ -15,19 +15,11 @@ public class RecommentEntity {
         this.poetryDetailEntityList = poetryDetailEntityList;
     }
 
-    public RecommendHerfEntity getRecommendHerfEntity() {
+    public RecommendLinkEntity getRecommendHerfEntity() {
         return recommendHerfEntity;
     }
 
-    public void setRecommendHerfEntity(RecommendHerfEntity recommendHerfEntity) {
+    public void setRecommendHerfEntity(RecommendLinkEntity recommendHerfEntity) {
         this.recommendHerfEntity = recommendHerfEntity;
-    }
-
-    @Override
-    public String toString() {
-        return "RecommentEntity{" +
-                "poetryDetailEntityList=" + poetryDetailEntityList +
-                ", recommendHerfEntity=" + recommendHerfEntity +
-                '}';
     }
 }

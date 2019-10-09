@@ -3,6 +3,9 @@ package tin.com.java.html.gushiwen;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+import java.io.File;
+import java.io.IOException;
+
 public class ParseUtils {
     private final static String Tag="ParseUtils.class";
 
@@ -23,6 +26,22 @@ public class ParseUtils {
             System.out.print(e.toString());
             return document;
         }
+    }
+
+
+    /***
+     * 获取网页源html
+     * @return
+     */
+    public static Document getLocatlHtml(String path){
+        Document document = null;
+        File input = new File(path);
+        try {
+            document = Jsoup.parse(input, "UTF-8", "");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return document;
     }
 
 

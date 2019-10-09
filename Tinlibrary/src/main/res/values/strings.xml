@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TinLibrary</string>
+
+    <!-- 主页 -->
+    <string name="home_exit_hint">再按一次退出</string>
+    <string name="home_nav_shelf">书架</string>
+    <string name="home_nav_recommend">推荐</string>
+    <string name="home_nav_me">我的</string>
+
 </resources>

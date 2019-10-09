@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">老书馆</string>
+    <string name="appbar_scrolling_view_behavior">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+
+    <!-- 提示 -->
+    <string name="hint_layout_no_data">亲，暂无数据</string>
+    <string name="hint_layout_error_request">亲，请求出错了</string>
+    <string name="hint_layout_error_network">亲，没有网络了</string>
+
+
+    <!-- 关于 -->
+    <string name="about_title">关于我们</string>
+    <string name="about_copyright">Copyright © 2019</string>
+
+
+
+</resources>

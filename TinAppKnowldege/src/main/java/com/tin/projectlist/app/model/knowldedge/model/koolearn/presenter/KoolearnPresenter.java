@@ -3,9 +3,10 @@ package com.tin.projectlist.app.model.knowldedge.model.koolearn.presenter;
 import android.app.Activity;
 
 import com.tin.projectlist.app.model.knowldedge.model.koolearn.imp.IKoolearn;
-import com.tin.projectlist.app.model.knowldedge.model.koolearn.mdoel.KoolearnModel;
-import knowldege.app.tin.com.tinlibrary.mvp.BasePresenter;
 import com.tin.projectlist.app.model.knowldedge.model.koolearn.imp.IKoolearnContract;
+import com.tin.projectlist.app.model.knowldedge.model.koolearn.mdoel.KoolearnModel;
+
+import knowldege.app.tin.com.tinlibrary.mvp.BasePresenter;
 
 public class KoolearnPresenter  extends BasePresenter implements IKoolearnContract.Presenter{
 

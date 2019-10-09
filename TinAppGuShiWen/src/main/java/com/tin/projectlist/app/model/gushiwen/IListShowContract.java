@@ -1,14 +1,12 @@
 package com.tin.projectlist.app.model.gushiwen;
 
-import android.text.TextUtils;
-
 import com.tin.library.mvp.IBasePresenter;
-import com.tin.library.mvp.IBaseVIew;
+import com.tin.library.mvp.IBaseView;
 
 public interface IListShowContract {
 
 
-    interface View extends IBaseVIew<Presenter>{
+    interface View extends IBaseView<Presenter> {
 
     }
 

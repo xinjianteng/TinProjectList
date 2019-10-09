@@ -1,6 +1,6 @@
 package com.tin.library.mvp;
 
-public interface IBasePresenter {
+public interface IBasePresenter extends IPresenterLifecycle{
 
 
 

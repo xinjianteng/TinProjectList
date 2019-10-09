@@ -7,7 +7,7 @@ package tin.com.java.html.gushiwen.bean;
 public class ClassilyTagEntity {
 
     private String tagName;
-    private String tagHref;
+    private String tagLink;
 
     public String getTagName() {
         return tagName;
@@ -17,11 +17,11 @@ public class ClassilyTagEntity {
         this.tagName = tagName;
     }
 
-    public String getTagHref() {
-        return tagHref;
+    public String getTagLink() {
+        return tagLink;
     }
 
-    public void setTagHref(String tagHref) {
-        this.tagHref = tagHref;
+    public void setTagLink(String tagLink) {
+        this.tagLink = tagLink;
     }
 }

@@ -4,7 +4,6 @@ import org.jsoup.nodes.Element;
 
 import java.util.List;
 
-
 import tin.com.java.html.gushiwen.bean.ClassilyTagEntity;
 
 public interface IClassilyTagContract {

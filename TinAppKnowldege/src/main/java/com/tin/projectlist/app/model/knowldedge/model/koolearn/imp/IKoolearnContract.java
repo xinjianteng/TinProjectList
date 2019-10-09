@@ -3,10 +3,11 @@ package com.tin.projectlist.app.model.knowldedge.model.koolearn.imp;
 import com.tin.projectlist.app.model.knowldedge.model.koolearn.bean.KoolearnDetailBean;
 import com.tin.projectlist.app.model.knowldedge.model.koolearn.bean.TypeBean;
 import com.tin.projectlist.app.model.knowldedge.model.koolearn.bean.TypeClassilyBean;
-import knowldege.app.tin.com.tinlibrary.mvp.IBasePresenter;
-import knowldege.app.tin.com.tinlibrary.mvp.IBaseView;
 
 import java.util.List;
+
+import knowldege.app.tin.com.tinlibrary.mvp.IBasePresenter;
+import knowldege.app.tin.com.tinlibrary.mvp.IBaseView;
 
 public interface IKoolearnContract {
 

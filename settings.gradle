@@ -1,9 +1,14 @@
-include ':app', ':TinAppWeChatCut', ':nettytest',
-        ':TinTvPlay',
-        ':TinAppKnowldege',
-        ':TinAppGuShiWen',
-        ':JavaTest',
-        ':Tinlibrary',
-        ':TinLibraryJsoup',
-        ':xutils',
-        ':TinLibraryBase'
+include ':TinAppWeChatCut', ':TinAppQuestionBank'
+include ':TinAppOldBook'
+include ':TinAppAdvert'
+include ':TinLibraryBase2'
+include ':TinAppAliyun'
+include ':TinTvRead'
+include ':nettytest'
+include ':TinAppItBook'
+include ':TinTvPlay'
+include ':TinAppKnowldege'
+include ':TinAppGuShiWen'
+include ':JavaTest'
+include ':Tinlibrary'
+include ':TinLibraryBase'

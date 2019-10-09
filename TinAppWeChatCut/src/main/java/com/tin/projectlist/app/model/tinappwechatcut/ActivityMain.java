@@ -2,17 +2,14 @@ package com.tin.projectlist.app.model.tinappwechatcut;
 
 import android.app.Activity;
 import android.content.ContentResolver;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Environment;
-import android.os.Handler;
-import android.os.Looper;
-import android.os.Message;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -27,30 +24,18 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.RandomAccessFile;
 import java.net.InetSocketAddress;
-import java.net.URI;
-import java.nio.charset.Charset;
 import java.util.UUID;
-import java.util.concurrent.CopyOnWriteArraySet;
 
 import cc.lison.pojo.EchoFile;
 import cc.lison.pojo.EchoMessage;
 import io.netty.bootstrap.Bootstrap;
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.ByteBufInputStream;
-import io.netty.buffer.Unpooled;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelOption;
-import io.netty.channel.DefaultFileRegion;
-import io.netty.channel.FileRegion;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import io.netty.handler.stream.ChunkedFile;
-import io.netty.util.CharsetUtil;
 
 public class ActivityMain extends Activity {
 

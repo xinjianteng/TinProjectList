@@ -4,92 +4,114 @@ import java.util.List;
 
 public class PoetryDetailEntity {
 
-    //作者
-    private String author;
+    private int poetryId;
+    //作者id
+    private int authorId;
     //作者连接
-    private String authorHerf;
+    private String authorLink;
+
+    private String  authorHead;
+
+    private String authorName;
+
+    private String  authorDes;
+
+    private String authorTime;
+
+    private String authorTimeLink;
+
     //标题
-    private String title;
-    //朝代
-    private String times;
-    //朝代连接
-    private String timesHerf;
+    private String poetryName;
     //内容
-    private String content;
+    private String poetryContent;
+
     //翻译
     private String translation;
 
-    private String tag;
+    private String poetryTag;
 
     private List<ClassilyTagEntity> classilyTagEntityList;
 
-    private String detailHref;
+    private String poetryLink;
 
-
-
-
-    public String getAuthor() {
-        return author;
+    public int getPoetryId() {
+        return poetryId;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setPoetryId(int poetryId) {
+        this.poetryId = poetryId;
     }
 
-    public String getTitle() {
-        return title;
+    public int getAuthorId() {
+        return authorId;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setAuthorId(int authorId) {
+        this.authorId = authorId;
     }
 
-    public String getTimes() {
-        return times;
+    public String getAuthorLink() {
+        return authorLink;
     }
 
-    public void setTimes(String times) {
-        this.times = times;
+    public void setAuthorLink(String authorLink) {
+        this.authorLink = authorLink;
     }
 
-    public String getContent() {
-        return content;
+    public String getAuthorHead() {
+        return authorHead;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setAuthorHead(String authorHead) {
+        this.authorHead = authorHead;
     }
 
-    public String getTag() {
-        return tag;
+    public String getAuthorName() {
+        return authorName;
     }
 
-    public void setTag(String tag) {
-        this.tag = tag;
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
     }
 
-    public String getDetailHref() {
-        return detailHref;
+    public String getAuthorDes() {
+        return authorDes;
     }
 
-    public void setDetailHref(String detailHref) {
-        this.detailHref = detailHref;
+    public void setAuthorDes(String authorDes) {
+        this.authorDes = authorDes;
     }
 
-    public String getTimesHerf() {
-        return timesHerf;
+    public String getAuthorTime() {
+        return authorTime;
     }
 
-    public void setTimesHerf(String timesHerf) {
-        this.timesHerf = timesHerf;
+    public void setAuthorTime(String authorTime) {
+        this.authorTime = authorTime;
     }
 
-    public String getAuthorHerf() {
-        return authorHerf;
+    public String getAuthorTimeLink() {
+        return authorTimeLink;
     }
 
-    public void setAuthorHerf(String authorHerf) {
-        this.authorHerf = authorHerf;
+    public void setAuthorTimeLink(String authorTimeLink) {
+        this.authorTimeLink = authorTimeLink;
+    }
+
+    public String getPoetryName() {
+        return poetryName;
+    }
+
+    public void setPoetryName(String poetryName) {
+        this.poetryName = poetryName;
+    }
+
+    public String getPoetryContent() {
+        return poetryContent;
+    }
+
+    public void setPoetryContent(String poetryContent) {
+        this.poetryContent = poetryContent;
     }
 
     public String getTranslation() {
@@ -100,6 +122,13 @@ public class PoetryDetailEntity {
         this.translation = translation;
     }
 
+    public String getPoetryTag() {
+        return poetryTag;
+    }
+
+    public void setPoetryTag(String poetryTag) {
+        this.poetryTag = poetryTag;
+    }
 
     public List<ClassilyTagEntity> getClassilyTagEntityList() {
         return classilyTagEntityList;
@@ -109,19 +138,31 @@ public class PoetryDetailEntity {
         this.classilyTagEntityList = classilyTagEntityList;
     }
 
+    public String getPoetryLink() {
+        return poetryLink;
+    }
+
+    public void setPoetryLink(String poetryLink) {
+        this.poetryLink = poetryLink;
+    }
+
     @Override
     public String toString() {
         return "PoetryDetailEntity{" +
-                "author='" + author + '\'' +
-                ", authorHerf='" + authorHerf + '\'' +
-                ", title='" + title + '\'' +
-                ", times='" + times + '\'' +
-                ", timesHerf='" + timesHerf + '\'' +
-                ", content='" + content + '\'' +
+                "poetryId=" + poetryId +
+                ", authorId=" + authorId +
+                ", authorLink='" + authorLink + '\'' +
+                ", authorHead='" + authorHead + '\'' +
+                ", authorName='" + authorName + '\'' +
+                ", authorDes='" + authorDes + '\'' +
+                ", authorTime='" + authorTime + '\'' +
+                ", authorTimeLink='" + authorTimeLink + '\'' +
+                ", poetryName='" + poetryName + '\'' +
+                ", poetryContent='" + poetryContent + '\'' +
                 ", translation='" + translation + '\'' +
-                ", tag='" + tag + '\'' +
+                ", poetryTag='" + poetryTag + '\'' +
                 ", classilyTagEntityList=" + classilyTagEntityList +
-                ", detailHref='" + detailHref + '\'' +
+                ", poetryLink='" + poetryLink + '\'' +
                 '}';
     }
 }

@@ -1,8 +1,10 @@
 package tin.com.java.html.netty;
 
+import java.io.File;
+import java.io.RandomAccessFile;
+
 import cc.lison.pojo.EchoFile;
 import cc.lison.pojo.EchoMessage;
-
 import cc.lison.pojo.EchoPojo;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
@@ -11,9 +13,6 @@ import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.util.CharsetUtil;
 import io.netty.util.concurrent.GlobalEventExecutor;
-
-import java.io.File;
-import java.io.RandomAccessFile;
 
 /**
  * Created by Lison-Liou on 5/17/2016.

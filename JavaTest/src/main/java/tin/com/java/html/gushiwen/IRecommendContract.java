@@ -3,7 +3,7 @@ package tin.com.java.html.gushiwen;
 import java.util.List;
 
 import tin.com.java.html.gushiwen.bean.PoetryDetailEntity;
-import tin.com.java.html.gushiwen.bean.RecommendHerfEntity;
+import tin.com.java.html.gushiwen.bean.RecommendLinkEntity;
 import tin.com.java.html.gushiwen.bean.RecommentEntity;
 
 /***
@@ -32,7 +32,7 @@ public interface IRecommendContract {
      * @param url
      * @return
      */
-    RecommendHerfEntity getRecommendHerf(String url);
+    RecommendLinkEntity getRecommendHerf(String url);
 
 
     /***
