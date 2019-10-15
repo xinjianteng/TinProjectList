@@ -1,7 +1,6 @@
-package com.tin.projectlist.app.model.oldBook.mvp.home;
+package com.tin.projectlist.app.model.oldBook.core.home;
 
 
-import com.fm.openinstall.model.AppData;
 import com.tin.projectlist.app.model.oldBook.mvp.IMvpView;
 
 /**
@@ -14,7 +13,7 @@ public final class HomeContract {
 
     public interface View extends IMvpView {
 
-        void installResult(AppData appData);
+        void installResult(String appData);
 
     }
 

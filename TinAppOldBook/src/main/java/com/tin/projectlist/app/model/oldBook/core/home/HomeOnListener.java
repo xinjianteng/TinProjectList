@@ -1,4 +1,4 @@
-package com.tin.projectlist.app.model.oldBook.mvp.home;
+package com.tin.projectlist.app.model.oldBook.core.home;
 
 /**
  *    author : Android 轮子哥

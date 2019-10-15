@@ -3,7 +3,6 @@ package com.tin.projectlist.app.model.oldBook.common;
 import android.app.ActivityManager;
 import android.content.Context;
 
-import com.fm.openinstall.OpenInstall;
 import com.tin.projectlist.app.library.base.BaseApplication;
 
 /**
@@ -18,7 +17,6 @@ public class MyApplication extends BaseApplication {
     public void onCreate() {
         super.onCreate();
         if (isMainProcess()) {
-            OpenInstall.init(this);
         }
     }
 

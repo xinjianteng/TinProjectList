@@ -1,6 +1,5 @@
-package com.tin.projectlist.app.model.oldBook.mvp.home;
+package com.tin.projectlist.app.model.oldBook.core.home;
 
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
@@ -8,9 +7,6 @@ import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.fm.openinstall.OpenInstall;
-import com.fm.openinstall.listener.AppWakeUpAdapter;
-import com.fm.openinstall.model.AppData;
 import com.tin.projectlist.app.library.base.BaseFragmentAdapter;
 import com.tin.projectlist.app.library.base.helper.DoubleClickHelper;
 import com.tin.projectlist.app.model.oldBook.R;
@@ -66,24 +62,10 @@ public final class HomeActivity extends MvpActivity<HomePresenter>
         mViewPager.setAdapter(mPagerAdapter);
         // 限制页面数量
         mViewPager.setOffscreenPageLimit(mPagerAdapter.getCount());
-        getPresenter().installFrom();
-        //获取唤醒参数
-        OpenInstall.getWakeUp(getIntent(), wakeUpAdapter);
+//        getPresenter().installFrom();
     }
 
-    @Override
-    protected void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
-        // 此处要调用，否则App在后台运行时，会无法截获
-        OpenInstall.getWakeUp(intent, wakeUpAdapter);
-    }
 
-    AppWakeUpAdapter wakeUpAdapter = new AppWakeUpAdapter() {
-        @Override
-        public void onWakeUp(AppData appData) {
-            log("getWakeUp : wakeupData ="+appData);
-        }
-    };
 
 
     /**
@@ -164,7 +146,6 @@ public final class HomeActivity extends MvpActivity<HomePresenter>
         mViewPager.setAdapter(null);
         mBottomNavigationView.setOnNavigationItemSelectedListener(null);
         super.onDestroy();
-        wakeUpAdapter = null;
     }
 
     @Override
@@ -180,8 +161,7 @@ public final class HomeActivity extends MvpActivity<HomePresenter>
 
 
     @Override
-    public void installResult(AppData appData) {
-        toast(appData);
+    public void installResult(String appData) {
     }
 
 

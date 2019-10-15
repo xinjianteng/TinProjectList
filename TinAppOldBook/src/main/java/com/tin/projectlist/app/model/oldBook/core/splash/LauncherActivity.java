@@ -1,4 +1,4 @@
-package com.tin.projectlist.app.model.oldBook.ui.activity;
+package com.tin.projectlist.app.model.oldBook.core.splash;
 
 import android.view.View;
 import android.view.animation.AlphaAnimation;
@@ -12,7 +12,7 @@ import com.hjq.permissions.Permission;
 import com.hjq.permissions.XXPermissions;
 import com.tin.projectlist.app.model.oldBook.R;
 import com.tin.projectlist.app.model.oldBook.common.MyActivity;
-import com.tin.projectlist.app.model.oldBook.mvp.home.HomeActivity;
+import com.tin.projectlist.app.model.oldBook.core.home.HomeActivity;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
@@ -21,14 +21,15 @@ import java.util.List;
 
 
 /**
- *    author : Android 轮子哥
- *    github : https://github.com/getActivity/AndroidProject
- *    time   : 2018/10/18
- *    desc   : 启动界面
+ * author : Android 轮子哥
+ * github : https://github.com/getActivity/AndroidProject
+ * time   : 2018/10/18
+ * desc   : 启动界面
  */
 @ContentView(R.layout.activity_launcher)
 public final class LauncherActivity extends MyActivity
         implements OnPermission, Animation.AnimationListener {
+
 
     @ViewInject(R.id.iv_launcher_bg)
     View mImageView;
@@ -36,6 +37,8 @@ public final class LauncherActivity extends MyActivity
     View mIconView;
     @ViewInject(R.id.iv_launcher_name)
     View mTextView;
+
+    private static final int ANIM_TIME = 1000;
 
     @Override
     protected View getTitleId() {
@@ -59,7 +62,6 @@ public final class LauncherActivity extends MyActivity
 
     }
 
-    private static final int ANIM_TIME = 1000;
 
     /**
      * 启动动画
@@ -123,7 +125,7 @@ public final class LauncherActivity extends MyActivity
         super.onRestart();
         if (XXPermissions.isHasPermission(LauncherActivity.this, Permission.Group.STORAGE)) {
             hasPermission(null, true);
-        }else {
+        } else {
             requestPermission();
         }
     }
@@ -139,7 +141,8 @@ public final class LauncherActivity extends MyActivity
      */
 
     @Override
-    public void onAnimationStart(Animation animation) {}
+    public void onAnimationStart(Animation animation) {
+    }
 
     @Override
     public void onAnimationEnd(Animation animation) {
@@ -147,7 +150,8 @@ public final class LauncherActivity extends MyActivity
     }
 
     @Override
-    public void onAnimationRepeat(Animation animation) {}
+    public void onAnimationRepeat(Animation animation) {
+    }
 
     /**
      * Android 8.0踩坑记录：Only fullscreen opaque activities can request orientation

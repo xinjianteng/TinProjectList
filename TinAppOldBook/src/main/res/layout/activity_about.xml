@@ -43,19 +43,10 @@
             android:autoLink="all"
             android:gravity="center_horizontal"
             android:lineSpacingExtra="@dimen/space_20"
-            android:text="渣男不在有"
             android:textColor="#222222"
             android:textSize="@dimen/font_size_28px" />
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/space_40"
-        android:layout_marginBottom="@dimen/space_40"
-        android:text="@string/about_copyright"
-        android:textColor="#BDBDBD"
-        android:textSize="@dimen/font_size_28px" />
 
 </LinearLayout>

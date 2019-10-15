@@ -2,9 +2,9 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- 选中状态 -->
-    <item android:color="#000000" android:state_checked="true" />
+    <item android:color="@color/menu_select" android:state_checked="true" />
 
     <!-- 默认状态 -->
-    <item android:color="#a4a4a4" />
+    <item android:color="@color/menu_default" />
 
 </selector>
