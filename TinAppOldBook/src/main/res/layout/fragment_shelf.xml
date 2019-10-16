@@ -7,9 +7,9 @@
     tools:context=".ui.fragment.HomeMeFragment">
 
     <com.hjq.bar.TitleBar
-        android:id="@+id/tb_test_d_title"
+        android:id="@+id/titleBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/space_100"
         app:backButton="false"
         app:title="@string/home_nav_shelf" />
 

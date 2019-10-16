@@ -1,7 +1,5 @@
 package com.tin.projectlist.app.model.oldBook.ui.fragment;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.view.View;
 import android.widget.TextView;
 
@@ -9,6 +7,8 @@ import com.hjq.bar.TitleBar;
 import com.tin.projectlist.app.model.oldBook.R;
 import com.tin.projectlist.app.model.oldBook.common.MyLazyFragment;
 import com.tin.projectlist.app.model.oldBook.core.home.HomeActivity;
+import com.tin.projectlist.app.model.oldBook.core.login.LoginActivity;
+import com.tin.projectlist.app.model.oldBook.ui.activity.AboutActivity;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
@@ -16,10 +16,10 @@ import org.xutils.view.annotation.ViewInject;
 
 
 /**
- *    author : Android 轮子哥
- *    github : https://github.com/getActivity/AndroidProject
- *    time   : 2018/10/18
- *    desc   : 项目界面跳转示例
+ * author : Android 轮子哥
+ * github : https://github.com/getActivity/AndroidProject
+ * time   : 2018/10/18
+ * desc   : 项目界面跳转示例
  */
 
 @ContentView(R.layout.fragment_me)
@@ -29,7 +29,7 @@ public final class HomeMeFragment extends MyLazyFragment<HomeActivity> {
         return new HomeMeFragment();
     }
 
-    @ViewInject(R.id.tb_test_d_title)
+    @ViewInject(R.id.titleBar)
     TitleBar mToolbar;
 
     @ViewInject(R.id.btn_about)
@@ -59,22 +59,18 @@ public final class HomeMeFragment extends MyLazyFragment<HomeActivity> {
     }
 
 
-
-    @Event(value = R.id.btn_about, type = View.OnClickListener.class/*可选参数, 默认是View.OnClickListener.class*/)
+    @Event({R.id.btn_about,R.id.btn_login})
     private void onAboutClick(View view) {
-        /**
-         * (1)在manifest配置文件中配置了scheme参数
-         * (2)网络端获取url
-         * (3)跳转
-         */
-        String url = "scheme://geebook/bookDetail?bookUserId=10011002";
-
-        Intent intent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse(url));
-        startActivity(intent);
-
-
+        switch (view.getId()){
+            case R.id.btn_about:
+                startActivity(AboutActivity.class);
+                break;
+            case R.id.btn_login:
+                startActivity(LoginActivity.class);
+                break;
+        }
     }
+
 
 
 }

@@ -1,7 +1,7 @@
 package com.tin.projectlist.app.model.oldBook.mvp.recommend;
 
 
-import com.tin.projectlist.app.model.oldBook.dto.BookDTO;
+import com.tin.projectlist.app.model.oldBook.entity.BookDTO;
 import com.tin.projectlist.app.model.oldBook.mvp.IMvpView;
 
 import java.util.List;

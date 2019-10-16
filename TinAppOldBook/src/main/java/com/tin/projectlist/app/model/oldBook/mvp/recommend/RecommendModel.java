@@ -2,7 +2,7 @@ package com.tin.projectlist.app.model.oldBook.mvp.recommend;
 
 
 import com.tin.projectlist.app.model.oldBook.common.BaseResponse;
-import com.tin.projectlist.app.model.oldBook.dto.BookDTO;
+import com.tin.projectlist.app.model.oldBook.entity.BookDTO;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpModel;
 
 import org.xutils.common.Callback;

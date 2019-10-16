@@ -10,7 +10,7 @@ import com.gyf.barlibrary.ImmersionBar;
 import com.hjq.bar.TitleBar;
 import com.tin.projectlist.app.library.base.widget.XCollapsingToolbarLayout;
 import com.tin.projectlist.app.model.oldBook.R;
-import com.tin.projectlist.app.model.oldBook.dto.BookDTO;
+import com.tin.projectlist.app.model.oldBook.entity.BookDTO;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpLazyFragment;
 import com.tin.projectlist.app.model.oldBook.ui.adapter.HomeRecommendAdapter;
 

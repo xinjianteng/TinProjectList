@@ -35,8 +35,6 @@ public final class LauncherActivity extends MyActivity
     View mImageView;
     @ViewInject(R.id.iv_launcher_icon)
     View mIconView;
-    @ViewInject(R.id.iv_launcher_name)
-    View mTextView;
 
     private static final int ANIM_TIME = 1000;
 
@@ -76,10 +74,6 @@ public final class LauncherActivity extends MyActivity
         ScaleAnimation sa = new ScaleAnimation(0, 1, 0, 1, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         sa.setDuration(ANIM_TIME);
         mIconView.startAnimation(sa);
-
-        RotateAnimation ra = new RotateAnimation(180, 360, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-        ra.setDuration(ANIM_TIME);
-        mTextView.startAnimation(ra);
     }
 
     private void requestPermission() {

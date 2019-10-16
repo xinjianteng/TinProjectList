@@ -65,7 +65,7 @@ public final class StatusManager {
      * 显示空提示
      */
     public void showEmpty(View view) {
-        showLayout(view, R.mipmap.icon_hint_empty, R.string.hint_layout_no_data);
+        showLayout(view, R.drawable.logo, R.string.hint_layout_no_data);
     }
 
     /**
@@ -74,9 +74,9 @@ public final class StatusManager {
     public void showError(View view) {
         // 判断当前网络是否可用
         if (isNetworkAvailable(view.getContext())) {
-            showLayout(view, R.mipmap.icon_hint_request, R.string.hint_layout_error_request);
+            showLayout(view, R.drawable.logo, R.string.hint_layout_error_request);
         } else {
-            showLayout(view, R.mipmap.icon_hint_nerwork, R.string.hint_layout_error_network);
+            showLayout(view, R.drawable.logo, R.string.hint_layout_error_network);
         }
     }
 

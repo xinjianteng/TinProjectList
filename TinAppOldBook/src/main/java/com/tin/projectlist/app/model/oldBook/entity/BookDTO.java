@@ -1,4 +1,4 @@
-package com.tin.projectlist.app.model.oldBook.dto;
+package com.tin.projectlist.app.model.oldBook.entity;
 
 import java.io.Serializable;
 

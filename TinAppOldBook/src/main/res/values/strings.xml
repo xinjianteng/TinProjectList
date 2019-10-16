@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">老书馆</string>
+    <string name="app_name">旧书卷</string>
     <string name="appbar_scrolling_view_behavior">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
 
     <!-- 提示 -->
@@ -13,5 +13,19 @@
     <string name="about_copyright">Copyright © 2019</string>
 
 
+    <string name="login">登录</string>
+    <string name="login_phone_hint">请输入手机号</string>
+    <string name="login_password_hint">请输入密码</string>
+    <string name="login_text">登录</string>
+    <string name="login_other">其他登录方式</string>
+    <string name="login_register">注册</string>
+    <string name="login_forget">忘记密码</string>
+    <string name="develop">开发中...</string>
+    <string name="register_title">注册</string>
+    <string name="register_hint">手机号仅用于登录和保护账号安全</string>
+    <string name="register_login">登录</string>
+    <string name="register_password_hint1">设置密码</string>
+    <string name="register_password_hint2">再次输入密码</string>
+    <string name="register_password_input_error">两次密码输入不一致，请重新输入</string>
 
 </resources>

@@ -40,10 +40,7 @@ public final class AboutActivity extends MyActivity {
 
     @Override
     protected void initData() {
-        Uri data = getIntent().getData();
-        log( "host = " + data.getHost() + " path = " + data.getPath() + " query = " + data.getQuery());
-        String param = data.getQueryParameter("goodsId");
-        tv_des.setText("获取的参数为：" + param);
+
     }
 
 }

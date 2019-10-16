@@ -7,7 +7,7 @@
     tools:context=".ui.fragment.HomeMeFragment">
 
     <com.hjq.bar.TitleBar
-        android:id="@+id/tb_test_d_title"
+        android:id="@+id/titleBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:backButton="false"
@@ -23,6 +23,17 @@
             android:layout_marginLeft="@dimen/space_60"
             android:layout_marginRight="@dimen/space_60"
             android:orientation="vertical">
+
+
+
+            <Button
+                android:id="@+id/btn_login"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_60"
+                android:layout_marginBottom="@dimen/space_60"
+                android:text="@string/login" />
 
 
             <Button

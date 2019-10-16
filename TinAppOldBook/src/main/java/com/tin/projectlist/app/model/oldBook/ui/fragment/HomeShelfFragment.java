@@ -19,7 +19,7 @@ import org.xutils.view.annotation.ViewInject;
 
 @ContentView(R.layout.fragment_shelf)
 public final class HomeShelfFragment extends MyLazyFragment<HomeActivity> {
-    @ViewInject(R.id.tb_test_d_title)
+    @ViewInject(R.id.titleBar)
     TitleBar mToolbar;
 
     public static HomeShelfFragment newInstance() {

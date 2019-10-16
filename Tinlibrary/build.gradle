@@ -34,7 +34,7 @@ dependencies {
     // 吐司工具类：https://github.com/getActivity/ToastUtils
     api 'com.hjq:toast:6.0'
     //全能型框架事件注解  http  数据库db 图片加载 https://github.com/wyouflf/xUtils3
-    api 'org.xutils:xutils:3.5.1'
+    api 'org.xutils:xutils:3.8.2'
     // 标题栏：https://github.com/getActivity/TitleBar
     api 'com.hjq:titlebar:5.0'
     // 权限请求框架：https://github.com/getActivity/XXPermissions
