@@ -1,14 +1,17 @@
 package com.tin.projectlist.app.model.oldBook.core.login;
 
+import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.hjq.bar.TitleBar;
-import com.hjq.toast.ToastUtils;
 import com.tin.projectlist.app.library.base.helper.InputTextHelper;
+import com.tin.projectlist.app.model.oldBook.BuildConfig;
 import com.tin.projectlist.app.model.oldBook.R;
+import com.tin.projectlist.app.model.oldBook.ValueConstant;
 import com.tin.projectlist.app.model.oldBook.core.home.HomeActivity;
 import com.tin.projectlist.app.model.oldBook.core.register.RegisterActivity;
 import com.tin.projectlist.app.model.oldBook.entity.UserInfo;
@@ -20,7 +23,7 @@ import org.xutils.view.annotation.ViewInject;
 
 
 @ContentView(R.layout.activity_login)
-public class LoginActivity extends MvpActivity<LoginPresenter> implements LoginContract.View{
+public class LoginActivity extends MvpActivity<LoginPresenter> implements LoginContract.View {
 
     @ViewInject(R.id.tabBar)
     TitleBar mToolbar;
@@ -56,15 +59,18 @@ public class LoginActivity extends MvpActivity<LoginPresenter> implements LoginC
 
     @Override
     protected void initData() {
-
+        if(BuildConfig.DEBUG){
+            mPhoneView.setText("15805930942");
+            mPasswordView.setText("123456");
+        }
     }
 
 
-    @Event({R.id.btn_login_commit,R.id.iv_login_wx})
-    private void onClick(View view){
-        switch (view.getId()){
+    @Event({R.id.btn_login_commit, R.id.iv_login_wx})
+    private void onClick(View view) {
+        switch (view.getId()) {
             case R.id.btn_login_commit:
-                getPresenter().login(mPhoneView.getText().toString(),mPasswordView.getText().toString());
+                getPresenter().login(mPhoneView.getText().toString(), mPasswordView.getText().toString());
                 break;
             case R.id.iv_login_wx:
                 toast(R.string.develop);
@@ -74,16 +80,17 @@ public class LoginActivity extends MvpActivity<LoginPresenter> implements LoginC
 
     @Override
     public void onRightClick(View v) {
-        // 跳转到注册界面
-        startActivity(RegisterActivity.class);
-
-//        startActivityForResult(new Intent(this, RegisterActivity.class), new ActivityCallback() {
-//
-//            @Override
-//            public void onActivityResult(int resultCode, @Nullable Intent data) {
-//                toast(String.valueOf(resultCode));
-//            }
-//        });
+        startActivityForResult(new Intent(this, RegisterActivity.class), new ActivityCallback() {
+            @Override
+            public void onActivityResult(int resultCode, @Nullable Intent data) {
+                toast(String.valueOf(resultCode));
+                if(resultCode==RESULT_OK){
+                    UserInfo userInfo=data.getParcelableExtra(ValueConstant.ENTITY);
+                    data.getExtras().getParcelable(ValueConstant.ENTITY);
+                    getPresenter().login(userInfo.getMobile(),userInfo.getMobile());
+                }
+            }
+        });
     }
 
     @Override

@@ -10,22 +10,26 @@ public class LoginPresenter extends MvpPresenter<LoginContract.View> implements 
     @Override
     public void start() {
         loginModel=new LoginModel();
-
+        loginModel.setListener(this);
     }
 
     @Override
     public void login(String account, String password) {
+        getView().onLoading();
         loginModel.login(account,password);
+
     }
 
     @Override
     public void onLoginSucceed(UserInfo userInfo) {
+        getView().onComplete();
         getView().loginSuccess(userInfo);
     }
 
     @Override
     public void onLoginFail(String msg) {
-
+        getView().onComplete();
+        getView().loginError(msg);
     }
 
 }

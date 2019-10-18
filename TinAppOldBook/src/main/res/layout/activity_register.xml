@@ -9,7 +9,7 @@
     tools:context=".core.register.RegisterActivity">
 
     <com.hjq.bar.TitleBar
-        android:id="@+id/tb_register_title"
+        android:id="@+id/tabBar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/space_100"
         app:backButton="false"
