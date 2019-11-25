@@ -8,14 +8,14 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.tin.projectlist.app.library.base.BaseFragmentAdapter;
-import com.tin.projectlist.app.library.base.helper.DoubleClickHelper;
+import com.tin.projectlist.app.library.base.utils.DoubleClickHelper;
 import com.tin.projectlist.app.model.oldBook.R;
 import com.tin.projectlist.app.model.oldBook.common.MyLazyFragment;
+import com.tin.projectlist.app.model.oldBook.core.gather.GatherFragment;
 import com.tin.projectlist.app.model.oldBook.helper.ActivityStackManager;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpActivity;
-import com.tin.projectlist.app.model.oldBook.mvp.recommend.RecommendFragment;
 import com.tin.projectlist.app.model.oldBook.ui.fragment.HomeMeFragment;
-import com.tin.projectlist.app.model.oldBook.ui.fragment.HomeShelfFragment;
+import com.tin.projectlist.app.model.oldBook.core.shelf.ShelfFragment;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
@@ -45,27 +45,21 @@ public final class HomeActivity extends MvpActivity<HomePresenter>
     }
 
     @Override
-    protected void initView() {
+    protected void initData() {
         mViewPager.addOnPageChangeListener(this);
-
         // 不使用图标默认变色
         mBottomNavigationView.setItemIconTintList(null);
         mBottomNavigationView.setOnNavigationItemSelectedListener(this);
-    }
-
-    @Override
-    protected void initData() {
         mPagerAdapter = new BaseFragmentAdapter<>(this);
-        mPagerAdapter.addFragment(HomeShelfFragment.newInstance());
-        mPagerAdapter.addFragment(RecommendFragment.newInstance());
+        mPagerAdapter.addFragment(ShelfFragment.newInstance());
+        mPagerAdapter.addFragment(GatherFragment.newInstance());
         mPagerAdapter.addFragment(HomeMeFragment.newInstance());
         mViewPager.setAdapter(mPagerAdapter);
         // 限制页面数量
         mViewPager.setOffscreenPageLimit(mPagerAdapter.getCount());
-//        getPresenter().installFrom();
+        mViewPager.setCurrentItem(0);
+        getPresenter().initConfig();
     }
-
-
 
 
     /**
@@ -81,7 +75,7 @@ public final class HomeActivity extends MvpActivity<HomePresenter>
                 mBottomNavigationView.setSelectedItemId(R.id.menu_home);
                 break;
             case 1:
-                mBottomNavigationView.setSelectedItemId(R.id.home_recommend);
+                mBottomNavigationView.setSelectedItemId(R.id.home_gather);
                 break;
             case 2:
                 mBottomNavigationView.setSelectedItemId(R.id.home_me);
@@ -102,7 +96,7 @@ public final class HomeActivity extends MvpActivity<HomePresenter>
                 // 如果切换的是相邻之间的 Item 就显示切换动画，如果不是则不要动画
                 mViewPager.setCurrentItem(0, mViewPager.getCurrentItem() == 1);
                 return true;
-            case R.id.home_recommend:
+            case R.id.home_gather:
                 mViewPager.setCurrentItem(1, mViewPager.getCurrentItem() == 0 || mViewPager.getCurrentItem() == 2);
                 return true;
             case R.id.home_me:

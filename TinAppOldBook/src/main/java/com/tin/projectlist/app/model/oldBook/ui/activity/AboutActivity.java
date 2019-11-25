@@ -1,7 +1,6 @@
 package com.tin.projectlist.app.model.oldBook.ui.activity;
 
 
-import android.net.Uri;
 import android.view.View;
 import android.widget.TextView;
 
@@ -33,10 +32,6 @@ public final class AboutActivity extends MyActivity {
         return titleBar;
     }
 
-    @Override
-    protected void initView() {
-
-    }
 
     @Override
     protected void initData() {

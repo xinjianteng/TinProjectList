@@ -32,4 +32,97 @@
         <attr name="pv_progressMode" format="integer"/>
     </declare-styleable>
 
+
+    <declare-styleable name="PageIndicator">
+        <attr name="pi_count" format="integer" />
+        <attr name="pi_select" format="integer" />
+
+        <attr name="pi_radius" format="dimension" />
+        <attr name="pi_padding" format="dimension" />
+        <attr name="pi_stroke_width" format="dimension" />
+        <attr name="pi_scaleFactor" format="float" />
+
+        <attr name="pi_unselectedColor" format="color" />
+        <attr name="pi_selectedColor" format="color" />
+
+        <attr name="pi_interactiveAnimation" format="boolean" />
+        <attr name="pi_animationDuration" format="integer" />
+        <attr name="pi_animationType">
+            <enum name="none" value="0" />
+            <enum name="color" value="1" />
+            <enum name="scale" value="2" />
+            <enum name="worm" value="3" />
+            <enum name="slide" value="4" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsUnderlineCircle" format="boolean" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsUnderlineWidth" format="dimension" />
+        <attr name="pstsDividerWidth" format="dimension" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsDividerIndicate" format="boolean" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsPaddingMiddle" format="boolean" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsTabTextSize" format="dimension" />
+        <attr name="pstsunTabTextSize" format="dimension" />
+        <attr name="pstsTabTextColor" format="reference" />
+        <attr name="pstsTabTextStyle" format="reference">
+            <flag name="normal" value="0x0" />
+            <flag name="bold" value="0x1" />
+            <flag name="italic" value="0x2" />
+        </attr>
+        <attr name="pstsTabTextAllCaps" format="boolean" />
+        <attr name="pstsTabTextAlpha" format="integer" />
+        <attr name="pstsTabTextFontFamily" format="string" />
+    </declare-styleable>
+
+
+    <attr name="StyleMultiStateView" format="reference" />
+    <declare-styleable name="MultiStateView">
+        <!-- 空布局资源id -->
+        <attr name="msv_emptyResId" format="reference" />
+        <!-- 加载中布局资源id -->
+        <attr name="msv_loadingResId" format="reference" />
+        <!-- 错误布局资源id -->
+        <attr name="msv_errorResId" format="reference" />
+
+        <!-- 加载中布局文本 -->
+        <attr name="msv_loadingText" format="string" />
+
+        <!-- 空布局图片 -->
+        <attr name="msv_emptyImage" format="reference" />
+        <!-- 空布局文本 -->
+        <attr name="msv_emptyText" format="string" />
+
+        <!-- 错误布局图片 -->
+        <attr name="msv_errorImage" format="reference" />
+        <!-- 错误布局文本 -->
+        <attr name="msv_errorText" format="string" />
+        <!-- 错误布局重试按钮文本 -->
+        <attr name="msv_retryText" format="string" />
+
+        <!-- 文本颜色 -->
+        <attr name="msv_textColor" format="color" />
+        <!-- 文本尺寸 -->
+        <attr name="msv_textSize" format="dimension" />
+
+        <!-- 按钮文本颜色 -->
+        <attr name="msv_buttonTextColor" format="color" />
+        <!-- 按钮文本尺寸 -->
+        <attr name="msv_buttonTextSize" format="dimension" />
+        <!-- 按钮背景 -->
+        <attr name="msv_buttonBackground" format="reference" />
+    </declare-styleable>
+
+
 </resources>

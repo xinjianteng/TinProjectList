@@ -4,7 +4,7 @@ import android.app.ActivityManager;
 import android.content.Context;
 
 import com.tin.projectlist.app.library.base.BaseApplication;
-import com.tin.projectlist.app.model.oldBook.KeyConstant;
+import com.tin.projectlist.app.model.oldBook.constant.KeyConstant;
 
 import cn.bmob.v3.Bmob;
 

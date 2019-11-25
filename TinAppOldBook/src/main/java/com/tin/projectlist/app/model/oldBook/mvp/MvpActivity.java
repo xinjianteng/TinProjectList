@@ -17,8 +17,8 @@ public abstract class MvpActivity<P extends MvpPresenter> extends MyActivity imp
     public void initActivity() {
         mPresenter = createPresenter();
         mPresenter.attach(this);
-        super.initActivity();
         mPresenter.start();
+        super.initActivity();
     }
 
     @Override

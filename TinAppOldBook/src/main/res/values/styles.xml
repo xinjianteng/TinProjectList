@@ -35,7 +35,7 @@
         <item name="android:paddingTop">@dimen/space_20</item>
         <item name="android:paddingBottom">@dimen/space_20</item>
         <item name="android:textSize">@dimen/font_size_28px</item>
-        <item name="android:textColor">@color/white90</item>
+        <item name="android:textColor">@color/ButtonTextColorDefault</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/selector_button</item>
         <item name="android:foreground">@null</item>

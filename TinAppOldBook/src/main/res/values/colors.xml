@@ -1,23 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#5A8DDF</color>
-    <color name="windowBackground">#F4F4F4</color>
-    <color name="textColor">#333333</color>
+
+    <color name="a">#425C5A</color>
+    <color name="b">#FFFFFF</color>
+    <color name="c">#FFCEA2</color>
+    <color name="d">#ECBE95</color>
+    <color name="colorPrimaryDark">@color/a</color>
+    <color name="colorPrimary">@color/a</color>
+    <color name="colorAccent">@color/a</color>
+    <color name="textColorPrimary">@color/d</color>
+
+
+    <color name="windowBackground">@color/b</color>
+    <color name="textColor">@color/a</color>
     <color name="textColorHint">#757575</color>
 
-    <!-- 按钮按压时的颜色 -->
-    <color name="colorButtonPressed">#1976d2</color>
+
+
+    <!-- 按钮默认的颜色 -->
+    <color name="ButtonBackgroundColorDefault">@color/c</color>
+    <!-- 按钮文字默认的颜色 -->
+    <color name="ButtonTextColorDefault">@color/a</color>
     <!-- 按钮禁用时的颜色 -->
-    <color name="colorButtonDisable">#DDDDDD</color>
+    <color name="ButtonBackgroundColorDisable">#DDDDDD</color>
+    <!-- 按钮按压时的颜色 -->
+    <color name="ButtonBackgroundColorPressed">@color/d</color>
+
     <!-- 分割线的颜色 -->
     <color name="colorLine">#ECECEC</color>
 
     <!-- 菜单选中的颜色 -->
-    <color name="menu_select">#1296db</color>
-    <color name="menu_default">#2c2c2c</color>
+    <color name="menu_select">@color/a</color>
+    <color name="menu_default">@color/black</color>
+    <color name="menu_background">@color/c</color>
+
+
+    <color name="item_bg_select">@color/a</color>
+    <color name="item_bg_default">@color/white</color>
+    <color name="item_tv_select">@color/c</color>
+    <color name="item_tv_default">@color/a</color>
+
 
 
 </resources>

@@ -4,4 +4,16 @@
     <!-- 默认按钮的圆角大小 -->
     <dimen name="button_round_size">5dp</dimen>
 
+
+    <!-- 默认 -->
+    <dimen name="app_title_text_size">20dp</dimen>
+    <dimen name="app_widget_text_size">16dp</dimen>
+
+    <dimen name="stroke_size">0.5dp</dimen>
+    <dimen name="space_item">5dp</dimen>
+    <dimen name="book_width">90dp</dimen>
+    <dimen name="book_height">127dp</dimen>
+
+
+
 </resources>

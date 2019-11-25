@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".core.shelf.ShelfFragment">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tabBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_100"
+        app:backButton="false"
+        app:barStyle="transparent"
+        app:rightTitle="@string/search"
+        app:rightColor="@color/colorPrimary"
+        app:rightSize="@dimen/app_widget_text_size"
+        app:titleColor="@color/colorPrimary"
+        app:title="@string/home_nav_gather"
+        app:titleSize="@dimen/app_title_text_size"
+        />
+
+    <TextView
+        android:background="@color/a"
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stroke_size"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_index"
+            android:layout_weight="0.25"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+        <TextView
+            android:background="@color/a"
+            android:elevation="10dp"
+            android:layout_width="@dimen/stroke_size"
+            android:layout_height="match_parent"/>
+        <include
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0.75"
+            layout="@layout/view_list"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

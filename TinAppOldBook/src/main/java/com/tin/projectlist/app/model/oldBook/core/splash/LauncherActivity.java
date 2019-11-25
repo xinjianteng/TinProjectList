@@ -3,7 +3,6 @@ package com.tin.projectlist.app.model.oldBook.core.splash;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
-import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 
 import com.gyf.barlibrary.BarHide;
@@ -28,7 +27,7 @@ import java.util.List;
  */
 @ContentView(R.layout.activity_launcher)
 public final class LauncherActivity extends MyActivity
-        implements OnPermission, Animation.AnimationListener {
+        implements OnPermission {
 
 
     @ViewInject(R.id.iv_launcher_bg)
@@ -44,7 +43,7 @@ public final class LauncherActivity extends MyActivity
     }
 
     @Override
-    protected void initView() {
+    protected void initData() {
         //初始化动画
         initStartAnim();
         //设置状态栏和导航栏参数
@@ -55,11 +54,6 @@ public final class LauncherActivity extends MyActivity
                 .init();
     }
 
-    @Override
-    protected void initData() {
-
-    }
-
 
     /**
      * 启动动画
@@ -68,7 +62,20 @@ public final class LauncherActivity extends MyActivity
         // 渐变展示启动屏
         AlphaAnimation aa = new AlphaAnimation(0.4f, 1.0f);
         aa.setDuration(ANIM_TIME * 2);
-        aa.setAnimationListener(this);
+        aa.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                requestPermission();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+            }
+        });
         mImageView.startAnimation(aa);
 
         ScaleAnimation sa = new ScaleAnimation(0, 1, 0, 1, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
@@ -85,7 +92,6 @@ public final class LauncherActivity extends MyActivity
     /**
      * {@link OnPermission}
      */
-
     @Override
     public void hasPermission(List<String> granted, boolean isAll) {
         startActivity(HomeActivity.class);
@@ -130,22 +136,6 @@ public final class LauncherActivity extends MyActivity
         return false;
     }
 
-    /**
-     * {@link Animation.AnimationListener}
-     */
-
-    @Override
-    public void onAnimationStart(Animation animation) {
-    }
-
-    @Override
-    public void onAnimationEnd(Animation animation) {
-        requestPermission();
-    }
-
-    @Override
-    public void onAnimationRepeat(Animation animation) {
-    }
 
     /**
      * Android 8.0踩坑记录：Only fullscreen opaque activities can request orientation

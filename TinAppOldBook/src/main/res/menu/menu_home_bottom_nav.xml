@@ -7,9 +7,9 @@
         android:title="@string/home_nav_shelf"/>
 
     <item
-        android:id="@+id/home_recommend"
-        android:icon="@drawable/home_menu_recommend_selector"
-        android:title="@string/home_nav_recommend"/>
+        android:id="@+id/home_gather"
+        android:icon="@drawable/home_menu_gather_selector"
+        android:title="@string/home_nav_gather"/>
 
 
     <item

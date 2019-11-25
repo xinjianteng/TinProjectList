@@ -40,6 +40,10 @@ dependencies {
     // 权限请求框架：https://github.com/getActivity/XXPermissions
     api 'com.hjq:xxpermissions:5.5'
     //json 解析器
-    api 'com.google.code.gson:gson:2.7'
+    api 'com.google.code.gson:gson:2.8.5'
+
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-10'
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-10'
+
 
 }

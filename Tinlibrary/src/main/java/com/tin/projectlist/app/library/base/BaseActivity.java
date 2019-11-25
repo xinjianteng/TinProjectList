@@ -12,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
+import com.tin.projectlist.app.library.base.utils.KeyboardUtils;
+
 import org.xutils.x;
 
 import java.util.Random;
@@ -34,22 +36,18 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     protected void initActivity() {
-        initView();
         initData();
     }
 
     //标题栏id
     protected abstract View getTitleId();
 
-    // 初始化控件
-    protected abstract void initView();
-
     // 初始化数据
     protected abstract void initData();
 
     @Override
     public void finish() {
-        hideSoftKeyboard();
+        KeyboardUtils.hideSoftKeyboard(this);
         super.finish();
     }
 
@@ -146,7 +144,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     /**
      * startActivityForResult 方法优化
      */
-
     private ActivityCallback mActivityCallback;
     private int mActivityRequestCode;
 
@@ -183,11 +180,10 @@ public abstract class BaseActivity extends AppCompatActivity {
     /**
      * 处理 Activity 多重跳转：https://www.jianshu.com/p/579f1f118161
      */
-
     @Override
     public void startActivityForResult(Intent intent, int requestCode, @Nullable Bundle options) {
         if (startActivitySelfCheck(intent)) {
-            hideSoftKeyboard();
+            KeyboardUtils.hideSoftKeyboard(this);
             // 查看源码得知 startActivity 最终也会调用 startActivityForResult
             super.startActivityForResult(intent, requestCode, options);
         }
@@ -225,17 +221,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         return result;
     }
 
-    /**
-     * 隐藏软键盘
-     */
-    private void hideSoftKeyboard() {
-        // 隐藏软键盘，避免软键盘引发的内存泄露
-        View view = getCurrentFocus();
-        if (view != null) {
-            InputMethodManager manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-            if (manager != null) manager.hideSoftInputFromWindow(view.getWindowToken(), 0);
-        }
-    }
 
     /**
      * Activity 回调接口
@@ -250,4 +235,6 @@ public abstract class BaseActivity extends AppCompatActivity {
          */
         void onActivityResult(int resultCode, @Nullable Intent data);
     }
+
+
 }

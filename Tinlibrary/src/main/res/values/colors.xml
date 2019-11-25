@@ -46,4 +46,9 @@
     <!-- 橙色 -->
     <color name="orange">#FFA500</color>
 
+    <color name="global_btn_select">#333333</color>
+    <color name="global_btn_default">#999999</color>
+    <color name="global_text_default">#333333</color>
+    <color name="global_text_remind">#999999</color>
+
 </resources>

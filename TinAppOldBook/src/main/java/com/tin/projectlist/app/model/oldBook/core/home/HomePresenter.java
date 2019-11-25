@@ -21,7 +21,7 @@ public final class HomePresenter extends MvpPresenter<HomeContract.View>
 
 
     @Override
-    public void installFrom() {
+    public void initConfig() {
 
 
     }

@@ -54,7 +54,7 @@ public final class ClearEditText extends EditText
 
     private void initialize(final Context context) {
 
-        final Drawable drawable = ContextCompat.getDrawable(context, R.mipmap.widget_input_delete);
+        final Drawable drawable = ContextCompat.getDrawable(context, R.mipmap.icon_delete);
 
         final Drawable wrappedDrawable = DrawableCompat.wrap(drawable); //Wrap the drawable so that it can be tinted pre Lollipop
         //DrawableCompat.setTint(wrappedDrawable, getCurrentHintTextColor());

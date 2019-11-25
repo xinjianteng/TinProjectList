@@ -7,11 +7,11 @@ import android.widget.EditText;
 
 import com.gyf.barlibrary.ImmersionBar;
 import com.hjq.bar.TitleBar;
-import com.tin.projectlist.app.library.base.helper.InputTextHelper;
+import com.tin.projectlist.app.library.base.utils.InputTextHelper;
 import com.tin.projectlist.app.library.base.widget.CountdownView;
 import com.tin.projectlist.app.model.oldBook.BuildConfig;
 import com.tin.projectlist.app.model.oldBook.R;
-import com.tin.projectlist.app.model.oldBook.ValueConstant;
+import com.tin.projectlist.app.model.oldBook.constant.ValueConstant;
 import com.tin.projectlist.app.model.oldBook.entity.UserInfo;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpActivity;
 
@@ -52,7 +52,13 @@ public class RegisterActivity extends MvpActivity<RegisterPresenter> implements 
     }
 
     @Override
-    protected void initView() {
+    protected ImmersionBar statusBarConfig() {
+        // 不要把整个布局顶上去
+        return super.statusBarConfig().keyboardEnable(true);
+    }
+
+    @Override
+    protected void initData() {
         new InputTextHelper.Builder(this)
                 .setMain(mCommitView)
                 .addView(mPhoneView)
@@ -68,11 +74,6 @@ public class RegisterActivity extends MvpActivity<RegisterPresenter> implements 
         }
     }
 
-    @Override
-    protected ImmersionBar statusBarConfig() {
-        // 不要把整个布局顶上去
-        return super.statusBarConfig().keyboardEnable(true);
-    }
 
 
     @Event({R.id.cv_register_countdown,R.id.btn_register_commit})
@@ -104,10 +105,6 @@ public class RegisterActivity extends MvpActivity<RegisterPresenter> implements 
     }
 
 
-    @Override
-    protected void initData() {
-
-    }
 
     @Override
     public void registerError(String msg) {
@@ -117,7 +114,7 @@ public class RegisterActivity extends MvpActivity<RegisterPresenter> implements 
     @Override
     public void registerSuccess(UserInfo userInfo) {
         Intent intent=new Intent();
-        intent.putExtra(ValueConstant.ENTITY,userInfo);
+        intent.putExtra(ValueConstant.ENTITY, userInfo);
         finishResult(RESULT_OK,intent);
     }
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="false"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+
+    <TextView
+        android:id="@+id/tv_dynasty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:focusable="true"
+        android:gravity="center"
+        android:textColor="@color/item_bg_select"
+        android:textSize="@dimen/app_widget_text_size"
+        android:paddingTop="@dimen/space_20"
+        android:paddingBottom="@dimen/space_20"
+        tools:text="0" />
+
+
+</LinearLayout>

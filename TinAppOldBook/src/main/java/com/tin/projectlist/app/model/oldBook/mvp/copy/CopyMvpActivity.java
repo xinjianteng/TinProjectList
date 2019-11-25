@@ -31,11 +31,6 @@ public final class CopyMvpActivity extends MvpActivity<CopyPresenter>
     }
 
     @Override
-    protected void initView() {
-
-    }
-
-    @Override
     protected void initData() {
 
     }

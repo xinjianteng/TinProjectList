@@ -13,20 +13,7 @@
         app:backButton="false"
         app:title="@string/home_nav_shelf" />
 
-    <android.support.v4.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <include layout="@layout/view_list"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/space_60"
-            android:layout_marginRight="@dimen/space_60"
-            android:orientation="vertical">
-
-
-        </LinearLayout>
-
-    </android.support.v4.widget.NestedScrollView>
 
 </LinearLayout>

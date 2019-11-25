@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tin.projectlist.app.library.base.widget.MultiStateView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/multi_state_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:msv_emptyResId="@layout/default_view_empty"
+    app:msv_errorResId="@layout/default_view_error"
+    app:msv_loadingResId="@layout/default_view_loading">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlDisableContentWhenRefresh="true"
+        app:srlEnableLoadMore="false"
+        app:srlEnableRefresh="true">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</com.tin.projectlist.app.library.base.widget.MultiStateView>
+

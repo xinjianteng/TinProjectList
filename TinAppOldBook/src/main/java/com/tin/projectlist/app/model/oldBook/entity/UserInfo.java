@@ -2,6 +2,8 @@ package com.tin.projectlist.app.model.oldBook.entity;
 
 import cn.bmob.v3.BmobObject;
 
+
+
 public class UserInfo extends BmobObject {
 
     private String mobile;

@@ -68,7 +68,6 @@
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data android:scheme="i5w58n"/>
             </intent-filter>
-
         </activity>
 
         <!-- 关于界面 -->
@@ -86,7 +85,11 @@
             android:name="com.tin.projectlist.app.model.oldBook.core.register.RegisterActivity"
             android:label="@string/register_title" >
         </activity>
-
+        <!-- 图书详情 -->
+        <activity
+            android:name="com.tin.projectlist.app.model.oldBook.core.book.BookDetailActivity"
+            android:label="@string/register_title" >
+        </activity>
 
 <!--        bomb    -->
         <provider

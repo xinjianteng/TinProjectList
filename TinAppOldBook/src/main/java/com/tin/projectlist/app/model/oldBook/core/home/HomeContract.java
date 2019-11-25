@@ -19,8 +19,8 @@ public final class HomeContract {
 
     public interface Presenter {
 
-        //从哪里进入的
-        void installFrom();
+        //初始化配置信息
+        void initConfig();
 
     }
 

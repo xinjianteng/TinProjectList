@@ -10,13 +10,14 @@ public class RegisterPresenter extends MvpPresenter<RegisterContract.View> imple
     @Override
     public void start() {
         registerModel = new RegisterModel();
+        registerModel.setListener(this);
     }
 
     @Override
     public void register(String account, String password) {
         getView().onLoading();
         registerModel.register(account, password);
-        registerModel.setListener(this);
+
     }
 
     @Override

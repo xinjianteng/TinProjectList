@@ -8,10 +8,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.hjq.bar.TitleBar;
-import com.tin.projectlist.app.library.base.helper.InputTextHelper;
+import com.tin.projectlist.app.library.base.utils.InputTextHelper;
 import com.tin.projectlist.app.model.oldBook.BuildConfig;
 import com.tin.projectlist.app.model.oldBook.R;
-import com.tin.projectlist.app.model.oldBook.ValueConstant;
+import com.tin.projectlist.app.model.oldBook.constant.ValueConstant;
 import com.tin.projectlist.app.model.oldBook.core.home.HomeActivity;
 import com.tin.projectlist.app.model.oldBook.core.register.RegisterActivity;
 import com.tin.projectlist.app.model.oldBook.entity.UserInfo;
@@ -48,17 +48,14 @@ public class LoginActivity extends MvpActivity<LoginPresenter> implements LoginC
         return mToolbar;
     }
 
+
     @Override
-    protected void initView() {
+    protected void initData() {
         new InputTextHelper.Builder(this)
                 .setMain(mCommitView)
                 .addView(mPhoneView)
                 .addView(mPasswordView)
                 .build();
-    }
-
-    @Override
-    protected void initData() {
         if(BuildConfig.DEBUG){
             mPhoneView.setText("15805930942");
             mPasswordView.setText("123456");
@@ -85,9 +82,9 @@ public class LoginActivity extends MvpActivity<LoginPresenter> implements LoginC
             public void onActivityResult(int resultCode, @Nullable Intent data) {
                 toast(String.valueOf(resultCode));
                 if(resultCode==RESULT_OK){
-                    UserInfo userInfo=data.getParcelableExtra(ValueConstant.ENTITY);
+                    UserInfo userInfo =data.getParcelableExtra(ValueConstant.ENTITY);
                     data.getExtras().getParcelable(ValueConstant.ENTITY);
-                    getPresenter().login(userInfo.getMobile(),userInfo.getMobile());
+                    getPresenter().login(userInfo.getMobile(), userInfo.getMobile());
                 }
             }
         });

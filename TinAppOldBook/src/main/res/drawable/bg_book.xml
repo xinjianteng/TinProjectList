@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?><!--主要按钮  常规状态-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 圆角 -->
+    <corners android:radius="@dimen/button_round_size" /><!-- 设置圆角半径 -->
+
+
+    <!-- 填充 -->
+    <solid android:color="@color/white" />
+    <!-- 填充的颜色 -->
+    <padding
+        android:bottom="@dimen/stroke_size"
+        android:left="@dimen/stroke_size"
+        android:right="@dimen/stroke_size"
+        android:top="@dimen/stroke_size" />
+
+    <!-- 描边 dashWidth：实线宽度   dashGap,虚线宽度-->
+    <stroke
+        android:width="@dimen/stroke_size"
+        android:color="@color/a" />
+
+</shape>
