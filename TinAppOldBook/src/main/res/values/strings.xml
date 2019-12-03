@@ -30,6 +30,22 @@
     <string name="home_nav_gather">目录</string>
     <string name="home_nav_me">我的</string>
 
+    <string name="bookDetail_title">图书详情</string>
+
+
+    <!--    阅读器-->
+    <string name="read_title">阅读器</string>
+    <string name="nb_read_community">社区</string>
+    <string name="nb_read_brief">简介</string>
+    <string name="nb_read_setting">设置</string>
+    <string name="nb_read_download">缓存</string>'
+    <string name="nb_read_category">目录</string>
+    <string name="nb_read_no_chapter">第 %1$d 章(%2$d)</string>
+    <!--mode-->
+    <string name="nb_mode_night">夜间</string>
+    <string name="nb_mode_morning">日间</string>
+
+
 
     <string name="common_phone_input_hint">输入手机号码</string>
     <string name="common_phone_input_error">手机号输入不正确</string>

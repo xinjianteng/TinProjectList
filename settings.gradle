@@ -1,10 +1,11 @@
-include ':TinAppWeChatCut', ':TinAppQuestionBank'
-include ':TinAppOldBook'
 include ':TinAppAdvert'
+include ':TinAppWeChatCut'
+include  ':TinAppQuestionBank'
+include ':TinAppOldBook'
+
 include ':TinLibraryBase2'
-include ':TinAppAliyun'
+
 include ':TinTvRead'
-include ':nettytest'
 include ':TinAppItBook'
 include ':TinTvPlay'
 include ':TinAppKnowldege'

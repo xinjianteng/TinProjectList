@@ -69,6 +69,7 @@
             layout="@layout/view_list"/>
 
         <TextView
+            android:id="@+id/tv_read"
             android:text="@string/read"
             style="@style/ButtonStyle"
             android:gravity="center"

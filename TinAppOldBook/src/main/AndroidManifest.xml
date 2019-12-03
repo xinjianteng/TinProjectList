@@ -88,6 +88,12 @@
         <!-- 图书详情 -->
         <activity
             android:name="com.tin.projectlist.app.model.oldBook.core.book.BookDetailActivity"
+            android:label="@string/bookDetail_title" >
+        </activity>
+
+        <!-- 图书详情 -->
+        <activity
+            android:name="com.tin.projectlist.app.model.oldBook.core.read.ReadActivity"
             android:label="@string/register_title" >
         </activity>
 

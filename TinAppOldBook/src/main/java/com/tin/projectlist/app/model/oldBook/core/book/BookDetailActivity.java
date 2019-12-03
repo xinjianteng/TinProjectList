@@ -12,11 +12,13 @@ import com.tin.projectlist.app.library.base.utils.IntentUtils;
 import com.tin.projectlist.app.library.base.widget.MultiStateView;
 import com.tin.projectlist.app.model.oldBook.R;
 import com.tin.projectlist.app.model.oldBook.constant.KeyConstant;
+import com.tin.projectlist.app.model.oldBook.core.read.ReadActivity;
 import com.tin.projectlist.app.model.oldBook.entity.Book;
 import com.tin.projectlist.app.model.oldBook.entity.BookComment;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpActivity;
 
 import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 
 import java.util.List;
@@ -42,10 +44,14 @@ public class BookDetailActivity extends MvpActivity<BookDetailPresenter> impleme
     private TextView bookDynasty;
 
     @ViewInject(R.id.recycler)
-    RecyclerView rcvList;
+    private RecyclerView rcvList;
 
     @ViewInject(R.id.multi_state_view)
-    MultiStateView multiStateView;
+    private MultiStateView multiStateView;
+
+    @ViewInject(R.id.tv_read)
+    private TextView tvRead;
+
 
     Book book;
 
@@ -79,4 +85,11 @@ public class BookDetailActivity extends MvpActivity<BookDetailPresenter> impleme
             bookCommentAdapter.setData(bookCommentList);
         }
     }
+
+
+    @Event(R.id.tv_read)
+    private void onClickRead(View view) {
+        startActivity(ReadActivity.class);
+    }
+
 }

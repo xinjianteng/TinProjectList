@@ -18,9 +18,12 @@ import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;
  */
 public class BaseApplication extends Application {
 
+    private static Context sInstance;
+
     @Override
     public void onCreate() {
         super.onCreate();
+        sInstance = this;
         initSDK(this);
     }
 
@@ -49,6 +52,10 @@ public class BaseApplication extends Application {
         super.attachBaseContext(base);
         // 使用 Dex分包
         MultiDex.install(this);
+    }
+
+    public static Context getContext(){
+        return sInstance;
     }
 
 }

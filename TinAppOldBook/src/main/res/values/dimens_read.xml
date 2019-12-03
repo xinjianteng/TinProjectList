@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nb_padding_small">4dp</dimen>
+    <dimen name="nb_padding_normal">8dp</dimen>
+    <dimen name="nb_padding_large">16dp</dimen>
+    <dimen name="nb_padding_xlarge">24dp</dimen>
+
+    <dimen name="nb_margin_small">4dp</dimen>
+    <dimen name="nb_margin_normal">8dp</dimen>
+    <dimen name="nb_margin_large">16dp</dimen>
+    <dimen name="nb_margin_xlarge">24dp</dimen>
+
+</resources>

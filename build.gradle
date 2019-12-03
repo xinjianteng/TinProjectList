@@ -5,13 +5,8 @@ buildscript {
     repositories {
         google()
         jcenter()
-        maven {
-            url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
-        }
-        dependencies {
-            // 添加emas-services插件
-            classpath 'com.aliyun.ams:emas-services:1.0.1'
-        }
+
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.2'
@@ -40,6 +35,9 @@ allprojects {
         }
         //Bmob的maven仓库地址--必填
         maven { url "https://raw.github.com/bmob/bmob-android-sdk/master" }
+        maven {
+            url 'https://dl.bintray.com/qichuan/maven/'
+        }
     }
 }
 
