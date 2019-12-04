@@ -19,6 +19,7 @@ import com.tin.projectlist.app.model.oldBook.readingTool.epub.view.ObservableWeb
 import com.tin.projectlist.app.model.oldBook.readingTool.epub.view.VerticalSeekbar;
 
 import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.ViewInject;
 
 import nl.siegmann.epublib.domain.Book;
 
@@ -27,17 +28,18 @@ import nl.siegmann.epublib.domain.Book;
  * @date 2016/12/14.
  */
 
-@ContentView(R.layout.fragment_epub_reader)
-public class EPubReaderFragment extends MvpLazyFragment<EpubPresenter> {
+@ContentView(R.layout.fragment_epub)
+public class EPubReaderFragment extends MvpLazyFragment<EpubPresenter> implements EpubContract.View{
 
     private static final String BUNDLE_POSITION = "position";
     private static final String BUNDLE_BOOK = "book";
     private static final String BUNDLE_EPUB_FILE_NAME = "filename";
     private static final String BUNDLE_IS_SMIL_AVAILABLE = "smilavailable";
 
-    @Bind(R.id.scrollSeekbar)
+    @ViewInject(R.id.scrollSeekbar)
     VerticalSeekbar mScrollSeekbar;
-    @Bind(R.id.contentWebView)
+
+    @ViewInject(R.id.contentWebView)
     ObservableWebView mWebview;
 
     private int mPosition = -1;
@@ -76,22 +78,12 @@ public class EPubReaderFragment extends MvpLazyFragment<EpubPresenter> {
     }
 
     @Override
-    public int getLayoutResId() {
-        return R.layout.fragment_epub_reader;
+    protected View getTitleId() {
+        return null;
     }
 
     @Override
-    protected void setupActivityComponent(AppComponent appComponent) {
-
-    }
-
-    @Override
-    public void attachView() {
-
-    }
-
-    @Override
-    public void initDatas() {
+    protected void initView() {
         activity = (ReadEPubActivity) getActivity();
 
         mPosition = getArguments().getInt(BUNDLE_POSITION);
@@ -101,7 +93,7 @@ public class EPubReaderFragment extends MvpLazyFragment<EpubPresenter> {
     }
 
     @Override
-    public void configViews() {
+    protected void initData() {
         initAnimations();
 
         initSeekbar();
@@ -109,12 +101,15 @@ public class EPubReaderFragment extends MvpLazyFragment<EpubPresenter> {
         initWebView();
     }
 
+
+
+
     private void initSeekbar() {
 
         mScrollSeekbar.setFragment(this);
         if (mScrollSeekbar.getProgressDrawable() != null)
             mScrollSeekbar.getProgressDrawable()
-                    .setColorFilter(ContextCompat.getColor(mContext, R.color.colorAccent),
+                    .setColorFilter(ContextCompat.getColor(getContext(), R.color.colorAccent),
                             PorterDuff.Mode.SRC_IN);
 
         mScrollSeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -243,4 +238,8 @@ public class EPubReaderFragment extends MvpLazyFragment<EpubPresenter> {
     }
 
 
+    @Override
+    protected EpubPresenter createPresenter() {
+        return new EpubPresenter();
+    }
 }

@@ -2,11 +2,11 @@ package com.tin.projectlist.app.model.oldBook.readingTool.epub.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.support.v7.widget.AppCompatSeekBar;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.ViewConfiguration;
 import android.view.ViewParent;
-import android.widget.SeekBar;
 
 import com.tin.projectlist.app.model.oldBook.core.read.epub.EPubReaderFragment;
 
@@ -15,7 +15,7 @@ import com.tin.projectlist.app.model.oldBook.core.read.epub.EPubReaderFragment;
  * @author yuyh.
  * @date 2016/12/13.
  */
-public class VerticalSeekbar extends SeekBar {
+public class VerticalSeekbar extends AppCompatSeekBar {
 
     private EPubReaderFragment fragment;
 
