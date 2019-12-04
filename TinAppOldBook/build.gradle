@@ -1,9 +1,19 @@
 apply plugin: 'com.android.application'
 
+
+
 android {
     compileSdkVersion rootProject.compileSdkVersion
+
+//    Android 6.0不再支持 Apache HTTP client， 建议使用 HttpURLConnection 代替。如果还想要继续使用 Apache HTTP client 的，请在build.gradle中添加下面的代码
     useLibrary 'org.apache.http.legacy'
 
+
+    packagingOptions {       //避免重复导入库
+        exclude 'lib/armeabi-v7a/libiomx.10.so'
+        exclude 'lib/armeabi-v7a/libanw.14.so'
+        exclude 'lib/armeabi-v7a/libvlc.so'
+    }
 
     defaultConfig {
         applicationId "com.tin.projectlist.app.model.oldBook"
@@ -20,6 +30,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        targetCompatibility = 1.8
+        sourceCompatibility = 1.8
+    }
 
 }
 
@@ -30,20 +44,12 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation project(path: ':Tinlibrary')
     implementation 'com.github.barteksc:android-pdf-viewer:3.1.0-beta.1'
-
-
     //bmob
     implementation 'cn.bmob.android:bmob-sdk:3.7.3-rc1'
-    implementation "io.reactivex.rxjava2:rxjava:2.2.2"
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
     implementation 'com.squareup.okio:okio:2.1.0'
     implementation 'com.squareup.okhttp3:okhttp:3.12.0'
-
-
-    //read
-    // OpenCC to convert Simp. Chinese to Trad. Chinese
-    implementation 'com.zqc.opencc.android.lib:lib-opencc-android:1.0.0@aar'
-    implementation 'org.greenrobot:greendao:3.2.2' // add library
-
-
+    implementation files('libs/slf4j-android-1.5.8.jar')
+    implementation files('libs/epublib-core-latest.jar')
 }
