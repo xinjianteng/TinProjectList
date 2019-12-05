@@ -14,6 +14,7 @@ import android.widget.SeekBar;
 
 
 import com.tin.projectlist.app.model.oldBook.R;
+import com.tin.projectlist.app.model.oldBook.core.read.ReadActivity;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpLazyFragment;
 import com.tin.projectlist.app.model.oldBook.readingTool.epub.view.ObservableWebView;
 import com.tin.projectlist.app.model.oldBook.readingTool.epub.view.VerticalSeekbar;
@@ -29,7 +30,7 @@ import nl.siegmann.epublib.domain.Book;
  */
 
 @ContentView(R.layout.fragment_epub)
-public class EPubReaderFragment extends MvpLazyFragment<EpubPresenter> implements EpubContract.View{
+public class ReaderEpubFragment extends MvpLazyFragment<EpubPresenter> implements EpubContract.View{
 
     private static final String BUNDLE_POSITION = "position";
     private static final String BUNDLE_BOOK = "book";
@@ -49,13 +50,13 @@ public class EPubReaderFragment extends MvpLazyFragment<EpubPresenter> implement
 
     private int mScrollY;
 
-    private ReadEPubActivity activity;
+    private ReadActivity activity;
 
     private Animation mFadeInAnimation, mFadeOutAnimation;
     private Handler mHandler = new Handler();
 
     public static Fragment newInstance(int position, Book book, String epubFileName, boolean isSmilAvailable) {
-        EPubReaderFragment fragment = new EPubReaderFragment();
+        ReaderEpubFragment fragment = new ReaderEpubFragment();
         Bundle args = new Bundle();
         args.putInt(BUNDLE_POSITION, position);
         args.putSerializable(BUNDLE_BOOK, book);

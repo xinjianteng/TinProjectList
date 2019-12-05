@@ -11,7 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.WebView;
 
-import com.tin.projectlist.app.model.oldBook.core.read.epub.EPubReaderFragment;
+import com.tin.projectlist.app.model.oldBook.core.read.epub.ReaderEpubFragment;
 
 
 /**
@@ -21,7 +21,7 @@ import com.tin.projectlist.app.model.oldBook.core.read.epub.EPubReaderFragment;
 public class ObservableWebView extends WebView {
 
     private ReaderCallback mActivityCallback;
-    private EPubReaderFragment fragment;
+    private ReaderEpubFragment fragment;
 
     private float MOVE_THRESHOLD_DP;
     private boolean mMoveOccured = false;
@@ -195,7 +195,7 @@ public class ObservableWebView extends WebView {
         };
     }
 
-    public void setFragment(EPubReaderFragment fragment) {
+    public void setFragment(ReaderEpubFragment fragment) {
         this.fragment = fragment;
     }
 }

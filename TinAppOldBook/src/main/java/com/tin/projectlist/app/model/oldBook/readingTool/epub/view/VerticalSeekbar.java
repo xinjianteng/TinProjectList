@@ -8,7 +8,7 @@ import android.view.MotionEvent;
 import android.view.ViewConfiguration;
 import android.view.ViewParent;
 
-import com.tin.projectlist.app.model.oldBook.core.read.epub.EPubReaderFragment;
+import com.tin.projectlist.app.model.oldBook.core.read.epub.ReaderEpubFragment;
 
 
 /**
@@ -17,7 +17,7 @@ import com.tin.projectlist.app.model.oldBook.core.read.epub.EPubReaderFragment;
  */
 public class VerticalSeekbar extends AppCompatSeekBar {
 
-    private EPubReaderFragment fragment;
+    private ReaderEpubFragment fragment;
 
     private boolean mIsDragging;
     private float mTouchDownY;
@@ -198,7 +198,7 @@ public class VerticalSeekbar extends AppCompatSeekBar {
         super.setOnSeekBarChangeListener(mOnSeekBarChangeListener);
     }
 
-    public void setFragment(EPubReaderFragment fragment) {
+    public void setFragment(ReaderEpubFragment fragment) {
         this.fragment = fragment;
     }
 }
