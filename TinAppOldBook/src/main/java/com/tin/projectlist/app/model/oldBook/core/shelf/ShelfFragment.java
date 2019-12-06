@@ -47,7 +47,7 @@ public final class ShelfFragment extends MyLazyFragment<HomeActivity> {
 
     @Override
     protected void initData() {
-
+        multiStateView.showEmpty();
     }
 
     @Override

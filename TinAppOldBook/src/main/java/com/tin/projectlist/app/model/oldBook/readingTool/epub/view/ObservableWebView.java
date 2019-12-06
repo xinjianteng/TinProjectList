@@ -11,6 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.WebView;
 
+import com.tin.projectlist.app.model.oldBook.core.read.ReadActivity;
 import com.tin.projectlist.app.model.oldBook.core.read.epub.ReaderEpubFragment;
 
 
@@ -20,7 +21,6 @@ import com.tin.projectlist.app.model.oldBook.core.read.epub.ReaderEpubFragment;
  */
 public class ObservableWebView extends WebView {
 
-    private ReaderCallback mActivityCallback;
     private ReaderEpubFragment fragment;
 
     private float MOVE_THRESHOLD_DP;
@@ -70,8 +70,6 @@ public class ObservableWebView extends WebView {
 
     @Override
     protected void onScrollChanged(int l, int t, int oldl, int oldt) {
-        mActivityCallback = (ReadEPubActivity) getContext();
-        mActivityCallback.hideToolBarIfVisible();
         if (mScrollListener != null)
             mScrollListener.onScrollChange(t);
         super.onScrollChanged(l, t, oldl, oldt);
@@ -101,11 +99,6 @@ public class ObservableWebView extends WebView {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
-
-
-        if (mActivityCallback == null)
-            mActivityCallback = (ReadEPubActivity) getContext();
-
         final int action = event.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN:
@@ -116,9 +109,8 @@ public class ObservableWebView extends WebView {
                 break;
             case MotionEvent.ACTION_UP:
                 if (!mMoveOccured) {
-                    mActivityCallback.toggleToolBarVisible();
+//                    mActivityCallback.toggleToolBarVisible();
                 }
-
                 fragment.startCallback();
                 break;
             case MotionEvent.ACTION_MOVE:

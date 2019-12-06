@@ -30,7 +30,7 @@ import nl.siegmann.epublib.domain.Book;
  */
 
 @ContentView(R.layout.fragment_epub)
-public class ReaderEpubFragment extends MvpLazyFragment<EpubPresenter> implements EpubContract.View{
+public class ReaderEpubFragment extends MvpLazyFragment<EpubPresenter> implements EpubContract.View {
 
     private static final String BUNDLE_POSITION = "position";
     private static final String BUNDLE_BOOK = "book";
@@ -38,10 +38,10 @@ public class ReaderEpubFragment extends MvpLazyFragment<EpubPresenter> implement
     private static final String BUNDLE_IS_SMIL_AVAILABLE = "smilavailable";
 
     @ViewInject(R.id.scrollSeekbar)
-    VerticalSeekbar mScrollSeekbar;
+    private VerticalSeekbar mScrollSeekbar;
 
     @ViewInject(R.id.contentWebView)
-    ObservableWebView mWebview;
+    private ObservableWebView mWebview;
 
     private int mPosition = -1;
     private Book mBook = null;
@@ -85,7 +85,7 @@ public class ReaderEpubFragment extends MvpLazyFragment<EpubPresenter> implement
 
     @Override
     protected void initView() {
-        activity = (ReadEPubActivity) getActivity();
+        activity = (ReadActivity) getActivity();
 
         mPosition = getArguments().getInt(BUNDLE_POSITION);
         mBook = (Book) getArguments().getSerializable(BUNDLE_BOOK);
@@ -101,8 +101,6 @@ public class ReaderEpubFragment extends MvpLazyFragment<EpubPresenter> implement
 
         initWebView();
     }
-
-
 
 
     private void initSeekbar() {
@@ -140,13 +138,11 @@ public class ReaderEpubFragment extends MvpLazyFragment<EpubPresenter> implement
     }
 
     private void initWebView() {
-
         mWebview.setFragment(this);
         mWebview.getSettings().setJavaScriptEnabled(true);
         mWebview.setVerticalScrollBarEnabled(false);
         mWebview.getSettings().setAllowFileAccess(true);
         mWebview.setHorizontalScrollBarEnabled(false);
-        mWebview.addJavascriptInterface(this, "Highlight");
 
         mWebview.setScrollListener(new ObservableWebView.ScrollListener() {
             @Override
@@ -164,9 +160,7 @@ public class ReaderEpubFragment extends MvpLazyFragment<EpubPresenter> implement
         });
 
         mWebview.getSettings().setDefaultTextEncodingName("utf-8");
-
         String herf = activity.getPageHref(mPosition);
-
         mWebview.loadUrl("file://" + herf);
     }
 
@@ -243,4 +237,10 @@ public class ReaderEpubFragment extends MvpLazyFragment<EpubPresenter> implement
     protected EpubPresenter createPresenter() {
         return new EpubPresenter();
     }
+
+
+    protected boolean isVisible(View view) {
+        return view.getVisibility() == View.VISIBLE;
+    }
+
 }

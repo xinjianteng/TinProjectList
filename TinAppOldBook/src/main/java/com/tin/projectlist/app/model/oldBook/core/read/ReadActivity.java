@@ -1,102 +1,162 @@
 package com.tin.projectlist.app.model.oldBook.core.read;
 
 import android.support.v7.widget.ListPopupWindow;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.PopupWindow;
 
+import com.hjq.bar.TitleBar;
 import com.tin.projectlist.app.model.oldBook.R;
+import com.tin.projectlist.app.model.oldBook.core.login.LoginActivity;
 import com.tin.projectlist.app.model.oldBook.core.read.epub.EpubCatalogAdapter;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpActivity;
 
 import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
+
+import com.tin.projectlist.app.model.oldBook.readingTool.BookFileUtils;
+import com.tin.projectlist.app.model.oldBook.readingTool.BookMixAToc;
 import com.tin.projectlist.app.model.oldBook.readingTool.epub.view.DirectionalViewpager;
+import com.tin.projectlist.app.model.oldBook.ui.activity.AboutActivity;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.List;
 
+import nl.siegmann.epublib.domain.Book;
+import nl.siegmann.epublib.domain.Resource;
+import nl.siegmann.epublib.domain.SpineReference;
 import nl.siegmann.epublib.domain.TOCReference;
 import nl.siegmann.epublib.epub.EpubReader;
 
 
 @ContentView(R.layout.activity_read)
-public class ReadActivity extends MvpActivity<ReadPresenter> implements ReadContract.View{
+public class ReadActivity extends MvpActivity<ReadPresenter> implements ReadContract.View {
 
+    @ViewInject(R.id.tabBar)
+    TitleBar mToolbar;
 
     @ViewInject(R.id.epubViewPager)
     private DirectionalViewpager readPageView;
 
+    @ViewInject(R.id.rcv_catalog)
+    private RecyclerView rcvCatalog;
+
+    @ViewInject(R.id.book_index)
+    private ImageView bookIndex;
 
     private EPubReaderAdapter mAdapter;
 
     private EpubCatalogAdapter epubCatalogAdapter;
 
+    private Book mBook;
+    private ArrayList<TOCReference> mTocReferences;
+    private List<SpineReference> mSpineReferences;
+    public boolean mIsSmilParsed = false;
+    private String mFileName = "Redis入门指南（第2版）";
+    private String mFilePath = "/sdcard/books/Redis入门指南（第2版）.epub";
+
+    private List<BookMixAToc.mixToc.Chapters> mChapterList = new ArrayList<>();
 
     @Override
     protected ReadPresenter createPresenter() {
-        return new ReadPresenter();
+        return new ReadPresenter(this);
     }
 
     @Override
     protected View getTitleId() {
-        return null;
+        return mToolbar;
+    }
+
+
+    @Event({R.id.book_index})
+    private void onBtnClick(View view) {
+        switch (view.getId()) {
+            case R.id.book_index:
+                rcvCatalog.setVisibility(rcvCatalog.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
+                break;
+        }
     }
 
     @Override
     protected void initData() {
-        String path = "file:///android_asset/test.epub";
-        readPageView.setOnPageChangeListener(new DirectionalViewpager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                mTocListAdapter.setCurrentChapter(position + 1);
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-            }
-        });
-
-        if (mBook != null && mSpineReferences != null && mTocReferences != null) {
-
-            mAdapter = new EPubReaderAdapter(getSupportFragmentManager(),
-                    mSpineReferences, mBook, mFileName, mIsSmilParsed);
-            viewpager.setAdapter(mAdapter);
-        }
-
-        epubCatalogAdapter = new EpubCatalogAdapter(this, mChapterList, "", 1);
-
+        epubCatalogAdapter = new EpubCatalogAdapter(this);
+        rcvCatalog.setAdapter(epubCatalogAdapter);
+        getPresenter().loadBook(mFilePath);
+        mToolbar.setTitle(mFileName);
     }
 
+    @Override
+    public void loadBookResult(Book book) {
+        if (book == null) {
 
-    private void loadBook() {
-
-        try {
-            // 打开书籍
-            EpubReader reader = new EpubReader();
-            InputStream is = new FileInputStream(mFilePath);
-            mBook = reader.readEpub(is);
-
+        } else {
+            mBook = book;
             mTocReferences = (ArrayList<TOCReference>) mBook.getTableOfContents().getTocReferences();
             mSpineReferences = mBook.getSpine().getSpineReferences();
+            readPageView.setOnPageChangeListener(new DirectionalViewpager.OnPageChangeListener() {
+                @Override
+                public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                }
 
-            setSpineReferenceTitle();
+                @Override
+                public void onPageSelected(int position) {
+                }
 
-            // 解压epub至缓存目录
-            FileUtils.unzipFile(mFilePath, Constant.PATH_EPUB + "/" + mFileName);
-        } catch (IOException e) {
-            e.printStackTrace();
+                @Override
+                public void onPageScrollStateChanged(int state) {
+                }
+            });
+
+            if (mBook != null && mSpineReferences != null && mTocReferences != null) {
+                mAdapter = new EPubReaderAdapter(getSupportFragmentManager(),
+                        mSpineReferences, mBook, mFileName, mIsSmilParsed);
+                readPageView.setAdapter(mAdapter);
+            }
+
+            int srSize = mSpineReferences.size();
+            int trSize = mTocReferences.size();
+            for (int j = 0; j < srSize; j++) {
+                String href = mSpineReferences.get(j).getResource().getHref();
+                for (int i = 0; i < trSize; i++) {
+                    if (mTocReferences.get(i).getResource().getHref().equalsIgnoreCase(href)) {
+                        mSpineReferences.get(j).getResource().setTitle(mTocReferences.get(i).getTitle());
+                        break;
+                    } else {
+                        mSpineReferences.get(j).getResource().setTitle("");
+                    }
+                }
+            }
+
+            for (int i = 0; i < trSize; i++) {
+                Resource resource = mTocReferences.get(i).getResource();
+                if (resource != null) {
+                    mChapterList.add(new BookMixAToc.mixToc.Chapters(resource.getTitle(), resource.getHref()));
+                }
+            }
+            epubCatalogAdapter.setData(mChapterList);
+
         }
+
     }
 
 
+    public String getPageHref(int position) {
+        String pageHref = mTocReferences.get(position).getResource().getHref();
+        String opfpath = BookFileUtils.getPathOPF(BookFileUtils.getEpubFolderPath(mFileName));
+        if (BookFileUtils.checkOPFInRootDirectory(BookFileUtils.getEpubFolderPath(mFileName))) {
+            pageHref = BookFileUtils.getEpubFolderPath(mFileName) + "/" + pageHref;
+        } else {
+            pageHref = BookFileUtils.getEpubFolderPath(mFileName) + "/" + opfpath + "/" + pageHref;
+        }
+        return pageHref;
+    }
 
 }

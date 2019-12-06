@@ -61,31 +61,23 @@ public final class GatherFragment extends MvpLazyFragment<GatherPresenter>
     @Override
     protected void initView() {
         gatherDynastyAdapter = new GatherDynastyAdapter(getContext());
-        gatherDynastyAdapter.setOnItemClickListener(new BaseRecyclerViewAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(RecyclerView recyclerView, View itemView, int position) {
-                for(int i=0;i<gatherDynastyAdapter.getItemCount();i++){
-                    if(gatherDynastyAdapter.getItem(i).isSelect()){
-                        gatherDynastyAdapter.getItem(i).setSelect(false);
-                        gatherDynastyAdapter.notifyItemChanged(i);
-                    }
+        gatherDynastyAdapter.setOnItemClickListener((recyclerView, itemView, position) -> {
+            for(int i=0;i<gatherDynastyAdapter.getItemCount();i++){
+                if(gatherDynastyAdapter.getItem(i).isSelect()){
+                    gatherDynastyAdapter.getItem(i).setSelect(false);
+                    gatherDynastyAdapter.notifyItemChanged(i);
                 }
-                gatherDynastyAdapter.getItem(position).setSelect(true);
-                gatherDynastyAdapter.notifyItemChanged(position);
-                getPresenter().getBookListForDynasty(gatherDynastyAdapter.getItem(position).getObjectId());
             }
+            gatherDynastyAdapter.getItem(position).setSelect(true);
+            gatherDynastyAdapter.notifyItemChanged(position);
+            getPresenter().getBookListForDynasty(gatherDynastyAdapter.getItem(position).getObjectId());
         });
         gatherBookAdapter = new GatherBookAdapter(getContext());
-        gatherBookAdapter.setOnItemClickListener(new BaseRecyclerViewAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(RecyclerView recyclerView, View itemView, int position) {
-                Intent intent=new Intent(getContext(), BookDetailActivity.class);
-                intent.putExtra(KeyConstant.ENTITY, (Parcelable) gatherBookAdapter.getItem(position));
-                IntentUtils.startActivity(getContext(),intent);
-            }
+        gatherBookAdapter.setOnItemClickListener((recyclerView, itemView, position) -> {
+            Intent intent=new Intent(getContext(), BookDetailActivity.class);
+            intent.putExtra(KeyConstant.ENTITY, (Parcelable) gatherBookAdapter.getItem(position));
+            IntentUtils.startActivity(getContext(),intent);
         });
-
-
         rcvIndex.setAdapter(gatherDynastyAdapter);
         rcvList.setAdapter(gatherBookAdapter);
 
