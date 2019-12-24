@@ -1,4 +1,4 @@
-package com.tin.projectlist.app.model.oldBook.helper;
+package com.tin.projectlist.app.model.oldBook.utils;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;

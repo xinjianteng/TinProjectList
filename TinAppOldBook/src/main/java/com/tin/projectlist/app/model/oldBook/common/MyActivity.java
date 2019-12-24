@@ -11,9 +11,9 @@ import android.view.View;
 import com.hjq.bar.OnTitleBarListener;
 import com.hjq.bar.TitleBar;
 import com.hjq.toast.ToastUtils;
-import com.tin.projectlist.app.model.oldBook.helper.ActivityStackManager;
-import com.tin.projectlist.app.model.oldBook.helper.DebugUtils;
-import com.tin.projectlist.app.model.oldBook.helper.StatusManager;
+import com.tin.projectlist.app.model.oldBook.utils.ActivityStackManager;
+import com.tin.projectlist.app.model.oldBook.utils.DebugUtils;
+import com.tin.projectlist.app.model.oldBook.utils.StatusManager;
 
 
 /**

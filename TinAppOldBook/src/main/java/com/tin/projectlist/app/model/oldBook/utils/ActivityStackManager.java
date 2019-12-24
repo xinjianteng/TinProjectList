@@ -1,4 +1,4 @@
-package com.tin.projectlist.app.model.oldBook.helper;
+package com.tin.projectlist.app.model.oldBook.utils;
 
 import android.app.Activity;
 import android.support.v4.util.ArrayMap;
