@@ -29,8 +29,8 @@ public class GatherPresenter extends MvpPresenter<GatherContract.View>
     }
 
     @Override
-    public void getBookListForDynasty(String dynastyId) {
-        model.getBookListForDynasty(dynastyId);
+    public void getBookListForDynasty(String dynastyId, String dynastyName) {
+        model.getBookListForDynasty(dynastyId, dynastyName);
     }
 
 

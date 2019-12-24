@@ -32,7 +32,7 @@ public final class GatherContract {
         void getGatherDynastyDatas();
 
 
-        void getBookListForDynasty(String dynastyId);
+        void getBookListForDynasty(String dynastyId, String dynastyName);
     }
 
 }

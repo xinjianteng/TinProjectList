@@ -1,4 +1,4 @@
-include ':TinAppAdvert'
+include ':TinAppAdvert', ':TinLibraryReader'
 include ':TinAppWeChatCut'
 include  ':TinAppQuestionBank'
 include ':TinAppOldBook'

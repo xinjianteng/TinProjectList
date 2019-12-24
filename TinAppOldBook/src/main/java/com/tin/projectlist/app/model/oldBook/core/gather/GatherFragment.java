@@ -2,13 +2,10 @@ package com.tin.projectlist.app.model.oldBook.core.gather;
 
 import android.content.Intent;
 import android.os.Parcelable;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.hjq.bar.TitleBar;
-import com.tin.projectlist.app.library.base.BaseRecyclerViewAdapter;
 import com.tin.projectlist.app.library.base.utils.IntentUtils;
 import com.tin.projectlist.app.library.base.widget.MultiStateView;
 import com.tin.projectlist.app.model.oldBook.R;
@@ -70,7 +67,7 @@ public final class GatherFragment extends MvpLazyFragment<GatherPresenter>
             }
             gatherDynastyAdapter.getItem(position).setSelect(true);
             gatherDynastyAdapter.notifyItemChanged(position);
-            getPresenter().getBookListForDynasty(gatherDynastyAdapter.getItem(position).getObjectId());
+            getPresenter().getBookListForDynasty(gatherDynastyAdapter.getItem(position).getObjectId(),gatherDynastyAdapter.getItem(position).getName() );
         });
         gatherBookAdapter = new GatherBookAdapter(getContext());
         gatherBookAdapter.setOnItemClickListener((recyclerView, itemView, position) -> {
@@ -117,7 +114,7 @@ public final class GatherFragment extends MvpLazyFragment<GatherPresenter>
                 dynastySelect=dynasty;
             }
         }
-        getPresenter().getBookListForDynasty(dynastySelect.getObjectId());
+        getPresenter().getBookListForDynasty(dynastySelect.getObjectId(),dynastySelect.getName());
     }
 
     @Override

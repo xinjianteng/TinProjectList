@@ -48,7 +48,7 @@ public final class GatherModel extends MvpModel<GatherOnListener> {
     }
 
 
-    public void getBookListForDynasty(String dynastyId) {
+    public void getBookListForDynasty(String dynastyId, String dynastyName) {
         BmobQuery query = new BmobQuery(BmobTableConstant.TAB_BOOK_INFO);
         query.order("createdAt");
         query.addWhereEqualTo("dynasty_id", dynastyId);
@@ -61,6 +61,7 @@ public final class GatherModel extends MvpModel<GatherOnListener> {
                     }.getType());
                     if(dynastyList.size()>0){
                         for (int i = 0; i < 100; i++) {
+                            dynastyList.get(0).setDynastyName(dynastyName);
                             dynastyList.add(dynastyList.get(0));
                         }
                         getListener().onBookListForDynastySuccess(dynastyList);

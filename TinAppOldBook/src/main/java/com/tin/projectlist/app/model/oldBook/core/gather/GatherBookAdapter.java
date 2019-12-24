@@ -29,10 +29,11 @@ public class GatherBookAdapter extends BaseRecyclerViewAdapter<Book, GatherBookA
 
     @Override
     public void onBindViewHolder(@NonNull GatherBookAdapter.ViewHolder holder, int position) {
-        holder.bookName.setText(getItem(position).getBook_name());
-        holder.bookAuthor.setText("作者："+getItem(position).getBook_name());
-        holder.bookDynasty.setText("朝代："+getItem(position).getBook_name());
-        x.image().bind(holder.bookCover,getItem(position).getBook_name());
+        holder.bookName.setText("《"+getItem(position).getBook_name()+"》");
+        holder.bookAuthor.setText(getItem(position).getBook_author());
+        holder.bookDynasty.setText(getItem(position).getDynastyName());
+        holder.bookIntroduction.setText("简介："+getItem(position).getBook_introduction());
+        x.image().bind(holder.bookCover,getItem(position).getBook_cover());
     }
 
     class ViewHolder extends BaseRecyclerViewAdapter.ViewHolder {
@@ -48,6 +49,9 @@ public class GatherBookAdapter extends BaseRecyclerViewAdapter<Book, GatherBookA
 
         @ViewInject(R.id.tv_bookDynasty)
         private TextView bookDynasty;
+
+        @ViewInject(R.id.tv_bookIntroduction)
+        private TextView bookIntroduction;
 
         private ViewHolder(ViewGroup parent, int layoutId) {
             super(parent, layoutId);
