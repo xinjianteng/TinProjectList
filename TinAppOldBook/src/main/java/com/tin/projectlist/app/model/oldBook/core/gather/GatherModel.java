@@ -60,10 +60,10 @@ public final class GatherModel extends MvpModel<GatherOnListener> {
                     List<Book> dynastyList = new Gson().fromJson(ary.toString(), new TypeToken<List<Book>>() {
                     }.getType());
                     if(dynastyList.size()>0){
-                        for (int i = 0; i < 100; i++) {
-                            dynastyList.get(0).setDynastyName(dynastyName);
-                            dynastyList.add(dynastyList.get(0));
-                        }
+//                        for (int i = 0; i < 100; i++) {
+//                            dynastyList.get(0).setDynastyName(dynastyName);
+//                            dynastyList.add(dynastyList.get(0));
+//                        }
                         getListener().onBookListForDynastySuccess(dynastyList);
                     }else {
                         getListener().onBookListForDynastySuccess(null);

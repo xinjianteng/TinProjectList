@@ -40,6 +40,9 @@
     <color name="item_bg_default">@color/white</color>
     <color name="item_tv_select">@color/c</color>
     <color name="item_tv_default">@color/a</color>
+    <color name="item_tv_BookName">@color/a</color>
+    <color name="item_tv_BookAuthor">@color/c</color>
+    <color name="item_tv_BookSummary">@color/black</color>
 
 
 

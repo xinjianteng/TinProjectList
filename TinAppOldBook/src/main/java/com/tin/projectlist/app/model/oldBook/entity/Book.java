@@ -15,11 +15,13 @@ public class Book extends BmobObject implements Parcelable {
     private String book_introduction;
     private String book_author;
     private String dynasty_id;
+    private String book_summary;
     private String dynastyName;
 
     public Book() {
         setTableName(BmobTableConstant.TAB_BOOK_INFO);
     }
+
 
     protected Book(Parcel in) {
         book_name = in.readString();
@@ -27,6 +29,7 @@ public class Book extends BmobObject implements Parcelable {
         book_introduction = in.readString();
         book_author = in.readString();
         dynasty_id = in.readString();
+        book_summary = in.readString();
         dynastyName = in.readString();
     }
 
@@ -37,6 +40,7 @@ public class Book extends BmobObject implements Parcelable {
         dest.writeString(book_introduction);
         dest.writeString(book_author);
         dest.writeString(dynasty_id);
+        dest.writeString(book_summary);
         dest.writeString(dynastyName);
     }
 
@@ -90,6 +94,14 @@ public class Book extends BmobObject implements Parcelable {
 
     public void setDynasty_id(String dynasty_id) {
         this.dynasty_id = dynasty_id;
+    }
+
+    public String getBook_summary() {
+        return book_summary;
+    }
+
+    public void setBook_summary(String book_summary) {
+        this.book_summary = book_summary;
     }
 
     public String getDynastyName() {

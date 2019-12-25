@@ -83,6 +83,43 @@
     </style>
 
 
+    <style name="item_bookName">
+        <item name="android:textSize">@dimen/item_bookName_size</item>
+        <item name="android:text">@string/app_test</item>
+        <item name="android:textColor">@color/item_tv_BookName</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="item_bookAuthor">
+        <item name="android:textSize">@dimen/item_bookAuthor_size</item>
+        <item name="android:text">@string/app_test</item>
+        <item name="android:textColor">@color/item_tv_BookAuthor</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/space_10</item>
+    </style>
+
+    <style name="item_bookSummary">
+        <item name="android:textSize">@dimen/item_summary_size</item>
+        <item name="android:text">@string/app_test</item>
+        <item name="android:textColor">@color/item_tv_BookSummary</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/space_20</item>
+    </style>
+
+
+
+
+
 
 
 </resources>

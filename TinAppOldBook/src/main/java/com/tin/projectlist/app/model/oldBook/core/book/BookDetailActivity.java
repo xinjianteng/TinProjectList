@@ -20,6 +20,7 @@ import com.tin.projectlist.app.model.oldBook.mvp.MvpActivity;
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
 
 import java.util.List;
 
@@ -40,8 +41,11 @@ public class BookDetailActivity extends MvpActivity<BookDetailPresenter> impleme
     @ViewInject(R.id.tv_bookAuthor)
     private TextView bookAuthor;
 
-    @ViewInject(R.id.tv_bookDynasty)
-    private TextView bookDynasty;
+    @ViewInject(R.id.tv_bookSummary)
+    private TextView bookSummary;
+
+    @ViewInject(R.id.tv_bookIntroduction)
+    private TextView bookIntroduction;
 
     @ViewInject(R.id.recycler)
     private RecyclerView rcvList;
@@ -72,7 +76,12 @@ public class BookDetailActivity extends MvpActivity<BookDetailPresenter> impleme
     protected void initData() {
         book = (Book) IntentUtils.getParcelableExtra(getIntent(), KeyConstant.ENTITY);
         titleBar.setTitle(book.getBook_name());
+        x.image().bind(bookCover,book.getBook_cover());
         bookName.setText(book.getBook_name());
+        bookAuthor.setText(book.getBook_author());
+        bookSummary.setText(book.getBook_summary());
+        bookIntroduction.setText(book.getBook_introduction());
+
         bookCommentAdapter=new BookCommentAdapter(this);
         rcvList.setAdapter(bookCommentAdapter);
         getPresenter().getBookCommentForBookId("PshVCCCH");

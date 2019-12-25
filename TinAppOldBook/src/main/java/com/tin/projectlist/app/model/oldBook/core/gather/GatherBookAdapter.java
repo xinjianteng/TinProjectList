@@ -2,7 +2,6 @@ package com.tin.projectlist.app.model.oldBook.core.gather;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.text.TextUtils;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -10,7 +9,6 @@ import android.widget.TextView;
 import com.tin.projectlist.app.library.base.BaseRecyclerViewAdapter;
 import com.tin.projectlist.app.model.oldBook.R;
 import com.tin.projectlist.app.model.oldBook.entity.Book;
-import com.tin.projectlist.app.model.oldBook.entity.Dynasty;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -24,15 +22,14 @@ public class GatherBookAdapter extends BaseRecyclerViewAdapter<Book, GatherBookA
     @NonNull
     @Override
     public GatherBookAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return new GatherBookAdapter.ViewHolder(viewGroup, R.layout.item_fragment_gather_book);
+        return new GatherBookAdapter.ViewHolder(viewGroup, R.layout.view_item_book);
     }
 
     @Override
     public void onBindViewHolder(@NonNull GatherBookAdapter.ViewHolder holder, int position) {
-        holder.bookName.setText("《"+getItem(position).getBook_name()+"》");
+        holder.bookName.setText(getItem(position).getBook_name());
         holder.bookAuthor.setText(getItem(position).getBook_author());
-        holder.bookDynasty.setText(getItem(position).getDynastyName());
-        holder.bookIntroduction.setText("简介："+getItem(position).getBook_introduction());
+        holder.bookSummary.setText(getItem(position).getBook_summary());
         x.image().bind(holder.bookCover,getItem(position).getBook_cover());
     }
 
@@ -47,11 +44,8 @@ public class GatherBookAdapter extends BaseRecyclerViewAdapter<Book, GatherBookA
         @ViewInject(R.id.tv_bookAuthor)
         private TextView bookAuthor;
 
-        @ViewInject(R.id.tv_bookDynasty)
-        private TextView bookDynasty;
-
-        @ViewInject(R.id.tv_bookIntroduction)
-        private TextView bookIntroduction;
+        @ViewInject(R.id.tv_bookSummary)
+        private TextView bookSummary;
 
         private ViewHolder(ViewGroup parent, int layoutId) {
             super(parent, layoutId);

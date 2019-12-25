@@ -14,74 +14,32 @@
         android:layout_height="wrap_content"
          />
 
-    <RelativeLayout
+    <include
+        layout="@layout/view_item_book"/>
+
+    <TextView
+        android:id="@+id/tv_bookIntroduction"
+        android:textSize="@dimen/item_book_introduction_size"
+        android:text="@string/app_test"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"/>
 
-        <LinearLayout
-            android:id="@+id/layout_head"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:focusable="false"
-            android:orientation="horizontal"
-            android:padding="@dimen/space_item"
-            tools:ignore="ResourceName">
-            <ImageView
-                android:id="@+id/iv_bookCover"
-                android:background="@drawable/bg_book"
-                android:layout_marginLeft="@dimen/space_item"
-                android:layout_width="@dimen/book_width"
-                android:layout_height="@dimen/book_height"/>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        layout="@layout/view_list"/>
 
-            <LinearLayout
-                android:background="@color/white"
-                android:layout_marginLeft="@dimen/space_item"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/tv_bookName"
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:id="@+id/tv_bookAuthor"
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:id="@+id/tv_bookDynasty"
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <include
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/layout_head"
-            layout="@layout/view_list"/>
-
-        <TextView
-            android:id="@+id/tv_read"
-            android:text="@string/read"
-            style="@style/ButtonStyle"
-            android:gravity="center"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:textSize="@dimen/app_title_text_size"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/space_100"/>
-
-    </RelativeLayout>
-
-
+    <TextView
+        android:id="@+id/tv_read"
+        android:text="@string/read"
+        style="@style/ButtonStyle"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/app_title_text_size"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_100"/>
 
 
 
