@@ -12,8 +12,6 @@ import com.tin.projectlist.app.library.base.widget.CountdownView;
 import com.tin.projectlist.app.model.oldBook.BuildConfig;
 import com.tin.projectlist.app.model.oldBook.R;
 import com.tin.projectlist.app.model.oldBook.constant.ValueConstant;
-import com.tin.projectlist.app.model.oldBook.core.register.RegisterContract;
-import com.tin.projectlist.app.model.oldBook.core.register.RegisterPresenter;
 import com.tin.projectlist.app.model.oldBook.entity.UserInfo;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpActivity;
 

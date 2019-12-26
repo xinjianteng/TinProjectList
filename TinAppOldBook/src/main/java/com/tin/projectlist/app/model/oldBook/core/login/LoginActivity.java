@@ -13,8 +13,6 @@ import com.tin.projectlist.app.model.oldBook.BuildConfig;
 import com.tin.projectlist.app.model.oldBook.R;
 import com.tin.projectlist.app.model.oldBook.constant.ValueConstant;
 import com.tin.projectlist.app.model.oldBook.core.home.HomeActivity;
-import com.tin.projectlist.app.model.oldBook.core.login.LoginContract;
-import com.tin.projectlist.app.model.oldBook.core.login.LoginPresenter;
 import com.tin.projectlist.app.model.oldBook.core.register.RegisterActivity;
 import com.tin.projectlist.app.model.oldBook.entity.UserInfo;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpActivity;

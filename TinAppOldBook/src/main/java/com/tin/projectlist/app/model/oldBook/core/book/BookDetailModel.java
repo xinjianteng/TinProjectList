@@ -3,7 +3,6 @@ package com.tin.projectlist.app.model.oldBook.core.book;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.tin.projectlist.app.model.oldBook.constant.BmobTableConstant;
-import com.tin.projectlist.app.model.oldBook.core.book.BookDetailOnListener;
 import com.tin.projectlist.app.model.oldBook.entity.BookComment;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpModel;
 

@@ -2,10 +2,7 @@ package com.tin.projectlist.app.model.oldBook.utils;
 
 import android.content.Context;
 
-
 import com.tin.projectlist.app.library.base.utils.SharePreferenceUtil;
-
-import java.util.Date;
 
 /**
  * @package : com.cliff.utils

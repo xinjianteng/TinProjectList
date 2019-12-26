@@ -3,7 +3,6 @@ package com.tin.projectlist.app.model.oldBook.core.read;
 import android.content.Context;
 
 import com.tin.projectlist.app.model.oldBook.constant.PathConstant;
-import com.tin.projectlist.app.model.oldBook.core.read.ReadOnListener;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpModel;
 import com.tin.projectlist.app.model.oldBook.readingTool.BookFileUtils;
 

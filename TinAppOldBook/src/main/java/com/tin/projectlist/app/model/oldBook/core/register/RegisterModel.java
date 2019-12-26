@@ -1,6 +1,5 @@
 package com.tin.projectlist.app.model.oldBook.core.register;
 
-import com.tin.projectlist.app.model.oldBook.core.register.RegisterOnListener;
 import com.tin.projectlist.app.model.oldBook.entity.UserInfo;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpModel;
 

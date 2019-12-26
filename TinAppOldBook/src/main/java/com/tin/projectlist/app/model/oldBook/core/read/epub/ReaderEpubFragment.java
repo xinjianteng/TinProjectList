@@ -14,8 +14,6 @@ import android.widget.SeekBar;
 
 import com.tin.projectlist.app.model.oldBook.R;
 import com.tin.projectlist.app.model.oldBook.core.read.ReadActivity;
-import com.tin.projectlist.app.model.oldBook.core.read.epub.EpubContract;
-import com.tin.projectlist.app.model.oldBook.core.read.epub.EpubPresenter;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpLazyFragment;
 import com.tin.projectlist.app.model.oldBook.readingTool.epub.view.ObservableWebView;
 import com.tin.projectlist.app.model.oldBook.readingTool.epub.view.VerticalSeekbar;

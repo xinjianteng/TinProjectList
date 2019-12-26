@@ -1,8 +1,5 @@
 package com.tin.projectlist.app.model.oldBook.core.register;
 
-import com.tin.projectlist.app.model.oldBook.core.register.RegisterContract;
-import com.tin.projectlist.app.model.oldBook.core.register.RegisterModel;
-import com.tin.projectlist.app.model.oldBook.core.register.RegisterOnListener;
 import com.tin.projectlist.app.model.oldBook.entity.UserInfo;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpPresenter;
 

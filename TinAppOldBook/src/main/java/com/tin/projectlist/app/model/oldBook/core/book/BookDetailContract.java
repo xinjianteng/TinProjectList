@@ -8,12 +8,9 @@ import java.util.List;
 public class BookDetailContract {
 
     public interface View extends IMvpView {
-        void getBookCommentResult(boolean result, List<BookComment> bookCommentList);
-
     }
 
     public interface Presenter{
-        void  getBookCommentForBookId(String bookid);
     }
 
 }

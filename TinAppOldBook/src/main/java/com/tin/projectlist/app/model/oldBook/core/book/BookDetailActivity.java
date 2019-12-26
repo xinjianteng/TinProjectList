@@ -1,5 +1,7 @@
 package com.tin.projectlist.app.model.oldBook.core.book;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -10,9 +12,6 @@ import com.tin.projectlist.app.library.base.utils.IntentUtils;
 import com.tin.projectlist.app.library.base.widget.MultiStateView;
 import com.tin.projectlist.app.model.oldBook.R;
 import com.tin.projectlist.app.model.oldBook.constant.KeyConstant;
-import com.tin.projectlist.app.model.oldBook.core.book.BookCommentAdapter;
-import com.tin.projectlist.app.model.oldBook.core.book.BookDetailContract;
-import com.tin.projectlist.app.model.oldBook.core.book.BookDetailPresenter;
 import com.tin.projectlist.app.model.oldBook.core.read.ReadActivity;
 import com.tin.projectlist.app.model.oldBook.entity.Book;
 import com.tin.projectlist.app.model.oldBook.entity.BookComment;
@@ -49,19 +48,10 @@ public class BookDetailActivity extends MvpActivity<BookDetailPresenter> impleme
     @ViewInject(R.id.tv_bookIntroduction)
     private TextView bookIntroduction;
 
-    @ViewInject(R.id.recycler)
-    private RecyclerView rcvList;
-
-    @ViewInject(R.id.multi_state_view)
-    private MultiStateView multiStateView;
-
     @ViewInject(R.id.tv_read)
     private TextView tvRead;
 
-
-    Book book;
-
-    BookCommentAdapter bookCommentAdapter;
+    private Book book;
 
     @Override
     protected BookDetailPresenter createPresenter() {
@@ -74,6 +64,7 @@ public class BookDetailActivity extends MvpActivity<BookDetailPresenter> impleme
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void initData() {
         book = (Book) IntentUtils.getParcelableExtra(getIntent(), KeyConstant.ENTITY);
@@ -83,19 +74,8 @@ public class BookDetailActivity extends MvpActivity<BookDetailPresenter> impleme
         TextViewUtils.setText(bookName,book.getBook_name());
         TextViewUtils.setText(bookAuthor,book.getBook_author());
         TextViewUtils.setText(bookSummary,book.getBook_summary());
-        TextViewUtils.setText(bookIntroduction,book.getBook_introduction());
+        TextViewUtils.setHtmlText(bookIntroduction,book.getBook_introduction());
 
-        bookCommentAdapter=new BookCommentAdapter(this);
-        rcvList.setAdapter(bookCommentAdapter);
-        getPresenter().getBookCommentForBookId("PshVCCCH");
-        multiStateView.showContent();
-    }
-
-    @Override
-    public void getBookCommentResult(boolean result, List<BookComment> bookCommentList) {
-        if(result){
-            bookCommentAdapter.setData(bookCommentList);
-        }
     }
 
 

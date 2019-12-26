@@ -6,9 +6,6 @@ import android.widget.ImageView;
 
 import com.hjq.bar.TitleBar;
 import com.tin.projectlist.app.model.oldBook.R;
-import com.tin.projectlist.app.model.oldBook.core.read.EPubReaderAdapter;
-import com.tin.projectlist.app.model.oldBook.core.read.ReadContract;
-import com.tin.projectlist.app.model.oldBook.core.read.ReadPresenter;
 import com.tin.projectlist.app.model.oldBook.core.read.epub.EpubCatalogAdapter;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpActivity;
 import com.tin.projectlist.app.model.oldBook.readingTool.BookFileUtils;

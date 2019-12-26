@@ -4,8 +4,6 @@ import android.view.View;
 
 import com.tin.projectlist.app.model.oldBook.R;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpActivity;
-import com.tin.projectlist.app.model.oldBook.mvp.copy.CopyContract;
-import com.tin.projectlist.app.model.oldBook.mvp.copy.CopyPresenter;
 
 import org.xutils.view.annotation.ContentView;
 

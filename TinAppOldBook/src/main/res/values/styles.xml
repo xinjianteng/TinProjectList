@@ -120,6 +120,15 @@
     </style>
 
 
+    <style name="item_bookIntroduction">
+        <item name="android:textSize">@dimen/item_book_introduction_size</item>
+        <item name="android:text">@string/app_test</item>
+        <item name="android:textColor">@color/item_tv_BookIntroduction</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/space_20</item>
+        <item name="android:lineSpacingExtra">@dimen/space_12</item>
+    </style>
 
 
 

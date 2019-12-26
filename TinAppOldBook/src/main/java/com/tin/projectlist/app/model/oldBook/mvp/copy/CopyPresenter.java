@@ -2,9 +2,6 @@ package com.tin.projectlist.app.model.oldBook.mvp.copy;
 
 
 import com.tin.projectlist.app.model.oldBook.mvp.MvpPresenter;
-import com.tin.projectlist.app.model.oldBook.mvp.copy.CopyContract;
-import com.tin.projectlist.app.model.oldBook.mvp.copy.CopyModel;
-import com.tin.projectlist.app.model.oldBook.mvp.copy.CopyOnListener;
 
 import java.util.List;
 

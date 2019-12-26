@@ -6,8 +6,6 @@ import android.support.annotation.StringRes;
 import android.util.Log;
 
 import com.hjq.toast.ToastUtils;
-import com.tin.projectlist.app.model.oldBook.common.MyActivity;
-import com.tin.projectlist.app.model.oldBook.common.UILazyFragment;
 import com.tin.projectlist.app.model.oldBook.utils.DebugUtils;
 import com.tin.projectlist.app.model.oldBook.utils.StatusManager;
 

@@ -17,9 +17,7 @@
     <dimen name="item_bookName_size">18sp</dimen>
     <dimen name="item_bookAuthor_size">12sp</dimen>
     <dimen name="item_summary_size">16sp</dimen>
-    <dimen name="item_book_introduction_size">14sp</dimen>
-
-
+    <dimen name="item_book_introduction_size">16sp</dimen>
 
 
 

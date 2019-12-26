@@ -1,7 +1,5 @@
 package com.tin.projectlist.app.model.oldBook.common;
 
-import com.tin.projectlist.app.model.oldBook.common.JsonResponseParser;
-
 import org.xutils.http.annotation.HttpResponse;
 
 @HttpResponse(parser = JsonResponseParser.class)
