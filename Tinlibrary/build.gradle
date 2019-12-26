@@ -34,8 +34,6 @@ dependencies {
     api 'com.gyf.immersionbar:immersionbar:2.3.3'
     // 侧滑功能：https://github.com/bingoogolapple/BGASwipeBackLayout-Android
     api 'cn.bingoogolapple:bga-swipebacklayout:1.2.0'
-    // 吐司工具类：https://github.com/getActivity/ToastUtils
-    api 'com.hjq:toast:6.0'
     //全能型框架事件注解  http  数据库db 图片加载 https://github.com/wyouflf/xUtils3
     api 'org.xutils:xutils:3.8.2'
     // 标题栏：https://github.com/getActivity/TitleBar
