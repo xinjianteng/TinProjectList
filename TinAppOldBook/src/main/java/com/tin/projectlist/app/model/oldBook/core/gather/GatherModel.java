@@ -4,6 +4,7 @@ package com.tin.projectlist.app.model.oldBook.core.gather;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.tin.projectlist.app.model.oldBook.constant.BmobTableConstant;
+import com.tin.projectlist.app.model.oldBook.constant.ValueConstant;
 import com.tin.projectlist.app.model.oldBook.core.gather.GatherOnListener;
 import com.tin.projectlist.app.model.oldBook.entity.Book;
 import com.tin.projectlist.app.model.oldBook.entity.Dynasty;
@@ -26,26 +27,15 @@ import cn.bmob.v3.listener.QueryListener;
 public final class GatherModel extends MvpModel<GatherOnListener> {
 
 
+
     public GatherModel() {
         // 在这里做一些初始化操作
     }
 
     public void getGatherDynastyDatas() {
-        BmobQuery query = new BmobQuery(BmobTableConstant.TAB_DYNASTY);
-        query.order("createdAt");
-        //v3.5.0版本提供`findObjectsByTable`方法查询自定义表名的数据
-        query.findObjectsByTable(new QueryListener<JSONArray>() {
-            @Override
-            public void done(JSONArray ary, BmobException e) {
-                if (e == null) {
-                    List<Dynasty> dynastyList = new Gson().fromJson(ary.toString(), new TypeToken<List<Dynasty>>() {
-                    }.getType());
-                    getListener().onGatherDynastySucceed(dynastyList);
-                } else {
-                    getListener().onGatherDynastyFail("失败：" + e.getMessage() + "," + e.getErrorCode());
-                }
-            }
-        });
+        List<Dynasty> dynastyList = new Gson().fromJson(ValueConstant.DYNASTY, new TypeToken<List<Dynasty>>() {
+        }.getType());
+        getListener().onGatherDynastySucceed(dynastyList);
     }
 
 

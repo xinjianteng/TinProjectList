@@ -27,7 +27,6 @@ public class GatherPresenter extends MvpPresenter<GatherContract.View>
 
     @Override
     public void getGatherDynastyDatas() {
-        getView().onLoading();
         model.getGatherDynastyDatas();
     }
 
@@ -39,7 +38,6 @@ public class GatherPresenter extends MvpPresenter<GatherContract.View>
 
     @Override
     public void onGatherDynastySucceed(List<Dynasty> datas) {
-        getView().onComplete();
         datas.get(0).setSelect(true);
         getView().GatherDynastyResult(datas);
     }

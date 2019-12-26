@@ -9,39 +9,100 @@
     tools:context=".ui.activity.AboutActivity">
 
     <com.hjq.bar.TitleBar
-        android:id="@+id/tb_title"
+        android:id="@+id/tabBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-         />
+        android:layout_height="@dimen/space_100"
+        app:backButton="true"
+        app:barStyle="transparent"
+        app:rightColor="@color/colorPrimary"
+        app:rightSize="@dimen/app_widget_text_size"
+        app:rightTitle="@string/search"
+        app:title="@string/home_nav_gather"
+        app:titleColor="@color/colorPrimary"
+        app:titleSize="@dimen/app_title_text_size" />
 
-    <include
-        layout="@layout/view_item_book"/>
-
-    <TextView
-        android:id="@+id/tv_bookIntroduction"
-        android:textSize="@dimen/item_book_introduction_size"
-        android:text="@string/app_test"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <include
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart_refresh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        layout="@layout/view_list"/>
+        app:srlDisableContentWhenRefresh="true"
+        app:srlEnableLoadMore="false"
+        app:srlEnableRefresh="true">
+
+
+        <com.tin.projectlist.app.library.base.widget.MultiStateView
+            android:id="@+id/multi_state_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:msv_emptyResId="@layout/default_view_empty"
+            app:msv_errorResId="@layout/default_view_error"
+            app:msv_loadingResId="@layout/default_view_loading">
+
+            <TextView
+                android:id="@+id/tv_bookIntroduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_test"
+                android:textSize="@dimen/item_book_introduction_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_item"
+                tools:ignore="ResourceName">
+
+                <include layout="@layout/view_book"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/space_10"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_item">
+
+                    <TextView
+                        android:id="@+id/tv_bookName"
+                        style="@style/item_bookName" />
+
+                    <TextView
+                        android:id="@+id/tv_bookAuthor"
+                        style="@style/item_bookAuthor" />
+
+                    <TextView
+                        android:id="@+id/tv_bookSummary"
+                        style="@style/item_bookSummary" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </com.tin.projectlist.app.library.base.widget.MultiStateView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
 
     <TextView
         android:id="@+id/tv_read"
-        android:text="@string/read"
         style="@style/ButtonStyle"
-        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_100"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:textSize="@dimen/app_title_text_size"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/space_100"/>
-
-
-
+        android:gravity="center"
+        android:text="@string/read"
+        android:textSize="@dimen/app_title_text_size" />
 
 </LinearLayout>

@@ -17,6 +17,7 @@ import com.tin.projectlist.app.model.oldBook.core.read.ReadActivity;
 import com.tin.projectlist.app.model.oldBook.entity.Book;
 import com.tin.projectlist.app.model.oldBook.entity.BookComment;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpActivity;
+import com.tin.projectlist.app.model.oldBook.utils.TextViewUtils;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
@@ -30,8 +31,8 @@ import java.util.List;
 public class BookDetailActivity extends MvpActivity<BookDetailPresenter> implements BookDetailContract.View{
 
 
-    @ViewInject(R.id.tb_title)
-    TitleBar titleBar;
+    @ViewInject(R.id.tabBar)
+    TitleBar mToolbar;
 
     @ViewInject(R.id.iv_bookCover)
     private ImageView bookCover;
@@ -69,19 +70,20 @@ public class BookDetailActivity extends MvpActivity<BookDetailPresenter> impleme
 
     @Override
     protected View getTitleId() {
-        return titleBar;
+        return mToolbar;
     }
 
 
     @Override
     protected void initData() {
         book = (Book) IntentUtils.getParcelableExtra(getIntent(), KeyConstant.ENTITY);
-        titleBar.setTitle(book.getBook_name());
+        mToolbar.setTitle(book.getBook_name());
         x.image().bind(bookCover,book.getBook_cover());
-        bookName.setText(book.getBook_name());
-        bookAuthor.setText(book.getBook_author());
-        bookSummary.setText(book.getBook_summary());
-        bookIntroduction.setText(book.getBook_introduction());
+
+        TextViewUtils.setText(bookName,book.getBook_name());
+        TextViewUtils.setText(bookAuthor,book.getBook_author());
+        TextViewUtils.setText(bookSummary,book.getBook_summary());
+        TextViewUtils.setText(bookIntroduction,book.getBook_introduction());
 
         bookCommentAdapter=new BookCommentAdapter(this);
         rcvList.setAdapter(bookCommentAdapter);

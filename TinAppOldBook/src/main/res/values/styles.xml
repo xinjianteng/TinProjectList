@@ -28,6 +28,9 @@
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
+
+
+
     <!-- 默认圆角按钮样式 -->
     <style name="ButtonStyle" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:paddingLeft">@dimen/space_30</item>

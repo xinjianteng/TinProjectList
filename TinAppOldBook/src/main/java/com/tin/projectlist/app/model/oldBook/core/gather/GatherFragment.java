@@ -111,18 +111,14 @@ public final class GatherFragment extends MvpLazyFragment<GatherPresenter>
 
     @Override
     public void GatherDynastyResult(List<Dynasty> dynamicList) {
-        if(dynamicList==null){
-
-        }else {
-            gatherDynastyAdapter.addData(dynamicList);
-            Dynasty dynastySelect = null;
-            for (Dynasty dynasty : dynamicList) {
-                if (dynasty.isSelect()) {
-                    dynastySelect = dynasty;
-                }
+        gatherDynastyAdapter.addData(dynamicList);
+        Dynasty dynastySelect = null;
+        for (Dynasty dynasty : dynamicList) {
+            if (dynasty.isSelect()) {
+                dynastySelect = dynasty;
             }
-            getPresenter().getBookListForDynasty(dynastySelect.getObjectId(),dynastySelect.getName());
         }
+        getPresenter().getBookListForDynasty(dynastySelect.getObjectId(),dynastySelect.getName());
     }
 
     @Override
