@@ -5,8 +5,6 @@ import android.os.Parcelable;
 
 import com.tin.projectlist.app.model.oldBook.constant.BmobTableConstant;
 
-import java.io.Serializable;
-
 import cn.bmob.v3.BmobObject;
 
 public class Book extends BmobObject implements Parcelable {

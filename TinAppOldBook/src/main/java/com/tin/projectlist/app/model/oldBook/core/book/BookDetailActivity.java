@@ -1,7 +1,5 @@
 package com.tin.projectlist.app.model.oldBook.core.book;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,6 +10,9 @@ import com.tin.projectlist.app.library.base.utils.IntentUtils;
 import com.tin.projectlist.app.library.base.widget.MultiStateView;
 import com.tin.projectlist.app.model.oldBook.R;
 import com.tin.projectlist.app.model.oldBook.constant.KeyConstant;
+import com.tin.projectlist.app.model.oldBook.core.book.BookCommentAdapter;
+import com.tin.projectlist.app.model.oldBook.core.book.BookDetailContract;
+import com.tin.projectlist.app.model.oldBook.core.book.BookDetailPresenter;
 import com.tin.projectlist.app.model.oldBook.core.read.ReadActivity;
 import com.tin.projectlist.app.model.oldBook.entity.Book;
 import com.tin.projectlist.app.model.oldBook.entity.BookComment;

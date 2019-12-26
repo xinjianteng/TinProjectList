@@ -2,6 +2,7 @@ package com.tin.projectlist.app.model.oldBook.mvp.copy;
 
 
 import com.tin.projectlist.app.model.oldBook.mvp.MvpModel;
+import com.tin.projectlist.app.model.oldBook.mvp.copy.CopyOnListener;
 
 /**
  *    author : Android 轮子哥

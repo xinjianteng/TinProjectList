@@ -11,6 +11,10 @@ import com.tin.projectlist.app.library.base.widget.MultiStateView;
 import com.tin.projectlist.app.model.oldBook.R;
 import com.tin.projectlist.app.model.oldBook.constant.KeyConstant;
 import com.tin.projectlist.app.model.oldBook.core.book.BookDetailActivity;
+import com.tin.projectlist.app.model.oldBook.core.gather.GatherBookAdapter;
+import com.tin.projectlist.app.model.oldBook.core.gather.GatherContract;
+import com.tin.projectlist.app.model.oldBook.core.gather.GatherDynastyAdapter;
+import com.tin.projectlist.app.model.oldBook.core.gather.GatherPresenter;
 import com.tin.projectlist.app.model.oldBook.entity.Book;
 import com.tin.projectlist.app.model.oldBook.entity.Dynasty;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpLazyFragment;
@@ -59,8 +63,8 @@ public final class GatherFragment extends MvpLazyFragment<GatherPresenter>
     protected void initView() {
         gatherDynastyAdapter = new GatherDynastyAdapter(getContext());
         gatherDynastyAdapter.setOnItemClickListener((recyclerView, itemView, position) -> {
-            for(int i=0;i<gatherDynastyAdapter.getItemCount();i++){
-                if(gatherDynastyAdapter.getItem(i).isSelect()){
+            for (int i = 0; i < gatherDynastyAdapter.getItemCount(); i++) {
+                if (gatherDynastyAdapter.getItem(i).isSelect()) {
                     gatherDynastyAdapter.getItem(i).setSelect(false);
                     gatherDynastyAdapter.notifyItemChanged(i);
                 }
@@ -71,9 +75,9 @@ public final class GatherFragment extends MvpLazyFragment<GatherPresenter>
         });
         gatherBookAdapter = new GatherBookAdapter(getContext());
         gatherBookAdapter.setOnItemClickListener((recyclerView, itemView, position) -> {
-            Intent intent=new Intent(getContext(), BookDetailActivity.class);
+            Intent intent = new Intent(getContext(), BookDetailActivity.class);
             intent.putExtra(KeyConstant.ENTITY, (Parcelable) gatherBookAdapter.getItem(position));
-            IntentUtils.startActivity(getContext(),intent);
+            IntentUtils.startActivity(getContext(), intent);
         });
         rcvIndex.setAdapter(gatherDynastyAdapter);
         rcvList.setAdapter(gatherBookAdapter);
@@ -107,22 +111,26 @@ public final class GatherFragment extends MvpLazyFragment<GatherPresenter>
 
     @Override
     public void GatherDynastyResult(List<Dynasty> dynamicList) {
-        gatherDynastyAdapter.addData(dynamicList);
-        Dynasty dynastySelect = null;
-        for(Dynasty dynasty:dynamicList){
-            if(dynasty.isSelect()){
-                dynastySelect=dynasty;
+        if(dynamicList==null){
+
+        }else {
+            gatherDynastyAdapter.addData(dynamicList);
+            Dynasty dynastySelect = null;
+            for (Dynasty dynasty : dynamicList) {
+                if (dynasty.isSelect()) {
+                    dynastySelect = dynasty;
+                }
             }
+            getPresenter().getBookListForDynasty(dynastySelect.getObjectId(),dynastySelect.getName());
         }
-        getPresenter().getBookListForDynasty(dynastySelect.getObjectId(),dynastySelect.getName());
     }
 
     @Override
     public void getBookListForDynasty(List<Book> bookList) {
-        if(bookList==null){
+        if (bookList == null) {
             gatherBookAdapter.clearData();
             multiStateView.showEmpty();
-        }else {
+        } else {
             gatherBookAdapter.setData(bookList);
             multiStateView.showContent();
         }

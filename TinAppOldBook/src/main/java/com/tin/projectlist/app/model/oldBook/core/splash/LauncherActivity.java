@@ -12,7 +12,6 @@ import com.hjq.permissions.XXPermissions;
 import com.tin.projectlist.app.model.oldBook.R;
 import com.tin.projectlist.app.model.oldBook.common.MyActivity;
 import com.tin.projectlist.app.model.oldBook.core.home.HomeActivity;
-import com.tin.projectlist.app.model.oldBook.core.read.ReadActivity;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
@@ -36,7 +35,7 @@ public final class LauncherActivity extends MyActivity
     @ViewInject(R.id.iv_launcher_icon)
     View mIconView;
 
-    private static final int ANIM_TIME = 100;
+    private static final int ANIM_TIME = 300;
 
     @Override
     protected View getTitleId() {

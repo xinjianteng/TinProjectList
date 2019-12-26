@@ -1,32 +1,24 @@
 package com.tin.projectlist.app.model.oldBook.core.read;
 
-import android.support.v7.widget.ListPopupWindow;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
-import android.widget.ListAdapter;
-import android.widget.PopupWindow;
 
 import com.hjq.bar.TitleBar;
 import com.tin.projectlist.app.model.oldBook.R;
-import com.tin.projectlist.app.model.oldBook.core.login.LoginActivity;
+import com.tin.projectlist.app.model.oldBook.core.read.EPubReaderAdapter;
+import com.tin.projectlist.app.model.oldBook.core.read.ReadContract;
+import com.tin.projectlist.app.model.oldBook.core.read.ReadPresenter;
 import com.tin.projectlist.app.model.oldBook.core.read.epub.EpubCatalogAdapter;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpActivity;
+import com.tin.projectlist.app.model.oldBook.readingTool.BookFileUtils;
+import com.tin.projectlist.app.model.oldBook.readingTool.BookMixAToc;
+import com.tin.projectlist.app.model.oldBook.readingTool.epub.view.DirectionalViewpager;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 
-import com.tin.projectlist.app.model.oldBook.readingTool.BookFileUtils;
-import com.tin.projectlist.app.model.oldBook.readingTool.BookMixAToc;
-import com.tin.projectlist.app.model.oldBook.readingTool.epub.view.DirectionalViewpager;
-import com.tin.projectlist.app.model.oldBook.ui.activity.AboutActivity;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +26,6 @@ import nl.siegmann.epublib.domain.Book;
 import nl.siegmann.epublib.domain.Resource;
 import nl.siegmann.epublib.domain.SpineReference;
 import nl.siegmann.epublib.domain.TOCReference;
-import nl.siegmann.epublib.epub.EpubReader;
 
 
 @ContentView(R.layout.activity_read)
@@ -144,7 +135,6 @@ public class ReadActivity extends MvpActivity<ReadPresenter> implements ReadCont
             epubCatalogAdapter.setData(mChapterList);
 
         }
-
     }
 
 

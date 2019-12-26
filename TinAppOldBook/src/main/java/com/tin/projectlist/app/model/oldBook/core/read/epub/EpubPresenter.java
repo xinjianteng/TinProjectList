@@ -1,8 +1,11 @@
 package com.tin.projectlist.app.model.oldBook.core.read.epub;
 
+import com.tin.projectlist.app.model.oldBook.core.read.epub.EpubContract;
+import com.tin.projectlist.app.model.oldBook.core.read.epub.EpubModel;
+import com.tin.projectlist.app.model.oldBook.core.read.epub.EpubOnListener;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpPresenter;
 
-public class EpubPresenter extends MvpPresenter<EpubContract.View> implements EpubContract.Presenter,EpubOnListener{
+public class EpubPresenter extends MvpPresenter<EpubContract.View> implements EpubContract.Presenter, EpubOnListener {
 
     EpubModel epubModel;
 

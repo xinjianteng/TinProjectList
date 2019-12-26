@@ -21,12 +21,12 @@ public class GatherBookAdapter extends BaseRecyclerViewAdapter<Book, GatherBookA
 
     @NonNull
     @Override
-    public GatherBookAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return new GatherBookAdapter.ViewHolder(viewGroup, R.layout.view_item_book);
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        return new ViewHolder(viewGroup, R.layout.view_item_book);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull GatherBookAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.bookName.setText(getItem(position).getBook_name());
         holder.bookAuthor.setText(getItem(position).getBook_author());
         holder.bookSummary.setText(getItem(position).getBook_summary());

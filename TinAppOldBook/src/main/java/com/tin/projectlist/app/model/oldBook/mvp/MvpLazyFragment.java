@@ -2,6 +2,8 @@ package com.tin.projectlist.app.model.oldBook.mvp;
 
 
 import com.tin.projectlist.app.model.oldBook.common.MyLazyFragment;
+import com.tin.projectlist.app.model.oldBook.mvp.IMvpView;
+import com.tin.projectlist.app.model.oldBook.mvp.MvpPresenter;
 
 /**
  *    author : Android 轮子哥

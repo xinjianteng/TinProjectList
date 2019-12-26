@@ -1,5 +1,8 @@
 package com.tin.projectlist.app.model.oldBook.core.gather;
 
+import com.tin.projectlist.app.model.oldBook.core.gather.GatherContract;
+import com.tin.projectlist.app.model.oldBook.core.gather.GatherModel;
+import com.tin.projectlist.app.model.oldBook.core.gather.GatherOnListener;
 import com.tin.projectlist.app.model.oldBook.entity.Book;
 import com.tin.projectlist.app.model.oldBook.entity.Dynasty;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpPresenter;

@@ -4,7 +4,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-
 import com.tin.projectlist.app.model.oldBook.core.read.epub.ReaderEpubFragment;
 
 import java.util.List;

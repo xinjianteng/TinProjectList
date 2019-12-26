@@ -13,7 +13,7 @@ public class LoginContract {
     }
 
     public  interface  Presenter{
-        void login(String account,String password);
+        void login(String account, String password);
     }
 
 }

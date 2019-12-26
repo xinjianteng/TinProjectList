@@ -12,6 +12,8 @@ import com.tin.projectlist.app.library.base.utils.DoubleClickHelper;
 import com.tin.projectlist.app.model.oldBook.R;
 import com.tin.projectlist.app.model.oldBook.common.MyLazyFragment;
 import com.tin.projectlist.app.model.oldBook.core.gather.GatherFragment;
+import com.tin.projectlist.app.model.oldBook.core.home.HomeContract;
+import com.tin.projectlist.app.model.oldBook.core.home.HomePresenter;
 import com.tin.projectlist.app.model.oldBook.utils.ActivityStackManager;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpActivity;
 import com.tin.projectlist.app.model.oldBook.ui.fragment.HomeMeFragment;
@@ -29,7 +31,7 @@ import org.xutils.view.annotation.ViewInject;
 @ContentView(R.layout.activity_home)
 public final class HomeActivity extends MvpActivity<HomePresenter>
         implements ViewPager.OnPageChangeListener,
-        BottomNavigationView.OnNavigationItemSelectedListener,HomeContract.View {
+        BottomNavigationView.OnNavigationItemSelectedListener, HomeContract.View {
 
     @ViewInject(R.id.vp_home_pager)
     ViewPager mViewPager;

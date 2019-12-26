@@ -15,33 +15,18 @@
  */
 package com.tin.projectlist.app.model.oldBook.readingTool;
 
-import android.content.Context;
-import android.os.Environment;
-
-
-import com.tin.projectlist.app.library.base.utils.FileUtils;
 import com.tin.projectlist.app.library.base.utils.LogUtils;
-import com.tin.projectlist.app.model.oldBook.common.MyApplication;
 import com.tin.projectlist.app.model.oldBook.constant.PathConstant;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.nio.channels.FileChannel;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.List;
@@ -54,13 +39,21 @@ import java.util.zip.ZipFile;
  */
 public class BookFileUtils {
 
+    public static  String getFileNameForPath(String filePath){
+        return filePath.substring(filePath.lastIndexOf("/") + 1, filePath.lastIndexOf("."));
+    }
+
 
     public static void unzipFile(String inputZip, String destinationDirectory) throws IOException {
         int buffer = 2048;
         List<String> zipFiles = new ArrayList<>();
+
         File sourceZipFile = new File(inputZip);
+
         File unzipDirectory = new File(destinationDirectory);
+
         createDir(unzipDirectory.getAbsolutePath());
+
         ZipFile zipFile;
         zipFile = new ZipFile(sourceZipFile, ZipFile.OPEN_READ);
         Enumeration zipFileEntries = zipFile.entries();

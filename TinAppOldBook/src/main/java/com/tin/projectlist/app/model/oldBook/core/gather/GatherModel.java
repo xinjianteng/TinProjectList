@@ -4,6 +4,7 @@ package com.tin.projectlist.app.model.oldBook.core.gather;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.tin.projectlist.app.model.oldBook.constant.BmobTableConstant;
+import com.tin.projectlist.app.model.oldBook.core.gather.GatherOnListener;
 import com.tin.projectlist.app.model.oldBook.entity.Book;
 import com.tin.projectlist.app.model.oldBook.entity.Dynasty;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpModel;

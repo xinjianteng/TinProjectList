@@ -1,11 +1,14 @@
 package com.tin.projectlist.app.model.oldBook.core.book;
 
+import com.tin.projectlist.app.model.oldBook.core.book.BookDetailContract;
+import com.tin.projectlist.app.model.oldBook.core.book.BookDetailModel;
+import com.tin.projectlist.app.model.oldBook.core.book.BookDetailOnListener;
 import com.tin.projectlist.app.model.oldBook.entity.BookComment;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpPresenter;
 
 import java.util.List;
 
-public class BookDetailPresenter  extends MvpPresenter<BookDetailContract.View> implements BookDetailContract.Presenter,BookDetailOnListener{
+public class BookDetailPresenter  extends MvpPresenter<BookDetailContract.View> implements BookDetailContract.Presenter, BookDetailOnListener {
 
 
     BookDetailModel bookDetailModel;
