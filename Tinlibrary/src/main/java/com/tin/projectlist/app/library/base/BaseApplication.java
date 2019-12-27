@@ -4,7 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
-import com.hjq.toast.ToastUtils;
+
+import com.tin.projectlist.app.library.base.widget.toast.ToastUtils;
 
 import org.xutils.x;
 

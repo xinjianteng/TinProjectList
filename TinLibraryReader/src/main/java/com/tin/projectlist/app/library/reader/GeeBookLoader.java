@@ -7,7 +7,9 @@ import android.os.Bundle;
 
 import com.tin.projectlist.app.library.reader.bookElements.BookDescriptor;
 import com.tin.projectlist.app.library.reader.controller.GeeBookMgr;
+import com.tin.projectlist.app.library.reader.pdf.PdfActivity;
 import com.tin.projectlist.app.library.reader.utils.IGiveback;
+import com.tin.projectlist.app.library.reader.view.ReaderActivity;
 
 /**
  *
@@ -179,8 +181,8 @@ public class GeeBookLoader {
      * @param
      */
     public static void initApp(Application app) {
-        new GBAndroidImageManager();
-        new GBAndroidLibrary(app);
+//        new GBAndroidImageManager();
+//        new GBAndroidLibrary(app);
     }
 
 

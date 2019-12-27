@@ -1,2 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tin.projectlist.app.library.reader" />
+    package="com.tin.projectlist.app.library.reader" >
+
+
+    <application>
+
+
+        <activity android:name=".pdf.PdfActivity"/>
+        <activity android:name=".view.ReaderActivity" />
+
+    </application>
+
+</manifest>
