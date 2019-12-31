@@ -6,6 +6,7 @@ import android.support.annotation.StringRes;
 import android.util.Log;
 
 import com.hjq.toast.ToastUtils;
+import com.tin.projectlist.app.library.base.view.MyActivity;
 import com.tin.projectlist.app.model.oldBook.utils.DebugUtils;
 import com.tin.projectlist.app.model.oldBook.utils.StatusManager;
 

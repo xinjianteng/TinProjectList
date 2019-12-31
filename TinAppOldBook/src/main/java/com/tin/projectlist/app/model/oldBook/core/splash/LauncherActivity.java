@@ -10,7 +10,7 @@ import com.hjq.permissions.OnPermission;
 import com.hjq.permissions.Permission;
 import com.hjq.permissions.XXPermissions;
 import com.tin.projectlist.app.model.oldBook.R;
-import com.tin.projectlist.app.model.oldBook.common.MyActivity;
+import com.tin.projectlist.app.library.base.view.MyActivity;
 import com.tin.projectlist.app.model.oldBook.core.home.HomeActivity;
 
 import org.xutils.view.annotation.ContentView;
@@ -31,9 +31,9 @@ public final class LauncherActivity extends MyActivity
 
 
     @ViewInject(R.id.iv_launcher_bg)
-    View mImageView;
+    private View mImageView;
     @ViewInject(R.id.iv_launcher_icon)
-    View mIconView;
+    private View mIconView;
 
     private static final int ANIM_TIME = 300;
 

@@ -15,7 +15,7 @@ import com.tin.projectlist.app.model.oldBook.core.gather.GatherFragment;
 import com.tin.projectlist.app.model.oldBook.core.shelf.ShelfFragment;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpActivity;
 import com.tin.projectlist.app.model.oldBook.ui.fragment.HomeMeFragment;
-import com.tin.projectlist.app.model.oldBook.utils.ActivityStackManager;
+import com.tin.projectlist.app.library.base.utils.ActivityStackManager;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;

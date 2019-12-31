@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import com.qq.e.ads.splash.SplashAD;
 import com.qq.e.ads.splash.SplashADListener;
 import com.tin.projectList.app.model.advert.ui.main.SectionsPagerAdapter;
-import com.tin.projectlist.app.library.base.BaseActivity;
+import com.tin.projectlist.app.library.base.view.base.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;

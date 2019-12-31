@@ -3,8 +3,8 @@ package com.tin.projectlist.app.library.reader.exception;
 import android.app.Activity;
 import android.os.Looper;
 
-import com.hjq.toast.ToastUtils;
 import com.tin.projectlist.app.library.base.utils.LogUtils;
+import com.tin.projectlist.app.library.base.widget.toast.ToastUtils;
 
 
 /**

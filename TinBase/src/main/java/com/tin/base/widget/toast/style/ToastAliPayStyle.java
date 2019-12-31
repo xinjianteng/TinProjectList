@@ -1,21 +1,21 @@
-package com.tin.projectlist.app.library.base.widget.toast.style;
+package com.tin.base.widget.toast.style;
 
 import android.view.Gravity;
 
-import com.tin.projectlist.app.library.base.widget.toast.IToastStyle;
+import com.tin.base.widget.toast.IToastStyle;
 
 
 /**
  *    author : Android 轮子哥
  *    github : https://github.com/getActivity/ToastUtils
- *    time   : 2018/09/01
- *    desc   : QQ样式实现
+ *    time   : 2018/12/06
+ *    desc   : 支付宝样式实现
  */
-public class ToastQQStyle implements IToastStyle {
+public class ToastAliPayStyle implements IToastStyle {
 
     @Override
     public int getGravity() {
-        return Gravity.CENTER;
+        return Gravity.CENTER_HORIZONTAL|Gravity.BOTTOM;
     }
 
     @Override
@@ -25,32 +25,32 @@ public class ToastQQStyle implements IToastStyle {
 
     @Override
     public int getYOffset() {
-        return 0;
+        return 240;
     }
 
     @Override
     public int getZ() {
-        return 0;
+        return 30;
     }
 
     @Override
     public int getCornerRadius() {
-        return 4;
+        return 5;
     }
 
     @Override
     public int getBackgroundColor() {
-        return 0XFF333333;
+        return 0XEE575757;
     }
 
     @Override
     public int getTextColor() {
-        return 0XFFE3E3E3;
+        return 0XFFFFFFFF;
     }
 
     @Override
     public float getTextSize() {
-        return 12;
+        return 16;
     }
 
     @Override
@@ -65,7 +65,7 @@ public class ToastQQStyle implements IToastStyle {
 
     @Override
     public int getPaddingTop() {
-        return 14;
+        return 10;
     }
 
     @Override

@@ -1,9 +1,8 @@
-include ':TinAppAdvert', ':TinLibraryReader'
+include ':TinAppAdvert', ':TinLibraryReader', ':TinBase'
 include ':TinAppWeChatCut'
 include  ':TinAppQuestionBank'
 include ':TinAppOldBook'
 
-include ':TinLibraryBase2'
 
 include ':TinTvRead'
 include ':TinAppItBook'

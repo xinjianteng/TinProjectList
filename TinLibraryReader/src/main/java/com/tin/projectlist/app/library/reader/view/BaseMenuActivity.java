@@ -1,6 +1,6 @@
 package com.tin.projectlist.app.library.reader.view;
 
-import com.tin.projectlist.app.library.base.BaseActivity;
+import com.tin.projectlist.app.library.base.view.base.BaseActivity;
 
 
 

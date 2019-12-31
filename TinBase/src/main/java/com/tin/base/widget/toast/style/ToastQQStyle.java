@@ -1,8 +1,8 @@
-package com.tin.projectlist.app.library.base.widget.toast.style;
+package com.tin.base.widget.toast.style;
 
 import android.view.Gravity;
 
-import com.tin.projectlist.app.library.base.widget.toast.IToastStyle;
+import com.tin.base.widget.toast.IToastStyle;
 
 
 /**

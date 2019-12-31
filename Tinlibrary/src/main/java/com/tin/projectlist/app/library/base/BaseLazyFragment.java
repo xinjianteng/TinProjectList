@@ -13,6 +13,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.tin.projectlist.app.library.base.view.base.BaseActivity;
+
 import org.xutils.x;
 
 import java.lang.reflect.Field;

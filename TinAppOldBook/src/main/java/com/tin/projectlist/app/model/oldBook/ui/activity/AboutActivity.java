@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import com.hjq.bar.TitleBar;
 import com.tin.projectlist.app.model.oldBook.R;
-import com.tin.projectlist.app.model.oldBook.common.MyActivity;
+import com.tin.projectlist.app.library.base.view.MyActivity;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;

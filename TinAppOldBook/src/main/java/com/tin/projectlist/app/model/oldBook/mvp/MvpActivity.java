@@ -1,7 +1,7 @@
 package com.tin.projectlist.app.model.oldBook.mvp;
 
 
-import com.tin.projectlist.app.model.oldBook.common.MyActivity;
+import com.tin.projectlist.app.library.base.view.MyActivity;
 
 /**
  *    author : Android 轮子哥
