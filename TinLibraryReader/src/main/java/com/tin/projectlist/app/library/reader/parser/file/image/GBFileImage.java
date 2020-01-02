@@ -1,4 +1,4 @@
-package com.tin.projectlist.app.library.reader.parser.file.image;
+package com.core.file.image;
 
 import com.core.common.util.Base64InputStream;
 import com.core.common.util.HexInputStream;
@@ -9,7 +9,6 @@ import com.core.file.GBFile;
 
 import java.io.IOException;
 import java.io.InputStream;
-
 /**
  * 类名： GBFileImage.java#ZLFileImage<br>
  * 描述： <br>

@@ -1,0 +1,20 @@
+package com.core.text.widget;
+/**
+ * 类名： GBAnimObjRegionSoul.java<br>
+ * 描述： 交互动画元素区域信息<br>
+ * 创建者： jack<br>
+ * 创建日期：2013-12-2<br>
+ * 版本： <br>
+ * 修改者： <br>
+ * 修改日期：<br>
+ */
+public class GBAnimObjRegionSoul extends GBTextRegion.Soul {
+    public final GBAnimObjElement AnimObjElement;
+    public final GBTextElementArea mArea;
+    public GBAnimObjRegionSoul(GBTextElementArea position, GBAnimObjElement animObjElement) {
+        super(position.getChpFileIndex(), position.getParagraphIndex(), position.getElementIndex(), position
+                .getElementIndex());
+        mArea = position;
+        AnimObjElement = animObjElement;
+    }
+}

@@ -1,4 +1,4 @@
-package com.tin.projectlist.app.library.reader.parser.common;
+package com.core.common;
 
 import java.io.Serializable;
 
@@ -9,6 +9,10 @@ import java.io.Serializable;
  *
  */
 public class CopyVersionInfo implements Serializable {
+
+	/**
+	 *
+	 */
 	private static final long serialVersionUID = 1L;
 	private final static String BOOKNAME = "${bookName}";
 	private final static String AUTHOR = "${author}";
@@ -35,7 +39,7 @@ public class CopyVersionInfo implements Serializable {
 	 *            总字数
 	 */
 	public CopyVersionInfo(String mBookName, String mPublisher, String mAuthor,
-                           String mISBN, String mCopyInfo, String mCopyCount, String mWords) {
+						   String mISBN, String mCopyInfo, String mCopyCount, String mWords) {
 		super();
 		this.mBookName = mBookName;
 		this.mPublisher = mPublisher;

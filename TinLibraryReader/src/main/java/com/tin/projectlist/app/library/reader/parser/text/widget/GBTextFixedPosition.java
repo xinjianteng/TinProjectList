@@ -1,6 +1,4 @@
-package com.tin.projectlist.app.library.reader.parser.text.widget;
-
-
+package com.core.text.widget;
 /**
  * 描述不可改变的位置 类名： .java<br>
  * 描述： <br>
@@ -30,7 +28,7 @@ public class GBTextFixedPosition extends GBTextPosition {
     }
 
 
-    public GBTextFixedPosition(int chpFileIndex, int paragraphIndex, int elementIndex, int charIndex, long chpInWordNum) {
+    public GBTextFixedPosition(int chpFileIndex, int paragraphIndex, int elementIndex, int charIndex,long chpInWordNum) {
         ChpFileIndex = chpFileIndex;
         ParagraphIndex = paragraphIndex;
         ElementIndex = elementIndex;

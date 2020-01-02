@@ -1,9 +1,8 @@
-package com.tin.projectlist.app.library.reader.parser.file.image;
+package com.core.file.image;
 
 import com.core.common.util.MimeType;
 
 import java.io.InputStream;
-
 /**
  * 类名： GBSingleImage.java<br>
  * 描述： <br>

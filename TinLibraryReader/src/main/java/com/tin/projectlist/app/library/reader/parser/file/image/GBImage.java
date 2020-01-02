@@ -1,4 +1,4 @@
-package com.tin.projectlist.app.library.reader.parser.file.image;
+package com.core.file.image;
 /**
  * 类名： GBImage.java<br>
  * 描述： 自定义image接口<br>

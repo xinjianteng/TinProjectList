@@ -1,4 +1,7 @@
-package com.tin.projectlist.app.library.reader.parser.text.iterator;
+package com.core.text.iterator;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import com.core.file.image.GBFileImage;
 import com.core.file.image.GBImage;
@@ -26,10 +29,6 @@ import com.core.text.widget.GBTextImageElement;
 import com.core.text.widget.GBTextStyleElement;
 import com.core.text.widget.GBTextWord;
 import com.core.text.widget.GBVideoElement;
-
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * 描述： 文本段游标解析迭代器<br>

@@ -1,4 +1,4 @@
-package com.tin.projectlist.app.library.reader.parser.file;
+package com.core.file;
 
 import com.core.file.zip.GBArchiveEntryFile;
 import com.core.file.zip.GBZipEntryFile;
