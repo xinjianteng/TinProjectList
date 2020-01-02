@@ -1,4 +1,4 @@
-package com.tin.projectlist.app.library.reader.bookElements;
+package com.tin.projectlist.app.library.reader.parser.common;
 
 import java.io.Serializable;
 

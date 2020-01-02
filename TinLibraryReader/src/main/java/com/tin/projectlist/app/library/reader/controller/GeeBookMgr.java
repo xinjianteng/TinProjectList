@@ -6,17 +6,15 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.core.common.util.IFunction;
 import com.core.domain.GBApplication;
-import com.core.text.widget.GBTextPosition;
-import com.geeboo.read.exception.TipException;
 import com.geeboo.read.model.book.Annotations;
 import com.geeboo.read.model.book.Bookmark;
 import com.geeboo.read.model.book.TypeFace;
 import com.geeboo.read.view.ReaderActivity;
 import com.geeboo.read.view.action.AnnotationOptype;
-import com.tin.projectlist.app.library.reader.bookElements.text.GBTextPosition;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextPosition;
 import com.tin.projectlist.app.library.reader.exception.TipException;
+import com.tin.projectlist.app.library.reader.utils.IFunction;
 
 import org.json.JSONException;
 
@@ -365,7 +363,7 @@ public abstract class GeeBookMgr {
      *
      * @return
      */
-    public abstract void downloadFile(String url,String filename,boolean isCache,String title,IFunction<Integer> callback);
+    public abstract void downloadFile(String url, String filename, boolean isCache, String title, IFunction<Integer> callback);
     /**
      * 功能描述：下载文件<br>
      * 创建者： 周波<br>

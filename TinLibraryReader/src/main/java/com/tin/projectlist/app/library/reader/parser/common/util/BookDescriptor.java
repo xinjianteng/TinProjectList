@@ -1,5 +1,7 @@
-package com.tin.projectlist.app.library.reader.bookElements;
+package com.tin.projectlist.app.library.reader.parser.common.util;
 
+
+import com.tin.projectlist.app.library.reader.parser.common.CopyVersionInfo;
 
 import java.io.Serializable;
 

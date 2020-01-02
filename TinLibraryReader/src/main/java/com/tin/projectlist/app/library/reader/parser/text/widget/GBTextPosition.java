@@ -1,4 +1,4 @@
-package com.tin.projectlist.app.library.reader.bookElements.text;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 /**
  * original:ZLTextPosition 类名： .java<br>
  * 描述： 文本位置定义<br>
