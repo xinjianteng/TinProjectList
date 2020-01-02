@@ -181,8 +181,8 @@ public class GeeBookLoader {
      * @param
      */
     public static void initApp(Application app) {
-//        new GBAndroidImageManager();
-//        new GBAndroidLibrary(app);
+        new GBAndroidImageManager();
+        new GBAndroidLibrary(app);
     }
 
 
