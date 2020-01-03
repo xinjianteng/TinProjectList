@@ -1,4 +1,4 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 /**
  * 描述不可改变的位置 类名： .java<br>
  * 描述： <br>

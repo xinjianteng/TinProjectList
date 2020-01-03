@@ -1,4 +1,4 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 
 public class GBTextImageRegionSoul extends GBTextRegion.Soul {
     public final GBTextImageElement ImageElement;

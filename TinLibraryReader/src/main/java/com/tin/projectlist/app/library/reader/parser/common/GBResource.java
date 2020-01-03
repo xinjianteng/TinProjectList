@@ -1,9 +1,9 @@
-package com.core.common;
+package com.tin.projectlist.app.library.reader.parser.common;
 
-import com.core.file.GBFile;
 import com.core.file.GBResourceFile;
 import com.core.option.GBStringOption;
 import com.core.support.Language;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
 
 import java.util.ArrayList;
 import java.util.Collections;

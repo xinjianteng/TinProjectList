@@ -1,4 +1,4 @@
-package com.core.text.style;
+package com.tin.projectlist.app.library.reader.parser.text.style;
 
 import com.core.text.model.GBTextHyperlink;
 import com.core.text.model.GBTextMetrics;

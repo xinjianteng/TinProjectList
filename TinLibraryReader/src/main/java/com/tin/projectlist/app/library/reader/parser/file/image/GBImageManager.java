@@ -1,4 +1,4 @@
-package com.core.file.image;
+package com.tin.projectlist.app.library.reader.parser.file.image;
 /**
  * 类名： GBImageManager.java#ZLImageManager<br>
  * 描述： 图片管理类<br>

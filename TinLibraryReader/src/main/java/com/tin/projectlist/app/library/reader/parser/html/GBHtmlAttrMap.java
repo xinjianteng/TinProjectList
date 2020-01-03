@@ -1,5 +1,5 @@
 
-package com.core.html;
+package com.tin.projectlist.app.library.reader.parser.html;
 
 import com.core.object.GBByteBuffer;
 

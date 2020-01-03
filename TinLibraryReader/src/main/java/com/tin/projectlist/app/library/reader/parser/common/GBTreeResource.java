@@ -1,4 +1,4 @@
-package com.core.common;
+package com.tin.projectlist.app.library.reader.parser.common;
 
 import com.core.file.GBFile;
 import com.core.file.GBResourceFile;

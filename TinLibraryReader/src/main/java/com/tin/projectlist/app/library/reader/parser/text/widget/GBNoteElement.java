@@ -1,4 +1,4 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 
 /**
  * 类名： GBNoteElement.java<br>

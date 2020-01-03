@@ -1,4 +1,4 @@
-package com.core.common.util;
+package com.tin.projectlist.app.library.reader.parser.common.util;
 
 import java.io.IOException;
 import java.io.InputStream;

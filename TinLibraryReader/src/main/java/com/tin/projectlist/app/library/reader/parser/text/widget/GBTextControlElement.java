@@ -1,4 +1,4 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 /**
  * 界面标签控制元素
  * original:ZLTextControlElement

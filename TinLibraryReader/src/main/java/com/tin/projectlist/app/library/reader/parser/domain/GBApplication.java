@@ -1,4 +1,4 @@
-package com.core.domain;
+package com.tin.projectlist.app.library.reader.parser.domain;
 
 import java.util.Collection;
 import java.util.HashMap;

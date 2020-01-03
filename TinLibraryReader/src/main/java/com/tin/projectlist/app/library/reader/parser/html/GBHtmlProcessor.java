@@ -1,4 +1,4 @@
-package com.core.html;
+package com.tin.projectlist.app.library.reader.parser.html;
 
 import java.io.InputStream;
 import java.io.IOException;

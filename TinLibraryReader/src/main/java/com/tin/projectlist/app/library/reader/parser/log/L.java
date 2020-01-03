@@ -1,4 +1,4 @@
-package com.core.log;
+package com.tin.projectlist.app.library.reader.parser.log;
 
 import android.util.Log;
 

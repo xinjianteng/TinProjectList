@@ -1,4 +1,4 @@
-package com.core.object;
+package com.tin.projectlist.app.library.reader.parser.object;
 
 /**
  * 描述：搜索条件实体 <br>

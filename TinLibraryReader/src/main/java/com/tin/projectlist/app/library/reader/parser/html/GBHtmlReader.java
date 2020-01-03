@@ -1,5 +1,5 @@
 
-package com.core.html;
+package com.tin.projectlist.app.library.reader.parser.html;
 /**
  * 类名： GBHtmlReader.java#ZLHtmlReader<br>
  * 描述： html文件阅读接口<br>

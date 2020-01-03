@@ -1,4 +1,4 @@
-package com.core.view;
+package com.tin.projectlist.app.library.reader.parser.view;
 
 import com.core.file.GBFile;
 import com.core.file.image.GBImageData;

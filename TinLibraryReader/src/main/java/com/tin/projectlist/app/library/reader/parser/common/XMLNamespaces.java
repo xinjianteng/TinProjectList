@@ -1,4 +1,4 @@
-package com.core.common;
+package com.tin.projectlist.app.library.reader.parser.common;
 
 /**
  * 地址

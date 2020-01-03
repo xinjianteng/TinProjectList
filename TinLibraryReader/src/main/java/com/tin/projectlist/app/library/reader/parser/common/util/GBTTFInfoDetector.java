@@ -1,4 +1,4 @@
-package com.core.common.util;
+package com.tin.projectlist.app.library.reader.parser.common.util;
 
 import java.util.*;
 import java.io.*;

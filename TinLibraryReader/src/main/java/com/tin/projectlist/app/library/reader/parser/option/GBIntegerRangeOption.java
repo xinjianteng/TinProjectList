@@ -1,4 +1,4 @@
-package com.core.option;
+package com.tin.projectlist.app.library.reader.parser.option;
 /**
  * 类名： GBIntegerRangeOption.java#ZLIntegerRangeOption<br>
  * 描述： 自定义一个区间范围和默认值的整形对象<br>

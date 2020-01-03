@@ -1,4 +1,4 @@
-package com.core.network;
+package com.tin.projectlist.app.library.reader.parser.network;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

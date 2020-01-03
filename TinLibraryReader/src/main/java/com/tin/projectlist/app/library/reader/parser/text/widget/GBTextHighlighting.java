@@ -1,4 +1,4 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 /**
  * 高亮文本 类名： .java<br>
  * 描述： <br>

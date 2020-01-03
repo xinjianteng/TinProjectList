@@ -1,4 +1,4 @@
-package com.core.text.iterator;
+package com.tin.projectlist.app.library.reader.parser.text.iterator;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.core.file.tar;
+package com.tin.projectlist.app.library.reader.parser.file.tar;
 
 import java.io.InputStream;
 import java.io.IOException;

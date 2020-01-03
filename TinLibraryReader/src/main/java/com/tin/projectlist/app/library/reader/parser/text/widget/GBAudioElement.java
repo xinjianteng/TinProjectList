@@ -1,6 +1,5 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 
-import com.core.file.image.GBFileImage;
 
 /**
  * 类名： GBAudioElement.java<br>

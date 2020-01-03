@@ -1,4 +1,4 @@
-package com.core.network;
+package com.tin.projectlist.app.library.reader.parser.network;
 
 import com.core.log.L;
 

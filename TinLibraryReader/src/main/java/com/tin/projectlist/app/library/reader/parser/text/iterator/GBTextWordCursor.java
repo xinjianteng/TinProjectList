@@ -1,4 +1,4 @@
-package com.core.text.iterator;
+package com.tin.projectlist.app.library.reader.parser.text.iterator;
 
 import com.core.domain.GBApplication;
 import com.core.text.model.GBTextMark;

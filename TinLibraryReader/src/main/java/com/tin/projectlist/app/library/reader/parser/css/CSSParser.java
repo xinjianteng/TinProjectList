@@ -1,4 +1,4 @@
-package com.core.css;
+package com.tin.projectlist.app.library.reader.parser.css;
 
 import java.io.IOException;
 import java.io.InputStream;

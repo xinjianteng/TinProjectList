@@ -1,4 +1,4 @@
-package com.core.file.tar;
+package com.tin.projectlist.app.library.reader.parser.file.tar;
 
 import com.core.file.GBFile;
 import com.core.file.zip.GBArchiveEntryFile;

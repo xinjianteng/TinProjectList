@@ -1,4 +1,4 @@
-package com.core.file.image;
+package com.tin.projectlist.app.library.reader.parser.file.image;
 
 import com.core.common.util.MimeType;
 

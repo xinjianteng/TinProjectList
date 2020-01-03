@@ -1,4 +1,4 @@
-package com.core.domain;
+package com.tin.projectlist.app.library.reader.parser.domain;
 /**
  * 类名： GBPopPanel.java#ZLApplication.PopupPanel<br>
  * 描述： 弹出窗体抽象类<br>

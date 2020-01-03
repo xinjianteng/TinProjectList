@@ -1,4 +1,4 @@
-package com.core.text.model;
+package com.tin.projectlist.app.library.reader.parser.text.model;
 /**
  *
  * 描述： 书签实体类 创建者： 燕冠楠<br>

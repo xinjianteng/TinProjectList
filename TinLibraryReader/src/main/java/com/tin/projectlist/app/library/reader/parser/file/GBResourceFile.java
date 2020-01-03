@@ -1,4 +1,4 @@
-package com.core.file;
+package com.tin.projectlist.app.library.reader.parser.file;
 
 import com.core.platform.GBLibrary;
 

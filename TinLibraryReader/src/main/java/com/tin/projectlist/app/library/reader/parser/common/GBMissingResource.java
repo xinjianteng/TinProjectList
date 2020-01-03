@@ -17,7 +17,7 @@
  * 02110-1301, USA.
  */
 
-package com.core.common;
+package com.tin.projectlist.app.library.reader.parser.common;
 
 final class GBMissingResource extends GBResource {
 	static final String Value = "????????";

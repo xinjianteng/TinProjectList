@@ -1,6 +1,7 @@
-package com.core.common.util;
+package com.tin.projectlist.app.library.reader.parser.common.util;
 
-import com.core.object.GBSearchPattern;
+
+import com.tin.projectlist.app.library.reader.parser.object.GBSearchPattern;
 
 /**
  * 搜索工具类<br>

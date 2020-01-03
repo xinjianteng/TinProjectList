@@ -1,4 +1,4 @@
-package com.core.option;
+package com.tin.projectlist.app.library.reader.parser.option;
 /**
  * 类名： GBIntegerOption.java#ZLIntegerOption<br>
  * 描述： 封装了一个带默认值的整形类型<br>

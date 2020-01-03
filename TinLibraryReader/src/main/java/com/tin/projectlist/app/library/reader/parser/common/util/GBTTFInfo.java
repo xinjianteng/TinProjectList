@@ -1,4 +1,4 @@
-package com.core.common.util;
+package com.tin.projectlist.app.library.reader.parser.common.util;
 
 /*
  * TTF(TrueTypeFont)是一种字库名称。是Apple公司和Microsoft公司共同推出的字体文件格式，随着windows的流行，已经变成最常用的一种字体文件表示方式

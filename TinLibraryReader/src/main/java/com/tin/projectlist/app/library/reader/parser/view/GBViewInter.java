@@ -1,4 +1,4 @@
-package com.core.view;
+package com.tin.projectlist.app.library.reader.parser.view;
 /**
  * 类名： GBViewInter.java#ZLViewWidget<br>
  * 描述： 翻页控件业务定义，例如重绘和启动动画的方法<br>

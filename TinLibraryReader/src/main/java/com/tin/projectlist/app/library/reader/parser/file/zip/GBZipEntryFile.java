@@ -1,4 +1,4 @@
-package com.core.file.zip;
+package com.tin.projectlist.app.library.reader.parser.file.zip;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,6 +16,7 @@ import com.core.zip.ZipFile;
 import com.geeboo.Geeboo;
 import com.geeboo.book.GBBook;
 import com.geeboo.book.GBBookFactory;
+import com.tin.projectlist.app.library.reader.parser.file.zip.GBArchiveEntryFile;
 
 /**
  * 类名： GBZipEntryFile.java#ZLZipEntryFile<br>

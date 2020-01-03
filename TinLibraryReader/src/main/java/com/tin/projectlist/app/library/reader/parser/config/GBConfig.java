@@ -1,4 +1,4 @@
-package com.core.config;
+package com.tin.projectlist.app.library.reader.parser.config;
 
 import java.util.List;
 /**

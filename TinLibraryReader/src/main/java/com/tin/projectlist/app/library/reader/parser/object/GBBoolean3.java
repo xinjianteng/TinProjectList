@@ -17,7 +17,7 @@
  * 02110-1301, USA.
  */
 
-package com.core.object;
+package com.tin.projectlist.app.library.reader.parser.object;
 
 /**
  * 描述：自定义布尔类，三个值的布尔类 <br>

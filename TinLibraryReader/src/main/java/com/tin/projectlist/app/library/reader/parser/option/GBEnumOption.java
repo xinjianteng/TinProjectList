@@ -1,4 +1,4 @@
-package com.core.option;
+package com.tin.projectlist.app.library.reader.parser.option;
 
 public final class GBEnumOption<T extends Enum<T>> extends GBOption {
 	private final T myDefaultValue;

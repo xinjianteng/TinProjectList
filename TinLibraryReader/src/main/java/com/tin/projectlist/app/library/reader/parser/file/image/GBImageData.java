@@ -1,4 +1,4 @@
-package com.core.file.image;
+package com.tin.projectlist.app.library.reader.parser.file.image;
 /**
  * 类名： GBImageData.java#ZLImageData<br>
  * 描述： 图片类型接口<br>

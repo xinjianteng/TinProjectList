@@ -1,4 +1,4 @@
-package com.core.common.util;
+package com.tin.projectlist.app.library.reader.parser.common.util;
 
 import com.core.file.GBFile;
 import com.core.text.iterator.GBTextParagraphCursor;

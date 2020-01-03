@@ -1,4 +1,4 @@
-package com.core.file.filetype;
+package com.tin.projectlist.app.library.reader.parser.file.filetype;
 
 import com.core.file.GBFile;
 import com.core.option.GBStringOption;

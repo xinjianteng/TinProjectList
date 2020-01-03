@@ -1,4 +1,4 @@
-package com.core.common.util;
+package com.tin.projectlist.app.library.reader.parser.common.util;
 
 /*
  * Unicode(统一码、万国码、单一码) 是基于通用字符集（Universal Character Set）的标准来发展，并且同时也以书本的形式

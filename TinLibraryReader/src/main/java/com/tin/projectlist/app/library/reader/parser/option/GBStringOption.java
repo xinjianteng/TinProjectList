@@ -1,4 +1,4 @@
-package com.core.option;
+package com.tin.projectlist.app.library.reader.parser.option;
 
 public final class GBStringOption extends GBOption {
 	private final String myDefaultValue;

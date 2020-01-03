@@ -1,4 +1,4 @@
-package com.core.file;
+package com.tin.projectlist.app.library.reader.parser.file;
 
 import java.util.*;
 import java.io.*;

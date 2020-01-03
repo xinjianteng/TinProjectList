@@ -1,4 +1,4 @@
-package com.core.file.zip;
+package com.tin.projectlist.app.library.reader.parser.file.zip;
 
 import com.core.file.GBFile;
 import com.core.file.GBPhysicalFile;

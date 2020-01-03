@@ -1,4 +1,4 @@
-package com.core.domain;
+package com.tin.projectlist.app.library.reader.parser.domain;
 
 import com.core.file.GBFile;
 import com.core.file.GBPaths;

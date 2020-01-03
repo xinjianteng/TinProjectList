@@ -1,4 +1,4 @@
-package com.core.common.util;
+package com.tin.projectlist.app.library.reader.parser.common.util;
 
 import java.net.URLEncoder;
 import java.io.UnsupportedEncodingException;
