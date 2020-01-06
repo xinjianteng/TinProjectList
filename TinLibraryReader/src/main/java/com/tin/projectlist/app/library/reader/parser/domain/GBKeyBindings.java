@@ -1,11 +1,11 @@
 package com.tin.projectlist.app.library.reader.parser.domain;
 
-import com.core.file.GBFile;
-import com.core.file.GBPaths;
-import com.core.option.GBStringListOption;
-import com.core.option.GBStringOption;
+
 import com.core.xml.GBStringMap;
 import com.core.xml.GBXMLReaderAdapter;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.option.GBStringListOption;
+import com.tin.projectlist.app.library.reader.parser.option.GBStringOption;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -30,7 +30,7 @@ public final class GBKeyBindings {
 	//按键事件集合
 	private final GBStringListOption mKeysOption;
 	//单击事件集合
-	private final TreeMap<Integer,GBStringOption> mActionMap = new TreeMap<Integer,GBStringOption>();
+	private final TreeMap<Integer, GBStringOption> mActionMap = new TreeMap<Integer,GBStringOption>();
 	//长按事件集合
 	private final TreeMap<Integer,GBStringOption> mLongPressActionMap = new TreeMap<Integer,GBStringOption>();
 

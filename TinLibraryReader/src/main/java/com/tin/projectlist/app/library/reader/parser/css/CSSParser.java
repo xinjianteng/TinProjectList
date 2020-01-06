@@ -28,10 +28,11 @@ public class CSSParser {
     public void parse(InputStream in) {
     }
 
-    /**
+
+    /***
      * 执行解析
-     *
-     * @param css字符流
+     * @param reader  css字符流
+     * @throws IOException
      */
     public void parse(Reader reader) throws IOException {
         if (null == reader) {

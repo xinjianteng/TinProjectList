@@ -8,14 +8,14 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-import com.core.common.util.LicenseMgr;
-import com.core.file.GBFile;
-import com.core.log.L;
 import com.core.zip.LocalFileHeader;
 import com.core.zip.ZipFile;
 import com.geeboo.Geeboo;
 import com.geeboo.book.GBBook;
 import com.geeboo.book.GBBookFactory;
+import com.tin.projectlist.app.library.base.utils.LogUtils;
+import com.tin.projectlist.app.library.reader.parser.common.util.LicenseMgr;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
 import com.tin.projectlist.app.library.reader.parser.file.zip.GBArchiveEntryFile;
 
 /**
@@ -122,7 +122,7 @@ public final class GBZipEntryFile extends GBArchiveEntryFile {
      */
     public static void removeGeebookCache(GBFile file) {
         if(file == null) return;
-        L.e("ReaderActivity", "removeGeebookCache close path=" + file.getPath());
+        LogUtils.e("ReaderActivity", "removeGeebookCache close path=" + file.getPath());
         GBBook geebook = mGBBookMapCache.get(file.getPath());
         if (null != geebook) {
             geebook.close();

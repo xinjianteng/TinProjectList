@@ -1,6 +1,7 @@
 package com.tin.projectlist.app.library.reader.parser.option;
 
-import com.core.common.util.MiscUtil;
+
+import com.tin.projectlist.app.library.reader.parser.common.util.MiscUtil;
 
 import java.util.ArrayList;
 import java.util.Collections;

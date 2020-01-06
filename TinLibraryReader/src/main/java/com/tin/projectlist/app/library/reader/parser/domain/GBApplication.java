@@ -7,12 +7,12 @@ import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.core.common.util.IFunction;
-import com.core.object.GBBoolean3;
-import com.core.text.iterator.GBTextWordCursor;
-import com.core.text.widget.GBTextFixedPosition;
-import com.core.view.GBView;
-import com.core.view.GBViewInter;
+import com.tin.projectlist.app.library.reader.parser.common.util.IFunction;
+import com.tin.projectlist.app.library.reader.parser.object.GBBoolean3;
+import com.tin.projectlist.app.library.reader.parser.text.iterator.GBTextWordCursor;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextFixedPosition;
+import com.tin.projectlist.app.library.reader.parser.view.GBView;
+import com.tin.projectlist.app.library.reader.parser.view.GBViewInter;
 
 /**
  *
@@ -375,14 +375,14 @@ public abstract class GBApplication {
     /**
      * // 按章节文件索引加载章节
      *
-     * @param chapterFileIndex章节索引
-     * @param callback是否加载成功 成功返回true否则返回false;
+     * @param chapterFileIndex  章节索引
+     * @param callback  是否加载成功 成功返回true否则返回false;
      */
     public abstract void openBookByChapFileIndex(int chapterFileIndex, IFunction callback);
 
-    /**
-     * 获取阅读进度
-     * @param handler 阅读进度毁掉函数  每当阅读进度发生改变触发该回调  该回调在子线程执行
+    /***
+     *  获取阅读进度
+     * @param progressChangeHandler   阅读进度毁掉函数  每当阅读进度发生改变触发该回调  该回调在子线程执行
      */
     public abstract void getReadProgress(IFunction<Integer> progressChangeHandler);
     /**

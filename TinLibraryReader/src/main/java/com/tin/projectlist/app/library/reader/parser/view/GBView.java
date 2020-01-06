@@ -1,6 +1,7 @@
 package com.tin.projectlist.app.library.reader.parser.view;
 
-import com.core.domain.GBApplication;
+
+import com.tin.projectlist.app.library.reader.parser.domain.GBApplication;
 
 /**
  * 类名： GBView.java#ZLView<br>

@@ -1,6 +1,7 @@
 package com.tin.projectlist.app.library.reader.parser.domain;
 
-import com.core.view.GBViewInter;
+
+import com.tin.projectlist.app.library.reader.parser.view.GBViewInter;
 
 /**
  *

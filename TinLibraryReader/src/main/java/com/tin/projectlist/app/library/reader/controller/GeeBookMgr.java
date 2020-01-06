@@ -14,7 +14,6 @@ import com.geeboo.read.view.ReaderActivity;
 import com.geeboo.read.view.action.AnnotationOptype;
 import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextPosition;
 import com.tin.projectlist.app.library.reader.exception.TipException;
-import com.tin.projectlist.app.library.reader.utils.IFunction;
 
 import org.json.JSONException;
 

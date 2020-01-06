@@ -1,7 +1,7 @@
 package com.tin.projectlist.app.library.reader.parser.file;
 
-import com.core.file.zip.GBArchiveEntryFile;
-import com.core.file.zip.GBZipEntryFile;
+
+import com.tin.projectlist.app.library.reader.parser.file.zip.GBArchiveEntryFile;
 
 import java.io.IOException;
 import java.io.InputStream;

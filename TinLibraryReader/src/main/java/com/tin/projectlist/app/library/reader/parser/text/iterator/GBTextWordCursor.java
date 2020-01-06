@@ -1,14 +1,11 @@
 package com.tin.projectlist.app.library.reader.parser.text.iterator;
 
-import com.core.domain.GBApplication;
-import com.core.text.model.GBTextMark;
 import com.core.text.model.GBTextModel;
-import com.core.text.widget.GBTextElement;
-import com.core.text.widget.GBTextPosition;
 import com.core.text.widget.GBTextView;
 import com.core.text.widget.GBTextWord;
-import com.core.text.widget.RePaintStatus;
-import com.core.view.PageEnum.PageIndex;
+import com.tin.projectlist.app.library.reader.parser.domain.GBApplication;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextElement;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextPosition;
 
 /**
  * 类名： .java<br>

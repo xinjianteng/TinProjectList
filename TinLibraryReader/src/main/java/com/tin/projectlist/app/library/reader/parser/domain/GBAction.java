@@ -1,6 +1,7 @@
 package com.tin.projectlist.app.library.reader.parser.domain;
 
-import com.core.object.GBBoolean3;
+
+import com.tin.projectlist.app.library.reader.parser.object.GBBoolean3;
 
 /**
  * 类名： GBAction.java#ZLApplication.ZLAction<br>

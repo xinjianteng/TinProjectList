@@ -3,32 +3,19 @@ package com.tin.projectlist.app.library.reader.parser.text.iterator;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.core.file.image.GBFileImage;
-import com.core.file.image.GBImage;
-import com.core.file.image.GBImageData;
-import com.core.file.image.GBImageManager;
 import com.core.text.linbreak.LineBreaker;
 import com.core.text.model.GBAudioEntry;
 import com.core.text.model.GBFileCtrEntry;
 import com.core.text.model.GBImageEntry;
 import com.core.text.model.GBNoteEntry;
 import com.core.text.model.GBTextHyperlink;
-import com.core.text.model.GBTextMark;
 import com.core.text.model.GBTextModel;
 import com.core.text.model.GBTextParagraph;
 import com.core.text.model.GBVideoEntry;
 import com.core.text.model.impl.GBTextTrParagraphImpl;
-import com.core.text.widget.GBAnimObjElement;
-import com.core.text.widget.GBAudioElement;
-import com.core.text.widget.GBNoteElement;
-import com.core.text.widget.GBTextControlElement;
-import com.core.text.widget.GBTextElement;
 import com.core.text.widget.GBTextFixedHSpaceElement;
-import com.core.text.widget.GBTextHyperlinkControlElement;
 import com.core.text.widget.GBTextImageElement;
-import com.core.text.widget.GBTextStyleElement;
 import com.core.text.widget.GBTextWord;
-import com.core.text.widget.GBVideoElement;
 /**
  *
  * 描述： 文本段游标解析迭代器<br>
