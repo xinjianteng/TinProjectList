@@ -1,6 +1,6 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 
-import com.core.file.image.GBImageData;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBImageData;
 
 /**
  * 界面元素  图片

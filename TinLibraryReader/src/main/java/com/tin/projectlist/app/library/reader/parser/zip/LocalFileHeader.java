@@ -1,4 +1,4 @@
-package com.core.zip;
+package com.tin.projectlist.app.library.reader.parser.zip;
 
 /**
  * Class consists of constants, describing a compressed file. Contains only

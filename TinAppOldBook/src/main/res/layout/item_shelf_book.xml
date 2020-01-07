@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="false"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+
+
+    <include layout="@layout/view_book"/>
+
+    <TextView
+        android:id="@+id/tv_bookName"
+        style="@style/item_bookName" />
+
+    <TextView
+        android:background="@color/colorLine"
+        android:elevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stroke_size"/>
+
+
+
+</LinearLayout>

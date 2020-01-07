@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import com.tin.projectlist.app.library.reader.parser.common.util.BookDescriptor;
 import com.tin.projectlist.app.library.reader.controller.GeeBookMgr;
+import com.tin.projectlist.app.library.reader.parser.common.util.IGiveback;
 import com.tin.projectlist.app.library.reader.pdf.PdfActivity;
 import com.tin.projectlist.app.library.reader.view.ReaderActivity;
 

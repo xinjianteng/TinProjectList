@@ -1,4 +1,4 @@
-package com.core.object;
+package com.tin.projectlist.app.library.reader.parser.object;
 /**
  * 类名： GBSize.java<br>
  * 描述： 自定义尺寸实体<br>

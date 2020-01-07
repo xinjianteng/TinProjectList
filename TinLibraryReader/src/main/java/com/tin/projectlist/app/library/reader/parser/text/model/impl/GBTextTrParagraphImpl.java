@@ -1,4 +1,4 @@
-package com.core.text.model.impl;
+package com.tin.projectlist.app.library.reader.parser.text.model.impl;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.core.support;
+package com.tin.projectlist.app.library.reader.parser.support;
 
 /**
  * 编码实体

@@ -1,8 +1,8 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 
-import com.core.platform.GBLibrary;
-import com.core.text.iterator.GBTextSelectionCursor;
-import com.core.text.widget.GBTextRegion.Soul;
+import com.tin.projectlist.app.library.reader.parser.platform.GBLibrary;
+import com.tin.projectlist.app.library.reader.parser.text.iterator.GBTextSelectionCursor;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextRegion.Soul;
 /**
  * 类名： GBTextSelection.java<br>
  * 描述： 文本选择信息封装<br>

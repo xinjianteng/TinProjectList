@@ -1,13 +1,13 @@
-package com.core.text.model.impl;
+package com.tin.projectlist.app.library.reader.parser.text.model.impl;
 
-import com.core.common.util.ArrayUtils;
-import com.core.file.image.GBImage;
-import com.core.log.L;
-import com.core.text.model.GBTextParagraph;
-import com.core.text.model.GBTextWritableModel;
-import com.core.text.model.cache.impl.CachedCharStorage;
-import com.core.text.model.style.GBTextStyleEntry;
-import com.core.text.model.style.GBTextStyleEntryProxy;
+import com.tin.projectlist.app.library.base.utils.LogUtils;
+import com.tin.projectlist.app.library.reader.parser.common.util.ArrayUtils;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBImage;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextParagraph;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextWritableModel;
+import com.tin.projectlist.app.library.reader.parser.text.model.cache.impl.CachedCharStorage;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntryProxy;
 
 import java.util.Map;
 import java.util.Stack;
@@ -88,7 +88,7 @@ public final class GBTextWritablePlainModel extends GBTextPlainModel implements 
     }
 
     private void extendByNum(int realChpFileIndex, int currentSize, int targetSize, boolean isFromCache) {
-        L.i("GBTextWritable", currentSize + "----" + targetSize);
+        LogUtils.i("GBTextWritable", currentSize + "----" + targetSize);
         // 获取映射索引
         int chpFileIndex = getChapterFileNumber(realChpFileIndex);
 
@@ -174,7 +174,7 @@ public final class GBTextWritablePlainModel extends GBTextPlainModel implements 
         // +
         // startEntryIndices[getChapterFileNumber(mWrithChpFileIndex)].length);
         if (index >= startEntryIndices[chpRealIndex].length) {
-            L.e(TAG, "in extend");
+            LogUtils.e(TAG, "in extend");
             extend();
             startEntryIndices = myStartEntryIndices;
         }
@@ -184,7 +184,7 @@ public final class GBTextWritablePlainModel extends GBTextPlainModel implements 
             if (mWrithChpFileIndex > 0 && index == 0) {
 
                 if (mWrithChpFileIndex < myTextSizes.length) {
-                    L.e(TAG, "myTextSizes len=" + myTextSizes.length + "  chpindex=" + mWrithChpFileIndex + " index="
+                    LogUtils.e(TAG, "myTextSizes len=" + myTextSizes.length + "  chpindex=" + mWrithChpFileIndex + " index="
                             + index);
                 }
                 // try{

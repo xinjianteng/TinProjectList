@@ -1,6 +1,6 @@
-package com.core.zip;
+package com.tin.projectlist.app.library.reader.parser.zip;
 
-import java.io.*;
+import java.io.IOException;
 
 public class NoCompressionDecompressor extends Decompressor {
 	private final LocalFileHeader myHeader;

@@ -1,12 +1,12 @@
 package com.tin.projectlist.app.library.reader.parser.text.style;
 
-import com.core.option.GBBooleanOption;
-import com.core.option.GBIntegerRangeOption;
-import com.core.option.GBStringOption;
-import com.core.platform.GBLibrary;
-import com.core.text.model.GBTextAlignmentType;
-import com.core.text.model.GBTextHyperlink;
-import com.core.text.model.GBTextMetrics;
+import com.tin.projectlist.app.library.reader.parser.option.GBBooleanOption;
+import com.tin.projectlist.app.library.reader.parser.option.GBIntegerRangeOption;
+import com.tin.projectlist.app.library.reader.parser.option.GBStringOption;
+import com.tin.projectlist.app.library.reader.parser.platform.GBLibrary;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextAlignmentType;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextHyperlink;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextMetrics;
 
 /**
  * 类名： GBTextBaseStyle#ZLTextBaseStyle<br>

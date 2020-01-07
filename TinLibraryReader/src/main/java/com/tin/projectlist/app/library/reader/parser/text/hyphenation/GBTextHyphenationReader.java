@@ -1,8 +1,8 @@
-package com.core.text.hyphenation;
+package com.tin.projectlist.app.library.reader.parser.text.hyphenation;
 
-import com.core.common.util.ArrayUtils;
-import com.core.xml.GBStringMap;
-import com.core.xml.GBXMLReaderAdapter;
+import com.tin.projectlist.app.library.reader.parser.common.util.ArrayUtils;
+import com.tin.projectlist.app.library.reader.parser.xml.GBStringMap;
+import com.tin.projectlist.app.library.reader.parser.xml.GBXMLReaderAdapter;
 
 final class GBTextHyphenationReader extends GBXMLReaderAdapter {
 	private static final String PATTERN = "pattern";

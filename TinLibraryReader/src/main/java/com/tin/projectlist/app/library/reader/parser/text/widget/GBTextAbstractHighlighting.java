@@ -1,4 +1,4 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 /**
  * 类名： GBTextAbstractHighlighting.java<br>
  * 描述： 高亮文本定义<br>

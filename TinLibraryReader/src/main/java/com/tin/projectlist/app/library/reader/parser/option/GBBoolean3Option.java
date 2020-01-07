@@ -1,6 +1,7 @@
 package com.tin.projectlist.app.library.reader.parser.option;
 
-import com.core.object.GBBoolean3;
+
+import com.tin.projectlist.app.library.reader.parser.object.GBBoolean3;
 
 /**
  * Boolean3的Option<br>

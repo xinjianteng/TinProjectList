@@ -1,9 +1,9 @@
-package com.core.text.model;
+package com.tin.projectlist.app.library.reader.parser.text.model;
+
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBImage;
 
 import java.util.Map;
-
-import com.core.file.image.GBImage;
-import com.core.text.model.style.GBTextStyleEntry;
 
 public class GBFileCtrEntry extends GBTextStyleEntry {
 

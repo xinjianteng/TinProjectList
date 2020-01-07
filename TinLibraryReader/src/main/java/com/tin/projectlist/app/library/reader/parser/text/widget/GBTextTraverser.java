@@ -1,6 +1,6 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 
-import com.core.text.iterator.GBTextParagraphCursor;
+import com.tin.projectlist.app.library.reader.parser.text.iterator.GBTextParagraphCursor;
 /**
  * 类名： GBTextTraverser.java#ZLTextTraverser<br>
  * 描述： 选中文本内容提取工具抽象定义<br>

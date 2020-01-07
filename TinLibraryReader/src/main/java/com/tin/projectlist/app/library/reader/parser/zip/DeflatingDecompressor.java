@@ -1,6 +1,6 @@
-package com.core.zip;
+package com.tin.projectlist.app.library.reader.parser.zip;
 
-import java.io.*;
+import java.io.IOException;
 
 /**
  * 描述：Deflating解码器 <br>

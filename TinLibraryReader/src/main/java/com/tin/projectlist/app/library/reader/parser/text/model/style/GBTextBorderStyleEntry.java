@@ -1,7 +1,7 @@
-package com.core.text.model.style;
+package com.tin.projectlist.app.library.reader.parser.text.model.style;
 
-import com.core.common.util.ArrayUtils;
-import com.core.common.util.NumUtil;
+import com.tin.projectlist.app.library.reader.parser.common.util.ArrayUtils;
+import com.tin.projectlist.app.library.reader.parser.common.util.NumUtil;
 
 /**
  *

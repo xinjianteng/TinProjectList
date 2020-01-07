@@ -1,6 +1,6 @@
 package com.tin.projectlist.app.library.reader.parser.file.image;
 
-import com.core.common.util.MimeType;
+import com.tin.projectlist.app.library.reader.parser.common.util.MimeType;
 
 public abstract class GBLoadableImage extends GBSingleImage {
 	private volatile boolean myIsSynchronized;

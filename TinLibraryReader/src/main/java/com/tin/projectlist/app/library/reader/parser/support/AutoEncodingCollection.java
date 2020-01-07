@@ -1,7 +1,7 @@
-package com.core.support;
+package com.tin.projectlist.app.library.reader.parser.support;
 
-import java.util.List;
 import java.util.Collections;
+import java.util.List;
 
 /**
  * 自动编码集

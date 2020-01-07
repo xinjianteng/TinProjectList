@@ -1,4 +1,4 @@
-package com.core.text.model.impl;
+package com.tin.projectlist.app.library.reader.parser.text.model.impl;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,22 +6,22 @@ import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 
-import com.core.common.util.GBSearchUtil;
-import com.core.file.image.GBImage;
-import com.core.log.L;
-import com.core.object.GBSearchPattern;
-import com.core.text.model.GBAudioEntry;
-import com.core.text.model.GBFileCtrEntry;
-import com.core.text.model.GBImageEntry;
-import com.core.text.model.GBNoteEntry;
-import com.core.text.model.GBTextMark;
-import com.core.text.model.GBTextModel;
-import com.core.text.model.GBTextParagraph;
-import com.core.text.model.GBVideoEntry;
-import com.core.text.model.cache.CharStorage;
-import com.core.text.model.style.GBTextStyleEntry;
-import com.core.text.model.style.GBTextStyleEntryProxy;
-import com.core.xml.GBIntMap;
+import com.tin.projectlist.app.library.base.utils.LogUtils;
+import com.tin.projectlist.app.library.reader.parser.common.util.GBSearchUtil;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBImage;
+import com.tin.projectlist.app.library.reader.parser.object.GBSearchPattern;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBAudioEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBFileCtrEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBImageEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBNoteEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextMark;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextModel;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextParagraph;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBVideoEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.cache.CharStorage;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntryProxy;
+import com.tin.projectlist.app.library.reader.parser.xml.GBIntMap;
 
 public class GBTextPlainModel implements GBTextModel, GBTextStyleEntry.Feature {
     final String TAG = "GBTextPlainModel";
@@ -172,7 +172,7 @@ public class GBTextPlainModel implements GBTextModel, GBTextStyleEntry.Feature {
                 myDataOffset = myStartEntryOffsets[getChapterFileNumber(chpFileIndex)][index];
                 mychpFileIndex = chpFileIndex;
             } catch (Exception ex) {
-                L.i("GBTextPainModel$iterator", "EntryIteratorImpl outofIndex" + getChapterFileNumber(chpFileIndex)
+                LogUtils.i("GBTextPainModel$iterator", "EntryIteratorImpl outofIndex" + getChapterFileNumber(chpFileIndex)
                         + "--" + index);
             }
             // L.i("GBTextPainModel$iterator",
@@ -322,7 +322,7 @@ public class GBTextPlainModel implements GBTextModel, GBTextStyleEntry.Feature {
                         dataOffset += labelLength;
                     } catch (Exception ex) {
                         ex.printStackTrace();
-                        L.i("EntryIteratorImpl", mychpFileIndex + "----" + myDataIndex);
+                        LogUtils.i("EntryIteratorImpl", mychpFileIndex + "----" + myDataIndex);
                     }
                     break;
                 }
@@ -336,7 +336,7 @@ public class GBTextPlainModel implements GBTextModel, GBTextStyleEntry.Feature {
                         myImageEntry = new GBImageEntry(myImageMap, id, vOffset, isCover);
                     } catch (Exception ex) {
                         ex.printStackTrace();
-                        L.i("EntryIteratorImpl", mychpFileIndex + "----" + myDataIndex);
+                        LogUtils.i("EntryIteratorImpl", mychpFileIndex + "----" + myDataIndex);
                     }
                     break;
                 }
@@ -362,7 +362,7 @@ public class GBTextPlainModel implements GBTextModel, GBTextStyleEntry.Feature {
                          */
                     } catch (Exception e) {
                         e.printStackTrace();
-                        L.e("GBTextPlainModel", mychpFileIndex + "----" + myDataIndex);
+                        LogUtils.e("GBTextPlainModel", mychpFileIndex + "----" + myDataIndex);
                     }
                     dataOffset += len;
 
@@ -417,7 +417,7 @@ public class GBTextPlainModel implements GBTextModel, GBTextStyleEntry.Feature {
                     myCtrEntry = new GBFileCtrEntry(myImageMap);
                     myCtrEntry.loadData(data, dataOffset, dataOffset + len);
                     dataOffset += len;
-                    L.e(TAG, "GBTextParagraph.Entry.HTML5_VIDEO_CONTROL" + GBTextParagraph.Entry.HTML5_FILE_CTR
+                    LogUtils.e(TAG, "GBTextParagraph.Entry.HTML5_VIDEO_CONTROL" + GBTextParagraph.Entry.HTML5_FILE_CTR
                             + "path=" + myCtrEntry.Path + "path2=" + myCtrEntry.PathTwo + myCtrEntry.getPathImage()
                             + "ss" + myCtrEntry.getPathTwoImage());
                     break;
@@ -731,7 +731,7 @@ public class GBTextPlainModel implements GBTextModel, GBTextStyleEntry.Feature {
             for (int i : myParagraphsNumber) {
                 sb.append("," + i);
             }
-            L.i(TAG, sb.toString());
+            LogUtils.i(TAG, sb.toString());
         }
         return new PositionInfo(0, 0);// Math.min(-index - 1,
         // getTotalParagraphsNumber() - 1);
@@ -935,7 +935,7 @@ public class GBTextPlainModel implements GBTextModel, GBTextStyleEntry.Feature {
         int size = myStartEntryOffsets[readChpPosition].length;
 
         // if (chpFileIndex != 3) {
-        L.e(TAG, "clearCache chpFileIndex" + chpFileIndex);
+        LogUtils.e(TAG, "clearCache chpFileIndex" + chpFileIndex);
         for (int i = 0; i < size; i++) {
             myStartEntryOffsets[readChpPosition][i] = 0;
             myParagraphLengths[readChpPosition][i] = 0;
@@ -970,7 +970,7 @@ public class GBTextPlainModel implements GBTextModel, GBTextStyleEntry.Feature {
 
     @Override
     public void loadBookOver() {
-        L.e(TAG, "start  in  load book over  ");
+        LogUtils.e(TAG, "start  in  load book over  ");
         myTotalParagrapsNumber = 0;
         for (int i : myParagraphsNumber) {
             myTotalParagrapsNumber += i;

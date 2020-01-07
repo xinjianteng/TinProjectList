@@ -1,8 +1,8 @@
-package com.core.text.model.style;
+package com.tin.projectlist.app.library.reader.parser.text.model.style;
 
-import com.core.common.util.NumUtil;
-import com.core.object.GBBoolean3;
-import com.core.text.model.GBTextMetrics;
+import com.tin.projectlist.app.library.reader.parser.common.util.NumUtil;
+import com.tin.projectlist.app.library.reader.parser.object.GBBoolean3;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextMetrics;
 
 /**
  *

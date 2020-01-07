@@ -1,6 +1,8 @@
 package com.tin.projectlist.app.library.reader.parser.text.widget;
 
 
+import com.tin.projectlist.app.library.reader.parser.file.image.GBFileImage;
+
 /**
  * 类名： GBAudioElement.java<br>
  * 描述： 音频元素<br>

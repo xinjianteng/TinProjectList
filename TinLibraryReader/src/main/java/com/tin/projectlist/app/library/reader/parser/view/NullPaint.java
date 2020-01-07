@@ -1,11 +1,11 @@
 package com.tin.projectlist.app.library.reader.parser.view;
 
-import com.core.file.GBFile;
-import com.core.file.image.GBImageData;
-import com.core.object.GBColor;
-import com.core.object.GBSize;
-import com.core.view.PageEnum.ImgFitType;
-import com.core.view.PageEnum.PageBgMode;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBImageData;
+import com.tin.projectlist.app.library.reader.parser.object.GBColor;
+import com.tin.projectlist.app.library.reader.parser.object.GBSize;
+import com.tin.projectlist.app.library.reader.parser.view.PageEnum.ImgFitType;
+import com.tin.projectlist.app.library.reader.parser.view.PageEnum.PageBgMode;
 /**
  * 类名： NullPaint.java<br>
  * 描述： 绘制空实现<br>

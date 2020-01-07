@@ -1,7 +1,8 @@
-package com.core.text.model.cache;
+package com.tin.projectlist.app.library.reader.parser.text.model.cache;
 
-import com.core.log.L;
 import com.core.text.model.cache.exception.CachedCharStorageException;
+import com.tin.projectlist.app.library.base.utils.LogUtils;
+import com.tin.projectlist.app.library.reader.parser.text.model.cache.CharStorage;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -52,7 +53,7 @@ public abstract class CachedCharStorageBase implements CharStorage {
 			myArray[i] = new ArrayList<WeakReference<char[]>>();
 		}
 
-		L.e(TAG, "array size=" + mChpFileSize);
+		LogUtils.e(TAG, "array size=" + mChpFileSize);
 
 	}
 
@@ -178,7 +179,7 @@ public abstract class CachedCharStorageBase implements CharStorage {
 			sb.append(" index ");
 			sb.append(index);
 			sb.append(" is null");
-			L.e(TAG, sb.toString());
+			LogUtils.e(TAG, sb.toString());
 		}
 		// System.out.println(cacheName);
 		return null;
@@ -244,7 +245,7 @@ public abstract class CachedCharStorageBase implements CharStorage {
 
 		final String realCacheName = fileName(cacheName);
 		File file = new File(realCacheName);
-		L.i("getLinkCache :"+file.getAbsolutePath());
+		LogUtils.i("getLinkCache :"+file.getAbsolutePath());
 		if (!file.exists()) {
 			return null;
 		}

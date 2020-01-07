@@ -1,4 +1,4 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 /**
  * 界面元素 空格 original:ZLTextFixedHSpaceElement 类名： .java<br>
  * 描述： <br>

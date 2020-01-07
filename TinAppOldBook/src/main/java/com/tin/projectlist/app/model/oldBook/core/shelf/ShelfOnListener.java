@@ -4,7 +4,7 @@ import com.tin.projectlist.app.model.oldBook.entity.Book;
 
 import java.util.List;
 
-public interface ShelfOnLIstener {
+public interface ShelfOnListener {
 
     void onLocationBookResult(List<Book> bookList);
 

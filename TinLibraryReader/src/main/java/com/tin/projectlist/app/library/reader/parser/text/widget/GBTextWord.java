@@ -1,6 +1,7 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 
-import com.core.view.GBPaint;
+
+import com.tin.projectlist.app.library.reader.parser.view.GBPaint;
 
 /**
  * original:ZLTextWord 类名： .java<br>

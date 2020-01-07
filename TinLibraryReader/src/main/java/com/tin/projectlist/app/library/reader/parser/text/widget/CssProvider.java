@@ -1,14 +1,14 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 
-import com.core.object.GBColor;
-import com.core.text.iterator.GBTextParagraphCursor;
-import com.core.text.model.GBTextModel;
-import com.core.text.model.GBTextParagraph;
-import com.core.text.model.style.GBTextBorderStyleEntry;
-import com.core.text.style.GBTextCssDecoratedStyle;
-import com.core.text.style.GBTextStyle;
-import com.core.text.style.GBTextStyle.BorderStation;
-import com.core.text.style.GBTextStyleCache;
+import com.tin.projectlist.app.library.reader.parser.object.GBColor;
+import com.tin.projectlist.app.library.reader.parser.text.iterator.GBTextParagraphCursor;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextModel;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextParagraph;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextBorderStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.style.GBTextCssDecoratedStyle;
+import com.tin.projectlist.app.library.reader.parser.text.style.GBTextStyle;
+import com.tin.projectlist.app.library.reader.parser.text.style.GBTextStyle.BorderStation;
+import com.tin.projectlist.app.library.reader.parser.text.style.GBTextStyleCache;
 
 /**
  * 类名： CssProvider.java<br>

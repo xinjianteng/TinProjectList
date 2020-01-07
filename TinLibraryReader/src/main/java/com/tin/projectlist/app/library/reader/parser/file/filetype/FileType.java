@@ -1,7 +1,8 @@
 package com.tin.projectlist.app.library.reader.parser.file.filetype;
 
-import com.core.common.util.MimeType;
-import com.core.file.GBFile;
+
+import com.tin.projectlist.app.library.reader.parser.common.util.MimeType;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
 
 import java.util.List;
 /**

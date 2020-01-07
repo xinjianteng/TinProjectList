@@ -1,6 +1,6 @@
 package com.tin.projectlist.app.library.reader.parser.option;
 
-import com.core.object.GBColor;
+import com.tin.projectlist.app.library.reader.parser.object.GBColor;
 
 public final class GBColorOption extends GBOption {
 	private final GBColor myDefaultValue;

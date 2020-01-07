@@ -1,6 +1,7 @@
 package com.tin.projectlist.app.library.reader.parser.text.widget;
 
-import com.core.text.model.style.GBTextStyleEntryProxy;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntryProxy;
+
 /**
  * 样式元素 original:ZLTextStyleElement 类名： .java<br>
  * 描述： <br>

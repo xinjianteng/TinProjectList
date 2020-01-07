@@ -1,4 +1,4 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 /**
  * 类名： GBVideoRegionSoul.java<br>
  * 描述： 视频元素区域信息<br>

@@ -1,7 +1,8 @@
-package com.core.text.model.style;
+package com.tin.projectlist.app.library.reader.parser.text.model.style;
 
-import com.core.common.util.NumUtil;
-import com.core.log.L;
+
+import com.tin.projectlist.app.library.base.utils.LogUtils;
+import com.tin.projectlist.app.library.reader.parser.common.util.NumUtil;
 
 /**
  *
@@ -177,7 +178,7 @@ public final class GBTextFontStyleEntry extends GBTextStyleEntry {
 		try {
 			myColor = NumUtil.parseColor(colorStr.trim());
 		} catch (NumberFormatException ex) {
-			L.e(TAG, "NumberFormatException  from GBTextFontStyleEntry");
+			LogUtils.e(TAG, "NumberFormatException  from GBTextFontStyleEntry");
 		}
 	}
 

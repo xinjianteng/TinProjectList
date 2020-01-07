@@ -1,15 +1,15 @@
 package com.tin.projectlist.app.library.reader.parser.text.style;
 
-import com.core.text.model.GBTextMetrics;
-import com.core.text.model.style.GBTextBackgroundStyleEntry;
-import com.core.text.model.style.GBTextBorderStyleEntry;
-import com.core.text.model.style.GBTextBoxStyleEntry;
-import com.core.text.model.style.GBTextFontStyleEntry;
-import com.core.text.model.style.GBTextStyleEntry;
-import com.core.text.model.style.GBTextStyleEntry.Length;
-import com.core.text.model.style.GBTextStyleEntry.SizeUnit;
-import com.core.text.model.style.GBTextStyleEntryProxy;
-import com.core.text.model.style.GBTextWordStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextMetrics;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextBackgroundStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextBorderStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextBoxStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextFontStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntry.Length;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntry.SizeUnit;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntryProxy;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextWordStyleEntry;
 
 /**
  * explicitly adj 明白的，明确的 类名： GBTextCssDecoratedStyle<br>

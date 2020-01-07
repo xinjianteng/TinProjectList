@@ -1,11 +1,11 @@
 package com.tin.projectlist.app.library.reader.parser.text.style;
 
-import com.core.object.GBBoolean3;
-import com.core.option.GBBoolean3Option;
-import com.core.option.GBIntegerOption;
-import com.core.option.GBIntegerRangeOption;
-import com.core.option.GBStringOption;
-import com.core.text.model.GBTextHyperlink;
+import com.tin.projectlist.app.library.reader.parser.object.GBBoolean3;
+import com.tin.projectlist.app.library.reader.parser.option.GBBoolean3Option;
+import com.tin.projectlist.app.library.reader.parser.option.GBIntegerOption;
+import com.tin.projectlist.app.library.reader.parser.option.GBIntegerRangeOption;
+import com.tin.projectlist.app.library.reader.parser.option.GBStringOption;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextHyperlink;
 
 /**
  * 类名： GBTextDecorationStyleOption#ZLTextStyleDecoration<br>

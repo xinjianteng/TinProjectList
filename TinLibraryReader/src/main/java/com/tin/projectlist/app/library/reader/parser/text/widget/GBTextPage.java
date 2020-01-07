@@ -1,8 +1,8 @@
 package com.tin.projectlist.app.library.reader.parser.text.widget;
 
-import com.core.text.iterator.GBTextParagraphCursor;
-import com.core.text.iterator.GBTextWordCursor;
-import com.core.text.widget.GBTextHighlighting.LIGHTMODEL;
+import com.tin.projectlist.app.library.reader.parser.text.iterator.GBTextParagraphCursor;
+import com.tin.projectlist.app.library.reader.parser.text.iterator.GBTextWordCursor;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextHighlighting.LIGHTMODEL;
 
 import java.util.ArrayList;
 import java.util.List;

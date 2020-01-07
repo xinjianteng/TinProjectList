@@ -1,6 +1,6 @@
 package com.tin.projectlist.app.library.reader.parser.text.iterator;
 
-import com.core.text.model.GBTextModel;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextModel;
 
 import java.lang.ref.WeakReference;
 import java.util.HashMap;

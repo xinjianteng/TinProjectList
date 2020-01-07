@@ -1,6 +1,7 @@
 package com.tin.projectlist.app.library.reader.parser.common.util;
 
-import com.core.common.CopyVersionInfo;
+
+import com.tin.projectlist.app.library.reader.parser.common.CopyVersionInfo;
 
 import java.io.Serializable;
 

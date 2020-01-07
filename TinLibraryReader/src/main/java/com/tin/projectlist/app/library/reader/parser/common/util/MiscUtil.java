@@ -1,11 +1,11 @@
 package com.tin.projectlist.app.library.reader.parser.common.util;
 
-import com.core.file.GBFile;
-import com.core.text.iterator.GBTextParagraphCursor;
-import com.core.text.iterator.GBTextWordCursor;
-import com.core.text.model.GBTextModel;
-import com.core.text.widget.GBTextPosition;
-import com.core.text.widget.GBTextWord;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.text.iterator.GBTextParagraphCursor;
+import com.tin.projectlist.app.library.reader.parser.text.iterator.GBTextWordCursor;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextModel;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextPosition;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextWord;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.core.object;
+package com.tin.projectlist.app.library.reader.parser.object;
 
 /**
  * 颜色实体

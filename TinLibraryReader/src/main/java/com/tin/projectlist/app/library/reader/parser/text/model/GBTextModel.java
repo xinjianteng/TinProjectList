@@ -1,10 +1,10 @@
-package com.core.text.model;
+package com.tin.projectlist.app.library.reader.parser.text.model;
+
+import com.tin.projectlist.app.library.reader.parser.text.model.cache.CharStorage;
+import com.tin.projectlist.app.library.reader.parser.xml.GBIntMap;
 
 import java.util.List;
 import java.util.Stack;
-
-import com.core.text.model.cache.CharStorage;
-import com.core.xml.GBIntMap;
 
 /**
  *
@@ -44,7 +44,7 @@ public interface GBTextModel {
     /**
      * 获取当前章 段信息
      *
-     * @param index段索引
+     * @param index 段索引
      * @return
      */
     GBTextParagraph getParagraph(int index);
@@ -111,13 +111,16 @@ public interface GBTextModel {
     // ignoreCase);
     int search(final String text, int startFileIndex, int startIndex, int endFileIndex, int endIndex, boolean ignoreCase);
 
-    /**
+
+    /***
+     * * 功能描述： 根据样式段码获取包含其的样式标签段码 创建者： yangn<br>
+     *      * 创建日期：2013-6-3<br>
      *
-     * 功能描述： 根据样式段码获取包含其的样式标签段码 创建者： yangn<br>
-     * 创建日期：2013-6-3<br>
-     *
-     * @param 样式段码
-     * @return >=0:包含其的样式段码数组 -1:非法段码
+     * *@param 样式段码
+     * * @return >=0:包含其的样式段码数组 -1:非法段码
+     * @param chpFileIndex
+     * @param index
+     * @return
      */
     int[] getStyleParagraphIncluded(int chpFileIndex, int index);
 

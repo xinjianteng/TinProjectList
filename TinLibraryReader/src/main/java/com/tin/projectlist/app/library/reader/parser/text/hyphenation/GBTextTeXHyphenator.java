@@ -1,9 +1,9 @@
-package com.core.text.hyphenation;
+package com.tin.projectlist.app.library.reader.parser.text.hyphenation;
 
-import com.core.file.GBFile;
-import com.core.file.GBResourceFile;
-import com.core.support.GBLanguageUtil;
-import com.core.support.Language;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.file.GBResourceFile;
+import com.tin.projectlist.app.library.reader.parser.support.GBLanguageUtil;
+import com.tin.projectlist.app.library.reader.parser.support.Language;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,7 +1,7 @@
 
 package com.tin.projectlist.app.library.reader.parser.html;
 
-import com.core.object.GBByteBuffer;
+import com.tin.projectlist.app.library.reader.parser.object.GBByteBuffer;
 
 import java.nio.charset.CharsetDecoder;
 

@@ -1,6 +1,6 @@
 package com.tin.projectlist.app.library.reader.parser.file.image;
 
-import com.core.common.util.MimeType;
+import com.tin.projectlist.app.library.reader.parser.common.util.MimeType;
 
 import java.io.InputStream;
 /**

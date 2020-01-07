@@ -1,4 +1,4 @@
-package com.core.zip;
+package com.tin.projectlist.app.library.reader.parser.zip;
 
 import java.io.IOException;
 

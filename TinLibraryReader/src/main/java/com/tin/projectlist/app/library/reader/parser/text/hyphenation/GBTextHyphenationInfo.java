@@ -1,4 +1,4 @@
-package com.core.text.hyphenation;
+package com.tin.projectlist.app.library.reader.parser.text.hyphenation;
 /**
  * 断字信息
  * 类名： .java<br>

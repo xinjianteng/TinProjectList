@@ -1,6 +1,6 @@
-package com.core.text.model.impl;
+package com.tin.projectlist.app.library.reader.parser.text.model.impl;
 
-import com.core.text.model.GBTextParagraph;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextParagraph;
 
 /**
  *

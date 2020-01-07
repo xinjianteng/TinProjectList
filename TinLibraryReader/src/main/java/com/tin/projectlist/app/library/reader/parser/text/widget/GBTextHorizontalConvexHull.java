@@ -1,6 +1,6 @@
 package com.tin.projectlist.app.library.reader.parser.text.widget;
 
-import com.core.view.GBPaint;
+import com.tin.projectlist.app.library.reader.parser.view.GBPaint;
 
 import java.util.Iterator;
 import java.util.LinkedList;

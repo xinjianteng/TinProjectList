@@ -1,6 +1,8 @@
-package com.core.text.model;
+package com.tin.projectlist.app.library.reader.parser.text.model;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 /**
  * 类名： GBTextHyperlink.java#ZLTextHyperlink<br>
  * 描述： 超链接文本信息封装<br>

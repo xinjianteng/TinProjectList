@@ -2,6 +2,8 @@ package com.tin.projectlist.app.library.reader.parser.file.zip;
 
 
 import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.file.GBPhysicalFile;
+import com.tin.projectlist.app.library.reader.parser.file.tar.GBTarEntryFile;
 
 import java.util.Collections;
 import java.util.List;

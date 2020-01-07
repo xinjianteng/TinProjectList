@@ -2,7 +2,7 @@ package com.tin.projectlist.app.library.reader.parser.text.widget;
 
 import java.util.List;
 
-import com.core.view.GBPaint;
+import com.tin.projectlist.app.library.reader.parser.view.GBPaint;
 /**
  * 描述： 描述文本区域范围<br>
  * 创建者： yangn<br>

@@ -6,12 +6,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.core.domain.GBApplication;
-import com.geeboo.read.model.book.Annotations;
-import com.geeboo.read.model.book.Bookmark;
-import com.geeboo.read.model.book.TypeFace;
-import com.geeboo.read.view.ReaderActivity;
-import com.geeboo.read.view.action.AnnotationOptype;
+
+import com.tin.projectlist.app.library.reader.model.book.Bookmark;
 import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextPosition;
 import com.tin.projectlist.app.library.reader.exception.TipException;
 

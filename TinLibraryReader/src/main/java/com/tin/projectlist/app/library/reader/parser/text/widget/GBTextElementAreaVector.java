@@ -1,11 +1,11 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.core.text.model.GBTextHyperlink;
-import com.core.view.PageEnum;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextHyperlink;
+import com.tin.projectlist.app.library.reader.parser.view.PageEnum;
 
 /**
  * 类名： GBTextElementAreaVector.java<br>

@@ -1,4 +1,4 @@
-package com.core.text.model;
+package com.tin.projectlist.app.library.reader.parser.text.model;
 /**
  *
  * 描述： 对齐类型

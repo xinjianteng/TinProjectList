@@ -1,6 +1,8 @@
-package com.core.xml;
+package com.tin.projectlist.app.library.reader.parser.xml;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * XML读取者<br>

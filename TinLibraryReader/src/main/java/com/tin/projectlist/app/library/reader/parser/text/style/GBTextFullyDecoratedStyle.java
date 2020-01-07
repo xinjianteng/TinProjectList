@@ -1,8 +1,8 @@
 package com.tin.projectlist.app.library.reader.parser.text.style;
 
-import com.core.text.model.GBTextAlignmentType;
-import com.core.text.model.GBTextHyperlink;
-import com.core.text.model.GBTextMetrics;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextAlignmentType;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextHyperlink;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextMetrics;
 
 /**
  * 类名： ZLTextFullyDecoratedStyle.java<br>

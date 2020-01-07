@@ -1,4 +1,4 @@
-package com.core.text.model;
+package com.tin.projectlist.app.library.reader.parser.text.model;
 /**
  * 类名： FBHyperlinkType.java<br>
  * 描述： 链接类型定义<br>

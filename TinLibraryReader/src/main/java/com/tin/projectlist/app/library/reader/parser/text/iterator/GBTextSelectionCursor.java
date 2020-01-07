@@ -1,6 +1,7 @@
 package com.tin.projectlist.app.library.reader.parser.text.iterator;
 
-import com.core.platform.GBLibrary;
+
+import com.tin.projectlist.app.library.reader.parser.platform.GBLibrary;
 
 /**
  * 类名： GBTextSelectionCursor.java<br>

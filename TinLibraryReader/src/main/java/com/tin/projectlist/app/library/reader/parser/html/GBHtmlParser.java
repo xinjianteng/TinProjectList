@@ -1,7 +1,8 @@
 package com.tin.projectlist.app.library.reader.parser.html;
 
-import com.core.common.util.ArrayUtils;
-import com.core.object.GBByteBuffer;
+
+import com.tin.projectlist.app.library.reader.parser.common.util.ArrayUtils;
+import com.tin.projectlist.app.library.reader.parser.object.GBByteBuffer;
 
 import java.io.IOException;
 import java.io.InputStream;

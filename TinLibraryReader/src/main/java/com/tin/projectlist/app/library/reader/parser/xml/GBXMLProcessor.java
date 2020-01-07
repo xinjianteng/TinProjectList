@@ -1,7 +1,8 @@
-package com.core.xml;
+package com.tin.projectlist.app.library.reader.parser.xml;
 
-import com.core.common.CopyVersionInfo;
-import com.core.file.GBFile;
+
+import com.tin.projectlist.app.library.reader.parser.common.CopyVersionInfo;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;

@@ -1,11 +1,14 @@
 package com.tin.projectlist.app.library.reader.parser.text.iterator;
 
-import com.core.text.model.GBTextModel;
-import com.core.text.widget.GBTextView;
-import com.core.text.widget.GBTextWord;
 import com.tin.projectlist.app.library.reader.parser.domain.GBApplication;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextMark;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextModel;
 import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextElement;
 import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextPosition;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextView;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextWord;
+import com.tin.projectlist.app.library.reader.parser.text.widget.RePaintStatus;
+import com.tin.projectlist.app.library.reader.parser.view.PageEnum;
 
 /**
  * 类名： .java<br>
@@ -163,7 +166,7 @@ public final class GBTextWordCursor extends GBTextPosition {
                             return false;
                         tv.mRefreashChpIndex = chapIndex;
                         if (isNeedRefreash) {
-                            tv.mPaintStatus = new RePaintStatus(true, PageIndex.NEXT, tv.myCurrentPage.EndCursor);
+                            tv.mPaintStatus = new RePaintStatus(true, PageEnum.PageIndex.NEXT, tv.myCurrentPage.EndCursor);
                             tv.isPaintLoading = true;
                         }
                         tv.mApplication.openBookByChapFileIndex(chapIndex, tv);
@@ -201,7 +204,7 @@ public final class GBTextWordCursor extends GBTextPosition {
                         // return false;
                         tv.mRefreashChpIndex = myParagraphCursor.chpFileIndex - 1;
                         if (isNeedRefreash) {
-                            tv.mPaintStatus = new RePaintStatus(true, PageIndex.PREVIOUS, tv.myCurrentPage.StartCursor);
+                            tv.mPaintStatus = new RePaintStatus(true, PageEnum.PageIndex.PREVIOUS, tv.myCurrentPage.StartCursor);
                             tv.isPaintLoading = true;
                         }
                         tv.mApplication.openBookByChapFileIndex(myParagraphCursor.chpFileIndex - 1, tv);

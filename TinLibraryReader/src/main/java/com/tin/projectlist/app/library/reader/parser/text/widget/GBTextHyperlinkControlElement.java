@@ -1,6 +1,6 @@
 package com.tin.projectlist.app.library.reader.parser.text.widget;
 
-import com.core.text.model.GBTextHyperlink;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextHyperlink;
 
 /**
  * 界面元素  超链接

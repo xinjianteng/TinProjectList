@@ -1,6 +1,7 @@
-package com.core.support;
+package com.tin.projectlist.app.library.reader.parser.support;
 
-import com.core.common.GBResource;
+
+import com.tin.projectlist.app.library.reader.parser.common.GBResource;
 
 import java.text.Normalizer;
 

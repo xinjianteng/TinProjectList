@@ -1,8 +1,8 @@
-package com.core.text.model.cache.impl;
+package com.tin.projectlist.app.library.reader.parser.text.model.cache.impl;
 
-import com.core.log.L;
-import com.core.text.model.cache.CachedCharStorageBase;
 import com.core.text.model.cache.exception.CachedCharStorageException;
+import com.tin.projectlist.app.library.base.utils.LogUtils;
+import com.tin.projectlist.app.library.reader.parser.text.model.cache.CachedCharStorageBase;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -123,7 +123,7 @@ public final class CachedCharStorage extends CachedCharStorageBase {
 
 				char[] block = myArray[mChpFileIndex].get(index).get();
 				if (block == null) {
-					L.e(TAG, "chpFileIndex=" + mChpFileIndex + " index="
+					LogUtils.e(TAG, "chpFileIndex=" + mChpFileIndex + " index="
 							+ index);
 					continue;
 					/*
@@ -165,7 +165,7 @@ public final class CachedCharStorage extends CachedCharStorageBase {
 		for (int i = currentSize; i < newArray.length; i++) {
 			newArray[i] = new ArrayList<WeakReference<char[]>>();
 		}
-		L.e(TAG, "array reset" + newChpSize);
+		LogUtils.e(TAG, "array reset" + newChpSize);
 		myArray = newArray;
 
 	}

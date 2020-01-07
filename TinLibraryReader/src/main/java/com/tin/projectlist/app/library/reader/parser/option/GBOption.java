@@ -1,6 +1,6 @@
 package com.tin.projectlist.app.library.reader.parser.option;
 
-import com.core.config.GBConfig;
+import com.tin.projectlist.app.library.reader.parser.config.GBConfig;
 
 /**
  * 自定义Option父类<br>

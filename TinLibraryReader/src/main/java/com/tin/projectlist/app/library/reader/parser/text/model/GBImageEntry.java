@@ -1,6 +1,7 @@
-package com.core.text.model;
+package com.tin.projectlist.app.library.reader.parser.text.model;
 
-import com.core.file.image.GBImage;
+
+import com.tin.projectlist.app.library.reader.parser.file.image.GBImage;
 
 import java.util.Map;
 /**
@@ -10,7 +11,7 @@ import java.util.Map;
  * 创建日期：2013-3-26<br>
  */
 public final class GBImageEntry {
-	private final Map<String,GBImage> myImageMap;
+	private final Map<String, GBImage> myImageMap;
 	public final String Id;
 	public final short VOffset;
 	public final boolean IsCover;

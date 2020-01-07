@@ -5,18 +5,29 @@ import com.tin.projectlist.app.model.oldBook.mvp.MvpPresenter;
 
 import java.util.List;
 
-public class ShelfPresenter extends MvpPresenter<ShelfContract.View> implements ShelfContract.Presenter, ShelfOnLIstener {
+public class ShelfPresenter extends MvpPresenter<ShelfContract.View> implements ShelfContract.Presenter, ShelfOnListener {
+
+
+    private ShelfModel shelfModel;
 
     /**
      * P 层初始化方法
      */
     @Override
     public void start() {
+        shelfModel=new ShelfModel();
+        shelfModel.setListener(this);
 
     }
 
     @Override
     public void getLocationBookList() {
+        shelfModel.getLocationBookList();
+    }
+
+    @Override
+    public void openBook(Book book) {
+
 
     }
 

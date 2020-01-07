@@ -1,8 +1,8 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 
-import com.core.text.iterator.GBTextParagraphCursor;
-import com.core.text.model.impl.GBTextTrParagraphImpl;
-import com.core.text.style.GBTextStyle;
+import com.tin.projectlist.app.library.reader.parser.text.iterator.GBTextParagraphCursor;
+import com.tin.projectlist.app.library.reader.parser.text.model.impl.GBTextTrParagraphImpl;
+import com.tin.projectlist.app.library.reader.parser.text.style.GBTextStyle;
 
 /**
  * 行信息 某段 某个元素的某个字符索引 标记开始 类名： .java<br>

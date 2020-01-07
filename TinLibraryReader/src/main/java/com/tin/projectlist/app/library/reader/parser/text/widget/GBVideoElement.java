@@ -1,6 +1,6 @@
 package com.tin.projectlist.app.library.reader.parser.text.widget;
 
-import com.core.file.image.GBFileImage;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBFileImage;
 
 /**
  * 类名： GBVideoElement.java<br>

@@ -1,11 +1,12 @@
-package com.core.xml;
+package com.tin.projectlist.app.library.reader.parser.xml;
 
-import com.core.common.util.ArrayUtils;
 
 // optimized partially implemented map String -> String
 // key must be interned
 // there is no remove() in this implementation
 // put with the same key does not remove old entry
+
+import com.tin.projectlist.app.library.reader.parser.common.util.ArrayUtils;
 
 /**
  * key value都必须是字符串的自定义map<br>

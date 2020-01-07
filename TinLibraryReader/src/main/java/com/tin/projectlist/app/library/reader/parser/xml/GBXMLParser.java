@@ -1,7 +1,8 @@
-package com.core.xml;
+package com.tin.projectlist.app.library.reader.parser.xml;
 
-import com.core.common.util.ArrayUtils;
-import com.core.file.GBResourceFile;
+
+import com.tin.projectlist.app.library.reader.parser.common.util.ArrayUtils;
+import com.tin.projectlist.app.library.reader.parser.file.GBResourceFile;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -101,13 +102,13 @@ final class GBXMLParser {
     private static HashMap<Integer, Queue<char[]>> ourBufferPool = new HashMap<Integer, Queue<char[]>>();
     private static Queue<GBMutableString> ourStringPool = new LinkedList<GBMutableString>();
 
+
     /**
-     *
      * 功能描述： 从缓存池获取缓存char[]<br>
      * 创建者： yangn<br>
      * 创建日期：2013-11-29<br>
-     *
-     * @param 缓存池中最后一个缓存
+     * @param bufferSize
+     * @return
      */
     private static synchronized char[] getBuffer(int bufferSize) {
         Queue<char[]> queue = ourBufferPool.get(bufferSize);

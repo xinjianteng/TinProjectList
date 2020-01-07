@@ -1,6 +1,6 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 
-import com.core.text.style.GBTextStyle;
+import com.tin.projectlist.app.library.reader.parser.text.style.GBTextStyle;
 
 /**
  * 文本域 关联一个元素在屏幕上的xy坐标 类名： .java<br>

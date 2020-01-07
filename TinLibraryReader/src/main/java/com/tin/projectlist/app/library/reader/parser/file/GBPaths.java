@@ -1,7 +1,8 @@
 package com.tin.projectlist.app.library.reader.parser.file;
 
-import com.core.domain.GBApplication;
-import com.core.option.GBStringOption;
+import com.tin.projectlist.app.library.reader.parser.domain.GBApplication;
+import com.tin.projectlist.app.library.reader.parser.option.GBStringOption;
+
 /**
  * 类名： GBPaths.java#Paths<br>
  * 描述： 获取资源路径工具类<br>

@@ -1,7 +1,8 @@
-package com.core.text.model.style;
+package com.tin.projectlist.app.library.reader.parser.text.model.style;
 
-import com.core.common.util.ArrayUtils;
-import com.core.log.L;
+import com.tin.projectlist.app.library.base.utils.LogUtils;
+import com.tin.projectlist.app.library.reader.parser.common.util.ArrayUtils;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntry;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -150,7 +151,7 @@ public class GBTextStyleEntryProxy {
                 }
 
                 if (mData.length < entryLen) {
-                    L.e("GBTextStyleEntryProxy", "mdata.leng=" + mData.length + "offset=" + offset + "entryLen"
+                    LogUtils.e("GBTextStyleEntryProxy", "mdata.leng=" + mData.length + "offset=" + offset + "entryLen"
                             + entryLen);
                 }
 

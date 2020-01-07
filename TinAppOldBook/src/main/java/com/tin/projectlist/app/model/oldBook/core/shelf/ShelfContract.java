@@ -10,11 +10,13 @@ public class ShelfContract {
 
     public interface View extends IMvpView {
         void onLocationBookListResult(List<Book> bookList);
-    }
+}
 
 
     public interface Presenter {
         void getLocationBookList();
+
+        void openBook(Book book);
     }
 
 }

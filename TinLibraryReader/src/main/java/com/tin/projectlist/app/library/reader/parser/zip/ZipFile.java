@@ -1,7 +1,12 @@
-package com.core.zip;
+package com.tin.projectlist.app.library.reader.parser.zip;
 
-import java.io.*;
-import java.util.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Collection;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * 类名： ZipFile.java<br>

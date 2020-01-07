@@ -2,7 +2,7 @@ package com.tin.projectlist.app.library.reader.parser.text.widget;
 
 import java.util.List;
 
-import com.core.text.model.GBTextHyperlink;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextHyperlink;
 
 public class GBTextHyperlinkRegionSoul extends GBTextRegion.Soul {
     public final GBTextHyperlink Hyperlink;

@@ -1,35 +1,35 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 
 import android.graphics.Point;
 
-import com.core.common.util.IFunction;
-import com.core.common.util.MiscUtil;
-import com.core.domain.GBApplication;
-import com.core.file.GBFile;
-import com.core.log.L;
-import com.core.object.GBColor;
-import com.core.object.GBSize;
-import com.core.platform.GBLibrary;
-import com.core.text.hyphenation.GBTextHyphenationInfo;
-import com.core.text.hyphenation.GBTextHyphenator;
-import com.core.text.iterator.GBTextParagraphCursor;
-import com.core.text.iterator.GBTextParagraphCursorCache;
-import com.core.text.iterator.GBTextSelectionCursor;
-import com.core.text.iterator.GBTextWordCursor;
-import com.core.text.model.GBTextAlignmentType;
-import com.core.text.model.GBTextMark;
-import com.core.text.model.GBTextModel;
-import com.core.text.model.GBTextModel.PositionInfo;
-import com.core.text.model.GBTextParagraph;
-import com.core.text.model.impl.GBTextTrParagraphImpl;
-import com.core.text.style.GBTextCssDecoratedStyle;
-import com.core.text.style.GBTextStyle;
-import com.core.text.style.GBTextStyleCache;
-import com.core.text.style.GBTextStyleCollection;
-import com.core.text.widget.GBTextHighlighting.LIGHTMODEL;
-import com.core.view.GBPaint;
-import com.core.view.PageEnum;
-import com.core.view.PageEnum.PageIndex;
+import com.tin.projectlist.app.library.base.utils.LogUtils;
+import com.tin.projectlist.app.library.reader.parser.common.util.IFunction;
+import com.tin.projectlist.app.library.reader.parser.common.util.MiscUtil;
+import com.tin.projectlist.app.library.reader.parser.domain.GBApplication;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.object.GBColor;
+import com.tin.projectlist.app.library.reader.parser.object.GBSize;
+import com.tin.projectlist.app.library.reader.parser.platform.GBLibrary;
+import com.tin.projectlist.app.library.reader.parser.text.hyphenation.GBTextHyphenationInfo;
+import com.tin.projectlist.app.library.reader.parser.text.hyphenation.GBTextHyphenator;
+import com.tin.projectlist.app.library.reader.parser.text.iterator.GBTextParagraphCursor;
+import com.tin.projectlist.app.library.reader.parser.text.iterator.GBTextParagraphCursorCache;
+import com.tin.projectlist.app.library.reader.parser.text.iterator.GBTextSelectionCursor;
+import com.tin.projectlist.app.library.reader.parser.text.iterator.GBTextWordCursor;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextAlignmentType;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextMark;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextModel;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextModel.PositionInfo;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextParagraph;
+import com.tin.projectlist.app.library.reader.parser.text.model.impl.GBTextTrParagraphImpl;
+import com.tin.projectlist.app.library.reader.parser.text.style.GBTextCssDecoratedStyle;
+import com.tin.projectlist.app.library.reader.parser.text.style.GBTextStyle;
+import com.tin.projectlist.app.library.reader.parser.text.style.GBTextStyleCache;
+import com.tin.projectlist.app.library.reader.parser.text.style.GBTextStyleCollection;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextHighlighting.LIGHTMODEL;
+import com.tin.projectlist.app.library.reader.parser.view.GBPaint;
+import com.tin.projectlist.app.library.reader.parser.view.PageEnum;
+import com.tin.projectlist.app.library.reader.parser.view.PageEnum.PageIndex;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -2368,7 +2368,7 @@ public abstract class GBTextView extends GBTextViewBase implements IFunction<Int
                 // // 获取当前章中总段数
 
                 int[] positionInfo = MiscUtil.convertChpInWordNumToInternalPosition(myModel, position);
-                L.e(TAG, "position.getChpFileIndex()" + position.getChpFileIndex() + "paragraphIndex" + positionInfo[0]
+                LogUtils.e(TAG, "position.getChpFileIndex()" + position.getChpFileIndex() + "paragraphIndex" + positionInfo[0]
                         + "elementIndex" + positionInfo[1] + "charIndex" + positionInfo[2]);
                 gotoPosition(position.getChpFileIndex(), positionInfo[0], positionInfo[1], positionInfo[2]);
 
@@ -3010,7 +3010,7 @@ public abstract class GBTextView extends GBTextViewBase implements IFunction<Int
 
     @Override
     public void callback(Integer result) {
-        L.i("@@@", "result:" + result.intValue() + "--" + isPaintLoading + "---:" + mRefreashChpIndex);
+        LogUtils.i("@@@", "result:" + result.intValue() + "--" + isPaintLoading + "---:" + mRefreashChpIndex);
         if (result != -1 && isPaintLoading && result.intValue() == mRefreashChpIndex) {
             // 空白章节处理
             // if (myModel.getParagraphsNumber(result.intValue()) <= 0) {
@@ -3096,7 +3096,7 @@ public abstract class GBTextView extends GBTextViewBase implements IFunction<Int
      ***********************************/
 
     // 试读业务支持
-    private PositionInfo mReadRangePosition;
+    private GBTextModel.PositionInfo mReadRangePosition;
     private int mReadRange = -1;
 
     @Override

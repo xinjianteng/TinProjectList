@@ -1,12 +1,12 @@
 package com.tin.projectlist.app.library.reader.parser.text.style;
 
-import com.core.file.GBResourceFile;
-import com.core.object.GBBoolean3;
-import com.core.option.GBBooleanOption;
-import com.core.platform.GBLibrary;
-import com.core.text.model.GBTextAlignmentType;
-import com.core.xml.GBStringMap;
-import com.core.xml.GBXMLReaderAdapter;
+import com.tin.projectlist.app.library.reader.parser.file.GBResourceFile;
+import com.tin.projectlist.app.library.reader.parser.object.GBBoolean3;
+import com.tin.projectlist.app.library.reader.parser.option.GBBooleanOption;
+import com.tin.projectlist.app.library.reader.parser.platform.GBLibrary;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextAlignmentType;
+import com.tin.projectlist.app.library.reader.parser.xml.GBStringMap;
+import com.tin.projectlist.app.library.reader.parser.xml.GBXMLReaderAdapter;
 
 /**
  * 类名： GBTextStyleCollection#ZLTextStyleCollection.java<br>

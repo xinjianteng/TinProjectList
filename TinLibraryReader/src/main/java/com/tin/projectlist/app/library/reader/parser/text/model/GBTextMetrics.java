@@ -1,4 +1,4 @@
-package com.core.text.model;
+package com.tin.projectlist.app.library.reader.parser.text.model;
 /**
  *
  * 描述：字体样式度量

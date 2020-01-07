@@ -1,7 +1,8 @@
-package com.core.support;
+package com.tin.projectlist.app.library.reader.parser.support;
 
-import com.core.file.GBFile;
-import com.core.file.GBResourceFile;
+
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.file.GBResourceFile;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,7 +1,7 @@
-package com.core.text.model.style;
+package com.tin.projectlist.app.library.reader.parser.text.model.style;
 
-import com.core.common.util.NumUtil;
-import com.core.log.L;
+import com.tin.projectlist.app.library.base.utils.LogUtils;
+import com.tin.projectlist.app.library.reader.parser.common.util.NumUtil;
 
 /**
  *
@@ -47,7 +47,7 @@ public final class GBTextBackgroundStyleEntry extends GBTextStyleEntry {
         try {
             this.backgroundColor = NumUtil.parseColor(backgroundColorStr);
         } catch (NumberFormatException ex) {
-            L.e(TAG, "NumberFormatException  from GBTextBackgroundStyleEntry ");
+            LogUtils.e(TAG, "NumberFormatException  from GBTextBackgroundStyleEntry ");
         }
     }
 

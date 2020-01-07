@@ -1,6 +1,6 @@
-package com.core.text.model;
+package com.tin.projectlist.app.library.reader.parser.text.model;
 
-import com.core.text.model.style.GBTextStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntry;
 
 /**
  * html5批注

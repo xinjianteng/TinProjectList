@@ -1,10 +1,10 @@
 package com.tin.projectlist.app.library.reader.parser.common;
 
-import com.core.file.GBFile;
-import com.core.file.GBResourceFile;
-import com.core.support.Language;
-import com.core.xml.GBStringMap;
-import com.core.xml.GBXMLReaderAdapter;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.file.GBResourceFile;
+import com.tin.projectlist.app.library.reader.parser.support.Language;
+import com.tin.projectlist.app.library.reader.parser.xml.GBStringMap;
+import com.tin.projectlist.app.library.reader.parser.xml.GBXMLReaderAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;

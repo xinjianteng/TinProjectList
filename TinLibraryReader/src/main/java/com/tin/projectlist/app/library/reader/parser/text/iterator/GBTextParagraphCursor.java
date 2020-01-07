@@ -1,21 +1,35 @@
 package com.tin.projectlist.app.library.reader.parser.text.iterator;
 
+import com.tin.projectlist.app.library.reader.parser.file.image.GBFileImage;
+import com.tin.projectlist.app.library.reader.parser.text.linbreak.LineBreaker;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBAudioEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBFileCtrEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBNoteEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextHyperlink;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextModel;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextParagraph;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBVideoEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.impl.GBTextTrParagraphImpl;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBAnimObjElement;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBAudioElement;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBNoteElement;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextFixedHSpaceElement;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextImageElement;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextStyleElement;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextWord;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBImage;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBImageData;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBImageManager;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBImageEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextMark;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextControlElement;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextElement;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextHyperlinkControlElement;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBVideoElement;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import com.core.text.linbreak.LineBreaker;
-import com.core.text.model.GBAudioEntry;
-import com.core.text.model.GBFileCtrEntry;
-import com.core.text.model.GBImageEntry;
-import com.core.text.model.GBNoteEntry;
-import com.core.text.model.GBTextHyperlink;
-import com.core.text.model.GBTextModel;
-import com.core.text.model.GBTextParagraph;
-import com.core.text.model.GBVideoEntry;
-import com.core.text.model.impl.GBTextTrParagraphImpl;
-import com.core.text.widget.GBTextFixedHSpaceElement;
-import com.core.text.widget.GBTextImageElement;
-import com.core.text.widget.GBTextWord;
 /**
  *
  * 描述： 文本段游标解析迭代器<br>
@@ -257,16 +271,16 @@ public final class GBTextParagraphCursor implements Comparable<GBTextParagraphCu
             }
         }
 
-        /**
+
+        /***
          * 功能描述： 添加文字<br>
          * 创建者： yangn<br>
          * 创建日期：2013-4-11<br>
-         *
-         * @param char[]
+         * @param data
          * @param offset 偏移量
          * @param len 长度
-         * @param 段偏移量
-         * @param 超链接信息 没有则为null
+         * @param paragraphOffset
+         * @param hyperlink 没有则为null
          */
         private final void addWord(char[] data, int offset, int len, int paragraphOffset, GBTextHyperlink hyperlink) {
             // String str = new String(data, offset, len);
@@ -300,7 +314,7 @@ public final class GBTextParagraphCursor implements Comparable<GBTextParagraphCu
      * 段指针 用于解析一段信息
      *
      * @param model 数据模型
-     * @param chpFileIndex章节文件索引
+     * @param chpFileIndex  章节文件索引
      * @param index 段落索引
      */
     private GBTextParagraphCursor(GBTextModel model, int chpFileIndex, int index) {

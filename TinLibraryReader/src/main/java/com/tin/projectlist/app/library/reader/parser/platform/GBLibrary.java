@@ -1,8 +1,9 @@
-package com.core.platform;
+package com.tin.projectlist.app.library.reader.parser.platform;
 
-import com.core.file.GBResourceFile;
-import com.core.option.GBBooleanOption;
-import com.core.option.GBStringOption;
+
+import com.tin.projectlist.app.library.reader.parser.file.GBResourceFile;
+import com.tin.projectlist.app.library.reader.parser.option.GBBooleanOption;
+import com.tin.projectlist.app.library.reader.parser.option.GBStringOption;
 
 import java.util.List;
 

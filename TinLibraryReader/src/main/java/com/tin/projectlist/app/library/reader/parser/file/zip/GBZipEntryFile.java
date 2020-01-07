@@ -1,5 +1,13 @@
 package com.tin.projectlist.app.library.reader.parser.file.zip;
 
+import com.geeboo.book.GBBook;
+import com.geeboo.book.GBBookFactory;
+import com.tin.projectlist.app.library.base.utils.LogUtils;
+import com.tin.projectlist.app.library.reader.parser.common.util.LicenseMgr;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.zip.LocalFileHeader;
+import com.tin.projectlist.app.library.reader.parser.zip.ZipFile;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -7,16 +15,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
-
-import com.core.zip.LocalFileHeader;
-import com.core.zip.ZipFile;
-import com.geeboo.Geeboo;
-import com.geeboo.book.GBBook;
-import com.geeboo.book.GBBookFactory;
-import com.tin.projectlist.app.library.base.utils.LogUtils;
-import com.tin.projectlist.app.library.reader.parser.common.util.LicenseMgr;
-import com.tin.projectlist.app.library.reader.parser.file.GBFile;
-import com.tin.projectlist.app.library.reader.parser.file.zip.GBArchiveEntryFile;
 
 /**
  * 类名： GBZipEntryFile.java#ZLZipEntryFile<br>

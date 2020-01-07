@@ -1,4 +1,4 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 /**
  * 类名： GBNoteRegionSoul.java<br>
  * 描述： 批注对象区域信息<br>

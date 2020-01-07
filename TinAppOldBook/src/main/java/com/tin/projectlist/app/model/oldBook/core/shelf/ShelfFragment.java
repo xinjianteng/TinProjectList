@@ -4,13 +4,18 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.hjq.bar.TitleBar;
+import com.tin.projectlist.app.library.base.BaseRecyclerViewAdapter;
 import com.tin.projectlist.app.library.base.widget.MultiStateView;
 import com.tin.projectlist.app.model.oldBook.R;
 import com.tin.projectlist.app.model.oldBook.common.MyLazyFragment;
 import com.tin.projectlist.app.model.oldBook.core.home.HomeActivity;
+import com.tin.projectlist.app.model.oldBook.entity.Book;
+import com.tin.projectlist.app.model.oldBook.mvp.MvpLazyFragment;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
+
+import java.util.List;
 
 /**
  *    author : Android 轮子哥
@@ -20,7 +25,7 @@ import org.xutils.view.annotation.ViewInject;
  */
 
 @ContentView(R.layout.fragment_shelf)
-public final class ShelfFragment extends MyLazyFragment<HomeActivity> {
+public final class ShelfFragment extends MvpLazyFragment<ShelfPresenter> implements ShelfContract.View{
     @ViewInject(R.id.titleBar)
     TitleBar mToolbar;
 
@@ -29,6 +34,8 @@ public final class ShelfFragment extends MyLazyFragment<HomeActivity> {
 
     @ViewInject(R.id.multi_state_view)
     MultiStateView multiStateView;
+
+    ShelfBookAdapter shelfBookAdapter;
 
     public static ShelfFragment newInstance() {
         return new ShelfFragment();
@@ -42,12 +49,20 @@ public final class ShelfFragment extends MyLazyFragment<HomeActivity> {
 
     @Override
     protected void initView() {
-
+        multiStateView.showLoading();
+        shelfBookAdapter=new ShelfBookAdapter(getContext());
+        rcvList.setAdapter(shelfBookAdapter);
+        shelfBookAdapter.setOnItemClickListener(new BaseRecyclerViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(RecyclerView recyclerView, View itemView, int position) {
+                getPresenter().openBook(shelfBookAdapter.getItem(position));
+            }
+        });
     }
 
     @Override
     protected void initData() {
-        multiStateView.showEmpty();
+        getPresenter().getLocationBookList();
     }
 
     @Override
@@ -57,5 +72,14 @@ public final class ShelfFragment extends MyLazyFragment<HomeActivity> {
     }
 
 
+    @Override
+    public void onLocationBookListResult(List<Book> bookList) {
+        shelfBookAdapter.setData(bookList);
+        multiStateView.showContent();
+    }
 
+    @Override
+    protected ShelfPresenter createPresenter() {
+        return null;
+    }
 }

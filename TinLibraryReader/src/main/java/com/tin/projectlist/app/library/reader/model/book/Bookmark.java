@@ -1,9 +1,5 @@
-package com.tin.projectlist.app.library.reader.model;
+package com.tin.projectlist.app.library.reader.model.book;
 
-import com.core.text.iterator.GBTextWordCursor;
-import com.core.text.widget.GBTextElement;
-import com.core.text.widget.GBTextPosition;
-import com.core.text.widget.GBTextWord;
 import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextFixedPosition;
 
 import java.util.Comparator;

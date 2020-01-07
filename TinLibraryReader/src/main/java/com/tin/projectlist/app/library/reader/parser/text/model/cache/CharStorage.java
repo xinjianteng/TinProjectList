@@ -1,4 +1,4 @@
-package com.core.text.model.cache;
+package com.tin.projectlist.app.library.reader.parser.text.model.cache;
 
 /**
  *
@@ -22,8 +22,8 @@ public interface CharStorage {
     /**
      * 按章、列表索引获取char数组
      *
-     * @param chpFileIndex章索引
-     * @param index列表索引
+     * @param chpFileIndex  章索引
+     * @param index 列表索引
      * @return chpFileIndex index位置char[]
      */
     public char[] block(int chpFileIndex, int index);
@@ -31,7 +31,7 @@ public interface CharStorage {
     /**
      * 若minimumLength大于当前char[]len 则创建新char[] 并加入到array
      *
-     * @param char[]最小长度
+     * @param char[]    最小长度
      */
     char[] createNewBlock(int chpFileIndex, int minimumLength);
 
@@ -40,7 +40,7 @@ public interface CharStorage {
      *
      * @param isCheckExists 是否检查缓存已存在 若检查缓存 缓存存在则不执行缓存 若不存在执行缓存 否则不检查缓存存在总是执行缓存
      */
-    void freezeLastBlock(int chpFileIndex, boolean ischeckExists);
+    void freezeLastBlock(int chpFileIndex, boolean isCheckExists);
 
     void freezeLastChpBlock();
 

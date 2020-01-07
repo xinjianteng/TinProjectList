@@ -1,7 +1,7 @@
-package com.core.text.hyphenation;
+package com.tin.projectlist.app.library.reader.parser.text.hyphenation;
 
-import com.core.common.util.GBCharacterUtil;
-import com.core.text.widget.GBTextWord;
+import com.tin.projectlist.app.library.reader.parser.common.util.GBCharacterUtil;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextWord;
 
 import java.util.List;
 

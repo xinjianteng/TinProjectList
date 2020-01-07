@@ -1,7 +1,7 @@
 package com.tin.projectlist.app.library.reader.parser.text.style;
 
-import com.core.text.model.style.GBTextStyleEntry;
-import com.core.text.widget.GBTextElement;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextElement;
 
 /**
  * 类名： GBTextStyleElement#ZLTextStyleElement.<br>

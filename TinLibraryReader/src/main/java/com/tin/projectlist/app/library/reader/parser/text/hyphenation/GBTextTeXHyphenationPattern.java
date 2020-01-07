@@ -1,4 +1,4 @@
-package com.core.text.hyphenation;
+package com.tin.projectlist.app.library.reader.parser.text.hyphenation;
 
 public final class GBTextTeXHyphenationPattern {
 	int myLength;

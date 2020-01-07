@@ -1,4 +1,4 @@
-package com.core.text.linbreak;
+package com.tin.projectlist.app.library.reader.parser.text.linbreak;
 
 public interface LineBreakerInterface {
 

@@ -1,4 +1,4 @@
-package com.core.text.model.impl;
+package com.tin.projectlist.app.library.reader.parser.text.model.impl;
 /**
  * 类名： GBTextSpecialParagraphImpl.java<br>
  * 描述： 特殊段落实现类<br>

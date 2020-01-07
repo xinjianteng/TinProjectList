@@ -1,11 +1,11 @@
 package com.tin.projectlist.app.library.reader.parser.file.image;
 
-import com.core.common.util.Base64InputStream;
-import com.core.common.util.HexInputStream;
-import com.core.common.util.MergedInputStream;
-import com.core.common.util.MimeType;
-import com.core.common.util.SliceInputStream;
-import com.core.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.common.util.Base64InputStream;
+import com.tin.projectlist.app.library.reader.parser.common.util.HexInputStream;
+import com.tin.projectlist.app.library.reader.parser.common.util.MergedInputStream;
+import com.tin.projectlist.app.library.reader.parser.common.util.MimeType;
+import com.tin.projectlist.app.library.reader.parser.common.util.SliceInputStream;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,4 +1,4 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 /**
  * 类名： GBAnimObjRegionSoul.java<br>
  * 描述： 交互动画元素区域信息<br>

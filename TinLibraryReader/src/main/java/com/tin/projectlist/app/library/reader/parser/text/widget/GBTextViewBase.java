@@ -1,23 +1,23 @@
-package com.core.text.widget;
+package com.tin.projectlist.app.library.reader.parser.text.widget;
 
-import com.core.domain.GBApplication;
-import com.core.file.GBFile;
-import com.core.object.GBColor;
-import com.core.object.GBSize;
-import com.core.platform.GBLibrary;
-import com.core.text.iterator.GBTextParagraphCursor;
-import com.core.text.model.GBHyperlinkType;
-import com.core.text.model.GBTextHyperlink;
-import com.core.text.model.GBTextMetrics;
-import com.core.text.style.GBTextBaseStyle;
-import com.core.text.style.GBTextCssDecoratedStyle;
-import com.core.text.style.GBTextDecorationStyleOption;
-import com.core.text.style.GBTextStyle;
-import com.core.text.style.GBTextStyleCollection;
-import com.core.view.GBPaint;
-import com.core.view.GBView;
-import com.core.view.PageEnum;
-import com.core.view.PageEnum.ImgFitType;
+import com.tin.projectlist.app.library.reader.parser.domain.GBApplication;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.object.GBColor;
+import com.tin.projectlist.app.library.reader.parser.object.GBSize;
+import com.tin.projectlist.app.library.reader.parser.platform.GBLibrary;
+import com.tin.projectlist.app.library.reader.parser.text.iterator.GBTextParagraphCursor;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBHyperlinkType;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextHyperlink;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextMetrics;
+import com.tin.projectlist.app.library.reader.parser.text.style.GBTextBaseStyle;
+import com.tin.projectlist.app.library.reader.parser.text.style.GBTextCssDecoratedStyle;
+import com.tin.projectlist.app.library.reader.parser.text.style.GBTextDecorationStyleOption;
+import com.tin.projectlist.app.library.reader.parser.text.style.GBTextStyle;
+import com.tin.projectlist.app.library.reader.parser.text.style.GBTextStyleCollection;
+import com.tin.projectlist.app.library.reader.parser.view.GBPaint;
+import com.tin.projectlist.app.library.reader.parser.view.GBView;
+import com.tin.projectlist.app.library.reader.parser.view.PageEnum;
+import com.tin.projectlist.app.library.reader.parser.view.PageEnum.ImgFitType;
 
 import java.util.Stack;
 

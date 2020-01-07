@@ -1,7 +1,7 @@
-package com.core.xml;
+package com.tin.projectlist.app.library.reader.parser.xml;
 
-import com.core.common.util.ArrayUtils;
 
+import com.tin.projectlist.app.library.reader.parser.common.util.ArrayUtils;
 
 /**
  * 可变长字符串<br>

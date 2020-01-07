@@ -1,6 +1,7 @@
-package com.core.zip;
+package com.tin.projectlist.app.library.reader.parser.zip;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * 描述：zip文件输入流 <br>

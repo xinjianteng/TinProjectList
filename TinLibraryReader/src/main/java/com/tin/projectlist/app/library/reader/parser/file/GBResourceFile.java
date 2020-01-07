@@ -1,6 +1,6 @@
 package com.tin.projectlist.app.library.reader.parser.file;
 
-import com.core.platform.GBLibrary;
+import com.tin.projectlist.app.library.reader.parser.platform.GBLibrary;
 
 /**
  * 类名： GBResourceFile.java#ZLResourceFile<br>

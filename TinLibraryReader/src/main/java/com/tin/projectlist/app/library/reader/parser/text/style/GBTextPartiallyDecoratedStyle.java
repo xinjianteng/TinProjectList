@@ -1,7 +1,7 @@
 package com.tin.projectlist.app.library.reader.parser.text.style;
 
-import com.core.text.model.GBTextHyperlink;
-import com.core.text.model.GBTextMetrics;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextHyperlink;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextMetrics;
 
 /**
  * partially 部分的 类名： GBTextPartiallyDecoratedStyle#ZLTextPartiallyDecoratedStyle<br>

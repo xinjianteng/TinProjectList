@@ -1,6 +1,6 @@
-package com.core.object;
+package com.tin.projectlist.app.library.reader.parser.object;
 
-import com.core.common.util.ArrayUtils;
+import com.tin.projectlist.app.library.reader.parser.common.util.ArrayUtils;
 
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
