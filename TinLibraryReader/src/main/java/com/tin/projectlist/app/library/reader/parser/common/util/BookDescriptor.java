@@ -25,12 +25,8 @@ public final class BookDescriptor implements Serializable {
         byte TXT = 0;
         byte EPUB = 1;
         byte PDF = 2;
-
     }
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 89757L;
 
     /**
@@ -41,10 +37,6 @@ public final class BookDescriptor implements Serializable {
      * 图书名称
      */
     public final String Title;
-    /**
-     * 是否属购买图书
-     */
-    public final Boolean IsPlay;
 
     /**
      * 阅读范围
@@ -56,33 +48,26 @@ public final class BookDescriptor implements Serializable {
      */
     public byte RealSuffer;
 
-    // public final SecretKey SecretKey;
-
     /**
      * @param filePath  图书文件路径
      * @param title     阅读器界面图书显示标题
-     * @param isPlay    是否购买图书
      * @param readRange 阅读范围 数值图书百分比
      */
-    public BookDescriptor(String filePath, String title, Boolean isPlay,
-                          int readRange/*
-     * , SecretKey secretKey
-     */) {
+    public BookDescriptor(String filePath, String title, int readRange) {
         FilePath = filePath;
         Title = title;
-        IsPlay = isPlay;
         ReadRange = readRange;
-        // SecretKey=secretKey;
     }
+
 
     // 添加版权支持
     private CopyVersionInfo mCopyVersionInfo = null;
 
-    public CopyVersionInfo getmCopyVersionInfo() {
+    public CopyVersionInfo getCopyVersionInfo() {
         return mCopyVersionInfo;
     }
 
-    public void setmCopyVersionInfo(CopyVersionInfo mCopyVersionInfo) {
+    public void setCopyVersionInfo(CopyVersionInfo mCopyVersionInfo) {
         this.mCopyVersionInfo = mCopyVersionInfo;
     }
 

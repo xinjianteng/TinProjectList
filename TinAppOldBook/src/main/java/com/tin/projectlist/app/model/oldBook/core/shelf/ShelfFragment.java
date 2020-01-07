@@ -80,6 +80,6 @@ public final class ShelfFragment extends MvpLazyFragment<ShelfPresenter> impleme
 
     @Override
     protected ShelfPresenter createPresenter() {
-        return null;
+        return new ShelfPresenter();
     }
 }

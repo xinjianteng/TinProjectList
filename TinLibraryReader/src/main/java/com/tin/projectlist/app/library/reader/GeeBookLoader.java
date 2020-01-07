@@ -10,6 +10,7 @@ import com.tin.projectlist.app.library.reader.controller.GeeBookMgr;
 import com.tin.projectlist.app.library.reader.parser.common.util.IGiveback;
 import com.tin.projectlist.app.library.reader.pdf.PdfActivity;
 import com.tin.projectlist.app.library.reader.view.ReaderActivity;
+import com.tin.projectlist.app.library.reader.view.img.GBAndroidImageManager;
 
 /**
  *
@@ -87,6 +88,14 @@ public class GeeBookLoader {
         return exec(context, descriptor);
     }
 
+
+    /***
+     * 检查参数空指针 情况
+     * @param context
+     * @param descriptor
+     * @return
+     * @throws Exception
+     */
     static boolean isInValidate(Context context, BookDescriptor descriptor) throws Exception {
         if (null == context || null == descriptor) {
             throw new Exception("in validate book descriptor  or  cache path");

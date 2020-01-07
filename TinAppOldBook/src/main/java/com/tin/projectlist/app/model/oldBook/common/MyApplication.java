@@ -4,6 +4,7 @@ import android.app.ActivityManager;
 import android.content.Context;
 
 import com.tin.projectlist.app.library.base.BaseApplication;
+import com.tin.projectlist.app.library.reader.GeeBookLoader;
 import com.tin.projectlist.app.model.oldBook.utils.BmobUtils;
 
 /**
@@ -19,7 +20,7 @@ public class MyApplication extends BaseApplication {
         super.onCreate();
         if (isMainProcess()) {
             BmobUtils.init(this);
-
+            GeeBookLoader.initApp(this);
         }
     }
 

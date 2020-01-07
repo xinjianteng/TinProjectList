@@ -16,7 +16,7 @@ public class ShelfContract {
     public interface Presenter {
         void getLocationBookList();
 
-        void openBook(Book book);
+        void openBook(Book book) throws Exception;
     }
 
 }
