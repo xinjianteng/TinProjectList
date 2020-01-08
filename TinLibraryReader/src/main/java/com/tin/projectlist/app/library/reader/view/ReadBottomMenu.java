@@ -80,10 +80,12 @@ public class ReadBottomMenu implements OnClickListener, AnimationListener, OnSee
         mRightInAnim = AnimationUtils.loadAnimation(mActivity, R.anim.read_bottom_menu_from_right_in);
     }
 
-
-    public View mMainView; // 底部菜单view对象
+    // 底部菜单view对象
+    public View mMainView;
+    //横竖屏切换
     private RadioButton mLandspace;
-    public SeekBar mPDFSeekBar;// 进度栏
+    // 进度栏
+    public SeekBar mPDFSeekBar;
 
     private void initPdfMenuView() {
         mMainView = mActivity.getLayoutInflater().inflate(R.layout.read_pdf_bottom, null);
@@ -93,7 +95,6 @@ public class ReadBottomMenu implements OnClickListener, AnimationListener, OnSee
         }
         mLandspace.setOnClickListener(this);
         mPDFSeekBar = (SeekBar) mMainView.findViewById(R.id.sb_goto_bar);
-        // mPages = (TextView) mMainView.findViewById(R.id.tv_read_pages);
         mPDFSeekBar.setOnSeekBarChangeListener(this);
         mMainView.setVisibility(View.GONE);
     }
