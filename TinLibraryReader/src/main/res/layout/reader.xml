@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <!-- 阅读版面 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <!-- 阅读翻页布局 -->
+
+        <LinearLayout
+            android:id="@+id/ll_read"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"></LinearLayout>
+
+        <!-- 底部状态栏 -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="28dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical">
+
+            <!-- 章节页码 -->
+
+            <TextView
+                android:id="@+id/tv_read_pages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/read_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_read_chapter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tv_read_pages"
+                android:textColor="@color/read_color"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_read_battery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/battery2" />
+
+            <TextView
+                android:id="@+id/tv_read_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/iv_read_battery"
+                android:paddingRight="5dp"
+                android:textColor="@color/read_color"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- 阅读菜单 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_read_headmenu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_read_footmenu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"></LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- 图片 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.geeboo.read.view.widget.ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/loading"
+        layout="@layout/reader_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- 阅读页引导 -->
+    <RelativeLayout
+        android:id="@+id/rl_readerguide"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bar"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/read_guide_previous" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="上一页"
+                        android:textColor="#ffffff"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/red" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/read_guide_menu" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="菜单"
+                        android:textColor="#ffffff"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/read_guide_next" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="下一页"
+                        android:textColor="#ffffff"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/red" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="330dp"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/iv_toread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/read_guide_click" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- 最后一页 -->
+    <RelativeLayout
+        android:id="@+id/rl_lastpage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/lastpage_top"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_left"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/ib_reader_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/top_left" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_right"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/btn_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/top_righe_share" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_center"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="本书完结"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/lastpage_top"
+            android:paddingTop="15dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/book_shelf_cover"
+                    android:layout_width="85dp"
+                    android:layout_height="121dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/book_shelf_cover"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/book_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="甘地自传"
+                    android:textColor="#333333"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="35dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="已读完"
+                    android:textColor="#999999"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f4f2f3">
+
+                <Button
+                    android:id="@+id/btn_recomend"
+                    android:layout_width="236dp"
+                    android:layout_height="38dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="38dp"
+                    android:background="@drawable/yuanjiao_bg_black"
+                    android:gravity="center"
+                    android:text="书评"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/btn_recomend">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="48dp"
+                        android:layout_marginTop="45dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="您阅读本书时长共计58个小时"
+                            android:textColor="#999999"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/tv_note"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:text="撰写了5条笔记"
+                            android:textColor="#999999"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/tv_shuzhai"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:text="分享了12条书摘"
+                            android:textColor="#999999"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/tv_dianping"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:text="15条点评"
+                            android:textColor="#999999"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/tv_good"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:text="21条点赞"
+                            android:textColor="#999999"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/tv_chengjiu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:text="4个成就"
+                            android:textColor="#999999"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/audio_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:alpha="1.0"
+        android:clickable="true"
+        android:visibility="gone" />
+</FrameLayout>

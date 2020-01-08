@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="40dip"
+        android:background="@drawable/dialog_top"
+        android:padding="5dip" >
+
+        <TextView
+            android:id="@+id/tv_dig_title"
+            style="@style/dialog_title_style" />
+    </RelativeLayout>
+    <!--
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/dliver_line" />
+    -->
+
+    <LinearLayout
+        android:id="@+id/ll_dig_body"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_body"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+    </LinearLayout>
+
+</LinearLayout>

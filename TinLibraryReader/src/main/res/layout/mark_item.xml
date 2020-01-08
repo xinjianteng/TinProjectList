@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<TextView
+		android:id="@+id/txt_time"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="15dp"
+		android:layout_marginLeft="15dp"
+		android:layout_marginRight="15dp"
+		android:text="字体名称"
+		android:textColor="#333333"
+		android:textSize="16sp"/>
+
+	<TextView
+		android:id="@+id/txt_mark_context"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="15dp"
+		android:layout_marginLeft="15dp"
+		android:layout_marginRight="15dp"
+		android:layout_marginBottom="15dp"
+		android:text="字体名称"
+		android:textColor="#999999"
+		android:textSize="14sp"/>
+
+	<View
+		android:id="@+id/v_bottom"
+		android:layout_width="match_parent"
+		android:layout_height="1px"
+		android:layout_marginLeft="15dp"
+		android:background="#dddddd" />
+
+</LinearLayout>

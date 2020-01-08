@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:src="@drawable/reader_back" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <com.geeboo.read.view.widget.RadioImageView
+                android:id="@+id/rb_bookmarky"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:paddingRight="23dp"
+                android:paddingTop="15dp"
+                android:src="@drawable/bookmark_gray" />
+
+            <com.geeboo.read.view.widget.RadioImageView
+                android:id="@+id/rb_notify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="23dp"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:src="@drawable/selector_read_notify" />
+
+            <com.geeboo.read.view.widget.RadioImageView
+                android:id="@+id/rb_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:paddingRight="23dp"
+                android:paddingTop="15dp"
+                android:src="@drawable/selector_read_aloud"
+                android:visibility="gone" />
+
+            <com.geeboo.read.view.widget.RadioImageView
+                android:id="@+id/rb_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:paddingRight="23dp"
+                android:paddingTop="15dp"
+                android:src="@drawable/selector_read_share" />
+
+            <com.geeboo.read.view.widget.RadioImageView
+                android:id="@+id/rb_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:src="@drawable/selector_read_friend" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_reader_head_body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"></LinearLayout>
+</LinearLayout>

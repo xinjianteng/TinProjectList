@@ -1,0 +1,199 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/my_toast_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/my_toast_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="分享"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_share_sina_weibo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/like_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="48dip"
+        android:paddingRight="20dip"
+        android:paddingTop="10dip" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dip"
+            android:background="@drawable/sns_sina" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分享到新浪微博"
+            android:textColor="@color/hui"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/hui_two" />
+
+    <LinearLayout
+        android:id="@+id/ll_share_renren"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hui_four"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="48dip"
+        android:paddingRight="20dip"
+        android:paddingTop="10dip" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dip"
+            android:background="@drawable/sns_renren" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分享到人人网"
+            android:textColor="@color/hui"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/hui_two" />
+
+    <LinearLayout
+        android:id="@+id/ll_share_qq_space"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/like_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="48dip"
+        android:paddingRight="20dip"
+        android:paddingTop="10dip"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dip"
+            android:background="@drawable/sns_qq_space" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="分享到QQ空间"
+            android:textColor="@color/hui"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/hui_two" />
+
+    <LinearLayout
+        android:id="@+id/ll_share_tencent_weibo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/like_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="48dip"
+        android:paddingRight="48dip"
+        android:paddingTop="10dip"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dip"
+            android:background="@drawable/sns_qq_weibo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="分享到腾讯微博"
+            android:textColor="@color/hui"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/hui_two" />
+
+    <LinearLayout
+        android:id="@+id/ll_share_douban"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_lower_body_circle"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="48dip"
+        android:paddingRight="20dip"
+        android:paddingTop="10dip"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dip"
+            android:background="@drawable/sns_douban" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="分享到豆瓣网"
+            android:textColor="@color/hui"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/hui_two"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_more"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dip"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更多..."
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,117 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/red" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.geeboo.widget.MyVideoView
+            android:id="@+id/vv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ProgressBar
+            android:id="@+id/tv_loading"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_video_menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#bb000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <CheckBox
+            android:id="@+id/ckb_start_or_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/rdo_video_play_selector"
+            android:button="@null"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rdo_go_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ckb_start_or_pause"
+            android:button="@drawable/bg_go_backward"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/rdo_go_forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/rdo_go_back"
+            android:button="@drawable/bg_go_forward"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/rdo_fullscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:button="@drawable/full_screen" />
+
+        <TextView
+            android:id="@+id/tv_sum_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/rdo_fullscreen"
+            android:text="10:00"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tv_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_sum_time"
+            android:text="00:00"
+            android:textColor="#ffffff" />
+
+        <ProgressBar
+            android:id="@+id/pb_buffer"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_current_time"
+            android:layout_toRightOf="@id/rdo_go_forward"
+            android:max="100"
+            android:maxHeight="4dp"
+            android:minHeight="4dp"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:progressDrawable="@drawable/video_goto_progress_style" />
+
+        <SeekBar
+            android:id="@+id/skb_video_ctr"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/tv_current_time"
+            android:layout_toRightOf="@id/rdo_go_forward"
+            android:max="100"
+            android:layout_centerVertical="true"
+            android:maxHeight="4dip"
+            android:minHeight="4dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:progressDrawable="@drawable/video_goto_seekbar_style"
+            android:thumb="@drawable/read_seekbar_thumb" />
+    </RelativeLayout>
+
+</FrameLayout>

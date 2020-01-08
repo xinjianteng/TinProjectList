@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!-- 写笔记 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/bottom_write_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/write_notes" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ash_white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- 阅读底部菜单切换区域 -->
+
+        <LinearLayout
+            android:id="@+id/ll_reader_bottom_body"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"></LinearLayout>
+        <!-- 阅读底部菜单 -->
+
+        <LinearLayout
+            android:id="@+id/ll_reader_bottom_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <!-- 目录设置 -->
+            <com.geeboo.read.view.widget.RadioImageView
+                android:id="@+id/rb_reader_catalog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:src="@drawable/icon_catalog" />
+
+            <!-- 章节设置 -->
+            <com.geeboo.read.view.widget.RadioImageView
+                android:id="@+id/rb_reader_night"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:src="@drawable/icon_type" />
+
+            <!-- 亮度设置 -->
+            <com.geeboo.read.view.widget.RadioImageView
+                android:id="@+id/rb_reader_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:src="@drawable/icon_light" />
+            <!-- 字体设置 -->
+            <com.geeboo.read.view.widget.RadioImageView
+                android:id="@+id/rb_reader_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:src="@drawable/icon_font" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

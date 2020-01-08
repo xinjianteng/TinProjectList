@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_read_pages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="第一张"
+        android:textColor="#2c343f"
+        android:textSize="12dp" />
+
+    <RelativeLayout
+        android:id="@+id/ll_normal_set"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@id/ll_perious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/iv_perious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/bg_read_sort_pre" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/ll_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="32dp"
+                android:background="@drawable/bg_read_sort_next" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/ll_next"
+            android:layout_toRightOf="@id/ll_perious">
+
+
+            <SeekBar
+                android:id="@+id/type_sb_goto_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="25dp"
+                android:paddingBottom="25dp"
+                android:progressDrawable="@drawable/goto_seekbar_style"
+                android:thumb="@drawable/read_seekbar_thumb" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

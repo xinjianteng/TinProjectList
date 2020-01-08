@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+    
+    <LinearLayout
+        android:id="@+id/ll_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+        <ProgressBar
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/progress_bg"
+            android:indeterminateDuration="1000"
+            android:indeterminateOnly="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:text="获取云端字体列表..."
+            android:layout_marginLeft="10dp"
+            android:textColor="#646464"
+            android:textSize="16sp"/>
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+        <TextView
+	        android:id="@+id/txt_typeface_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="字体名称"
+	        android:textColor="@color/hui"
+	        android:singleLine="true"
+	        android:ellipsize="end"
+	        android:maxLength="16"
+	        android:textSize="18sp" />
+
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="10dip"
+	        android:orientation="horizontal" >
+	
+	        <TextView
+	            android:id="@+id/txt_typeface_size"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="10.6M"
+	            android:textColor="#959693"
+	            android:textSize="18sp"
+	            android:visibility="gone" />
+	
+	        <ImageView
+	            android:id="@+id/iv_icon_selected"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:layout_marginRight="10dip"
+	            android:visibility="gone"
+	            android:src="@drawable/ic_red_ok" />
+	        
+	        <RelativeLayout
+	            android:id="@+id/btn_download"
+	            android:layout_width="60dp"
+	            android:layout_height="27dp"
+	            android:layout_marginRight="10dip"
+	            android:layout_gravity="center_vertical|center_horizontal"
+	            android:gravity="center_vertical|center_horizontal"
+	            android:visibility="gone" >
+	
+	            <ProgressBar
+	                android:id="@+id/borrow_btn"
+	                style="@android:style/Widget.ProgressBar.Horizontal"
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent"
+	                android:background="@drawable/btn_ok_selector"
+	                android:max="100"
+	                android:progress="0"
+	                android:progressDrawable="@drawable/my_bar" />
+	
+	            <TextView
+	                android:id="@+id/tv_borrow_title"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerInParent="true"
+	                android:text="下载"
+	                android:textColor="#646464"
+	                android:textSize="13sp" />
+	        </RelativeLayout>
+	    </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

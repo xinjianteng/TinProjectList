@@ -185,6 +185,7 @@ public abstract class GeeBookMgr {
         GBApplication.Instance().runAction(ActionCode.SELECTION_NOTE_ANNOTATION, AnnotationOptype.INSERT, type, text,
                 tag);
     }
+
     /**
      * 功能描述： 启动更新批注框<br>
      * 创建者： jack<br>
@@ -464,4 +465,7 @@ public abstract class GeeBookMgr {
     public abstract void  showChengjiu(Activity activity);
 
     public abstract void  shareToFriend(int requestCode, int resultCode, Intent data, final Activity act,View v);
+
+
+
 }

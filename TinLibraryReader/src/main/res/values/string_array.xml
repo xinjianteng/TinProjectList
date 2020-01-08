@@ -1,0 +1,13 @@
+
+    <resources>
+        <string-array name="report_type">
+            <item >广告</item>
+            <item >虚假中奖</item>
+            <item >淫秽色情</item>
+            <item >敏感信息</item>
+            <item >人身攻击</item>
+            <item >骚扰他人</item>
+        </string-array>
+        
+        
+    </resources>

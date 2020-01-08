@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rdo1">0dp</dimen>
+    <dimen name="rdo2">150dp</dimen>
+   <dimen name="selection_menu_height">50dip</dimen>
+</resources>

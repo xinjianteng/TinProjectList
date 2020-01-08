@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <VideoView
+        android:id="@+id/vv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ll_video_menu_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/vv"
+        android:background="@drawable/reading_text_selector_view_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/ckb_start_or_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rdo_video_play_selector"
+            android:button="@null"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rdo_go_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/bg_go_backward" />
+
+        <RadioButton
+            android:id="@+id/rdo_go_forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/bg_go_forward" />
+
+        <!--
+             <MediaController
+            android:id="@+id/mc_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        -->
+
+        <SeekBar
+            android:id="@+id/skb_video_ctr"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:max="100" />
+    </LinearLayout>
+
+</RelativeLayout>

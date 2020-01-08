@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- @drawable/reading__text_selector_view__bg -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_panel_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/iv_arrow_up"
+        android:layout_width="wrap_content"
+        android:layout_height="12dip"
+        android:layout_marginRight="20dip"
+        android:src="@drawable/ic_arrow_up"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_text_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dip"
+        android:background="@drawable/reading_note_bg" >
+
+        <ProgressBar
+            android:id="@+id/pb_loading"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dip" />
+
+        <RelativeLayout
+            android:id="@+id/rl_result_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip" >
+
+            <TextView
+                android:id="@+id/txt_from_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dip"
+                android:text="来自  金山词霸"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/txt_from_info"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="被解释文字"
+                android:textColor="@color/loan_book_name"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/txt_annotation_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_word"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:maxHeight="120dip"
+                android:paddingLeft="10dip"
+                android:scrollbars="vertical"
+                android:text="正在努力加载..."
+                android:textColor="@color/hui"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_more_translate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_annotation_input"
+                android:layout_marginLeft="10dip"
+                android:text="更多网络解释"
+                android:textColor="#0066cc"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <!-- android:textColor="@color/white" -->
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_arrow_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dip"
+        android:src="@drawable/ic_arrow_down"
+        android:visibility="gone" />
+
+</RelativeLayout>

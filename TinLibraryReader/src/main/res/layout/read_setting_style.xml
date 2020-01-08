@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal" >
+        <TextView
+	   	    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingTop="5dp"
+	        android:paddingBottom="5dp"
+	        android:gravity="center"
+	        android:textColor="#ffffff"
+	        android:text="自定义间距"
+	        android:textSize="17sp" />
+    </LinearLayout>
+    <ImageView
+	    android:layout_width="fill_parent"
+	    android:layout_height="1dp"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginRight="5dp"
+	    android:background="#2b2929" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical" >
+            <TextView
+	    	    android:layout_width="wrap_content"
+		        android:layout_height="40dp"
+		        android:gravity="center"
+		        android:textColor="#ffffff"
+		        android:text="行间距"
+		        android:textSize="15sp" />
+            <TextView
+	    	    android:layout_width="wrap_content"
+		        android:layout_height="40dp"
+		        android:gravity="center"
+		        android:textColor="#ffffff"
+		        android:text="段间距"
+		        android:textSize="15sp" />
+            <TextView
+	    	    android:layout_width="wrap_content"
+		        android:layout_height="40dp"
+		        android:gravity="center"
+		        android:textColor="#ffffff"
+		        android:text="上下间距"
+		        android:textSize="15sp" />
+            <TextView
+	    	    android:layout_width="wrap_content"
+		        android:layout_height="40dp"
+		        android:gravity="center"
+		        android:textColor="#ffffff"
+		        android:text="左右间距"
+		        android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="5dp"
+        	android:orientation="vertical" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical">
+                <SeekBar
+	        	    android:id="@+id/sb_line_progress"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:maxHeight="2dp"
+		            android:minHeight="2dp"
+		            android:paddingLeft="3dp"
+	            	android:paddingRight="3dp"
+		            android:max="100"
+		            android:progressDrawable="@drawable/goto_seekbar_style"
+		            android:thumb="@drawable/read_seekbar_thumb" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical">
+                <SeekBar
+	        	    android:id="@+id/sb_paragh_progress"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:maxHeight="2dp"
+		            android:minHeight="2dp"
+		            android:paddingLeft="3dp"
+	            	android:paddingRight="3dp"
+		            android:max="100"
+		            android:progressDrawable="@drawable/goto_seekbar_style"
+		            android:thumb="@drawable/read_seekbar_thumb" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical">
+                <SeekBar
+	        	    android:id="@+id/sb_up_progress"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:maxHeight="2dp"
+		            android:minHeight="2dp"
+		            android:paddingLeft="3dp"
+	            	android:paddingRight="3dp"
+		            android:max="100"
+		            android:progressDrawable="@drawable/goto_seekbar_style"
+		            android:thumb="@drawable/read_seekbar_thumb" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical">
+                <SeekBar
+	        	    android:id="@+id/sb_left_progress"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:maxHeight="2dp"
+		            android:minHeight="2dp"
+		            android:paddingLeft="3dp"
+	            	android:paddingRight="3dp"
+		            android:max="100"
+		            android:progressDrawable="@drawable/goto_seekbar_style"
+		            android:thumb="@drawable/read_seekbar_thumb" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

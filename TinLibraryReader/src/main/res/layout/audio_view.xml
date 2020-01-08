@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_video_menu_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/reading_text_selector_view_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <CheckBox
+        android:id="@+id/ckb_start_or_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rdo_video_play_selector"
+        android:button="@null"
+        android:checked="true" />
+
+    <RadioButton
+        android:id="@+id/rdo_go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/bg_go_backward" />
+
+    <RadioButton
+        android:id="@+id/rdo_go_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/bg_go_forward" />
+
+    <!--
+             <MediaController
+            android:id="@+id/mc_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    -->
+
+    <SeekBar
+        android:id="@+id/sb_progress"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:max="100"
+        android:maxHeight="4dip"
+        android:minHeight="4dip"
+        android:progressDrawable="@drawable/goto_seekbar_style"
+        android:thumb="@drawable/read_seekbar_thumb" />
+
+</LinearLayout>

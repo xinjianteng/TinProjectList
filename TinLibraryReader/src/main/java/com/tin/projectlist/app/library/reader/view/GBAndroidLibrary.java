@@ -11,12 +11,12 @@ import android.telephony.TelephonyManager;
 import android.text.format.DateFormat;
 import android.util.DisplayMetrics;
 
-import com.core.file.GBFile;
-import com.core.file.GBResourceFile;
-import com.core.option.GBBooleanOption;
-import com.core.option.GBIntegerRangeOption;
-import com.geeboo.read.view.widget.GBAndroidWidget;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.file.GBResourceFile;
+import com.tin.projectlist.app.library.reader.parser.option.GBBooleanOption;
+import com.tin.projectlist.app.library.reader.parser.option.GBIntegerRangeOption;
 import com.tin.projectlist.app.library.reader.parser.platform.GBLibrary;
+import com.tin.projectlist.app.library.reader.view.widget.GBAndroidWidget;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -49,6 +49,7 @@ public final class GBAndroidLibrary extends GBLibrary {
             "ScreenBrightnessLevel", 0, 100, 0);
     public final GBBooleanOption DisableButtonLightsOption = new GBBooleanOption("LookNFeel", "DisableButtonLights",
             !hasButtonLightsBug());
+
     /**
      * 功能描述：判断屏幕是否存在底部按钮<br>
      * 创建者： jack<br>
@@ -65,6 +66,7 @@ public final class GBAndroidLibrary extends GBLibrary {
     }
 
     private Boolean myIsKindleFire = null;
+
     public boolean isKindleFire() {
         if (myIsKindleFire == null) {
             final String KINDLE_MODEL_REGEXP = ".*kindle(\\s+)fire.*";
@@ -99,6 +101,7 @@ public final class GBAndroidLibrary extends GBLibrary {
     public BaseMenuActivity getActivity() {
         return myActivity;
     }
+
     /*
      * 获取当前阅读控件
      */
@@ -302,6 +305,7 @@ public final class GBAndroidLibrary extends GBLibrary {
         }
 
         private long mySize = -1;
+
         @Override
         public long size() {
             if (mySize == -1) {
@@ -363,14 +367,16 @@ public final class GBAndroidLibrary extends GBLibrary {
     public boolean isGPU() {
         return mIsGPU;
     }
+
     // 获取gpu状态
     public boolean mIsGPU;
+
     private void initGPUState() {
         mIsGPU = false;
         try {
             Class<?> c = Class.forName("android.os.SystemProperties");
             Method m = c.getMethod("get", new Class[]{String.class, String.class});
-            Object[] object =new String[]{"persist.sys.ui.hw", "false"};
+            Object[] object = new String[]{"persist.sys.ui.hw", "false"};
             mIsGPU = Boolean.parseBoolean(m.invoke(c, object).toString());
         } catch (Exception e) {
             e.printStackTrace();
@@ -378,6 +384,7 @@ public final class GBAndroidLibrary extends GBLibrary {
     }
 
     private String mPhoneSN;
+
     /**
      * 获取PhoneSN add by jack
      *

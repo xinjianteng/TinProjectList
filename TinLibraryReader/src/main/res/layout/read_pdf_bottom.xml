@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="53dip"
+    android:background="@color/bar" >
+
+    <RadioButton
+        android:id="@+id/rb_reader_landspace"
+        style="@style/reader_foot_radio"
+        android:layout_width="80dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:drawableTop="@drawable/read_landscape"
+        android:text="横屏" />
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="2dip"
+        android:layout_height="53dip"
+        android:layout_toLeftOf="@id/rb_reader_landspace"
+        android:background="@drawable/slide_line_shadow" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="53dip"
+        android:layout_toLeftOf="@id/iv1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip" >
+
+        <TextView
+            android:id="@+id/tv_read_pages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="adc"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <SeekBar
+            android:id="@+id/sb_goto_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_read_pages"
+            android:maxHeight="2dp"
+            android:minHeight="2dp"
+            android:progressDrawable="@drawable/goto_seekbar_style"
+            android:thumb="@drawable/read_seekbar_thumb"
+            android:thumbOffset="1dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

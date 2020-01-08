@@ -1,0 +1,208 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+
+    <style name="Top_style">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/read_title_red</item>
+    </style>
+    <!-- 小进度条样式 -->
+    <style name="loading_small" parent="@android:style/Widget.ProgressBar.Small">
+
+        <!-- <item name="android:indeterminateDrawable">@anim/loading</item> -->
+        <item name="android:layout_width">21dip</item>
+        <item name="android:layout_height">21dip</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="Btn_top_style">
+        <item name="android:layout_width">35dip</item>
+        <item name="android:layout_height">35dip</item>
+        <item name="android:layout_margin">5dip</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:contentDescription">this is a btn</item>
+    </style>
+
+    <!-- 通用的弹出提示框头部信息字体样式 -->
+    <style name="dialog_title_style">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+    <!-- 通用的弹出提示框信息字体样式 -->
+    <style name="dialog_body_style">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- 通用界面字体样式 -->
+    <style name="text_style">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:paddingLeft">5dip</item>
+        <item name="android:background">@color/dialog_bg_color</item>
+    </style>
+
+    <!-- menu界面大字体 -->
+    <style name="text_style_menu_large">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FAFFEF</item>
+        <item name="android:paddingLeft">5dip</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+    <!-- menu界面一般字体  D3D7D1 -->
+    <style name="text_style_menu_middle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FAFFEF</item>
+        <item name="android:paddingLeft">5dip</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+    <!-- menu界面小字体 -->
+    <style name="text_style_menu_little">
+        <item name="android:textSize">14sp</item>
+        <!-- 系统浅灰 -->
+        <!-- <item name="android:textColor">?android:attr/textColorTertiary</item> -->
+        <!-- 系统浅白 -->
+        <item name="android:textColor"> ?android:attr/textColorSecondary</item>
+    </style>
+    <!-- 头部标题字体 -->
+    <style name="text_style_title_1">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FAFFEF</item>
+        <!-- <item name="android:paddingLeft">5dip</item> -->
+        <!-- <item name="android:textAppearance">?android:attr/textAppearanceLarge</item> -->
+    </style>
+
+    <!-- 二级标题 -->
+    <style name="text_style_title_2">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="btn_2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#B3B3B3</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+
+    <!-- 单行输入框 -->
+    <style name="input">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/input</item>
+        <item name="android:textColorHint">@color/input_hint</item>
+        <item name="android:paddingLeft">13dip</item>
+        <item name="android:paddingRight">13dip</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:cursorVisible">true</item>
+    </style>
+
+    <!-- 多行输入框 -->
+    <style name="input_mulp">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/input</item>
+        <item name="android:textColorHint">@color/input_hint</item>
+        <item name="android:paddingLeft">13dip</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+
+    <!-- 一般字体样式 -->
+    <style name="text_style_normal">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:paddingLeft">5dip</item>
+        <!-- <item name="android:textAppearance">?android:attr/textAppearanceLarge</item> -->
+    </style>
+
+    <!-- 图书详情字体样式 -->
+    <style name="bookdetail_text_style" parent="text_style_normal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- 提示框设置 -->
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/clarity</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!-- 底部按鈕 -->
+    <style name="footbar">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:button">@null</item>
+        <item name="android:padding">0dp</item>
+    </style>
+    <!-- 书苑底部按钮样式 -->
+    <style name="reader_foot_radio" parent="footbar">
+        <item name="android:padding">0dip</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@drawable/reader_menu_text</item>
+    </style>
+
+    <!-- 阅读更多屏保单选按钮样式 -->
+    <style name="read_lightset">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">37dip</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/hui</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    <!-- 所有分割线样式 -->
+    <style name="line_style">
+        <item name="android:background">@drawable/dliver_line</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="annotation_popup_animation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/annotation_scale_in</item>
+    </style>
+
+    <style name="menu_up_animation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/menu_push_up_in</item>
+        <item name="android:windowExitAnimation">@anim/menu_push_down_out</item>
+    </style>
+
+    <style name="catalog_and_mark_radio_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <!-- <item name="android:textColor">@drawable/mark_radio_selector</item> -->
+        <item name="android:button">@null</item>
+    </style>
+
+    <!-- pop的动画-->
+    <style name="take_photo_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_enter_anim_read</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit_anim_read</item>
+    </style>
+
+</resources>

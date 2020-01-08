@@ -1,0 +1,783 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <!-- title -->
+
+    <RelativeLayout
+        android:id="@+id/rl_title_container"
+        android:layout_width="fill_parent"
+        android:layout_height="47dip"
+        android:background="@color/top_color" >
+        
+        <LinearLayout
+	        android:id="@+id/iv_back"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_centerVertical="true"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="5dp" >
+	
+	        <ImageView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@android:color/transparent"
+	            android:src="@drawable/action_bar_back" />
+	
+	        <ImageView
+	            android:id="@+id/ib_logo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dp"
+	            android:background="@android:color/transparent"
+	            android:src="@drawable/action_bar_logo" />
+	    </LinearLayout>
+	    
+        <RelativeLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_toRightOf="@id/iv_back"
+	        android:gravity="center_vertical" >
+	
+	        <TextView
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:gravity="center_vertical"
+	            android:singleLine="true"
+	            android:text="设置"
+	            android:textColor="#646464"
+	            android:textSize="19sp" />
+	    </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_send_idea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_edit"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/iv_line_divider"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/rl_title_container"
+        android:layout_height="1px"
+        android:src="#de2625" />
+    <!-- two -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/iv_line_divider" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" >
+            <!-- 翻页设置 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="翻页设置"
+                android:textColor="#646464"
+                android:textSize="17sp" />
+            <ImageView
+	            android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:layout_marginTop="5dp"
+	            android:background="#c8c8c8" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" >
+                    <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerVertical="true"
+		                android:text="启用音量键翻页"
+		                android:textColor="#323232"
+		                android:textSize="17sp" />
+	                <com.geeboo.utils.switchbtn.SwitchButton
+	                    android:id="@+id/sb_page_up_down"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentRight="true"
+	                    android:layout_centerVertical="true"
+	                    android:button="@null"
+	                    android:checked="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- 阅读界面屏保时间设置 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="阅读界面屏保时间设置"
+                android:textColor="#646464"
+                android:textSize="17sp" />
+            <ImageView
+	            android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:layout_marginTop="5dp"
+	            android:background="#c8c8c8" />
+        	<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:padding="1dp"
+                android:background="@drawable/rec_frame_red"
+                android:gravity="center" >
+
+                <RadioButton
+                    android:id="@+id/rb_1_minute"
+                    style="@style/read_lightset"
+                    android:background="@drawable/rdo_stg_switch_left_selector"
+                    android:text="@string/light_minite1" />
+
+                <RadioButton
+                    android:id="@+id/rb_3_minute"
+                    style="@style/read_lightset"
+                    android:background="@drawable/rdo_stg_switch_center_selector"
+                    android:text="@string/light_minite3" />
+
+                <RadioButton
+                    android:id="@+id/rb_5_minute"
+                    style="@style/read_lightset"
+                    android:background="@drawable/rdo_stg_switch_center_selector"
+                    android:text="@string/light_minite5" />
+
+                <RadioButton
+                    android:id="@+id/rb_10_minute"
+                    style="@style/read_lightset"
+                    android:layout_width="60dip"
+                    android:background="@drawable/rdo_stg_switch_center_selector"
+                    android:text="@string/light_minite10" />
+
+                <RadioButton
+                    android:id="@+id/rb_0_minute"
+                    style="@style/read_lightset"
+                    android:background="@drawable/rdo_stg_switch_right_selector"
+                    android:text="@string/keep_light" />
+            </LinearLayout>
+            <!-- 显示信息格式 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="显示信息格式"
+                android:textColor="#646464"
+                android:textSize="17sp" />
+            <ImageView
+	            android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:layout_marginTop="5dp"
+	            android:background="#c8c8c8" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" >
+                    <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerVertical="true"
+		                android:text="按百分比显示进度"
+		                android:textColor="#323232"
+		                android:textSize="17sp" />
+	                <com.geeboo.utils.switchbtn.SwitchButton
+	                    android:id="@+id/show_percent"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentRight="true"
+	                    android:layout_centerVertical="true"
+	                    android:button="@null"
+	                    android:checked="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" >
+                    <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerVertical="true"
+		                android:text="按页码显示进度"
+		                android:textColor="#323232"
+		                android:textSize="17sp" />
+	                <com.geeboo.utils.switchbtn.SwitchButton
+	                    android:id="@+id/show_pagenum"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentRight="true"
+	                    android:layout_centerVertical="true"
+	                    android:button="@null"
+	                    android:checked="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" >
+                    <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerVertical="true"
+		                android:text="显示电量"
+		                android:textColor="#323232"
+		                android:textSize="17sp" />
+	                <com.geeboo.utils.switchbtn.SwitchButton
+	                    android:id="@+id/show_battery"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentRight="true"
+	                    android:layout_centerVertical="true"
+	                    android:button="@null"
+	                    android:checked="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" >
+                    <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerVertical="true"
+		                android:text="显示时间"
+		                android:textColor="#323232"
+		                android:textSize="17sp" />
+	                <com.geeboo.utils.switchbtn.SwitchButton
+	                    android:id="@+id/show_time"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentRight="true"
+	                    android:layout_centerVertical="true"
+	                    android:button="@null"
+	                    android:checked="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" >
+                    <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerVertical="true"
+		                android:text="显示章节"
+		                android:textColor="#323232"
+		                android:textSize="17sp" />
+	                <com.geeboo.utils.switchbtn.SwitchButton
+	                    android:id="@+id/show_title"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentRight="true"
+	                    android:layout_centerVertical="true"
+	                    android:button="@null"
+	                    android:checked="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- 阅读设置 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="阅读设置"
+                android:textColor="#646464"
+                android:textSize="17sp" />
+            <ImageView
+	            android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:layout_marginTop="5dp"
+	            android:background="#c8c8c8" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" >
+                    <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerVertical="true"
+		                android:text="pdf阅读设置"
+		                android:textColor="#323232"
+		                android:textSize="17sp" />
+                    <RelativeLayout
+		                android:layout_width="60dp"
+		                android:layout_height="27dp"
+		                android:layout_alignParentRight="true"
+	                    android:layout_centerVertical="true" >
+		
+		                <ProgressBar
+		                    android:id="@+id/borrow_btn1"
+		                    style="@android:style/Widget.ProgressBar.Horizontal"
+		                    android:layout_width="match_parent"
+		                    android:layout_height="match_parent"
+		                    android:background="@drawable/btn_ok_selector"
+		                    android:max="100"
+		                    android:progress="0"
+		                    android:progressDrawable="@drawable/my_bar" />
+		                <!-- android:progressDrawable="@drawable/my_bar" android:background="@drawable/btn_ok_selector" -->
+		
+		                <TextView
+		                    android:id="@+id/tv_borrow_title1"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_centerInParent="true"
+		                    android:text="下载"
+		                    android:textColor="#646464"
+		                    android:textSize="13sp" />
+		            </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" >
+                    <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerVertical="true"
+		                android:text="语音朗读"
+		                android:textColor="#323232"
+		                android:textSize="17sp" />
+                    <RelativeLayout
+		                android:layout_width="60dp"
+		                android:layout_height="27dp"
+		                android:layout_alignParentRight="true"
+	                    android:layout_centerVertical="true" >
+		
+		                <ProgressBar
+		                    android:id="@+id/borrow_btn2"
+		                    style="@android:style/Widget.ProgressBar.Horizontal"
+		                    android:layout_width="match_parent"
+		                    android:layout_height="match_parent"
+		                    android:background="@drawable/btn_ok_selector"
+		                    android:max="100"
+		                    android:progress="0"
+		                    android:progressDrawable="@drawable/my_bar" />
+		                <!-- android:progressDrawable="@drawable/my_bar" android:background="@drawable/btn_ok_selector" -->
+		
+		                <TextView
+		                    android:id="@+id/tv_borrow_title2"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_centerInParent="true"
+		                    android:text="下载"
+		                    android:textColor="#646464"
+		                    android:textSize="13sp" />
+		            </RelativeLayout>
+                </RelativeLayout>
+                <!-- <RelativeLayout
+                    android:id="@+id/rl_font_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" >
+                    <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerVertical="true"
+		                android:text="字体设置"
+		                android:textColor="#323232"
+		                android:textSize="17sp" />
+                    
+                    <ImageView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentRight="true"
+	                    android:layout_centerVertical="true"
+	                    android:src="@drawable/icon_more" />
+                </RelativeLayout> -->
+            </LinearLayout>
+            <!-- <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="15dip"
+                    android:text="更换主题" />
+
+                <RadioGroup
+                    android:id="@+id/rg_switch_theme"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/b_day"
+                        style="@style/read_lightset"
+                        android:background="@drawable/rdo_stg_switch_left_selector"
+                        android:text="白天" />
+
+                    <RadioButton
+                        android:id="@+id/b_sheep_skin"
+                        style="@style/read_lightset"
+                        android:background="@drawable/rdo_stg_switch_center_selector"
+                        android:text="羊皮卷" />
+
+                    <RadioButton
+                        android:id="@+id/b_flax_brown"
+                        style="@style/read_lightset"
+                        android:background="@drawable/rdo_stg_switch_center_selector"
+                        android:text="亚麻棕" />
+
+                    <RadioButton
+                        android:id="@+id/b_simple_brown"
+                        style="@style/read_lightset"
+                        android:background="@drawable/rdo_stg_switch_center_selector"
+                        android:text="简棕红" />
+
+                    <RadioButton
+                        android:id="@+id/b_wash"
+                        style="@style/read_lightset"
+                        android:background="@drawable/rdo_stg_switch_right_selector"
+                        android:text="水墨风" />
+                </RadioGroup>
+            </LinearLayout> -->
+            <!-- <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dip"
+                    android:background="@drawable/edit_border"
+                    android:padding="1dip" >
+                    <EditText
+                        android:id="@+id/et_line_setting"
+                        android:layout_width="fill_parent"
+                        android:layout_height="132dip"
+                        android:background="@color/white"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:padding="5dip"
+                        android:text="藏书馆集下载、阅读、管理于一体的电子书阅读软件，拥有海量图书，让您随时随地享受移动阅读的乐趣"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+                    <SeekBar
+                        android:id="@+id/sb_linepadding"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:max="100"
+                        android:maxHeight="4dip"
+                        android:minHeight="4dip"
+                        android:progressDrawable="@drawable/seekbar_style"
+                        android:thumb="@drawable/read_seekbar_thumb"
+                        android:thumbOffset="1dp" />
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true" >
+                        <ImageView
+                            android:id="@+id/iv_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/read_seekbar_point" />
+                        <ImageView
+                            android:id="@+id/iv_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/read_seekbar_point" />
+                        <ImageView
+                            android:id="@+id/iv_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/read_seekbar_point" />
+                        <ImageView
+                            android:id="@+id/iv_four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/read_seekbar_point"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout> -->
+            <!-- 翻页动画 -->
+            <!-- <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:orientation="vertical" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="15dip"
+                    android:text="翻页动画" />
+                <RadioGroup
+                    android:id="@+id/rg_flip_anim_switch"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+                    <RadioButton
+                        android:id="@+id/rdo_move_anim"
+                        android:layout_width="56dip"
+                        android:layout_height="37dip"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rdo_stg_switch_center_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="平移"
+                        android:textColor="@color/hui"
+                        android:textSize="13sp" />
+                    <RadioButton
+                        android:id="@+id/rdo_slide_anim"
+                        android:layout_width="56dip"
+                        android:layout_height="37dip"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rdo_stg_switch_center_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="滑动"
+                        android:textColor="@color/hui"
+                        android:textSize="13sp" />
+                    <RadioButton
+                        android:id="@+id/rdo_real_anim"
+                        android:layout_width="56dip"
+                        android:layout_height="37dip"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rdo_stg_switch_right_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="卷帘动画"
+                        android:textColor="@color/hui"
+                        android:textSize="13sp" />
+                </RadioGroup>
+            </LinearLayout> -->
+            <!-- <RelativeLayout
+                android:id="@+id/rl_vertical_anim"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="9dip"
+                    android:text="启用上下翻页:" />
+
+                <RadioGroup
+                    android:id="@+id/rg_vertical_flip_paper_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rdo_vertical_flip_paper_on"
+                        android:layout_width="56dip"
+                        android:layout_height="37dip"
+                        android:background="@drawable/rdo_stg_switch_left_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="开" />
+
+                    <RadioButton
+                        android:id="@+id/rdo_vertical_flip_paper_off"
+                        android:layout_width="56dip"
+                        android:layout_height="37dip"
+                        android:background="@drawable/rdo_stg_switch_right_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="关"
+                        android:textColor="@color/white" />
+                </RadioGroup>
+
+                <com.cliff.switchbutton.SwitchButton
+                    android:id="@+id/sbtn_anim_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone" />
+            </RelativeLayout> -->
+            <!-- <RelativeLayout
+                android:id="@+id/rl_duble_flip_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="9dip"
+                    android:text="启用双翻页:" />
+
+                <com.cliff.switchbutton.SwitchButton
+                    android:id="@+id/sbtn_doublepage_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="9dip"
+                    android:visibility="gone" />
+
+                <RadioGroup
+                    android:id="@+id/rg_doublepage_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rdo_double_paper_on"
+                        android:layout_width="56dip"
+                        android:layout_height="37dip"
+                        android:background="@drawable/rdo_stg_switch_left_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="开" />
+
+                    <RadioButton
+                        android:id="@+id/rdo_doub_paper_off"
+                        android:layout_width="56dip"
+                        android:layout_height="37dip"
+                        android:background="@drawable/rdo_stg_switch_right_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="关"
+                        android:textColor="@color/white" />
+                </RadioGroup>
+            </RelativeLayout> -->
+            <!-- 语音设置 -->
+            <!-- <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="语音阅读设置" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dip"
+                android:visibility="visible" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:text="语速:" />
+                <SeekBar
+                    android:id="@+id/sb_speed"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dp"
+                    android:max="100"
+                    android:maxHeight="6dip"
+                    android:minHeight="6dip"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:thumb="@drawable/read_seekbar_thumb"
+                    android:thumbOffset="1dp" />
+            </LinearLayout> -->
+            <!-- <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dip"
+                android:visibility="visible" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:text="音高:" />
+                <SeekBar
+                    android:id="@+id/sb_pitch"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dp"
+                    android:max="100"
+                    android:maxHeight="6dip"
+                    android:minHeight="6dip"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:thumb="@drawable/read_seekbar_thumb"
+                    android:thumbOffset="1dp" />
+            </LinearLayout> -->
+            <!-- 翻页感应灵敏度设置 -->
+            <!-- <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dip"
+                    android:paddingLeft="10dip"
+                    android:text="是否启用感应翻页(重启生效):" />
+                <com.cliff.switchbutton.SwitchButton
+                    android:id="@+id/sbtn_sensorpage_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp" />
+            </RelativeLayout> -->
+            <!-- <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dip"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:text="翻页灵敏度:" />
+                <SeekBar
+                    android:id="@+id/sb_sensitivity"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dp"
+                    android:max="100"
+                    android:maxHeight="6dip"
+                    android:minHeight="6dip"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:thumb="@drawable/read_seekbar_thumb"
+                    android:thumbOffset="1dp" />
+            </LinearLayout> -->
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

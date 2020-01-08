@@ -9,6 +9,7 @@ import com.tin.projectlist.app.library.reader.parser.common.util.BookDescriptor;
 import com.tin.projectlist.app.library.reader.controller.GeeBookMgr;
 import com.tin.projectlist.app.library.reader.parser.common.util.IGiveback;
 import com.tin.projectlist.app.library.reader.pdf.PdfActivity;
+import com.tin.projectlist.app.library.reader.view.GBAndroidLibrary;
 import com.tin.projectlist.app.library.reader.view.ReaderActivity;
 import com.tin.projectlist.app.library.reader.view.img.GBAndroidImageManager;
 

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bar"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <!-- 阅读底部菜单切换区域 -->
+
+    <LinearLayout
+        android:id="@+id/ll_reader_bottom_body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+    </LinearLayout>
+    <!-- 阅读底部菜单 -->
+
+    <!-- <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@drawable/slide_line_verticalshadow" /> -->
+
+    <LinearLayout
+        android:id="@+id/ll_reader_bottom_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="53dip"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+        
+        <!-- 目录 -->
+        <RadioButton
+            android:id="@+id/rb_reader_catalog"
+            style="@style/reader_foot_radio"
+            android:drawableTop="@drawable/bg_read_catalog" 
+            android:text="目录"/>
+        
+        <!-- 字体设置 -->
+        <RadioButton
+            android:id="@+id/rb_reader_font"
+            style="@style/reader_foot_radio"
+            android:drawableTop="@drawable/bg_read_font" 
+            android:text="字体"/>
+        
+        <!-- 夜间模式 -->
+        <RadioButton
+            android:id="@+id/rb_reader_night"
+            style="@style/reader_foot_radio"
+            android:drawableTop="@drawable/bg_read_night"
+            android:text="夜间" />
+        
+		<!-- 亮度调节 -->
+        <RadioButton
+            android:id="@+id/rb_reader_light"
+            style="@style/reader_foot_radio"
+            android:drawableTop="@drawable/bg_read_light"
+            android:text="亮度" />
+
+        <!-- 更多设置 -->
+        <RadioButton
+            android:id="@+id/rb_reader_more"
+            style="@style/reader_foot_radio"
+            android:drawableTop="@drawable/bg_read_setting"
+            android:text="设置" />
+
+        <!-- 阅读模式 -->
+        <!-- <RadioButton
+            android:id="@+id/rb_reader_model"
+            style="@style/reader_foot_radio"
+            android:drawableBottom="@drawable/bg_btn_read_mode"/> -->
+    </LinearLayout>
+
+</LinearLayout>

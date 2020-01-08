@@ -19,7 +19,7 @@ public class PageEnum {
      * 修改者： <br>
      * 修改日期：<br>
      */
-    public static enum PageIndex {
+    public enum PageIndex {
         PREVIOUS, CURRENT, NEXT;
         /**
          * 功能描述： 获取下一页<br>
@@ -59,6 +59,9 @@ public class PageEnum {
         // 服务于双翻页
         public boolean isLeft = true;
     };
+
+
+
     /**
      * 类名： PageEnum.java<br>
      * 描述： 翻页方式<br>
@@ -68,7 +71,7 @@ public class PageEnum {
      * 修改者： <br>
      * 修改日期：<br>
      */
-    public static enum DirectType {
+    public enum DirectType {
         LTOR(true), // 左向右翻
         RTOL(true), // 右向左翻
         UP(false), // 向上翻页
@@ -90,7 +93,7 @@ public class PageEnum {
      * 修改者： <br>
      * 修改日期：<br>
      */
-    public static enum Anim {
+    public enum Anim {
 
         NONE, // 无
         CURL, // 翻页
@@ -123,10 +126,12 @@ public class PageEnum {
      * 修改者： <br>
      * 修改日期：<br>
      */
-    public static enum PageBgMode {
+    public enum PageBgMode {
         TILE, // 平铺
         STRETCH // 拉伸
     }
+
+
     /**
      * 类名： PageEnum.java<br>
      * 描述： 图片显示模式<br>
@@ -141,4 +146,6 @@ public class PageEnum {
         AUTO_FIT, // 自适应填充
         MAX_FIT // 超出最大尺寸时自适应
     }
+
+
 }

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/my_toast_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="40dip"
+        android:padding="5dip" >
+
+        <TextView
+            android:id="@+id/tv_dig_title"
+            style="@style/dialog_title_style" />
+    </RelativeLayout>
+    <!--
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/dliver_line" />
+    -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/iv_lib_delete"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_msg"
+            android:background="#881a1a1a" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_msg"
+            android:layout_marginTop="16dp"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_bg_normal"
+                android:text="@string/ok"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:background="@drawable/btn_bg_normal"
+                android:text="@string/cancel"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

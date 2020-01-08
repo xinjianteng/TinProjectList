@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title_container"
+        android:layout_width="fill_parent"
+        android:layout_height="47dip"
+        android:background="@color/top_color" >
+		
+        <LinearLayout
+	        android:id="@+id/iv_back"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_centerVertical="true"
+	        android:background="@drawable/btn_press_bg"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="5dp" >
+	
+	        <ImageView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@android:color/transparent"
+	            android:src="@drawable/action_bar_back" />
+	
+	        <ImageView
+	            android:id="@+id/ib_logo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dp"
+	            android:background="@android:color/transparent"
+	            android:src="@drawable/action_bar_logo" />
+	    </LinearLayout>
+	    
+        <RelativeLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_toRightOf="@id/iv_back"
+	        android:gravity="center_vertical" >
+	
+	        <TextView
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:gravity="center_vertical"
+	            android:singleLine="true"
+	            android:text="字体"
+	            android:textColor="#646464"
+	            android:textSize="19sp" />
+	    </RelativeLayout>
+        
+        <ImageView
+            android:id="@+id/iv_send_idea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_edit"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/iv_line_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:src="#de2625" />
+
+    <!-- <TextView
+        android:id="@+id/txt_typeface_file_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="3dip"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="选择默认字体"
+        android:textColor="@color/hui"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@drawable/dliver_line" /> -->
+
+    <ListView
+        android:id="@+id/lv_font_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:choiceMode="singleChoice"
+        android:divider="@drawable/dliver_line"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none" />
+
+</LinearLayout>
