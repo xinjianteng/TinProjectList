@@ -6,14 +6,12 @@
     android:layout_height="fill_parent">
 
     <!-- 阅读版面 -->
-
     <RelativeLayout
         android:id="@+id/rl_root"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
         <!-- 阅读翻页布局 -->
-
         <LinearLayout
             android:id="@+id/ll_read"
             android:layout_width="fill_parent"
@@ -65,8 +63,10 @@
                 android:textSize="12sp" />
         </RelativeLayout>
     </RelativeLayout>
-    <!-- 阅读菜单 -->
 
+
+
+    <!-- 阅读菜单 -->
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
@@ -230,6 +230,8 @@
                 android:background="@drawable/read_guide_click" />
         </RelativeLayout>
     </RelativeLayout>
+
+
     <!-- 最后一页 -->
     <RelativeLayout
         android:id="@+id/rl_lastpage"
@@ -430,6 +432,8 @@
             </RelativeLayout>
         </LinearLayout>
     </RelativeLayout>
+
+
     <ImageView
         android:id="@+id/audio_play"
         android:layout_width="wrap_content"

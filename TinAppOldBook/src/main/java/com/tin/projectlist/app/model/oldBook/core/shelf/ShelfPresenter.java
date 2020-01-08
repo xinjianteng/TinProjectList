@@ -34,12 +34,18 @@ public class ShelfPresenter extends MvpPresenter<ShelfContract.View> implements 
     }
 
     @Override
-    public void openBook(Book book) throws Exception {
+    public void openBook(Book book)  {
         InputStream abpath = getClass().getResourceAsStream("/assets/test.epub");
-        String path = new String(InputStreamToByte(abpath));
-        BookDescriptor bookDescriptor = new BookDescriptor(path, "测试图书",
-                 20);
-        GeeBookLoader.execEpub(MyApplication.getContext(), bookDescriptor);
+        String path = null;
+        try {
+            path = new String(InputStreamToByte(abpath));
+            BookDescriptor bookDescriptor = new BookDescriptor(path, "测试图书",
+                    20);
+            GeeBookLoader.execEpub(MyApplication.getContext(), bookDescriptor);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
