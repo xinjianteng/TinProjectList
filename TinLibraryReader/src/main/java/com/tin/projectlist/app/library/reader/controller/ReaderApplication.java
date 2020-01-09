@@ -7,13 +7,18 @@ import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 
 import com.tin.projectlist.app.library.reader.parser.domain.GBApplication;
+import com.tin.projectlist.app.library.reader.parser.domain.GBKeyBindings;
 import com.tin.projectlist.app.library.reader.parser.object.GBColor;
 import com.tin.projectlist.app.library.reader.parser.option.GBBooleanOption;
 import com.tin.projectlist.app.library.reader.parser.option.GBColorOption;
 import com.tin.projectlist.app.library.reader.parser.option.GBEnumOption;
+import com.tin.projectlist.app.library.reader.parser.option.GBFloatOption;
+import com.tin.projectlist.app.library.reader.parser.option.GBIntegerOption;
 import com.tin.projectlist.app.library.reader.parser.option.GBIntegerRangeOption;
 import com.tin.projectlist.app.library.reader.parser.option.GBStringOption;
 import com.tin.projectlist.app.library.reader.parser.platform.GBLibrary;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextPosition;
+import com.tin.projectlist.app.library.reader.view.ReadView;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -101,7 +106,7 @@ public final class ReaderApplication extends GBApplication {
     // new GBStringOption("Options", "FooterFont", "Droid Sans");
     // 阅读模式配置（夜间白天）
     public final GBStringOption ColorProfileOption = new GBStringOption("Options", "ColorProfile", ColorProfile.NIGHT);
-    public DayModel mDayModel;
+    public ColorProfile.DayModel mDayModel;
     public int isEnableVolumeScrollPage = 1;// 是否启动音量键翻页
     public int isShowTitle = 1;// 是否显示标题
     public String chapterName = "";//章节名称

@@ -43,7 +43,7 @@
             android:orientation="horizontal">
 
             <!-- 目录设置 -->
-            <com.geeboo.read.view.widget.RadioImageView
+            <com.tin.projectlist.app.library.reader.view.widget.RadioImageView
                 android:id="@+id/rb_reader_catalog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
                 android:src="@drawable/icon_catalog" />
 
             <!-- 章节设置 -->
-            <com.geeboo.read.view.widget.RadioImageView
+            <com.tin.projectlist.app.library.reader.view.widget.RadioImageView
                 android:id="@+id/rb_reader_night"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                 android:src="@drawable/icon_type" />
 
             <!-- 亮度设置 -->
-            <com.geeboo.read.view.widget.RadioImageView
+            <com.tin.projectlist.app.library.reader.view.widget.RadioImageView
                 android:id="@+id/rb_reader_light"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
                 android:paddingTop="15dp"
                 android:src="@drawable/icon_light" />
             <!-- 字体设置 -->
-            <com.geeboo.read.view.widget.RadioImageView
+            <com.tin.projectlist.app.library.reader.view.widget.RadioImageView
                 android:id="@+id/rb_reader_font"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

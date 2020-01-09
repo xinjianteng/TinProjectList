@@ -9,12 +9,13 @@ import com.tin.projectlist.app.library.reader.R;
 import org.xutils.view.annotation.ContentView;
 
 
-@ContentView(R.layout.reader)
 public final  class ReaderActivity extends BaseMenuActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.reader);
+
     }
 
     @Override

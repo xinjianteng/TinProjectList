@@ -10,8 +10,9 @@ import android.util.FloatMath;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.core.object.GBColor;
-import com.geeboo.read.controller.ReaderApplication;
+import com.tin.projectlist.app.library.reader.controller.ReaderApplication;
+import com.tin.projectlist.app.library.reader.parser.object.GBColor;
+
 
 /**
  * 类名： ImageView.java<br>

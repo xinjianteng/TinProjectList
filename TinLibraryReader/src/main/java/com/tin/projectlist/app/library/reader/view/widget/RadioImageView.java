@@ -8,7 +8,7 @@ import android.widget.Checkable;
  * Created by Shikh
  * on 16-8-30.
  */
-public class RadioImageView extends android.widget.ImageView implements Checkable {
+public class RadioImageView extends ImageView implements Checkable {
     int[] CHECKED_STATE_SET = { android.R.attr.state_checked };
     private boolean mChecked;
     public RadioImageView(Context context) {
@@ -43,7 +43,6 @@ public class RadioImageView extends android.widget.ImageView implements Checkabl
 
     @Override
     public int[] onCreateDrawableState(int extraSpace) {
-//        return super.onCreateDrawableState(extraSpace);
         final int[] drawableState = super.onCreateDrawableState(extraSpace + 1);
         if (isChecked()) {
             mergeDrawableStates(drawableState, CHECKED_STATE_SET);

@@ -92,7 +92,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
-        <com.geeboo.read.view.widget.ImageView
+        <com.tin.projectlist.app.library.reader.view.widget.ImageView
             android:id="@+id/iv_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -21,8 +21,15 @@ import android.widget.Toast;
 
 
 import com.tin.projectlist.app.library.reader.R;
+import com.tin.projectlist.app.library.reader.controller.ColorProfile;
+import com.tin.projectlist.app.library.reader.controller.ReaderApplication;
 import com.tin.projectlist.app.library.reader.parser.common.util.IFunction;
+import com.tin.projectlist.app.library.reader.parser.domain.GBApplication;
+import com.tin.projectlist.app.library.reader.parser.option.GBStringOption;
+import com.tin.projectlist.app.library.reader.parser.platform.GBLibrary;
+import com.tin.projectlist.app.library.reader.parser.text.style.GBTextStyleCollection;
 import com.tin.projectlist.app.library.reader.pdf.PdfActivity;
+import com.tin.projectlist.app.library.reader.view.widget.RadioImageView;
 
 import java.io.File;
 import java.util.List;
@@ -256,12 +263,14 @@ public class ReadBottomMenu implements OnClickListener, AnimationListener, OnSee
 
 
     }
+
     public void closeOtherView() {
         mChangeBody.removeAllViews();
         mNight.setChecked(false);
         mFontSet.setChecked(false);
         mLight.setChecked(false);
     }
+
     // ============初始化epub/txt跳转框===============
     private void initGoToBar(int p) {
         mMainView.startAnimation(mOutAnim);
@@ -310,16 +319,16 @@ public class ReadBottomMenu implements OnClickListener, AnimationListener, OnSee
                     ReaderApplication application = (ReaderApplication) GBApplication.Instance();
                     if (application.getColorProfileName().equals(ColorProfile.DAY)) {
                         switch (application.mDayModel) {
-                            case Day:
+                            case ColorProfile.DayModel.Day:
                                 setReadBackgroudUnChecked(2);
                                 break;
-                            case FlaxBrown:
+                            case ColorProfile.DayModel.FlaxBrown:
                                 setReadBackgroudUnChecked(3);
                                 break;
-                            case SleepKin:
+                            case ColorProfile.DayModel.SleepKin:
                                 setReadBackgroudUnChecked(1);
                                 break;
-                            case SimpleBrown:
+                            case ColorProfile.DayModel.SimpleBrown:
                                 setReadBackgroudUnChecked(4);
                                 break;
                         }
@@ -360,7 +369,6 @@ public class ReadBottomMenu implements OnClickListener, AnimationListener, OnSee
                 break;
         }
     }
-
 
 
     /**
