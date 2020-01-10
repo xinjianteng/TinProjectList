@@ -1,9 +1,9 @@
 package com.tin.projectlist.app.library.reader.controller;
 
-import com.core.text.widget.GBTextRegion;
-import com.core.text.widget.GBTextWordRegionSoul;
-import com.core.view.PageEnum;
-import com.geeboo.read.view.ReadView;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextRegion;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextWordRegionSoul;
+import com.tin.projectlist.app.library.reader.parser.view.PageEnum;
+import com.tin.projectlist.app.library.reader.view.ReadView;
 
 /**
  * 类名： MoveCursorAction.java<br>

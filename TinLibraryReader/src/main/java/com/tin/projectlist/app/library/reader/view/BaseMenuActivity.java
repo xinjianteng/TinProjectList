@@ -20,4 +20,12 @@ public abstract class BaseMenuActivity extends BaseActivity {
     }
 
 
+    /***
+     * 获取阅读进度
+     * @return
+     */
+    public abstract float getReadPro();
+
+
+
 }

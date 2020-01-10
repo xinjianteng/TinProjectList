@@ -1,10 +1,11 @@
 package com.tin.projectlist.app.library.reader.controller;
 
-import com.core.option.GBBooleanOption;
-import com.core.option.GBEnumOption;
-import com.core.option.GBIntegerRangeOption;
-import com.core.option.GBStringOption;
-import com.core.view.PageEnum;
+
+import com.tin.projectlist.app.library.reader.parser.option.GBBooleanOption;
+import com.tin.projectlist.app.library.reader.parser.option.GBEnumOption;
+import com.tin.projectlist.app.library.reader.parser.option.GBIntegerRangeOption;
+import com.tin.projectlist.app.library.reader.parser.option.GBStringOption;
+import com.tin.projectlist.app.library.reader.parser.view.PageEnum;
 
 /**
  * 类名： ScrollingPreferences.java<br>

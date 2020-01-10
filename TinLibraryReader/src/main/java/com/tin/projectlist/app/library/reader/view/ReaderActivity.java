@@ -23,4 +23,9 @@ public final class ReaderActivity extends BaseMenuActivity {
         return null;
     }
 
+    @Override
+    public float getReadPro() {
+        return 0;
+    }
+
 }
