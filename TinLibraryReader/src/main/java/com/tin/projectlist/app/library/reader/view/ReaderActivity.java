@@ -9,7 +9,7 @@ import com.tin.projectlist.app.library.reader.R;
 import org.xutils.view.annotation.ContentView;
 
 
-public final  class ReaderActivity extends BaseMenuActivity{
+public final class ReaderActivity extends BaseMenuActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
