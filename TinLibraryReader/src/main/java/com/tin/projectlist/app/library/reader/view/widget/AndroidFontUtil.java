@@ -2,10 +2,9 @@ package com.tin.projectlist.app.library.reader.view.widget;
 
 import android.graphics.Typeface;
 
-import com.core.common.util.GBTTFInfoDetector;
-import com.core.file.GBPaths;
-import com.core.log.L;
-import com.geeboo.read.model.book.TypeFace;
+import com.tin.projectlist.app.library.reader.model.book.TypeFace;
+import com.tin.projectlist.app.library.reader.parser.common.util.GBTTFInfoDetector;
+import com.tin.projectlist.app.library.reader.parser.file.GBPaths;
 
 import java.io.File;
 import java.io.FilenameFilter;

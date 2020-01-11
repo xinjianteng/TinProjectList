@@ -20,15 +20,26 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.tin.projectlist.app.library.base.widget.toast.ToastUtils;
+import com.tin.projectlist.app.library.reader.GeeBookLoader;
 import com.tin.projectlist.app.library.reader.R;
+import com.tin.projectlist.app.library.reader.controller.ActionCode;
 import com.tin.projectlist.app.library.reader.controller.ColorProfile;
+import com.tin.projectlist.app.library.reader.controller.GeeBookMgr;
 import com.tin.projectlist.app.library.reader.controller.ReaderApplication;
+import com.tin.projectlist.app.library.reader.model.book.TypeFace;
+import com.tin.projectlist.app.library.reader.model.parser.oeb.OEBBookReader;
+import com.tin.projectlist.app.library.reader.parser.common.GBResource;
+import com.tin.projectlist.app.library.reader.parser.common.util.Cookie;
 import com.tin.projectlist.app.library.reader.parser.common.util.IFunction;
 import com.tin.projectlist.app.library.reader.parser.domain.GBApplication;
+import com.tin.projectlist.app.library.reader.parser.file.GBPaths;
+import com.tin.projectlist.app.library.reader.parser.option.GBIntegerRangeOption;
 import com.tin.projectlist.app.library.reader.parser.option.GBStringOption;
 import com.tin.projectlist.app.library.reader.parser.platform.GBLibrary;
 import com.tin.projectlist.app.library.reader.parser.text.style.GBTextStyleCollection;
 import com.tin.projectlist.app.library.reader.pdf.PdfActivity;
+import com.tin.projectlist.app.library.reader.view.widget.AndroidFontUtil;
 import com.tin.projectlist.app.library.reader.view.widget.RadioImageView;
 
 import java.io.File;
@@ -424,7 +435,6 @@ public class ReadBottomMenu implements OnClickListener, AnimationListener, OnSee
         mActivity.closeView(1);
         if (mActivity.mApplication.isReadPdf) {
             if (v.getId() == R.id.rb_reader_landspace) {
-                MobclickAgent.onEvent(mActivity, EventName.READER_PDF_SECREENSETING);
                 RadioButton rdoBtn = (RadioButton) v;
                 Cookie cookie = new Cookie(mActivity, Cookie.APP_CFG);
                 if (rdoBtn.getText().toString().trim().equals("横屏")) {
@@ -445,13 +455,12 @@ public class ReadBottomMenu implements OnClickListener, AnimationListener, OnSee
         }
         if (v.getId() == R.id.rb_reader_catalog) {// 目录
             initGoToBar(1);
-            MobclickAgent.onEvent(mActivity, EventName.READER_SHOWCATALOG);
             mActivity.showDisMenu();
             if (mActivity.mApplication.isReadPdf) {
                 if (mActivity.isHaveCatalog()) {
                     CatalogAndMarkActivity.actionView(mActivity, mActivity.menuRoot, (byte) 1);
                 } else {
-                    UIUtil.showMessageText(mActivity, GBResource.resource("readerPage").getResource("noBookCatalog")
+                    ToastUtils.show(GBResource.resource("readerPage").getResource("noBookCatalog")
                             .getValue());
                 }
             } else {
@@ -459,20 +468,17 @@ public class ReadBottomMenu implements OnClickListener, AnimationListener, OnSee
                 if (fbreader.Model.TOCTree.getSize() > 1) {
                     CatalogAndMarkActivity.actionView(mActivity, fbreader.Model.TOCTree, (byte) 2);
                 } else {
-                    UIUtil.showMessageText(mActivity, isPageing ? "正在提取目录" : GBResource.resource("readerPage")
+                    ToastUtils.show(isPageing ? "正在提取目录" : GBResource.resource("readerPage")
                             .getResource("noBookCatalog").getValue());
                 }
             }
         } else if (v.getId() == R.id.rb_reader_font) {// 字体
-            MobclickAgent.onEvent(mActivity, EventName.READER_FONTSETTING);
             initGoToBar(4);
             mCurrenOpre = OPREATION.FONT;
         } else if (v.getId() == R.id.rb_reader_night) {// 夜间模式
-            MobclickAgent.onEvent(mActivity, EventName.READER_READMODEL);
             initGoToBar(2);
             mCurrenOpre = OPREATION.SET;
         } else if (v.getId() == R.id.rb_reader_light) {// 亮度
-            MobclickAgent.onEvent(mActivity, EventName.READER_SECREENLIGHT);
             initGoToBar(3);
             mCurrenOpre = OPREATION.LIGHT;
         } else if (v.getId() == R.id.bottom_write_notes) {//写笔记
@@ -487,14 +493,13 @@ public class ReadBottomMenu implements OnClickListener, AnimationListener, OnSee
             mActivity.mApplication.runAction(ActionCode.SELECTION_NOTE_ANNOTATION, 0, type);
         } else if (v.getId() == R.id.ll_next) {
             if (!mActivity.mApplication.BookTextView.nextChapter())
-                UIUtil.showMessageText(mActivity,
-                        GBResource.resource("readerPage").getResource("isLastChapter").getValue());
+                ToastUtils.show(GBResource.resource("readerPage").getResource("isLastChapter").getValue());
+
             mActivity.getmWidget().postInvalidate();
             GBApplication.Instance().runAction(ActionCode.RESET_PAGEINFO);
         } else if (v.getId() == R.id.ll_perious) {
             if (!mActivity.mApplication.BookTextView.preChapter()) {
-                UIUtil.showMessageText(mActivity,
-                        GBResource.resource("readerPage").getResource("isFristChapter").getValue());
+                ToastUtils.show(GBResource.resource("readerPage").getResource("isFristChapter").getValue());
             }
             mActivity.getmWidget().postInvalidate();
             GBApplication.Instance().runAction(ActionCode.RESET_PAGEINFO);
@@ -540,20 +545,16 @@ public class ReadBottomMenu implements OnClickListener, AnimationListener, OnSee
         int i = seekBar.getId();
         if (i == R.id.type_sb_goto_bar) {
             if (mActivity.mApplication.getCurrentView().isLoading()) {
-                UIUtil.showMessageText(mActivity, GBResource.resource("readerPage").getResource("loadingPlease")
-                        .getValue());
+                ToastUtils.show(GBResource.resource("readerPage").getResource("loadingPlease").getValue());
             } else {
-                MobclickAgent.onEvent(mActivity, EventName.READER_GOTO);
                 ReaderApplication.Instance().runAction(ActionCode.GOTO_PAGE, mNightSeekBar.getProgress());
             }
         } else if (i == R.id.light_sb_goto_bar) {
             ReaderApplication.Instance().runAction(ActionCode.SCREEN_LIGHT, mLightSeekBar.getProgress());
         } else if (i == R.id.sb_goto_bar) {
             if (mActivity.mApplication.getCurrentView().isLoading()) {
-                UIUtil.showMessageText(mActivity, GBResource.resource("readerPage").getResource("loadingPlease")
-                        .getValue());
+                ToastUtils.show(GBResource.resource("readerPage").getResource("loadingPlease").getValue());
             } else {
-                MobclickAgent.onEvent(mActivity, EventName.READER_GOTO);
                 ReaderApplication.Instance().runAction(ActionCode.GOTO_PAGE, mPDFSeekBar.getProgress());
             }
         }

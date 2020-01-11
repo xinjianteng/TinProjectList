@@ -15,21 +15,6 @@ import android.view.ViewConfiguration;
 import com.tin.projectlist.app.library.reader.parser.view.GBViewInter;
 import com.tin.projectlist.app.library.reader.parser.view.PageEnum;
 
-//import com.core.domain.GBApplication;
-//import com.core.platform.GBLibrary;
-//import com.core.view.GBView;
-//import com.core.view.GBViewInter;
-//import com.core.view.PageEnum;
-//import com.core.view.PageEnum.DirectType;
-//import com.core.view.PageEnum.PageIndex;
-//import com.geeboo.R;
-//import com.geeboo.read.controller.ActionCode;
-//import com.geeboo.read.controller.ReaderApplication;
-//import com.geeboo.read.controller.ScrollingPreferences;
-//import com.geeboo.read.view.GBAndroidLibrary;
-//import com.geeboo.read.view.ReaderActivity;
-//import com.geeboo.read.view.poppanel.AudioPopup;
-//import com.geeboo.utils.UIUtil;
 
 /**
  * 类名： GBAndroidWidget.java<br>

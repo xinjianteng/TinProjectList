@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 
+import com.tin.projectlist.app.library.reader.model.book.IBookCollection;
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookModel;
 import com.tin.projectlist.app.library.reader.parser.domain.GBApplication;
 import com.tin.projectlist.app.library.reader.parser.domain.GBKeyBindings;
 import com.tin.projectlist.app.library.reader.parser.object.GBColor;
