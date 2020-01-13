@@ -1,15 +1,13 @@
 package com.tin.projectlist.app.library.reader.model.parser;
 
+import com.tin.projectlist.app.library.reader.model.parser.oeb.OEBPlugin;
+import com.tin.projectlist.app.library.reader.model.parser.txt.TxtPlugin;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.core.file.GBFile;
-import com.core.file.filetype.FileType;
-import com.core.file.filetype.FileTypeCollection;
-import com.geeboo.read.model.parser.oeb.OEBPlugin;
-import com.geeboo.read.model.parser.txt.TxtPlugin;
 
 public class PluginCollection {
 //	static {

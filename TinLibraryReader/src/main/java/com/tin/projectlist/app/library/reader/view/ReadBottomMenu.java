@@ -25,6 +25,7 @@ import com.tin.projectlist.app.library.reader.GeeBookLoader;
 import com.tin.projectlist.app.library.reader.R;
 import com.tin.projectlist.app.library.reader.controller.ActionCode;
 import com.tin.projectlist.app.library.reader.controller.ColorProfile;
+import com.tin.projectlist.app.library.reader.controller.ColorProfile.DayModel;
 import com.tin.projectlist.app.library.reader.controller.GeeBookMgr;
 import com.tin.projectlist.app.library.reader.controller.ReaderApplication;
 import com.tin.projectlist.app.library.reader.model.book.TypeFace;
@@ -44,6 +45,8 @@ import com.tin.projectlist.app.library.reader.view.widget.RadioImageView;
 
 import java.io.File;
 import java.util.List;
+
+import static com.tin.projectlist.app.library.reader.controller.ColorProfile.DayModel.*;
 
 /**
  * 阅读底部菜单
@@ -330,16 +333,16 @@ public class ReadBottomMenu implements OnClickListener, AnimationListener, OnSee
                     ReaderApplication application = (ReaderApplication) GBApplication.Instance();
                     if (application.getColorProfileName().equals(ColorProfile.DAY)) {
                         switch (application.mDayModel) {
-                            case ColorProfile.DayModel.Day:
+                            case Day:
                                 setReadBackgroudUnChecked(2);
                                 break;
-                            case ColorProfile.DayModel.FlaxBrown:
+                            case FlaxBrown:
                                 setReadBackgroudUnChecked(3);
                                 break;
-                            case ColorProfile.DayModel.SleepKin:
+                            case SleepKin:
                                 setReadBackgroudUnChecked(1);
                                 break;
-                            case ColorProfile.DayModel.SimpleBrown:
+                            case SimpleBrown:
                                 setReadBackgroudUnChecked(4);
                                 break;
                         }
@@ -570,19 +573,19 @@ public class ReadBottomMenu implements OnClickListener, AnimationListener, OnSee
         public void onClick(View v) {
             if (v.getId() == R.id.ll_iv_01) {
                 setReadBackgroudUnChecked(1);
-                ((ReaderApplication) GBApplication.Instance()).setColorProfileName(ColorProfile.DAY, DayModel.SleepKin);
+                ((ReaderApplication) GBApplication.Instance()).setColorProfileName(ColorProfile.DAY, SleepKin);
                 resetReaderConfig();
             } else if (v.getId() == R.id.ll_iv_02) {
                 setReadBackgroudUnChecked(2);
-                ((ReaderApplication) GBApplication.Instance()).setColorProfileName(ColorProfile.DAY, DayModel.Day);
+                ((ReaderApplication) GBApplication.Instance()).setColorProfileName(ColorProfile.DAY, Day);
                 resetReaderConfig();
             } else if (v.getId() == R.id.ll_iv_03) {
                 setReadBackgroudUnChecked(3);
-                ((ReaderApplication) GBApplication.Instance()).setColorProfileName(ColorProfile.DAY, DayModel.FlaxBrown);
+                ((ReaderApplication) GBApplication.Instance()).setColorProfileName(ColorProfile.DAY, FlaxBrown);
                 resetReaderConfig();
             } else if (v.getId() == R.id.ll_iv_04) {
                 setReadBackgroudUnChecked(4);
-                ((ReaderApplication) GBApplication.Instance()).setColorProfileName(ColorProfile.DAY, DayModel.SimpleBrown);
+                ((ReaderApplication) GBApplication.Instance()).setColorProfileName(ColorProfile.DAY, SimpleBrown);
                 resetReaderConfig();
             } else if (v.getId() == R.id.ll_lts_01) {// 常规
                 GBTextStyleCollection.Instance().getBaseStyle().LeftIndentOption.setValue(0);// 段落缩进
@@ -950,14 +953,14 @@ public class ReadBottomMenu implements OnClickListener, AnimationListener, OnSee
         } else {
             File fontFile = new File(GBPaths.getFontsPathOption().getValue(), fontFileName);
             if (!fontFile.exists()) {
-                UIUtil.showMessageText(mActivity, "字体文件不存在");
+                ToastUtils.show("字体文件不存在");
                 return;
             }
             realFontName = AndroidFontUtil.getRealFontName(fontFile);
 //            realFontName = fontDownLoadRealName;
         }
         if (mFontOption.getValue().equals(realFontName)) {
-            UIUtil.showMessageText(mActivity, "已经是该字体了");
+            ToastUtils.show("已经是该字体了");
             return;
         }
         //设置字体

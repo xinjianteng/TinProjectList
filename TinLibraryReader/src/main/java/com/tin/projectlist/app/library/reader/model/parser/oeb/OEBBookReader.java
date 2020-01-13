@@ -1,35 +1,14 @@
 package com.tin.projectlist.app.library.reader.model.parser.oeb;
 import android.graphics.Bitmap;
 
-import com.core.common.CopyVersionInfo;
-import com.core.common.XMLNamespaces;
-import com.core.common.util.IFunction;
-import com.core.common.util.MiscUtil;
-import com.core.file.GBFile;
-import com.core.file.image.GBFileImage;
-import com.core.file.image.GBImageData;
-import com.core.file.image.GBImageManager;
-import com.core.log.L;
-import com.core.object.GBSize;
-import com.core.text.model.GBTextModel;
-import com.core.text.model.GBTextWritableModel;
-import com.core.text.model.impl.GBTextWritablePlainModel;
-import com.core.text.widget.GBTextFixedPosition;
-import com.core.text.widget.GBTextPosition;
-import com.core.view.PageEnum.ImgFitType;
-import com.core.xml.GBStringMap;
-import com.core.xml.GBXMLReaderAdapter;
-import com.geeboo.read.model.bookmodel.BookModel;
-import com.geeboo.read.model.bookmodel.BookReader;
-import com.geeboo.read.model.bookmodel.BookReadingException;
-import com.geeboo.read.model.bookmodel.GBTextKind;
-import com.geeboo.read.model.bookmodel.TagSpoor;
-import com.geeboo.read.model.parser.IBookChpReader;
-import com.geeboo.read.model.parser.css.XHTMLStyleReader;
-import com.geeboo.read.model.parser.xhtml.XHTMLReader;
-import com.geeboo.read.view.img.GBAndroidImageData;
-import com.geeboo.utils.FileUtils;
-import com.geeboo.utils.GeeBookLoader;
+
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookModel;
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookReader;
+import com.tin.projectlist.app.library.reader.model.parser.IBookChpReader;
+import com.tin.projectlist.app.library.reader.parser.common.XMLNamespaces;
+import com.tin.projectlist.app.library.reader.parser.common.util.IFunction;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextModel;
+import com.tin.projectlist.app.library.reader.parser.xml.GBXMLReaderAdapter;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,12 +1,13 @@
 package com.tin.projectlist.app.library.reader.model.bookmodel;
 
+import com.tin.projectlist.app.library.reader.model.book.Book;
+import com.tin.projectlist.app.library.reader.model.parser.FormatPlugin;
+import com.tin.projectlist.app.library.reader.parser.platform.GBLibrary;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextModel;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextPosition;
+
 import java.util.List;
 
-import com.core.platform.GBLibrary;
-import com.core.text.model.GBTextModel;
-import com.core.text.widget.GBTextPosition;
-import com.geeboo.read.model.book.Book;
-import com.geeboo.read.model.parser.FormatPlugin;
 
 /**
  * 类名： BookModel.java<br>
@@ -48,7 +49,7 @@ public abstract class BookModel {
         return model;
     }
 
-    public final Book Book;
+    public final Book book;
     public final TOCTree TOCTree = new TOCTree();
 
     /*

@@ -1,18 +1,19 @@
 package com.tin.projectlist.app.library.reader.model.bookmodel;
 
-import com.core.file.image.GBImage;
-import com.core.text.model.GBTextModel;
-import com.core.text.model.cache.CharStorage;
-import com.geeboo.read.model.book.Book;
+
+import com.tin.projectlist.app.library.reader.model.book.Book;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBImage;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextModel;
+import com.tin.projectlist.app.library.reader.parser.text.model.cache.CharStorage;
 
 import java.util.HashMap;
 
 abstract class BookModelImpl extends BookModel {
 	protected CharStorage myInternalHyperlinks;  // 内部链接缓存
-	protected final HashMap<String,GBImage> myImageMap = new HashMap<String,GBImage>();
-	protected final HashMap<String,GBTextModel> myFootnotes = new HashMap<String,GBTextModel>();
+	protected final HashMap<String, GBImage> myImageMap = new HashMap<String,GBImage>();
+	protected final HashMap<String, GBTextModel> myFootnotes = new HashMap<String,GBTextModel>();
 
-	BookModelImpl(Book book) {
+	BookModelImpl(com.tin.projectlist.app.library.reader.model.book.Book book) {
 		super(book);
 	}
 

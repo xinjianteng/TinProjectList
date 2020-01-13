@@ -1,11 +1,8 @@
 package com.tin.projectlist.app.library.reader.model.bookmodel;
 
-import com.core.file.GBPaths;
-import com.core.log.L;
-import com.core.text.model.GBTextModel;
-import com.core.text.model.cache.impl.CachedCharStorage;
-import com.core.text.model.impl.GBTextWritablePlainModel;
-import com.geeboo.read.model.book.Book;
+
+import com.tin.projectlist.app.library.reader.model.book.Book;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextModel;
 
 public class JavaBookModel extends BookModelImpl {
     final String TAG = "JavaBookModel";
@@ -13,7 +10,7 @@ public class JavaBookModel extends BookModelImpl {
     public final GBTextModel GenerPageNumModel;
     public final String CacheVersion = "v1";
 
-    public JavaBookModel(Book book) {
+    public JavaBookModel(com.tin.projectlist.app.library.reader.model.book.Book book) {
         super(book);
         myInternalHyperlinks = new CachedCharStorage(32768, GBPaths.cacheDirectory(), book.getId() + "", "links", 1);
         // arraySize 章节数组长度 dataBlockSize 缓存char长度

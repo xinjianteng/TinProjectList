@@ -149,44 +149,44 @@ public abstract class MyActivity extends UIActivity
         return (BaseApplication) getApplication();
     }
 
-    private final StatusManager mStatusManager = new StatusManager();
-
-    /**
-     * 显示加载中
-     */
-    public void showLoading() {
-        mStatusManager.showLoading(this);
-    }
-
-    /**
-     * 显示加载完成
-     */
-    public void showComplete() {
-        mStatusManager.showComplete();
-    }
-
-    /**
-     * 显示空提示
-     */
-    public void showEmpty() {
-        mStatusManager.showEmpty(getContentView());
-    }
-
-    /**
-     * 显示错误提示
-     */
-    public void showError() {
-        mStatusManager.showError(getContentView());
-    }
-
-    /**
-     * 显示自定义提示
-     */
-    public void showLayout(@DrawableRes int iconId, @StringRes int textId) {
-        mStatusManager.showLayout(getContentView(), iconId, textId);
-    }
-
-    public void showLayout(Drawable drawable, CharSequence hint) {
-        mStatusManager.showLayout(getContentView(), drawable, hint);
-    }
+//    private final StatusManager mStatusManager = new StatusManager();
+//
+//    /**
+//     * 显示加载中
+//     */
+//    public void showLoading() {
+//        mStatusManager.showLoading(this);
+//    }
+//
+//    /**
+//     * 显示加载完成
+//     */
+//    public void showComplete() {
+//        mStatusManager.showComplete();
+//    }
+//
+//    /**
+//     * 显示空提示
+//     */
+//    public void showEmpty() {
+//        mStatusManager.showEmpty(getContentView());
+//    }
+//
+//    /**
+//     * 显示错误提示
+//     */
+//    public void showError() {
+//        mStatusManager.showError(getContentView());
+//    }
+//
+//    /**
+//     * 显示自定义提示
+//     */
+//    public void showLayout(@DrawableRes int iconId, @StringRes int textId) {
+//        mStatusManager.showLayout(getContentView(), iconId, textId);
+//    }
+//
+//    public void showLayout(Drawable drawable, CharSequence hint) {
+//        mStatusManager.showLayout(getContentView(), drawable, hint);
+//    }
 }

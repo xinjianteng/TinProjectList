@@ -6,8 +6,15 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 
+import com.geeboo.book.Book;
+import com.tin.projectlist.app.library.base.utils.LogUtils;
+import com.tin.projectlist.app.library.reader.exception.TipException;
+import com.tin.projectlist.app.library.reader.model.MyDeflatingDecompressor;
+import com.tin.projectlist.app.library.reader.model.MyLineBreaker;
+import com.tin.projectlist.app.library.reader.model.book.Bookmark;
 import com.tin.projectlist.app.library.reader.model.book.IBookCollection;
 import com.tin.projectlist.app.library.reader.model.bookmodel.BookModel;
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookReadingException;
 import com.tin.projectlist.app.library.reader.parser.domain.GBApplication;
 import com.tin.projectlist.app.library.reader.parser.domain.GBKeyBindings;
 import com.tin.projectlist.app.library.reader.parser.object.GBColor;
@@ -238,7 +245,7 @@ public final class ReaderApplication extends GBApplication {
                 public void run() {
                     long t1 = System.currentTimeMillis();
                     openBookInternal(book, bookmark, false);
-                    L.e("time", (System.currentTimeMillis() - t1) / 1000 + "-----------ms");
+                    LogUtils.e("time", (System.currentTimeMillis() - t1) / 1000 + "-----------ms");
                     context.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -405,7 +412,7 @@ public final class ReaderApplication extends GBApplication {
      * @param name 白天/夜间
      * @param model 白天主题
      */
-    public void setColorProfileName(String name, DayModel model) {
+    public void setColorProfileName(String name, ColorProfile.DayModel model) {
         ColorProfileOption.setValue(name);
         mDayModel = model;
         myColorProfile = null;

@@ -2,9 +2,9 @@ package com.tin.projectlist.app.library.reader.model.bookmodel;
 
 import java.io.IOException;
 
-import com.core.common.GBResource;
-import com.core.file.GBFile;
-import com.core.zip.ZipException;
+import com.tin.projectlist.app.library.reader.parser.common.GBResource;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.zip.ZipException;
 
 public final class BookReadingException extends Exception {
 	public static void throwForFile(String resourceId, GBFile file) throws BookReadingException {

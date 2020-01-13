@@ -1,7 +1,7 @@
 package com.tin.projectlist.app.library.reader.model.parser.oeb;
 
-import com.core.xml.GBStringMap;
-import com.core.xml.GBXMLReaderAdapter;
+
+import com.tin.projectlist.app.library.reader.parser.xml.GBXMLReaderAdapter;
 
 /**
  * 类名： ContainerFileReader.java<br>

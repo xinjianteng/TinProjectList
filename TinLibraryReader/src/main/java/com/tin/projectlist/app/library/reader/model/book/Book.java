@@ -2,7 +2,13 @@ package com.tin.projectlist.app.library.reader.model.book;
 
 
 
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookReadingException;
+import com.tin.projectlist.app.library.reader.model.parser.FormatPlugin;
+import com.tin.projectlist.app.library.reader.model.parser.PluginCollection;
+import com.tin.projectlist.app.library.reader.parser.common.CopyVersionInfo;
+import com.tin.projectlist.app.library.reader.parser.common.util.MiscUtil;
 import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBImage;
 
 import java.lang.ref.WeakReference;
 import java.math.BigDecimal;

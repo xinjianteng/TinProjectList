@@ -1,13 +1,14 @@
 package com.tin.projectlist.app.library.reader.model.parser;
 
-import com.core.common.util.IFunction;
-import com.core.file.GBFile;
-import com.core.file.image.GBImage;
-import com.core.support.EncodingCollection;
-import com.core.text.widget.GBTextPosition;
-import com.geeboo.read.model.book.Book;
-import com.geeboo.read.model.bookmodel.BookModel;
-import com.geeboo.read.model.bookmodel.BookReadingException;
+
+import com.tin.projectlist.app.library.reader.model.book.Book;
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookModel;
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookReadingException;
+import com.tin.projectlist.app.library.reader.parser.common.util.IFunction;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBImage;
+import com.tin.projectlist.app.library.reader.parser.support.EncodingCollection;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextPosition;
 
 /**
  * 类名： FormatPlugin.java<br>

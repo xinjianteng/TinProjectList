@@ -1,15 +1,16 @@
 package com.tin.projectlist.app.library.reader.model.parser.oeb;
 
-import com.core.common.CopyVersionInfo;
-import com.core.common.util.IFunction;
-import com.core.file.GBFile;
-import com.core.file.image.GBImage;
-import com.core.support.AutoEncodingCollection;
-import com.core.text.widget.GBTextPosition;
-import com.geeboo.read.model.book.Book;
-import com.geeboo.read.model.bookmodel.BookModel;
-import com.geeboo.read.model.bookmodel.BookReadingException;
-import com.geeboo.read.model.parser.JavaFormatPlugin;
+
+import com.tin.projectlist.app.library.reader.model.book.Book;
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookModel;
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookReadingException;
+import com.tin.projectlist.app.library.reader.model.parser.JavaFormatPlugin;
+import com.tin.projectlist.app.library.reader.parser.common.CopyVersionInfo;
+import com.tin.projectlist.app.library.reader.parser.common.util.IFunction;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBImage;
+import com.tin.projectlist.app.library.reader.parser.support.AutoEncodingCollection;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextPosition;
 
 /**
  * 类名： OEBPlugin.java<br>
