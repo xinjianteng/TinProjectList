@@ -1,18 +1,19 @@
 package com.tin.projectlist.app.library.reader.model.parser.xhtml;
 
+import com.tin.projectlist.app.library.reader.model.parser.css.AttrBorderAction;
+import com.tin.projectlist.app.library.reader.model.parser.css.XHTMLStyleReader;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextBackgroundStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextBorderStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextBoxStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextFontStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntryProxy;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextWordStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.xml.GBStringMap;
+
 import java.util.ArrayList;
 import java.util.Stack;
 
-import com.core.text.model.style.GBTextBackgroundStyleEntry;
-import com.core.text.model.style.GBTextBorderStyleEntry;
-import com.core.text.model.style.GBTextBoxStyleEntry;
-import com.core.text.model.style.GBTextFontStyleEntry;
-import com.core.text.model.style.GBTextStyleEntry;
-import com.core.text.model.style.GBTextStyleEntryProxy;
-import com.core.text.model.style.GBTextWordStyleEntry;
-import com.core.xml.GBStringMap;
-import com.geeboo.read.model.parser.css.AttrBorderAction;
-import com.geeboo.read.model.parser.css.XHTMLStyleReader;
 
 /**
  * 类名： .java<br>

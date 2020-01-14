@@ -1,7 +1,8 @@
 package com.tin.projectlist.app.library.reader.model.parser.xhtml;
 
-import com.core.xml.GBStringMap;
-import com.geeboo.read.model.parser.css.AttrFontAction;
+
+import com.tin.projectlist.app.library.reader.model.parser.css.AttrFontAction;
+import com.tin.projectlist.app.library.reader.parser.xml.GBStringMap;
 
 public class XHTMLTagFontAction extends XHTMLTagStyleKindAction {
 

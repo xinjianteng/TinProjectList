@@ -1,8 +1,9 @@
 package com.tin.projectlist.app.library.reader.model.parser.xhtml;
 
-import com.core.xml.GBStringMap;
-import com.geeboo.read.model.bookmodel.BookReader;
-import com.geeboo.read.model.bookmodel.GBTextKind;
+
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookReader;
+import com.tin.projectlist.app.library.reader.model.bookmodel.GBTextKind;
+import com.tin.projectlist.app.library.reader.parser.xml.GBStringMap;
 
 public class XHTMLTagTDAction extends XHTMLTagAction {
 

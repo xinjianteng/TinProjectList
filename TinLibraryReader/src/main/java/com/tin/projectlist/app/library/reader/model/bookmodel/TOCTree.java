@@ -1,6 +1,7 @@
 package com.tin.projectlist.app.library.reader.model.bookmodel;
 
-import com.core.text.model.GBTextModel;
+
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextModel;
 
 import java.io.Serializable;
 

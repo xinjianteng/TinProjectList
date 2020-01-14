@@ -3,9 +3,9 @@ package com.tin.projectlist.app.library.reader.model.parser.xhtml;
 import java.util.ArrayList;
 import java.util.Stack;
 
-import com.core.text.model.style.GBTextStyleEntry;
-import com.core.text.model.style.GBTextStyleEntryProxy;
-import com.core.xml.GBStringMap;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntryProxy;
+import com.tin.projectlist.app.library.reader.parser.xml.GBStringMap;
 
 /**
  * 样式标签处理

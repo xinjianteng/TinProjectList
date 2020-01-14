@@ -1,12 +1,13 @@
 package com.tin.projectlist.app.library.reader.model.parser.xhtml;
 
-import com.core.common.util.MimeType;
-import com.core.common.util.MiscUtil;
-import com.core.file.GBFile;
-import com.core.file.image.GBFileImage;
-import com.core.text.model.GBFileCtrEntry;
-import com.core.xml.GBStringMap;
-import com.geeboo.read.model.bookmodel.BookReader;
+
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookReader;
+import com.tin.projectlist.app.library.reader.parser.common.util.MimeType;
+import com.tin.projectlist.app.library.reader.parser.common.util.MiscUtil;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBFileImage;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBFileCtrEntry;
+import com.tin.projectlist.app.library.reader.parser.xml.GBStringMap;
 
 public class XHTMLTagFileCtrAction extends XHTMLTagAction {
 

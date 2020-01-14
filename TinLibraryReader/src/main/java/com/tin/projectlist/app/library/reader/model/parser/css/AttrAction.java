@@ -1,6 +1,7 @@
 package com.tin.projectlist.app.library.reader.model.parser.css;
 
-import com.core.text.model.style.GBTextStyleEntry;
+
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntry;
 
 /**
  *

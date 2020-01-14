@@ -10,22 +10,33 @@ import java.util.Map;
 
 import android.util.SparseArray;
 
-import com.core.common.util.IFunction;
-import com.core.common.util.LicenseMgr;
-import com.core.file.GBFile;
-import com.core.log.L;
-import com.core.text.model.GBTextModel;
-import com.core.text.model.GBTextWritableModel;
-import com.core.text.widget.GBTextFixedPosition;
-import com.core.text.widget.GBTextPosition;
-import com.geeboo.read.model.bookmodel.BookModel;
-import com.geeboo.read.model.bookmodel.BookReader;
-import com.geeboo.read.model.bookmodel.BookReadingException;
-import com.geeboo.read.model.bookmodel.GBTextKind;
-import com.geeboo.read.model.bookmodel.TOCTree;
-import com.geeboo.read.model.parser.oeb.OEBBookReader;
-import com.geeboo.read.model.parser.txt.GetChap.OnAnalyzeLisener;
-import com.geeboo.read.model.parser.xhtml.XHTMLReader;
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookModel;
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookReader;
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookReadingException;
+import com.tin.projectlist.app.library.reader.model.parser.oeb.OEBBookReader;
+import com.tin.projectlist.app.library.reader.model.parser.xhtml.XHTMLReader;
+import com.tin.projectlist.app.library.reader.parser.common.util.LicenseMgr;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextModel;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextFixedPosition;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextPosition;
+
+//import com.core.common.util.IFunction;
+//import com.core.common.util.LicenseMgr;
+//import com.core.file.GBFile;
+//import com.core.log.L;
+//import com.core.text.model.GBTextModel;
+//import com.core.text.model.GBTextWritableModel;
+//import com.core.text.widget.GBTextFixedPosition;
+//import com.core.text.widget.GBTextPosition;
+//import com.geeboo.read.model.bookmodel.BookModel;
+//import com.geeboo.read.model.bookmodel.BookReader;
+//import com.geeboo.read.model.bookmodel.BookReadingException;
+//import com.geeboo.read.model.bookmodel.GBTextKind;
+//import com.geeboo.read.model.bookmodel.TOCTree;
+//import com.geeboo.read.model.parser.oeb.OEBBookReader;
+//import com.geeboo.read.model.parser.txt.GetChap.OnAnalyzeLisener;
+//import com.geeboo.read.model.parser.xhtml.XHTMLReader;
 
 /**
  * 类名： TxtBookChapReader.java<br>
@@ -36,7 +47,7 @@ import com.geeboo.read.model.parser.xhtml.XHTMLReader;
  * 修改者： <br>
  * 修改日期：<br>
  */
-class TxtBookChapReader extends OEBBookReader implements OnAnalyzeLisener {
+class TxtBookChapReader extends OEBBookReader implements GetChap.OnAnalyzeLisener {
     final String TAG = "TxtBookChapReader";
 
     private TxtParser mParser;

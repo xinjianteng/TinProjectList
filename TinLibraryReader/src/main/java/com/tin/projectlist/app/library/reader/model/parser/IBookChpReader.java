@@ -1,9 +1,10 @@
 package com.tin.projectlist.app.library.reader.model.parser;
 
-import com.core.common.util.IFunction;
-import com.core.file.GBFile;
-import com.core.text.widget.GBTextPosition;
-import com.geeboo.read.model.bookmodel.BookReadingException;
+
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookReadingException;
+import com.tin.projectlist.app.library.reader.parser.common.util.IFunction;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextPosition;
 
 /**
  * 可按章节加载图书的解析器

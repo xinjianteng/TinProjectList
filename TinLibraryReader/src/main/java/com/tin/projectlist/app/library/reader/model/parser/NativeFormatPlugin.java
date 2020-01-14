@@ -1,16 +1,17 @@
 package com.tin.projectlist.app.library.reader.model.parser;
 
-import com.core.common.util.IFunction;
-import com.core.file.GBFile;
-import com.core.file.image.GBImage;
-import com.core.file.image.GBImageProxy;
-import com.core.file.image.GBSingleImage;
-import com.core.support.EncodingCollection;
-import com.core.support.JavaEncodingCollection;
-import com.core.text.widget.GBTextPosition;
-import com.geeboo.read.model.book.Book;
-import com.geeboo.read.model.bookmodel.BookModel;
-import com.geeboo.read.model.bookmodel.BookReadingException;
+
+import com.tin.projectlist.app.library.reader.model.book.Book;
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookModel;
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookReadingException;
+import com.tin.projectlist.app.library.reader.parser.common.util.IFunction;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBImage;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBImageProxy;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBSingleImage;
+import com.tin.projectlist.app.library.reader.parser.support.EncodingCollection;
+import com.tin.projectlist.app.library.reader.parser.support.JavaEncodingCollection;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextPosition;
 
 public class NativeFormatPlugin extends FormatPlugin {
 	public static NativeFormatPlugin create(String fileType) {
@@ -44,7 +45,7 @@ public class NativeFormatPlugin extends FormatPlugin {
 	public native void detectLanguageAndEncodingNative(Book book);
 
 	@Override
-	synchronized public void readModel(BookModel model,GBTextPosition lastPosition) throws BookReadingException {
+	synchronized public void readModel(BookModel model, GBTextPosition lastPosition) throws BookReadingException {
 		if (!readModelNative(model)) {
 			throw new BookReadingException("errorReadingFile", model.Book.File);
 		}

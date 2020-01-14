@@ -1,6 +1,7 @@
 package com.tin.projectlist.app.library.reader.model.parser.xhtml;
 
-import com.core.xml.GBStringMap;
+
+import com.tin.projectlist.app.library.reader.parser.xml.GBStringMap;
 
 /**
  * 类名： XHTMLTagBodyAction.java<br>

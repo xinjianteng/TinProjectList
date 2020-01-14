@@ -2,7 +2,10 @@ package com.tin.projectlist.app.library.reader.model.bookmodel;
 
 
 import com.tin.projectlist.app.library.reader.model.book.Book;
+import com.tin.projectlist.app.library.reader.parser.file.GBPaths;
 import com.tin.projectlist.app.library.reader.parser.text.model.GBTextModel;
+import com.tin.projectlist.app.library.reader.parser.text.model.cache.impl.CachedCharStorage;
+import com.tin.projectlist.app.library.reader.parser.text.model.impl.GBTextWritablePlainModel;
 
 public class JavaBookModel extends BookModelImpl {
     final String TAG = "JavaBookModel";

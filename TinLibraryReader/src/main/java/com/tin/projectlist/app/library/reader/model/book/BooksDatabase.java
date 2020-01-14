@@ -1,7 +1,7 @@
 package com.tin.projectlist.app.library.reader.model.book;
 
-import com.core.file.GBFile;
-import com.core.text.widget.GBTextPosition;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextPosition;
 
 import java.util.Collection;
 import java.util.List;

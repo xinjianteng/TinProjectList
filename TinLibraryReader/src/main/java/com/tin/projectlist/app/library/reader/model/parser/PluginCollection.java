@@ -2,6 +2,9 @@ package com.tin.projectlist.app.library.reader.model.parser;
 
 import com.tin.projectlist.app.library.reader.model.parser.oeb.OEBPlugin;
 import com.tin.projectlist.app.library.reader.model.parser.txt.TxtPlugin;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.file.filetype.FileType;
+import com.tin.projectlist.app.library.reader.parser.file.filetype.FileTypeCollection;
 
 import java.util.ArrayList;
 import java.util.HashMap;

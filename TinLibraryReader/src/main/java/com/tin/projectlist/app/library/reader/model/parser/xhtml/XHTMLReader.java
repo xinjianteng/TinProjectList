@@ -1,16 +1,16 @@
 package com.tin.projectlist.app.library.reader.model.parser.xhtml;
 
-import com.core.common.CopyVersionInfo;
-import com.core.common.XMLNamespaces;
-import com.core.common.util.MiscUtil;
-import com.core.file.GBFile;
-import com.core.file.zip.GBArchiveEntryFile;
-import com.core.xml.GBStringMap;
-import com.core.xml.GBXMLReaderAdapter;
-import com.geeboo.read.model.bookmodel.BookReader;
-import com.geeboo.read.model.bookmodel.GBTextKind;
-import com.geeboo.read.model.bookmodel.TagSpoor;
-import com.geeboo.read.model.parser.css.XHTMLStyleReader;
+import com.tin.projectlist.app.library.reader.model.bookmodel.BookReader;
+import com.tin.projectlist.app.library.reader.model.bookmodel.GBTextKind;
+import com.tin.projectlist.app.library.reader.model.bookmodel.TagSpoor;
+import com.tin.projectlist.app.library.reader.model.parser.css.XHTMLStyleReader;
+import com.tin.projectlist.app.library.reader.parser.common.CopyVersionInfo;
+import com.tin.projectlist.app.library.reader.parser.common.XMLNamespaces;
+import com.tin.projectlist.app.library.reader.parser.common.util.MiscUtil;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.file.zip.GBArchiveEntryFile;
+import com.tin.projectlist.app.library.reader.parser.xml.GBStringMap;
+import com.tin.projectlist.app.library.reader.parser.xml.GBXMLReaderAdapter;
 
 import java.io.IOException;
 import java.util.ArrayList;

@@ -2,37 +2,45 @@ package com.tin.projectlist.app.library.reader.model.parser.xhtml;
 
 
 import com.tin.projectlist.app.library.reader.model.bookmodel.BookReader;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBNoteEntry;
 import com.tin.projectlist.app.library.reader.parser.xml.GBStringMap;
 
 /**
- * 类名： XHTMLTagControlAction.java<br>
- * 描述： 控制标签业务处理<br>
- * 创建者： jack<br>
- * 创建日期：2013-4-26<br>
- * 版本：  <br>
- * 修改者： <br>
- * 修改日期：<br>
+ * html5 笔记
+ *
+ * @author android
+ *
  */
-class XHTMLTagControlAction extends XHTMLTagAction {
-	final byte myControl;
+public class XHTMLTagNoteAction extends XHTMLTagAction {
+	private final byte myControl;
 
-	XHTMLTagControlAction(byte control) {
+	public XHTMLTagNoteAction(byte control) {
 		myControl = control;
 	}
 
+	@Override
 	protected void doAtStart(XHTMLReader reader, GBStringMap xmlattributes) {
+
+		final String value = xmlattributes.getValue("value");
+
 		final BookReader modelReader = reader.getModelReader();
-		//往控制标签栈中压入一个标示
+
 		modelReader.pushKind(myControl);
+
+		GBNoteEntry mediaEntry = new GBNoteEntry(value);
 		//将控制标签写入缓存
 		modelReader.addControl(myControl, true);
+		modelReader.addHtml5NoteControl(mediaEntry.toChars());
+
 	}
 
+	@Override
 	protected void doAtEnd(XHTMLReader reader) {
 		final BookReader modelReader = reader.getModelReader();
-		//写入结束控制标到缓存
+//		写入结束控制标到缓存
 		modelReader.addControl(myControl, false);
-		//从栈顶移除标示
+//		从栈顶移除标示
 		modelReader.popKind();
 	}
+
 }

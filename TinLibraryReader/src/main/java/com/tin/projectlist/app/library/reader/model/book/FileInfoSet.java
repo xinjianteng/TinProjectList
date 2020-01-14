@@ -1,9 +1,9 @@
 package com.tin.projectlist.app.library.reader.model.book;
 
-import com.core.common.util.MiscUtil;
-import com.core.file.GBFile;
-import com.core.file.GBPhysicalFile;
-import com.core.file.zip.GBArchiveEntryFile;
+import com.tin.projectlist.app.library.reader.parser.common.util.MiscUtil;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.file.GBPhysicalFile;
+import com.tin.projectlist.app.library.reader.parser.file.zip.GBArchiveEntryFile;
 
 import java.util.Collection;
 import java.util.Collections;

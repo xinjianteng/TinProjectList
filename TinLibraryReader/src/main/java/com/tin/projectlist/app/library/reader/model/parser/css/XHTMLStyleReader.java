@@ -1,5 +1,14 @@
 package com.tin.projectlist.app.library.reader.model.parser.css;
 
+import com.tin.projectlist.app.library.base.utils.LogUtils;
+import com.tin.projectlist.app.library.reader.model.bookmodel.TagSpoor;
+import com.tin.projectlist.app.library.reader.parser.css.CSSParser;
+import com.tin.projectlist.app.library.reader.parser.css.StyleBlock;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextFontStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntry;
+import com.tin.projectlist.app.library.reader.parser.xml.GBStringMap;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -8,14 +17,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
-import com.core.css.CSSParser;
-import com.core.css.StyleBlock;
-import com.core.file.GBFile;
-import com.core.log.L;
-import com.core.text.model.style.GBTextFontStyleEntry;
-import com.core.text.model.style.GBTextStyleEntry;
-import com.core.xml.GBStringMap;
-import com.geeboo.read.model.bookmodel.TagSpoor;
 
 /**
  *
@@ -142,13 +143,13 @@ public class XHTMLStyleReader {
         fillAttrTable();
         GBFile file = GBFile.createFileByPath(path);
         if (null == file || !file.exists()) {
-            L.d(TAG, "file no  exists" + path);
+            LogUtils.d(TAG, "file no  exists" + path);
             return;
         }
 
-        L.d(TAG, path + "file exists");
+        LogUtils.d(TAG, path + "file exists");
         InputStream in = file.getInputStream();
-        L.d(TAG, "available=" + in.available());
+        LogUtils.d(TAG, "available=" + in.available());
 
         final String encoding = "utf-8";
         InputStreamReader isr = new InputStreamReader(in, encoding);
@@ -324,7 +325,7 @@ public class XHTMLStyleReader {
      * 功能描述：执行action 创建者： yangn<br>
      * 创建日期：2013-5-23<br>
      *
-     * @param 属性集合
+     * @param set 属性集合
      */
     private void execAction(GBStringMap set) {// ,
         // ArrayList<AttrAction>
@@ -477,7 +478,7 @@ public class XHTMLStyleReader {
             styleBlock = styleBlockList.get(i);
             if (null == styleBlock) {
 
-                L.d(TAG, "current style block is " + styleBlock);
+                LogUtils.d(TAG, "current style block is " + styleBlock);
                 continue;
             }
 

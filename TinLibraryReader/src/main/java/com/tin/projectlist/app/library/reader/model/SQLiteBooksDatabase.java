@@ -7,6 +7,20 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 
 
+import com.tin.projectlist.app.library.reader.model.book.Annotations;
+import com.tin.projectlist.app.library.reader.model.book.Author;
+import com.tin.projectlist.app.library.reader.model.book.Book;
+import com.tin.projectlist.app.library.reader.model.book.Bookmark;
+import com.tin.projectlist.app.library.reader.model.book.BooksDatabase;
+import com.tin.projectlist.app.library.reader.model.book.FileInfo;
+import com.tin.projectlist.app.library.reader.model.book.FileInfoSet;
+import com.tin.projectlist.app.library.reader.model.book.SeriesInfo;
+import com.tin.projectlist.app.library.reader.model.book.Tag;
+import com.tin.projectlist.app.library.reader.model.book.UID;
+import com.tin.projectlist.app.library.reader.parser.file.GBFile;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextFixedPosition;
+import com.tin.projectlist.app.library.reader.parser.text.widget.GBTextPosition;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;

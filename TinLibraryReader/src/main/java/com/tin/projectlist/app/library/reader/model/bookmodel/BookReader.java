@@ -1,18 +1,17 @@
 package com.tin.projectlist.app.library.reader.model.bookmodel;
 
+import com.tin.projectlist.app.library.reader.parser.common.util.ArrayUtils;
+import com.tin.projectlist.app.library.reader.parser.file.image.GBImage;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBHyperlinkType;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextModel;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextParagraph;
+import com.tin.projectlist.app.library.reader.parser.text.model.GBTextWritableModel;
+import com.tin.projectlist.app.library.reader.parser.text.model.style.GBTextStyleEntryProxy;
+
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.CharsetDecoder;
 import java.util.Stack;
-
-import com.core.common.util.ArrayUtils;
-import com.core.file.image.GBImage;
-import com.core.log.L;
-import com.core.text.model.GBHyperlinkType;
-import com.core.text.model.GBTextModel;
-import com.core.text.model.GBTextParagraph;
-import com.core.text.model.GBTextWritableModel;
-import com.core.text.model.style.GBTextStyleEntryProxy;
 
 /**
  * 类名： BookReader.java<br>
