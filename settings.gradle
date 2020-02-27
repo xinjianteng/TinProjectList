@@ -1,9 +1,9 @@
-include ':TinAppAdvert', ':TinLibraryReader', ':TinBase'
+include ':TinAppAdvert', ':ChainUpapp', ':TinAppSoundQuality'
+include ':TinLibraryReader'
+include ':TinAppAv'
 include ':TinAppWeChatCut'
-include  ':TinAppQuestionBank'
+include ':TinAppQuestionBank'
 include ':TinAppOldBook'
-
-
 include ':TinTvRead'
 include ':TinAppItBook'
 include ':TinTvPlay'
@@ -11,4 +11,3 @@ include ':TinAppKnowldege'
 include ':TinAppGuShiWen'
 include ':JavaTest'
 include ':Tinlibrary'
-include ':TinLibraryBase'

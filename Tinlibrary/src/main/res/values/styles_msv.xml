@@ -10,17 +10,17 @@
         <item name="msv_errorResId">@layout/default_view_error</item>
 
         <item name="msv_textColor">#666666</item>
-        <item name="msv_textSize">@dimen/space_32</item>
+        <item name="msv_textSize">@dimen/sp_16</item>
 
-        <item name="msv_buttonTextColor">#666666</item>
-        <item name="msv_buttonTextSize">@dimen/space_28</item>
-        <item name="msv_buttonBackground">@drawable/global_btn</item>
+        <item name="msv_buttonTextColor">@color/black</item>
+        <item name="msv_buttonTextSize">@dimen/sp_18</item>
+        <item name="msv_buttonBackground">@drawable/default_btn</item>
 
-        <item name="msv_emptyImage">@null</item>
-        <item name="msv_emptyText">@string/txt_msv_empty</item>
-        <item name="msv_errorImage">@null</item>
-        <item name="msv_errorText">@string/txt_msv_net_error</item>
-        <item name="msv_retryText">@string/txt_msv_refresh</item>
+        <item name="msv_emptyImage">@drawable/default_empty</item>
+        <item name="msv_emptyText">@string/default_txt_msv_empty</item>
+        <item name="msv_errorImage">@drawable/default_error</item>
+        <item name="msv_errorText">@string/default_txt_msv_net_error</item>
+        <item name="msv_retryText">@string/default_txt_msv_refresh</item>
     </style>
 
 </resources>

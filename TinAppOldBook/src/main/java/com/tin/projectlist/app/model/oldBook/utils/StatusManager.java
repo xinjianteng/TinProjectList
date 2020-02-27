@@ -11,9 +11,6 @@ import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.tin.projectlist.app.library.base.BaseDialog;
-import com.tin.projectlist.app.library.base.widget.HintLayout;
-import com.tin.projectlist.app.library.base.widget.dialog.WaitDialog;
 import com.tin.projectlist.app.model.oldBook.R;
 
 import static android.Manifest.permission.ACCESS_NETWORK_STATE;

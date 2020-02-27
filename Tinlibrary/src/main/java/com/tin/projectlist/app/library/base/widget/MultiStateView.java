@@ -74,7 +74,7 @@ public class MultiStateView extends FrameLayout {
 
         mLoadingText = a.getString(R.styleable.MultiStateView_msv_loadingText);
 
-        mEmptyImage = a.getResourceId(R.styleable.MultiStateView_msv_emptyImage, R.mipmap.icon_empty);
+        mEmptyImage = a.getResourceId(R.styleable.MultiStateView_msv_emptyImage, R.drawable.default_empty);
         mEmptyText = a.getString(R.styleable.MultiStateView_msv_emptyText);
 
         mErrorImage = a.getResourceId(R.styleable.MultiStateView_msv_errorImage, NO_ID);

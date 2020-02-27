@@ -12,8 +12,14 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 
+import com.tin.projectlist.app.library.reader.controller.ScrollingPreferences;
+import com.tin.projectlist.app.library.reader.parser.domain.GBApplication;
+import com.tin.projectlist.app.library.reader.parser.platform.GBLibrary;
+import com.tin.projectlist.app.library.reader.parser.view.GBView;
 import com.tin.projectlist.app.library.reader.parser.view.GBViewInter;
 import com.tin.projectlist.app.library.reader.parser.view.PageEnum;
+import com.tin.projectlist.app.library.reader.view.GBAndroidLibrary;
+import com.tin.projectlist.app.library.reader.view.ReaderActivity;
 
 
 /**

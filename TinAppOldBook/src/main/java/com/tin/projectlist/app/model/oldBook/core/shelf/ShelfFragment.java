@@ -4,11 +4,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.hjq.bar.TitleBar;
-import com.tin.projectlist.app.library.base.BaseRecyclerViewAdapter;
 import com.tin.projectlist.app.library.base.widget.MultiStateView;
 import com.tin.projectlist.app.model.oldBook.R;
-import com.tin.projectlist.app.model.oldBook.common.MyLazyFragment;
-import com.tin.projectlist.app.model.oldBook.core.home.HomeActivity;
 import com.tin.projectlist.app.model.oldBook.entity.Book;
 import com.tin.projectlist.app.model.oldBook.mvp.MvpLazyFragment;
 

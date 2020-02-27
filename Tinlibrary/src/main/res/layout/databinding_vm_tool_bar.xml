@@ -1,0 +1,83 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+        <variable
+            name="toolBarObservable"
+            type="com.tin.projectlist.app.library.base.frame.activity.BaseAppModelActivtiy.ToolBarObservable" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@{toolBarObservable.toolbarBackground, default=@color/white}"
+        android:fitsSystemWindows="@{toolBarObservable.fitsSystemWindows, default=false}"
+        android:orientation="vertical"
+        android:visibility="@{toolBarObservable.showToolbar ? View.VISIBLE : View.GONE }">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/AppTheme.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_bar_height"
+            app:contentInsetEnd="@dimen/dp_0"
+            app:contentInsetStart="@dimen/dp_0">
+
+            <ImageView
+                android:id="@+id/img_left"
+                android:layout_width="@dimen/default_bar_height"
+                android:layout_height="@dimen/default_bar_height"
+                android:onClick="@{(view)->toolBarObservable.onImgLeftClick(view)}"
+                android:scaleType="centerInside"
+                android:src="@{toolBarObservable.imgLeftDrawableRes}"
+                android:visibility="@{toolBarObservable.showImgLeft?View.VISIBLE:View.GONE}" />
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:maxWidth="@dimen/dp_180"
+                android:text="@{toolBarObservable.toolbarTitle}"
+                android:textColor="@{toolBarObservable.toolbarTitleColor, default=@color/black}"
+                android:textSize="@dimen/sp_18" />
+
+
+            <TextView
+                android:id="@+id/tv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:enabled="@{toolBarObservable.tvRightEnabled}"
+                android:gravity="center"
+                android:onClick="@{(view)->toolBarObservable.onTvRightClick(view)}"
+                android:paddingLeft="@dimen/dp_13"
+                android:paddingRight="@dimen/dp_13"
+                android:text="@{toolBarObservable.tvRightText}"
+                android:textColor="@color/tv_disable_selector"
+                android:textSize="@dimen/sp_14"
+                />
+
+        </android.support.v7.widget.Toolbar>
+
+
+        <View
+            style="@style/default_horizontal_divider_line"
+            android:visibility="@{toolBarObservable.showDividerLine?View.VISIBLE:View.GONE}" />
+
+
+    </LinearLayout>
+
+</layout>

@@ -41,7 +41,7 @@ dependencies {
     //没有使用特殊Header，可以不加这行
 
     api 'jp.wasabeef:glide-transformations:3.0.1'
-    api project(':Tinlibrary')
+//    api project(':Tinlibrary')
 
 
 }

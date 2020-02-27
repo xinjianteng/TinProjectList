@@ -459,22 +459,22 @@ public class ReadBottomMenu implements OnClickListener, AnimationListener, OnSee
         if (v.getId() == R.id.rb_reader_catalog) {// 目录
             initGoToBar(1);
             mActivity.showDisMenu();
-            if (mActivity.mApplication.isReadPdf) {
-                if (mActivity.isHaveCatalog()) {
-                    CatalogAndMarkActivity.actionView(mActivity, mActivity.menuRoot, (byte) 1);
-                } else {
-                    ToastUtils.show(GBResource.resource("readerPage").getResource("noBookCatalog")
-                            .getValue());
-                }
-            } else {
-                final ReaderApplication fbreader = (ReaderApplication) GBApplication.Instance();
-                if (fbreader.Model.TOCTree.getSize() > 1) {
-                    CatalogAndMarkActivity.actionView(mActivity, fbreader.Model.TOCTree, (byte) 2);
-                } else {
-                    ToastUtils.show(isPageing ? "正在提取目录" : GBResource.resource("readerPage")
-                            .getResource("noBookCatalog").getValue());
-                }
-            }
+//            if (mActivity.mApplication.isReadPdf) {
+//                if (mActivity.isHaveCatalog()) {
+//                    CatalogAndMarkActivity.actionView(mActivity, mActivity.menuRoot, (byte) 1);
+//                } else {
+//                    ToastUtils.show(GBResource.resource("readerPage").getResource("noBookCatalog")
+//                            .getValue());
+//                }
+//            } else {
+//                final ReaderApplication fbreader = (ReaderApplication) GBApplication.Instance();
+//                if (fbreader.Model.TOCTree.getSize() > 1) {
+//                    CatalogAndMarkActivity.actionView(mActivity, fbreader.Model.TOCTree, (byte) 2);
+//                } else {
+//                    ToastUtils.show(isPageing ? "正在提取目录" : GBResource.resource("readerPage")
+//                            .getResource("noBookCatalog").getValue());
+//                }
+//            }
         } else if (v.getId() == R.id.rb_reader_font) {// 字体
             initGoToBar(4);
             mCurrenOpre = OPREATION.FONT;
@@ -485,27 +485,27 @@ public class ReadBottomMenu implements OnClickListener, AnimationListener, OnSee
             initGoToBar(3);
             mCurrenOpre = OPREATION.LIGHT;
         } else if (v.getId() == R.id.bottom_write_notes) {//写笔记
-            GeeBookMgr geebooMgr = GeeBookLoader.getBookMgr();
-            int b = geebooMgr.getHoldStatus();
-            if (b == 1 || b == 2 || b == 3 | b == 4) {
-            } else {
-                Toast.makeText(mActivity, "本书还未同步到云端，无法进行此操作", Toast.LENGTH_SHORT).show();
-                return;
-            }
-            int type = 1;
-            mActivity.mApplication.runAction(ActionCode.SELECTION_NOTE_ANNOTATION, 0, type);
+//            GeeBookMgr geebooMgr = GeeBookLoader.getBookMgr();
+//            int b = geebooMgr.getHoldStatus();
+//            if (b == 1 || b == 2 || b == 3 | b == 4) {
+//            } else {
+//                Toast.makeText(mActivity, "本书还未同步到云端，无法进行此操作", Toast.LENGTH_SHORT).show();
+//                return;
+//            }
+//            int type = 1;
+//            mActivity.mApplication.runAction(ActionCode.SELECTION_NOTE_ANNOTATION, 0, type);
         } else if (v.getId() == R.id.ll_next) {
-            if (!mActivity.mApplication.BookTextView.nextChapter())
-                ToastUtils.show(GBResource.resource("readerPage").getResource("isLastChapter").getValue());
-
-            mActivity.getmWidget().postInvalidate();
-            GBApplication.Instance().runAction(ActionCode.RESET_PAGEINFO);
+//            if (!mActivity.mApplication.BookTextView.nextChapter())
+//                ToastUtils.show(GBResource.resource("readerPage").getResource("isLastChapter").getValue());
+//
+//            mActivity.getmWidget().postInvalidate();
+//            GBApplication.Instance().runAction(ActionCode.RESET_PAGEINFO);
         } else if (v.getId() == R.id.ll_perious) {
-            if (!mActivity.mApplication.BookTextView.preChapter()) {
-                ToastUtils.show(GBResource.resource("readerPage").getResource("isFristChapter").getValue());
-            }
-            mActivity.getmWidget().postInvalidate();
-            GBApplication.Instance().runAction(ActionCode.RESET_PAGEINFO);
+//            if (!mActivity.mApplication.BookTextView.preChapter()) {
+//                ToastUtils.show(GBResource.resource("readerPage").getResource("isFristChapter").getValue());
+//            }
+//            mActivity.getmWidget().postInvalidate();
+//            GBApplication.Instance().runAction(ActionCode.RESET_PAGEINFO);
         }
     }
 
@@ -718,48 +718,48 @@ public class ReadBottomMenu implements OnClickListener, AnimationListener, OnSee
                     return;
                 }
                 isLoading = 2;
-                final File itemFontFile = new File(FileUtils.getFONT() + File.separator + fontDownLoadName[0]);
-                GeeBookLoader.getBookMgr().downloadFontFile(fontDownLoadPath[0], itemFontFile.getAbsolutePath(),
-                        false, "正在下载" + "字体", new IFunction<Integer>() {
-                            @Override
-                            public void callback(Integer nowProgress) {
-                                Message message = new Message();
-                                message.what = nowProgress;
-                                progressHander.sendMessage(message);
-                            }
-                        });
+//                final File itemFontFile = new File(FileUtils.getFONT() + File.separator + fontDownLoadName[0]);
+//                GeeBookLoader.getBookMgr().downloadFontFile(fontDownLoadPath[0], itemFontFile.getAbsolutePath(),
+//                        false, "正在下载" + "字体", new IFunction<Integer>() {
+//                            @Override
+//                            public void callback(Integer nowProgress) {
+//                                Message message = new Message();
+//                                message.what = nowProgress;
+//                                progressHander.sendMessage(message);
+//                            }
+//                        });
             } else if (v.getId() == R.id.rel_download_03) {
                 if (isLoading != 0) {
                     Toast.makeText(mActivity, "正在下载字体", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 isLoading = 3;
-                final File itemFontFile = new File(FileUtils.FONT + File.separator + fontDownLoadName[1]);
-                GeeBookLoader.getBookMgr().downloadFontFile(fontDownLoadPath[1], itemFontFile.getAbsolutePath(),
-                        false, "正在下载" + "字体", new IFunction<Integer>() {
-                            @Override
-                            public void callback(Integer nowProgress) {
-                                Message message = new Message();
-                                message.what = nowProgress;
-                                progressHander.sendMessage(message);
-                            }
-                        });
+//                final File itemFontFile = new File(FileUtils.FONT + File.separator + fontDownLoadName[1]);
+//                GeeBookLoader.getBookMgr().downloadFontFile(fontDownLoadPath[1], itemFontFile.getAbsolutePath(),
+//                        false, "正在下载" + "字体", new IFunction<Integer>() {
+//                            @Override
+//                            public void callback(Integer nowProgress) {
+//                                Message message = new Message();
+//                                message.what = nowProgress;
+//                                progressHander.sendMessage(message);
+//                            }
+//                        });
             } else if (v.getId() == R.id.rel_download_04) {
                 if (isLoading != 0) {
                     Toast.makeText(mActivity, "正在下载字体", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 isLoading = 4;
-                final File itemFontFile = new File(FileUtils.FONT + File.separator + fontDownLoadName[2]);
-                GeeBookLoader.getBookMgr().downloadFontFile(fontDownLoadPath[2], itemFontFile.getAbsolutePath(),
-                        false, "正在下载" + "字体", new IFunction<Integer>() {
-                            @Override
-                            public void callback(Integer nowProgress) {
-                                Message message = new Message();
-                                message.what = nowProgress;
-                                progressHander.sendMessage(message);
-                            }
-                        });
+//                final File itemFontFile = new File(FileUtils.FONT + File.separator + fontDownLoadName[2]);
+//                GeeBookLoader.getBookMgr().downloadFontFile(fontDownLoadPath[2], itemFontFile.getAbsolutePath(),
+//                        false, "正在下载" + "字体", new IFunction<Integer>() {
+//                            @Override
+//                            public void callback(Integer nowProgress) {
+//                                Message message = new Message();
+//                                message.what = nowProgress;
+//                                progressHander.sendMessage(message);
+//                            }
+//                        });
             }
         }
     };
@@ -769,7 +769,7 @@ public class ReadBottomMenu implements OnClickListener, AnimationListener, OnSee
         public void dispatchMessage(Message msg) {
             super.dispatchMessage(msg);
             if (msg.what == OEBBookReader.CALL_BOOK_OVER) {
-                mActivity.resetPages();
+//                mActivity.resetPages();
             } else if (msg.what < OEBBookReader.CALL_BOOK_OVER) {
                 // mPages.setText(isPageing ? "正在分页..." : "正在提取目录...");
             } else {

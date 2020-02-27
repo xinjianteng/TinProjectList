@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_bg">@color/c_f2616e</color>
+
+
+    <color name="c_f2616e">#f2616e</color>
+    <color name="c_ff4f4f">#ff4f4f</color>
+</resources>

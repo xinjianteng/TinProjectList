@@ -1,5 +1,0 @@
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:radius="@dimen/space_40" />
-    <solid android:color="@color/global_btn_select" />
-
-</shape>

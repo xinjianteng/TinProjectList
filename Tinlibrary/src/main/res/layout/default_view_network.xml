@@ -9,34 +9,34 @@
 
     <ImageView
         android:id="@id/msv_error_image"
-        android:layout_width="@dimen/space_248"
-        android:layout_height="@dimen/space_278"
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="@dimen/dp_120"
         android:layout_gravity="center"
         android:adjustViewBounds="true"
-        android:src="@mipmap/icon_error" />
+        android:src="@drawable/default_error" />
 
     <TextView
         android:id="@+id/tv_state"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/space_26"
-        android:layout_marginRight="@dimen/space_26"
-        android:paddingTop="@dimen/space_26"
-        android:text="@string/txt_msv_load_net_error"
-        android:textColor="@color/global_text_remind"
-        android:textSize="@dimen/space_32" />
-
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/default_txt_msv_load_net_error"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16" />
 
     <TextView
         android:id="@id/msv_retry_button"
-        android:layout_width="@dimen/space_192"
-        android:layout_height="@dimen/space_52"
-        android:layout_marginTop="@dimen/space_26"
-        android:background="@drawable/global_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/default_btn"
         android:gravity="center"
-        android:text="@string/txt_msv_refresh"
+        android:text="@string/default_txt_msv_refresh"
         android:textColor="@color/white"
-        android:textSize="@dimen/space_28" />
+        android:textSize="@dimen/sp_16" />
 
 
 </LinearLayout>

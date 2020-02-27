@@ -10,8 +10,9 @@ ext {
     constraintLayoutVersion = '2.0.0-beta1'
     junitVersion = '4.12'
 
-    versionName="5.0.0.18"
+    versionName="1.0.0"
     versionCode= 500018
+    glideVersion = '4.9.0'
 
 
 }

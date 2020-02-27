@@ -7,9 +7,10 @@ public class SeMain {
    public static ZiPaiPresenter ziPaiPresenter;
 
 
+   public static String ziPaiUrl="https://www.qqce98.com/tupian/list-%E8%87%AA%E6%8B%8D%E5%81%B7%E6%8B%8D.html";
 
-   public static String ziPaiUrl="https://www.ed353.com/xiazai/list-%E5%9B%BD%E4%BA%A7%E8%87%AA%E6%8B%8D.html";
-   public static String rootUrl="https://www.ed353.com/index/home.html";
+   public static String rootUrl="https://www.qqce98.com/index/home.html";
+
 
     public static void main(String args[]) {
         ziPaiPresenter=new ZiPaiPresenter();

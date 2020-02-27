@@ -5,11 +5,22 @@ import android.view.View;
 
 
 import com.tin.projectlist.app.library.reader.R;
+import com.tin.projectlist.app.library.reader.view.widget.GBAndroidWidget;
 
 import org.xutils.view.annotation.ContentView;
 
 
 public final class ReaderActivity extends BaseMenuActivity {
+
+
+    // epub阅读控件
+    protected GBAndroidWidget mWidget;
+
+    public GBAndroidWidget getmWidget() {
+        return mWidget;
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

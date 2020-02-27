@@ -6,24 +6,24 @@
     android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical"
-    android:paddingTop="@dimen/space_14"
-    android:paddingBottom="@dimen/space_14">
+>
 
     <ImageView
         android:id="@+id/msv_empty_image"
-        android:layout_width="@dimen/space_248"
-        android:layout_height="@dimen/space_296"
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="@dimen/dp_120"
         android:layout_gravity="center"
         android:adjustViewBounds="true"
-        android:src="@mipmap/icon_empty" />
+        android:src="@drawable/default_empty" />
 
     <TextView
         android:id="@+id/msv_empty_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/space_20"
-        android:text="@string/txt_msv_empty"
-        android:textColor="@color/global_text_remind"
-        android:textSize="@dimen/space_42" />
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/default_txt_msv_empty"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16" />
+
 </LinearLayout>

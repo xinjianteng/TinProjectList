@@ -91,4 +91,27 @@
         <item name="cpd_outAnimDuration">@android:integer/config_mediumAnimTime</item>
     </style>
 
+
+<!--    -->
+
+    <style name="AppTheme.Toolbar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <!--横向分割线-->
+    <style name="default_horizontal_divider_line">
+        <item name="android:layout_height">@dimen/default_stroke</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/black10</item>
+    </style>
+
+    <!--竖向分割线-->
+    <style name="default_vertical_divider_line">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/default_stroke</item>
+        <item name="android:background">@color/black10</item>
+    </style>
+
 </resources>
